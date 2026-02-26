@@ -92,7 +92,7 @@ export default function Home() {
   if (sel) return <Detail ev={sel} onBack={() => setSel(null)} />;
 
   return (
-    <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 28px" }}>
+    <div style={{ maxWidth: 100%, margin: "0 auto", padding: "0 28px" }}>
       {/* Header */}
       <header style={{ padding: "44px 0 0", marginBottom: 8 }}>
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
