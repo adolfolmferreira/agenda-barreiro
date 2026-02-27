@@ -1,8 +1,28 @@
+# dependencies
 node_modules/
+.pnp
+.pnp.js
+
+# next.js
 .next/
 out/
+
+# production
+build/
+
+# misc
+.DS_Store
+*.pem
 .env
-.env.local
-.vercel
+.env*.local
+
+# debug
+npm-debug.log*
+
+# typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# scraped data (regenerável)
+data/events.json
+data/meta.json
