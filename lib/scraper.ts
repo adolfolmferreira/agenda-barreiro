@@ -1,5 +1,5 @@
-// lib/scraper.ts — v7
-// Scraper com paginação completa via Playwright + fetch para páginas individuais
+// lib/scraper.ts — v8
+// Scraper com paginação completa + fallback de data via URL da imagem
 
 export interface Event {
   id: string;
@@ -76,6 +76,29 @@ function between(html: string, start: RegExp, end: RegExp): string {
   return e ? rest.slice(0, e.index) : rest.slice(0, 5000);
 }
 
+/** Extract YYYY-MM-DD from an image URL like /2026-03-15-Oficina... or /2026/03/image.jpg */
+function dateFromImageUrl(imgUrl: string): string | null {
+  // Pattern 1: /2026-03-15-Something or /2026-03-15_Something
+  const m1 = imgUrl.match(/(20\d{2})-(\d{2})-(\d{2})/);
+  if (m1) return `${m1[1]}-${m1[2]}-${m1[3]}`;
+  // Pattern 2: /uploads/2026/03/
+  const m2 = imgUrl.match(/uploads\/(20\d{2})\/(\d{2})\//);
+  if (m2) return `${m2[1]}-${m2[2]}-01`;
+  return null;
+}
+
+/** Extract YYYY-MM-DD from the page URL slug like /eventos/21-fevereiro-2026/ */
+function dateFromPageUrl(url: string): string | null {
+  const path = new URL(url).pathname;
+  // Pattern: /14-marco-2026/ or /14-de-marco-de-2026/
+  const m = path.match(/(\d{1,2})-(?:de-)?(\w+)-(?:de-)?(20\d{2})/i);
+  if (m) return parsePT(`${m[1]} ${m[2]} ${m[3]}`);
+  // Pattern: /2026-03-14-something/
+  const m2 = path.match(/(20\d{2})-(\d{2})-(\d{2})/);
+  if (m2) return `${m2[1]}-${m2[2]}-${m2[3]}`;
+  return null;
+}
+
 // ─── Fetch & parse a single event page ──────────────────────────
 
 async function fetchEvent(url: string): Promise<Event | null> {
@@ -102,26 +125,18 @@ async function fetchEvent(url: string): Promise<Event | null> {
       || between(html, /<h1/i, /<footer/i);
     const contentText = strip(contentHtml);
 
+    // ─── DATE EXTRACTION (cascading fallbacks) ──────────────
     const dates = contentText.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
+    const parsedContentDate = dates[0] ? parsePT(dates[0]) : null;
+    const ldDate = ld?.startDate ? ld.startDate.slice(0, 10) : null;
+    const imgDate = ogImg ? dateFromImageUrl(ogImg) : null;
+    const urlDate = dateFromPageUrl(url);
 
-    // Try to extract date from image URL (e.g. /2026-03-15-Oficina...)
-    let imgDate: string | null = null;
-    if (ogImg) {
-      const imgDateMatch = ogImg.match(/(20\d{2})-(\d{2})-(\d{2})/);
-      if (imgDateMatch) imgDate = `${imgDateMatch[1]}-${imgDateMatch[2]}-${imgDateMatch[3]}`;
-    }
+    // Use today ONLY as absolute last resort
+    const today = new Date().toISOString().slice(0, 10);
+    const date = parsedContentDate || ldDate || imgDate || urlDate || today;
+    const usedFallback = date === today ? ' ⚠ FALLBACK' : '';
 
-    // Try to extract date from the page URL slug (e.g. /eventos/21-fevereiro-2026/)
-    const urlPath = new URL(url).pathname;
-    const urlDateMatch = urlPath.match(/(\d{1,2})-(?:de-)?(\w+)-(?:de-)?(\d{4})/i);
-    let urlDate: string | null = null;
-    if (urlDateMatch) urlDate = parsePT(`${urlDateMatch[1]} ${urlDateMatch[2]} ${urlDateMatch[3]}`);
-
-    const date = (dates[0] ? parsePT(dates[0]) : null)
-      || (ld?.startDate ? ld.startDate.slice(0, 10) : null)
-      || imgDate
-      || urlDate
-      || new Date().toISOString().slice(0, 10);
     const endDate = (dates[1] ? parsePT(dates[1]) : null)
       || (ld?.endDate ? ld.endDate.slice(0, 10) : undefined);
 
@@ -193,7 +208,6 @@ async function discoverAllUrls(): Promise<string[]> {
     waitUntil: 'networkidle', timeout: 20000,
   });
 
-  // Dismiss cookies
   try { await p.locator('text=Aceitar tudo').click({ timeout: 2000 }); } catch {}
   await p.waitForTimeout(3000);
 
@@ -222,7 +236,6 @@ async function discoverAllUrls(): Promise<string[]> {
     urls.forEach(u => allUrls.add(u));
     console.log(`  📄 Página ${pageNum}: ${urls.length} links (${newCount} novos) — total: ${allUrls.size}`);
 
-    // Only stop after 3 consecutive pages with 0 new
     if (newCount === 0) { noNewCount++; } else { noNewCount = 0; }
     if (noNewCount >= 3) {
       console.log('  ⏹ 3 páginas sem novos URLs, a parar');
@@ -249,25 +262,24 @@ async function discoverAllUrls(): Promise<string[]> {
 
 export async function scrapeEvents(): Promise<Event[]> {
   console.log('═══════════════════════════════════════');
-  console.log('  Agenda Barreiro — Scraper v7');
-  console.log('  Paginação completa + fetch');
+  console.log('  Agenda Barreiro — Scraper v8');
+  console.log('  Paginação + image URL date fallback');
   console.log('═══════════════════════════════════════\n');
 
-  // 1. Discover all URLs via pagination
   const allDiscovered = await discoverAllUrls();
 
-  // 2. Filter: exclude obviously old events (2024 or earlier in URL)
+  // Filter: exclude obviously old events (2024 or earlier in URL)
   const urls = allDiscovered.filter(u => {
     const path = new URL(u).pathname;
     const yearMatch = path.match(/20(\d{2})/);
-    if (!yearMatch) return true; // no year in URL = include, will filter by date later
+    if (!yearMatch) return true;
     const yr = 2000 + parseInt(yearMatch[1]);
-    return yr >= 2025; // keep 2025 and 2026+
+    return yr >= 2025;
   });
 
   console.log(`\n📋 ${urls.length} URLs de eventos actuais (filtrados de ${allDiscovered.length})\n`);
 
-  // 3. Fetch all event pages in parallel batches of 4
+  // Fetch all event pages in parallel batches of 4
   const events: Event[] = [];
   for (let i = 0; i < urls.length; i += 4) {
     const batch = urls.slice(i, i + 4);
@@ -282,22 +294,22 @@ export async function scrapeEvents(): Promise<Event[]> {
     for (const r of results) if (r) events.push(r);
   }
 
-  // 4. Filter: only events with date in 2025-2026
+  // Filter: only 2025-2026
   const filtered = events.filter(e => {
     const year = parseInt(e.date.slice(0, 4));
     return year >= 2025 && year <= 2026;
   });
 
-  // 5. Sort by date
+  // Sort by date
   filtered.sort((a, b) => a.date.localeCompare(b.date));
 
-  // 6. Mark featured (next upcoming with image)
+  // Mark featured (next upcoming with image)
   const today = new Date().toISOString().slice(0, 10);
   const upcoming = filtered.filter(e => (e.endDate || e.date) >= today);
   const feat = upcoming.find(e => e.imageUrl) || upcoming[0];
   if (feat) feat.featured = true;
 
-  // 7. Deduplicate by slug
+  // Deduplicate by slug
   const unique: Event[] = [];
   const seen = new Set<string>();
   for (const e of filtered) {
@@ -307,6 +319,17 @@ export async function scrapeEvents(): Promise<Event[]> {
     unique.push(e);
   }
 
+  // Log date source stats
+  const withToday = unique.filter(e => e.date === today).length;
   console.log(`\n✅ ${unique.length} eventos únicos extraídos`);
+  if (withToday > 0) console.log(`⚠ ${withToday} eventos ainda com data de hoje (fallback)`);
+
+  // Log March events specifically
+  const march = unique.filter(e => e.date.startsWith('2026-03'));
+  if (march.length > 0) {
+    console.log(`\n📅 Eventos de Março: ${march.length}`);
+    march.forEach(e => console.log(`  → ${e.date} ${e.title.slice(0, 50)}`));
+  }
+
   return unique;
 }
