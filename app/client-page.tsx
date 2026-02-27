@@ -2,10 +2,6 @@
 
 import { useState, useMemo } from 'react';
 
-// ─── Fonts ───────────────────────────────────────────────────────
-const FONT_LINK =
-  'https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800;900&display=swap';
-
 // ─── Types ───────────────────────────────────────────────────────
 interface Event {
   id: string;
@@ -154,8 +150,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
     const cc = catColor(ev.category);
     return (
       <>
-        <link href={FONT_LINK} rel="stylesheet" />
-        <style>{`* { margin:0; padding:0; box-sizing:border-box; } body { font-family:'Inter',sans-serif; background:#f5f3ef; }`}</style>
+        {/* Styles loaded via globals.css */}
         <div style={{ minHeight: '100vh', background: '#f5f3ef' }}>
           {/* Back bar */}
           <div style={{ background: '#1a1a1a', padding: '16px 32px' }}>
@@ -223,29 +218,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
   // ─── Main listing ────────────────────────────────────────────
   return (
     <>
-      <link href={FONT_LINK} rel="stylesheet" />
-      <style>{`
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family:'Inter',sans-serif; background:#f5f3ef; color:#1a1a1a; }
-        a { text-decoration:none; color:inherit; }
-        ::selection { background:#6C3FC5; color:#fff; }
-        .pill-btn { border:1px solid #d1d1d1; background:#fff; border-radius:24px; padding:8px 18px; font-size:13px; font-weight:600; cursor:pointer; transition:all .15s; font-family:'Inter',sans-serif; color:#555; }
-        .pill-btn:hover { border-color:#1a1a1a; color:#1a1a1a; }
-        .pill-btn.active { background:#1a1a1a; color:#fff; border-color:#1a1a1a; }
-        .card { background:#fff; border-radius:14px; overflow:hidden; cursor:pointer; transition:transform .2s, box-shadow .2s; }
-        .card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,.1); }
-        .card img { width:100%; height:220px; object-fit:cover; display:block; }
-        .card-body { padding:20px; }
-        .tag { display:inline-block; font-size:11px; font-weight:700; padding:3px 10px; border-radius:16px; letter-spacing:.4px; text-transform:uppercase; }
-        .date-block { display:flex; align-items:baseline; gap:6px; margin:10px 0 8px; }
-        .date-day { font-size:32px; font-weight:800; line-height:1; color:#1a1a1a; }
-        .date-month { font-size:13px; font-weight:600; text-transform:uppercase; color:#888; }
-        .card-title { font-family:'Instrument Serif',serif; font-size:22px; line-height:1.2; color:#1a1a1a; margin-bottom:8px; }
-        .card-loc { font-size:13px; color:#888; display:flex; align-items:center; gap:4px; }
-        .price-badge { display:inline-block; font-size:11px; font-weight:700; background:#ECFDF5; color:#047857; padding:3px 10px; border-radius:12px; margin-top:10px; }
-        @media (max-width:900px) { .events-grid { grid-template-columns:1fr 1fr !important; } }
-        @media (max-width:560px) { .events-grid { grid-template-columns:1fr !important; } }
-      `}</style>
+      {/* Styles loaded via globals.css */}
 
       <div style={{ minHeight: '100vh' }}>
         {/* ═══ HEADER ═══ */}
