@@ -116,7 +116,9 @@ export async function scrapeEvents(): Promise<Event[]> {
         // OU eventos em /eventos/ que não sejam sub-páginas de arquivo
         const url = new URL(href);
         const isAgendaEvent = url.search.includes('mp=');
-        const isDirectEvent = url.pathname.match(/^\/eventos\/[^/]+\/?$/) && !url.pathname.includes('feira-quinhentista') && !url.pathname.includes('festas-do-barreiro') && !url.pathname.includes('provocacao') && !url.pathname.includes('moinho-lounge');
+        // Excluir eventos com anos antigos no URL (2015-2025)
+        const hasOldYear = /20(1[5-9]|2[0-5])/.test(url.pathname);
+        const isDirectEvent = url.pathname.match(/^\/eventos\/[^/]+\/?$/) && !hasOldYear && !url.pathname.includes('feira-quinhentista') && !url.pathname.includes('festas-do-barreiro') && !url.pathname.includes('provocacao') && !url.pathname.includes('moinho-lounge');
 
         if (!isAgendaEvent && !isDirectEvent) return;
 
