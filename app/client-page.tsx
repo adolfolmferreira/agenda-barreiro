@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 
 // ─── Types ───────────────────────────────────────────────────────
 interface Event {
@@ -95,11 +95,17 @@ export default function ClientPage({ events, lastUpdated }: Props) {
 
   useEffect(() => { if (detail) window.scrollTo({ top: 0, behavior: 'smooth' }); }, [detail]);
 
-  const closeDropdowns = useCallback(() => { setCatOpen(false); setMonOpen(false); }, []);
   useEffect(() => {
-    document.addEventListener('click', closeDropdowns);
-    return () => document.removeEventListener('click', closeDropdowns);
-  }, [closeDropdowns]);
+    const handler = (e: MouseEvent) => {
+      const t = e.target as HTMLElement;
+      if (!t.closest('.tsl-dropdown')) {
+        setCatOpen(false);
+        setMonOpen(false);
+      }
+    };
+    document.addEventListener('click', handler);
+    return () => document.removeEventListener('click', handler);
+  }, []);
 
   const categories = useMemo(() => {
     const s = new Set(events.map(e => e.category).filter(Boolean));
@@ -251,7 +257,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
       {/* FILTERS */}
       <div className="tsl-filters">
         <div className="tsl-filters-row">
-          <div className="tsl-dropdown" onClick={(e) => { e.stopPropagation(); setCatOpen(!catOpen); setMonOpen(false); }}>
+          <div className="tsl-dropdown" onClick={() => { setCatOpen(v => !v); setMonOpen(false); }}>
             <div className="tsl-dropdown-label">Categoria</div>
             <button className="tsl-dropdown-trigger">
               {selCat}
@@ -261,7 +267,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
               <div className="tsl-dropdown-menu">
                 {categories.map(c => (
                   <button key={c} className={`tsl-dropdown-item ${selCat === c ? 'active' : ''}`}
-                    onClick={(e) => { e.stopPropagation(); setSelCat(c); setCatOpen(false); }}>
+                    onClick={() => { setSelCat(c); setCatOpen(false); }}>
                     {c}
                   </button>
                 ))}
@@ -269,7 +275,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
             )}
           </div>
 
-          <div className="tsl-dropdown" onClick={(e) => { e.stopPropagation(); setMonOpen(!monOpen); setCatOpen(false); }}>
+          <div className="tsl-dropdown" onClick={() => { setMonOpen(v => !v); setCatOpen(false); }}>
             <div className="tsl-dropdown-label">Mês</div>
             <button className="tsl-dropdown-trigger">
               {selMon === 'Todos os Meses' ? selMon : mkLabel(selMon)}
@@ -279,7 +285,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
               <div className="tsl-dropdown-menu">
                 {months.map(m => (
                   <button key={m} className={`tsl-dropdown-item ${selMon === m ? 'active' : ''}`}
-                    onClick={(e) => { e.stopPropagation(); setSelMon(m); setMonOpen(false); }}>
+                    onClick={() => { setSelMon(m); setMonOpen(false); }}>
                     {m === 'Todos os Meses' ? m : mkLabel(m)}
                   </button>
                 ))}

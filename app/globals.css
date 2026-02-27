@@ -130,10 +130,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .tsl-hero-feat-title {
   font-family: 'Instrument Serif', serif;
-  font-size: clamp(36px, 5vw, 72px);
+  font-size: clamp(44px, 7vw, 96px);
   font-weight: 400;
-  line-height: 1;
-  letter-spacing: -1.5px;
+  line-height: 0.95;
+  letter-spacing: -3px;
   color: #fff;
   margin-bottom: 16px;
 }
@@ -227,12 +227,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .tsl-month-title {
   font-family: 'Instrument Serif', serif;
-  font-size: clamp(40px, 5vw, 60px);
+  font-size: clamp(56px, 8vw, 96px);
   font-weight: 400;
   color: #1a1a1a;
   padding-bottom: 20px;
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 32px;
+  letter-spacing: -2px;
 }
 
 /* ─── 4-column grid ─── */
@@ -307,9 +308,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .tsl-card-title {
   font-family: 'Instrument Serif', serif;
-  font-size: clamp(18px, 1.6vw, 24px);
+  font-size: clamp(20px, 2vw, 28px);
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 1.1;
   color: #1a1a1a;
   transition: color 0.2s;
 }
@@ -349,10 +350,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .tsl-detail-title {
   font-family: 'Instrument Serif', serif;
-  font-size: clamp(36px, 5vw, 72px);
+  font-size: clamp(44px, 6vw, 88px);
   font-weight: 400;
-  line-height: 1;
-  letter-spacing: -1.5px;
+  line-height: 0.95;
+  letter-spacing: -2px;
   color: #1a1a1a;
   margin-bottom: 40px;
 }

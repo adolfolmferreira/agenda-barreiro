@@ -183,16 +183,14 @@ async function discoverAllUrls(): Promise<string[]> {
 
   const allUrls = new Set<string>();
   let pageNum = 1;
-  const MAX_PAGES = 50; // safety limit
+  let noNewCount = 0;
 
-  while (pageNum <= MAX_PAGES) {
-    // Scroll to load lazy content
+  while (pageNum <= 30) {
     for (let i = 0; i < 3; i++) {
       await p.mouse.wheel(0, 500);
       await p.waitForTimeout(200);
     }
 
-    // Extract event URLs from current page
     const urls = await p.evaluate(() => {
       const links = document.querySelectorAll('a[href*="/eventos/"]');
       const result: string[] = [];
@@ -208,13 +206,13 @@ async function discoverAllUrls(): Promise<string[]> {
     urls.forEach(u => allUrls.add(u));
     console.log(`  📄 Página ${pageNum}: ${urls.length} links (${newCount} novos) — total: ${allUrls.size}`);
 
-    // If no new URLs found, we might be looping
-    if (newCount === 0 && pageNum > 2) {
-      console.log('  ⏹ Sem novos URLs, a parar');
+    // Only stop after 3 consecutive pages with 0 new
+    if (newCount === 0) { noNewCount++; } else { noNewCount = 0; }
+    if (noNewCount >= 3) {
+      console.log('  ⏹ 3 páginas sem novos URLs, a parar');
       break;
     }
 
-    // Try clicking next page button
     const nextBtn = await p.$('button.pag-001-next:not(.pag-arrow--disabled)');
     if (!nextBtn) {
       console.log('  ⏹ Última página alcançada');
@@ -242,14 +240,13 @@ export async function scrapeEvents(): Promise<Event[]> {
   // 1. Discover all URLs via pagination
   const allDiscovered = await discoverAllUrls();
 
-  // 2. Filter: only keep events with 2025/2026 in URL or no year (current)
-  const currentYear = new Date().getFullYear();
+  // 2. Filter: exclude obviously old events (2024 or earlier in URL)
   const urls = allDiscovered.filter(u => {
     const path = new URL(u).pathname;
     const yearMatch = path.match(/20(\d{2})/);
-    if (!yearMatch) return true; // no year in URL = probably current
+    if (!yearMatch) return true; // no year in URL = include, will filter by date later
     const yr = 2000 + parseInt(yearMatch[1]);
-    return yr >= currentYear - 1; // keep 2025 and 2026+
+    return yr >= 2025; // keep 2025 and 2026+
   });
 
   console.log(`\n📋 ${urls.length} URLs de eventos actuais (filtrados de ${allDiscovered.length})\n`);
@@ -269,10 +266,10 @@ export async function scrapeEvents(): Promise<Event[]> {
     for (const r of results) if (r) events.push(r);
   }
 
-  // 4. Filter: only events with date in 2025-2026 range
+  // 4. Filter: only events with date in 2025-2026
   const filtered = events.filter(e => {
     const year = parseInt(e.date.slice(0, 4));
-    return year >= currentYear - 1 && year <= currentYear + 1;
+    return year >= 2025 && year <= 2026;
   });
 
   // 5. Sort by date
