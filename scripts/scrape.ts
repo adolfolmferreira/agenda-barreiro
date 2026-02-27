@@ -1,35 +1,34 @@
 // scripts/scrape.ts
-// Uso: npx tsx scripts/scrape.ts
 import { scrapeEvents } from '../lib/scraper';
-import { promises as fs } from 'fs';
-import path from 'path';
+import { saveEvents } from '../lib/store';
 
 async function main() {
   console.log('═══════════════════════════════════════');
-  console.log('  Agenda Barreiro — Scraper');
-  console.log('  Fonte: cm-barreiro.pt');
+  console.log('  Agenda Barreiro — Scraper v5');
+  console.log('  Fonte: cm-barreiro.pt/agenda-de-eventos');
   console.log('═══════════════════════════════════════\n');
 
   const t0 = Date.now();
   const events = await scrapeEvents();
   const dur = ((Date.now() - t0) / 1000).toFixed(1);
 
+  if (events.length > 0) {
+    await saveEvents(events);
+    console.log(`\n💾 Guardados ${events.length} eventos em data/events.json`);
+  } else {
+    console.log('\n⚠️ Nenhum evento encontrado — data/events.json não alterado');
+  }
+
   console.log(`\n══════════════════════════════════════`);
   console.log(`  ${events.length} eventos · ${dur}s`);
   console.log(`══════════════════════════════════════\n`);
 
-  // Guardar
-  const dir = path.join(process.cwd(), 'data');
-  await fs.mkdir(dir, { recursive: true });
-  await fs.writeFile(path.join(dir, 'events.json'), JSON.stringify(events, null, 2));
-  console.log('💾 Guardado em data/events.json\n');
-
-  // Preview
-  for (const e of events.slice(0, 10)) {
-    console.log(`  📅 ${e.date} · ${e.category}`);
+  for (const e of events) {
+    console.log(`  📅 ${e.date}${e.endDate ? ' → ' + e.endDate : ''} · ${e.category}`);
     console.log(`     ${e.title}`);
     console.log(`     📍 ${e.location}`);
-    console.log(`     🔗 ${e.sourceUrl}`);
+    if (e.imageUrl) console.log(`     🖼️  ${e.imageUrl.slice(0, 80)}`);
+    if (e.price) console.log(`     💰 ${e.price}`);
     console.log('');
   }
 }

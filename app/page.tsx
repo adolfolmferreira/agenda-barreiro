@@ -1,14 +1,16 @@
 // app/page.tsx
-// Server component — carrega eventos e passa ao client
-
 import { loadEvents, getLastUpdated } from '@/lib/store';
+import type { Event } from '@/lib/scraper';
 import ClientPage from './client-page';
 
-export const revalidate = 300; // ISR: revalidar a cada 5 min
+export const revalidate = 300;
 
 export default async function Home() {
-  const events = await loadEvents();
-  const updatedAt = await getLastUpdated();
-
+  let events: Event[] = [];
+  let updatedAt: string | null = null;
+  try {
+    events = await loadEvents();
+    updatedAt = await getLastUpdated();
+  } catch {}
   return <ClientPage events={events} updatedAt={updatedAt} />;
 }

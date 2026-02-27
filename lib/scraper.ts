@@ -1,343 +1,292 @@
 // lib/scraper.ts
-// Scraper automático para https://www.cm-barreiro.pt/conhecer/agenda-de-eventos/
-// Usa Playwright (browser headless) para renderizar a página e extrair eventos
-// carregados via JavaScript/AJAX.
-//
-// Em produção (Vercel), usa @playwright/browser-chromium ou api routes com puppeteer-core + @sparticuz/chromium
-// Em dev local, usa playwright completo.
+// Scraper para https://www.cm-barreiro.pt/conhecer/agenda-de-eventos/
+// Os eventos actuais têm URLs com ?mp=7164&mc=8420
+// e o texto do link contém a data + título
 
 import { chromium, type Browser, type Page } from 'playwright';
-import { promises as fs } from 'fs';
-import path from 'path';
 
 export interface Event {
   id: string;
   title: string;
-  subtitle: string;
   category: string;
-  date: string;       // ISO YYYY-MM-DD
+  date: string;
   endDate?: string;
   time?: string;
   location: string;
   price: string;
   description: string;
-  descriptionFull: string;  // descrição completa da página de detalhe
-  url: string;
+  descriptionFull: string;
+  sourceUrl: string;
   imageUrl?: string;
-  organizer?: string;       // organizador (ex: CMB, Sons em Trânsito)
-  contacts?: string;        // telefones, emails
-  ticketUrl?: string;       // link de bilheteira
-  ageRating?: string;       // ex: M/6 anos
-  tags?: string[];          // palavras-chave extraídas
+  organizer?: string;
+  contacts?: string;
+  ticketUrl?: string;
+  ageRating?: string;
   source: string;
   scrapedAt: string;
+  featured?: boolean;
 }
 
-// Category detection from title/description keywords
+// ─── Helpers ────────────────────────────────────────────────────
+
+const MONTHS_PT: Record<string, string> = {
+  janeiro:'01', fevereiro:'02', 'março':'03', marco:'03', abril:'04',
+  maio:'05', junho:'06', julho:'07', agosto:'08', setembro:'09',
+  outubro:'10', novembro:'11', dezembro:'12',
+};
+
+function parseDatePT(text: string): string | null {
+  const m = text.match(/(\d{1,2})\s+(\w+)\s+(\d{4})/i);
+  if (!m) return null;
+  const day = m[1].padStart(2, '0');
+  const key = m[2].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const month = MONTHS_PT[key];
+  if (!month) return null;
+  return `${m[3]}-${month}-${day}`;
+}
+
+function slug(t: string): string {
+  return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+}
+
 const CAT_RULES: [RegExp, string][] = [
-  [/concert|música|fado|zambujo|ivandro|tiago sousa|banda municipal|orquestra|disco/i, 'Música'],
-  [/exposiç|ilustra|mostra|galeria/i, 'Exposição'],
+  [/concert|música|fado|zambujo|ivandro|tiago sousa|banda municipal|orquestra|jazz|hip.?hop/i, 'Música'],
+  [/exposiç|ilustra|mostra|galeria|pintura|fotografia/i, 'Exposição'],
   [/dança|flamen|ballet|coreograf/i, 'Dança'],
-  [/teatro|peça|dramatur|comédia|palco/i, 'Teatro'],
-  [/trail|natação|atletismo|xadrez|desport|corta.?mato|torneio|circuito|piscina/i, 'Desporto'],
+  [/teatro|peça|dramatur|comédia|palco|espetáculo/i, 'Teatro'],
+  [/trail|natação|atletismo|xadrez|desport|corta.?mato|torneio|circuito|piscina|corrida/i, 'Desporto'],
   [/oficina|workshop|curso|formação/i, 'Workshop'],
   [/visita|patrimon|roteiro|guiad/i, 'Visitas'],
   [/conto|leitura|livro|biblioteca|hora do conto/i, 'Leitura'],
+  [/cinema|filme|sessão/i, 'Cinema'],
+  [/feira|mercado|gastronom/i, 'Comunidade'],
 ];
 
-function detectCategory(title: string, desc: string): string {
-  const text = `${title} ${desc}`;
-  for (const [re, cat] of CAT_RULES) {
-    if (re.test(text)) return cat;
-  }
+function detectCat(text: string): string {
+  for (const [re, cat] of CAT_RULES) if (re.test(text)) return cat;
   return 'Comunidade';
 }
 
-// Parse Portuguese date strings: "01 Março 2026", "1 Mar", "01 março", etc.
-const MONTHS_PT: Record<string, string> = {
-  janeiro:'01', fevereiro:'02', março:'03', marco:'03', abril:'04',
-  maio:'05', junho:'06', julho:'07', agosto:'08', setembro:'09',
-  outubro:'10', novembro:'11', dezembro:'12',
-  jan:'01', fev:'02', mar:'03', abr:'04', mai:'05', jun:'06',
-  jul:'07', ago:'08', set:'09', out:'10', nov:'11', dez:'12',
-};
-
-function parseDatePT(text: string, fallbackYear = 2026): string | null {
-  // Try: "DD de Mês de YYYY" or "DD Mês YYYY" or "DD Mês"
-  const m = text.match(/(\d{1,2})\s*(?:de\s+)?(\w+)(?:\s+(?:de\s+)?(\d{4}))?/i);
-  if (!m) return null;
-  const day = m[1].padStart(2, '0');
-  const monthKey = m[2].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  // also try without accents
-  const month = MONTHS_PT[monthKey] || MONTHS_PT[m[2].toLowerCase()];
-  if (!month) return null;
-  const year = m[3] || String(fallbackYear);
-  return `${year}-${month}-${day}`;
-}
-
-function generateId(title: string, date: string): string {
-  const slug = title.toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  return `${slug}-${date}`;
-}
-
-// ─── Main scraper ───────────────────────────────────────────────
+// ─── Main ───────────────────────────────────────────────────────
 
 export async function scrapeEvents(): Promise<Event[]> {
-  const url = 'https://www.cm-barreiro.pt/conhecer/agenda-de-eventos/';
+  const BASE = 'https://www.cm-barreiro.pt/conhecer/agenda-de-eventos/';
   let browser: Browser | null = null;
 
   try {
-    console.log('🚀 Launching browser...');
+    console.log('🚀 A lançar browser...');
     browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
-
-    // Set a realistic viewport and user agent
     await page.setViewportSize({ width: 1280, height: 900 });
-    await page.setExtraHTTPHeaders({
-      'Accept-Language': 'pt-PT,pt;q=0.9,en;q=0.8',
-    });
 
-    console.log(`📄 Navigating to ${url}`);
-    await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 });
+    console.log('📄 A navegar para a agenda...');
+    await page.goto(BASE, { waitUntil: 'networkidle', timeout: 30000 });
 
-    // Accept cookies if the banner appears
+    // Aceitar cookies
     try {
-      const cookieBtn = page.locator('text=Aceitar tudo');
-      if (await cookieBtn.isVisible({ timeout: 3000 })) {
-        await cookieBtn.click();
-        console.log('🍪 Accepted cookies');
+      const btn = page.locator('text=Aceitar tudo');
+      if (await btn.isVisible({ timeout: 3000 })) {
+        await btn.click();
         await page.waitForTimeout(500);
       }
-    } catch { /* no cookie banner */ }
+    } catch {}
 
-    // Wait for events to load (they come via AJAX)
-    console.log('⏳ Waiting for events to render...');
     await page.waitForTimeout(3000);
 
-    // Scroll down to trigger lazy loading
-    for (let i = 0; i < 5; i++) {
-      await page.mouse.wheel(0, 800);
-      await page.waitForTimeout(500);
+    // Scroll para carregar tudo
+    for (let i = 0; i < 8; i++) {
+      await page.mouse.wheel(0, 600);
+      await page.waitForTimeout(400);
     }
 
-    // Extract event data from the page
-    console.log('🔍 Extracting events...');
-    const raw = await page.evaluate(() => {
-      const events: any[] = [];
-
-      // Strategy 1: Look for event card/list elements
-      // The CM Barreiro site typically renders events in a list with links to /eventos/
-      const links = document.querySelectorAll('a[href*="/eventos/"]');
+    // ─── Extrair links de eventos ACTUAIS ───
+    // Os eventos reais têm ?mp= no URL e o texto contém data + título
+    console.log('🔍 A extrair eventos da agenda...');
+    const rawItems = await page.evaluate(() => {
+      const items: { href: string; text: string; img: string }[] = [];
+      // Seleccionar links que são eventos actuais (contêm ?mp= ou estão em /eventos/ com data)
+      const allLinks = document.querySelectorAll('a[href*="/eventos/"]');
       const seen = new Set<string>();
 
-      links.forEach(a => {
-        const href = (a as HTMLAnchorElement).href;
-        if (seen.has(href)) return;
-        seen.add(href);
+      allLinks.forEach(a => {
+        const el = a as HTMLAnchorElement;
+        const href = el.href;
+        // Filtrar: só eventos com query params (são os da agenda actual)
+        // OU eventos em /eventos/ que não sejam sub-páginas de arquivo
+        const url = new URL(href);
+        const isAgendaEvent = url.search.includes('mp=');
+        const isDirectEvent = url.pathname.match(/^\/eventos\/[^/]+\/?$/) && !url.pathname.includes('feira-quinhentista') && !url.pathname.includes('festas-do-barreiro') && !url.pathname.includes('provocacao') && !url.pathname.includes('moinho-lounge');
 
-        // Get the closest container
-        const card = a.closest('.evento, .event, .post, article, .card, li') || a;
-        const title = card.querySelector('h2, h3, h4, .title, .titulo')?.textContent?.trim()
-          || a.textContent?.trim() || '';
-        if (!title || title.length < 3) return;
+        if (!isAgendaEvent && !isDirectEvent) return;
 
-        // Try to find date, location, etc.
-        const dateEl = card.querySelector('.date, .data, time, .event-date');
-        const dateText = dateEl?.textContent?.trim() || '';
-        const locEl = card.querySelector('.location, .local, .venue');
-        const locText = locEl?.textContent?.trim() || '';
+        // Deduplicate by pathname
+        const key = url.pathname;
+        if (seen.has(key)) return;
+        seen.add(key);
+
+        const text = el.textContent || '';
+        // Procurar imagem no card pai
+        const card = el.closest('li, article, .event, .card, div') || el;
         const imgEl = card.querySelector('img');
-        const imgSrc = imgEl?.src || '';
+        const img = imgEl ? imgEl.src : '';
 
-        events.push({ title, dateText, location: locText, url: href, imageUrl: imgSrc });
+        items.push({ href, text: text.trim(), img });
       });
-
-      // Strategy 2: If no events found via links, try to read visible text blocks
-      if (events.length === 0) {
-        const allText = document.body.innerText;
-        // Look for patterns like dates followed by venue names
-        const blocks = allText.split(/\n\n+/);
-        for (const block of blocks) {
-          if (block.includes('Piscina') || block.includes('Auditório') ||
-              block.includes('Biblioteca') || block.includes('Mercado') ||
-              block.includes('Parque')) {
-            events.push({ title: block.slice(0, 100), dateText: '', location: '', url: '', raw: block });
-          }
-        }
-      }
-
-      return events;
+      return items;
     });
 
-    console.log(`📦 Found ${raw.length} raw events`);
+    console.log(`📦 Encontrados ${rawItems.length} eventos na agenda`);
 
-    // Also scrape individual event pages for more detail
+    if (rawItems.length === 0) {
+      console.log('⚠️ Nenhum evento encontrado na agenda. A página pode ter mudado.');
+      return [];
+    }
+
+    // ─── Visitar cada página de evento para extrair detalhes ───
     const events: Event[] = [];
-    const eventUrls = raw
-      .filter((r: any) => r.url && r.url.includes('/eventos/'))
-      .slice(0, 30); // Limit to 30 to avoid overload
 
-    for (const item of eventUrls) {
+    for (const item of rawItems) {
       try {
-        const ev = await scrapeEventDetail(page, item.url, item);
-        if (ev) events.push(ev);
-      } catch (err) {
-        console.warn(`⚠️ Failed to scrape ${item.url}:`, err);
+        console.log(`  → A extrair: ${item.text.slice(0, 60).replace(/\s+/g, ' ')}...`);
+        const ev = await scrapeDetail(page, item);
+        if (ev) {
+          events.push(ev);
+          console.log(`    ✓ ${ev.title} (${ev.date})`);
+        }
+      } catch (err: any) {
+        console.warn(`    ✗ Erro: ${err.message}`);
       }
     }
 
-    // If we got events from the listing but couldn't get details, use listing data
-    if (events.length === 0 && raw.length > 0) {
-      for (const item of raw) {
-        const date = parseDatePT(item.dateText || '') || '2026-01-01';
-        events.push({
-          id: generateId(item.title, date),
-          title: item.title,
-          subtitle: '',
-          category: detectCategory(item.title, ''),
-          date,
-          location: item.location || 'Barreiro',
-          price: '',
-          description: '',
-          url: item.url || url,
-          imageUrl: item.imageUrl,
-          source: 'cm-barreiro.pt',
-          scrapedAt: new Date().toISOString(),
-        });
-      }
-    }
+    // Marcar o primeiro evento futuro como destaque
+    const today = new Date().toISOString().slice(0, 10);
+    const future = events.filter(e => e.date >= today).sort((a, b) => a.date.localeCompare(b.date));
+    if (future.length > 0) future[0].featured = true;
 
-    console.log(`✅ Scraped ${events.length} events`);
+    console.log(`\n✅ ${events.length} eventos extraídos com sucesso`);
     return events;
 
   } catch (err) {
-    console.error('❌ Scraping failed:', err);
+    console.error('❌ Scraping falhou:', err);
     return [];
   } finally {
     if (browser) await browser.close();
   }
 }
 
-// ─── Scrape individual event page ──────────────────────────────
+// ─── Detalhe de cada evento ─────────────────────────────────────
 
-async function scrapeEventDetail(page: Page, url: string, listing: any): Promise<Event | null> {
-  try {
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
-    await page.waitForTimeout(1500);
+async function scrapeDetail(page: Page, item: { href: string; text: string; img: string }): Promise<Event | null> {
+  // Extrair data do texto do link (ex: "25 Janeiro 2026 - 7 Junho 2026\n...Circuito de Torneios...")
+  const dateMatch = item.text.match(/(\d{1,2}\s+\w+\s+\d{4})/g);
+  const listDate = dateMatch?.[0] ? parseDatePT(dateMatch[0]) : null;
+  const listEndDate = dateMatch?.[1] ? parseDatePT(dateMatch[1]) : null;
 
-    const data = await page.evaluate(() => {
-      const title = document.querySelector('h1, .entry-title, .event-title')?.textContent?.trim() || '';
-      const contentEl = document.querySelector('.entry-content, .event-content, article, main');
-      const content = contentEl?.textContent?.trim() || '';
-      const contentHtml = contentEl?.innerHTML || '';
+  await page.goto(item.href, { waitUntil: 'domcontentloaded', timeout: 20000 });
+  await page.waitForTimeout(2000);
 
-      // ─── Full description (clean paragraphs) ───
-      const paragraphs = contentEl?.querySelectorAll('p');
-      const descFull = paragraphs
-        ? Array.from(paragraphs).map(p => p.textContent?.trim()).filter(t => t && t.length > 10).join('\n\n')
-        : content.slice(0, 1000);
+  const data = await page.evaluate(() => {
+    // Título — h1 principal, limpar "Atualizado em..."
+    const h1Raw = document.querySelector('h1')?.textContent?.trim() || '';
+    const title = h1Raw.replace(/\s*Atualizado em.*/i, '').replace(/\s+/g, ' ').trim();
 
-      // ─── JSON-LD structured data ───
-      const jsonLd = document.querySelector('script[type="application/ld+json"]');
-      let structured: any = null;
-      if (jsonLd) { try { structured = JSON.parse(jsonLd.textContent || ''); } catch {} }
+    // Conteúdo principal
+    const main = document.querySelector('.entry-content, .event-content, article .content, main article, .post-content');
+    const body = main || document.querySelector('main') || document.body;
+    const fullText = body.innerText || '';
 
-      // ─── Dates ───
-      const datePatterns = content.match(/(\d{1,2}\s+(?:de\s+)?\w+(?:\s+(?:de\s+)?\d{4})?)/gi) || [];
-      const timePattern = content.match(/(\d{1,2})[h:](\d{2})?/);
-      const time = timePattern ? `${timePattern[1].padStart(2,'0')}:${timePattern[2]||'00'}` : '';
+    // Parágrafos limpos para descrição
+    const ps = body.querySelectorAll('p');
+    const paragraphs = Array.from(ps)
+      .map(p => (p.textContent || '').trim())
+      .filter(t => t.length > 20 && !t.includes('Procurar') && !t.includes('Tipo de conteúdo') && !t.includes('Selecionar'));
+    const descFull = paragraphs.join('\n\n').slice(0, 3000);
+    const descShort = paragraphs[0]?.slice(0, 300) || '';
 
-      // ─── Price ───
-      const priceMatch = content.match(/(?:ingressos?|preço|bilhete)[:\s]*(?:€|EUR)\s*(\d+[,.]?\d*)|(?:€|EUR)\s*(\d+[,.]?\d*)|(\d+[,.]?\d*)\s*(?:€|EUR)|gratuito|entrada\s+livre/i);
-      let price = '';
-      if (priceMatch) {
-        if (/gratuito|livre/i.test(priceMatch[0])) price = 'Gratuito';
-        else price = '€' + (priceMatch[1] || priceMatch[2] || priceMatch[3]);
-      }
+    // Datas no conteúdo
+    const dateMatches = fullText.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
 
-      // ─── Location ───
-      const locMatch = content.match(/(Auditório[^.\n]*|Piscina[^.\n]*|Biblioteca[^.\n]*|Mercado[^.\n]*|Parque[^.\n]*|Moinho[^.\n]*|Mata[^.\n]*|AMAC[^.\n]*)/i);
-      const location = locMatch ? locMatch[0].trim().slice(0, 80) : '';
+    // Hora
+    const timeMatch = fullText.match(/(\d{1,2})[hH:](\d{2})/);
+    const time = timeMatch ? `${timeMatch[1].padStart(2, '0')}:${timeMatch[2]}` : '';
 
-      // ─── Organizer ───
-      const orgMatch = content.match(/Org\.?[:\s]*(CMB[^.\n]*|Câmara[^.\n]*|[^.\n]{3,50})/i);
-      const organizer = orgMatch ? orgMatch[1].trim() : '';
+    // Localização — procurar padrões comuns
+    const locPatterns = [
+      /(?:Local|Onde|Venue)[:\s]+([^\n]+)/i,
+      /(Auditório[^.\n,]{0,60})/i,
+      /(Piscina[^.\n,]{0,60})/i,
+      /(Biblioteca[^.\n,]{0,60})/i,
+      /(Mercado[^.\n,]{0,60})/i,
+      /(Parque[^.\n,]{0,60})/i,
+      /(Mata[^.\n,]{0,60})/i,
+      /(Galeria[^.\n,]{0,60})/i,
+      /(Pavilhão[^.\n,]{0,60})/i,
+      /(AMAC[^.\n,]{0,60})/i,
+    ];
+    let location = '';
+    for (const re of locPatterns) {
+      const m = fullText.match(re);
+      if (m) { location = m[1]?.trim() || m[0]?.trim(); break; }
+    }
 
-      // ─── Contacts ───
-      const phoneMatch = content.match(/(\d{3}\s?\d{3}\s?\d{3})/g);
-      const emailMatch = content.match(/[\w.-]+@[\w.-]+\.\w+/g);
-      const contacts = [
-        ...(phoneMatch || []),
-        ...(emailMatch || []),
-      ].join(' · ') || '';
+    // Preço
+    const priceMatch = fullText.match(/gratuito|entrada\s+livre|€\s*\d+[,.]?\d*/i);
+    const price = priceMatch ? (/gratuito|livre/i.test(priceMatch[0]) ? 'Gratuito' : priceMatch[0]) : '';
 
-      // ─── Ticket URL ───
-      const ticketLink = contentEl?.querySelector('a[href*="ticketline"], a[href*="bilhete"], a[href*="inscrição"], a[href*="inscricao"], a[href*="xistarca"]');
-      const ticketUrl = (ticketLink as HTMLAnchorElement)?.href || '';
+    // Imagem — og:image ou primeira imagem do conteúdo
+    const ogImg = document.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
+    const contentImg = body.querySelector('img:not([src*="logo"])')?.getAttribute('src') || '';
+    const imageUrl = ogImg || contentImg;
 
-      // ─── Age rating ───
-      const ageMatch = content.match(/M\/(\d+)\s*anos/i);
-      const ageRating = ageMatch ? `M/${ageMatch[1]} anos` : '';
+    // Organizador
+    const orgMatch = fullText.match(/(?:Organização|Org\.|Promoção)[:\s]+([^\n]{3,60})/i);
+    const organizer = orgMatch ? orgMatch[1].trim() : '';
 
-      // ─── Image ───
-      const img = document.querySelector('.wp-post-image, .event-image img, article img, .entry-content img');
-      const imageUrl = (img as HTMLImageElement)?.src || '';
+    // Contactos
+    const phones = fullText.match(/(?:2\d{2}\s?\d{3}\s?\d{3}|9\d{2}\s?\d{3}\s?\d{3})/g) || [];
+    const emails = fullText.match(/[\w.-]+@[\w.-]+\.\w+/g) || [];
+    const contacts = [...phones, ...emails].join(' · ');
 
-      // ─── OG image fallback ───
-      const ogImg = document.querySelector('meta[property="og:image"]');
-      const ogImageUrl = ogImg?.getAttribute('content') || '';
+    // Bilheteira
+    const ticketEl = body.querySelector('a[href*="ticketline"], a[href*="bilhete"], a[href*="xistarca"], a[href*="inscrição"], a[href*="inscricao"]') as HTMLAnchorElement;
+    const ticketUrl = ticketEl?.href || '';
 
-      return {
-        title,
-        content: content.slice(0, 500),
-        descFull: descFull.slice(0, 2000),
-        dates: datePatterns.slice(0, 3),
-        time,
-        price,
-        location,
-        organizer,
-        contacts,
-        ticketUrl,
-        ageRating,
-        imageUrl: imageUrl || ogImageUrl,
-        structured,
-      };
-    });
-
-    if (!data.title) return null;
-
-    const date = (data.dates[0] ? parseDatePT(data.dates[0]) : null) || '2026-01-01';
-    const endDate = data.dates[1] ? parseDatePT(data.dates[1]) : undefined;
+    // Classificação etária
+    const ageMatch = fullText.match(/M\/(\d+)\s*anos/i);
+    const ageRating = ageMatch ? `M/${ageMatch[1]} anos` : '';
 
     return {
-      id: generateId(data.title, date),
-      title: data.title,
-      subtitle: '',
-      category: detectCategory(data.title, data.content),
-      date,
-      endDate,
-      time: data.time || undefined,
-      location: data.location || listing?.location || 'Barreiro',
-      price: data.price || '',
-      description: data.content.slice(0, 300),
-      descriptionFull: data.descFull,
-      url,
-      imageUrl: data.imageUrl || listing?.imageUrl,
-      organizer: data.organizer || undefined,
-      contacts: data.contacts || undefined,
-      ticketUrl: data.ticketUrl || undefined,
-      ageRating: data.ageRating || undefined,
-      source: 'cm-barreiro.pt',
-      scrapedAt: new Date().toISOString(),
+      title, descShort, descFull, time, location, price, imageUrl,
+      organizer, contacts, ticketUrl, ageRating,
+      dates: dateMatches.slice(0, 4),
     };
-  } catch {
-    return null;
-  }
-}
+  });
 
-// ─── Store helpers ──────────────────────────────────────────────
-// NOTA: loadEvents, saveEvents e getLastUpdated estão em lib/store.ts
-// O scraper importa saveEvents de lá quando precisa de guardar dados.
-// Isto evita que o Next.js tente carregar Playwright ao importar o store.
+  if (!data.title || data.title.length < 3) return null;
+
+  // Usar data da listagem (mais fiável) ou da página de detalhe
+  const date = listDate || (data.dates[0] ? parseDatePT(data.dates[0]) : null) || new Date().toISOString().slice(0, 10);
+  const endDate = listEndDate || (data.dates[1] ? parseDatePT(data.dates[1]) : undefined);
+
+  return {
+    id: `${slug(data.title)}-${date}`,
+    title: data.title,
+    category: detectCat(`${data.title} ${data.descShort}`),
+    date,
+    endDate,
+    time: data.time || undefined,
+    location: data.location || 'Barreiro',
+    price: data.price,
+    description: data.descShort,
+    descriptionFull: data.descFull,
+    sourceUrl: item.href.split('?')[0],
+    imageUrl: data.imageUrl || item.img || undefined,
+    organizer: data.organizer || undefined,
+    contacts: data.contacts || undefined,
+    ticketUrl: data.ticketUrl || undefined,
+    ageRating: data.ageRating || undefined,
+    source: 'cm-barreiro.pt',
+    scrapedAt: new Date().toISOString(),
+  };
+}
