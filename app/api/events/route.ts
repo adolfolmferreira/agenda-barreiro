@@ -23,7 +23,7 @@ export async function GET(req: Request) {
   if (q) {
     const s = q.toLowerCase();
     events = events.filter(e =>
-      `${e.title} ${e.subtitle} ${e.location} ${e.description}`.toLowerCase().includes(s)
+      `${e.title} ${e.category} ${e.location} ${e.description}`.toLowerCase().includes(s)
     );
   }
 

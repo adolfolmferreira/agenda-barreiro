@@ -26,3 +26,4 @@ next-env.d.ts
 # scraped data (regenerável)
 data/events.json
 data/meta.json
+.vercel
