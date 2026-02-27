@@ -1,14 +1,13 @@
 {
   "name": "agenda-barreiro",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "Agenda de eventos e cultura do Barreiro",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "scrape": "npx tsx lib/scrapers/run.ts",
-    "scrape:test": "curl http://localhost:3000/api/scrape"
+    "scrape": "npx tsx scripts/scrape.ts"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
