@@ -1,9 +1,6 @@
 // lib/scraper.ts
-// Scraper para https://www.cm-barreiro.pt/conhecer/agenda-de-eventos/
-// Os eventos actuais têm URLs com ?mp=7164&mc=8420
-// e o texto do link contém a data + título
-
-import { chromium, type Browser, type Page } from 'playwright';
+// Scraper para cm-barreiro.pt — usa fetch para páginas individuais (rápido)
+// + Playwright só para descobrir novos URLs na listagem da agenda (AJAX)
 
 export interface Event {
   id: string;
@@ -27,22 +24,33 @@ export interface Event {
   featured?: boolean;
 }
 
+// ─── Seed URLs (known 2026 events) ─────────────────────────────
+// These are discovered via Google and updated by the agenda scraper
+const SEED_URLS = [
+  'https://www.cm-barreiro.pt/eventos/circuito-de-torneios-de-xadrez-do-barreiro-2026/',
+  'https://www.cm-barreiro.pt/eventos/barreiro-machada-trail-noturno-2026/',
+  'https://www.cm-barreiro.pt/eventos/exposicao-cem-peixes/',
+  'https://www.cm-barreiro.pt/eventos/exposicao-oleandras/',
+  'https://www.cm-barreiro.pt/eventos/2o-festival-de-bebes-circuito-de-natacao-do-barreiro-2025-2026/',
+  'https://www.cm-barreiro.pt/eventos/hora-do-conto-com-pozinhos-de-perlimpimpi-do-inicio-ao-fim-de-ana-frias-fev2026/',
+  'https://www.cm-barreiro.pt/eventos/cria-o-teu-projeto-2026/',
+  'https://www.cm-barreiro.pt/eventos/carnaval-das-escolas-2026-desfiles/',
+];
+
 // ─── Helpers ────────────────────────────────────────────────────
 
-const MONTHS_PT: Record<string, string> = {
+const MP: Record<string, string> = {
   janeiro:'01', fevereiro:'02', 'março':'03', marco:'03', abril:'04',
   maio:'05', junho:'06', julho:'07', agosto:'08', setembro:'09',
   outubro:'10', novembro:'11', dezembro:'12',
 };
 
-function parseDatePT(text: string): string | null {
-  const m = text.match(/(\d{1,2})\s+(\w+)\s+(\d{4})/i);
+function parsePT(text: string): string | null {
+  const m = text.match(/(\d{1,2})\s+(?:de\s+)?(\w+)\s+(?:de\s+)?(\d{4})/i);
   if (!m) return null;
-  const day = m[1].padStart(2, '0');
-  const key = m[2].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  const month = MONTHS_PT[key];
-  if (!month) return null;
-  return `${m[3]}-${month}-${day}`;
+  const k = m[2].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const mo = MP[k];
+  return mo ? `${m[3]}-${mo}-${m[1].padStart(2, '0')}` : null;
 }
 
 function slug(t: string): string {
@@ -50,245 +58,236 @@ function slug(t: string): string {
     .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
 }
 
-const CAT_RULES: [RegExp, string][] = [
-  [/concert|música|fado|zambujo|ivandro|tiago sousa|banda municipal|orquestra|jazz|hip.?hop/i, 'Música'],
+const CR: [RegExp, string][] = [
+  [/concert|música|fado|zambujo|ivandro|jazz|hip.?hop|punk|banda/i, 'Música'],
   [/exposiç|ilustra|mostra|galeria|pintura|fotografia/i, 'Exposição'],
   [/dança|flamen|ballet|coreograf/i, 'Dança'],
   [/teatro|peça|dramatur|comédia|palco|espetáculo/i, 'Teatro'],
-  [/trail|natação|atletismo|xadrez|desport|corta.?mato|torneio|circuito|piscina|corrida/i, 'Desporto'],
-  [/oficina|workshop|curso|formação/i, 'Workshop'],
+  [/trail|natação|atletismo|xadrez|desport|corta.?mato|torneio|circuito|piscina|corrida|festival de bebé/i, 'Desporto'],
+  [/oficina|workshop|curso|formação|treinador/i, 'Workshop'],
   [/visita|patrimon|roteiro|guiad/i, 'Visitas'],
   [/conto|leitura|livro|biblioteca|hora do conto/i, 'Leitura'],
   [/cinema|filme|sessão/i, 'Cinema'],
-  [/feira|mercado|gastronom/i, 'Comunidade'],
+  [/carnaval|feira|mercado|gastronom|festas|projeto|desfile/i, 'Comunidade'],
 ];
 
-function detectCat(text: string): string {
-  for (const [re, cat] of CAT_RULES) if (re.test(text)) return cat;
+function cat(text: string): string {
+  for (const [re, c] of CR) if (re.test(text)) return c;
   return 'Comunidade';
 }
 
-// ─── Main ───────────────────────────────────────────────────────
-
-export async function scrapeEvents(): Promise<Event[]> {
-  const BASE = 'https://www.cm-barreiro.pt/conhecer/agenda-de-eventos/';
-  let browser: Browser | null = null;
-
-  try {
-    console.log('🚀 A lançar browser...');
-    browser = await chromium.launch({ headless: true });
-    const page = await browser.newPage();
-    await page.setViewportSize({ width: 1280, height: 900 });
-
-    console.log('📄 A navegar para a agenda...');
-    await page.goto(BASE, { waitUntil: 'networkidle', timeout: 30000 });
-
-    // Aceitar cookies
-    try {
-      const btn = page.locator('text=Aceitar tudo');
-      if (await btn.isVisible({ timeout: 3000 })) {
-        await btn.click();
-        await page.waitForTimeout(500);
-      }
-    } catch {}
-
-    await page.waitForTimeout(3000);
-
-    // Scroll para carregar tudo
-    for (let i = 0; i < 8; i++) {
-      await page.mouse.wheel(0, 600);
-      await page.waitForTimeout(400);
-    }
-
-    // ─── Extrair links de eventos ACTUAIS ───
-    // Os eventos reais têm ?mp= no URL e o texto contém data + título
-    console.log('🔍 A extrair eventos da agenda...');
-    const rawItems = await page.evaluate(() => {
-      const items: { href: string; text: string; img: string }[] = [];
-      // Seleccionar links que são eventos actuais (contêm ?mp= ou estão em /eventos/ com data)
-      const allLinks = document.querySelectorAll('a[href*="/eventos/"]');
-      const seen = new Set<string>();
-
-      allLinks.forEach(a => {
-        const el = a as HTMLAnchorElement;
-        const href = el.href;
-        // Filtrar: só eventos com query params (são os da agenda actual)
-        // OU eventos em /eventos/ que não sejam sub-páginas de arquivo
-        const url = new URL(href);
-        const isAgendaEvent = url.search.includes('mp=');
-        // Excluir eventos com anos antigos no URL (2015-2025)
-        const hasOldYear = /20(1[5-9]|2[0-5])/.test(url.pathname);
-        const isDirectEvent = url.pathname.match(/^\/eventos\/[^/]+\/?$/) && !hasOldYear && !url.pathname.includes('feira-quinhentista') && !url.pathname.includes('festas-do-barreiro') && !url.pathname.includes('provocacao') && !url.pathname.includes('moinho-lounge');
-
-        if (!isAgendaEvent && !isDirectEvent) return;
-
-        // Deduplicate by pathname
-        const key = url.pathname;
-        if (seen.has(key)) return;
-        seen.add(key);
-
-        const text = el.textContent || '';
-        // Procurar imagem no card pai
-        const card = el.closest('li, article, .event, .card, div') || el;
-        const imgEl = card.querySelector('img');
-        const img = imgEl ? imgEl.src : '';
-
-        items.push({ href, text: text.trim(), img });
-      });
-      return items;
-    });
-
-    console.log(`📦 Encontrados ${rawItems.length} eventos na agenda`);
-
-    if (rawItems.length === 0) {
-      console.log('⚠️ Nenhum evento encontrado na agenda. A página pode ter mudado.');
-      return [];
-    }
-
-    // ─── Visitar cada página de evento para extrair detalhes ───
-    const events: Event[] = [];
-
-    for (const item of rawItems) {
-      try {
-        console.log(`  → A extrair: ${item.text.slice(0, 60).replace(/\s+/g, ' ')}...`);
-        const ev = await scrapeDetail(page, item);
-        if (ev) {
-          events.push(ev);
-          console.log(`    ✓ ${ev.title} (${ev.date})`);
-        }
-      } catch (err: any) {
-        console.warn(`    ✗ Erro: ${err.message}`);
-      }
-    }
-
-    // Marcar o primeiro evento futuro como destaque
-    const today = new Date().toISOString().slice(0, 10);
-    const future = events.filter(e => e.date >= today).sort((a, b) => a.date.localeCompare(b.date));
-    if (future.length > 0) future[0].featured = true;
-
-    console.log(`\n✅ ${events.length} eventos extraídos com sucesso`);
-    return events;
-
-  } catch (err) {
-    console.error('❌ Scraping falhou:', err);
-    return [];
-  } finally {
-    if (browser) await browser.close();
-  }
+function strip(html: string): string {
+  return html.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ').replace(/&#8211;/g, '–')
+    .replace(/&#8217;/g, "'").replace(/&#8220;|&#8221;/g, '"').replace(/\s+/g, ' ').trim();
 }
 
-// ─── Detalhe de cada evento ─────────────────────────────────────
+function between(html: string, start: RegExp, end: RegExp): string {
+  const s = html.match(start);
+  if (!s) return '';
+  const rest = html.slice(s.index! + s[0].length);
+  const e = rest.match(end);
+  return e ? rest.slice(0, e.index) : rest.slice(0, 5000);
+}
 
-async function scrapeDetail(page: Page, item: { href: string; text: string; img: string }): Promise<Event | null> {
-  // Extrair data do texto do link (ex: "25 Janeiro 2026 - 7 Junho 2026\n...Circuito de Torneios...")
-  const dateMatch = item.text.match(/(\d{1,2}\s+\w+\s+\d{4})/g);
-  const listDate = dateMatch?.[0] ? parseDatePT(dateMatch[0]) : null;
-  const listEndDate = dateMatch?.[1] ? parseDatePT(dateMatch[1]) : null;
+// ─── Fetch & parse a single event page ──────────────────────────
 
-  await page.goto(item.href, { waitUntil: 'domcontentloaded', timeout: 20000 });
-  await page.waitForTimeout(2000);
+async function fetchEvent(url: string): Promise<Event | null> {
+  try {
+    const res = await fetch(url, {
+      signal: AbortSignal.timeout(10000),
+      headers: { 'Accept-Language': 'pt-PT,pt;q=0.9' },
+    });
+    if (!res.ok) return null;
+    const html = await res.text();
 
-  const data = await page.evaluate(() => {
-    // Título — h1 principal, limpar "Atualizado em..."
-    const h1Raw = document.querySelector('h1')?.textContent?.trim() || '';
-    const title = h1Raw.replace(/\s*Atualizado em.*/i, '').replace(/\s+/g, ' ').trim();
+    // Title from <h1>
+    const h1Raw = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || '';
+    const title = strip(h1Raw).replace(/\s*Atualizado em.*/i, '').trim();
+    if (!title || title.length < 3) return null;
 
-    // Conteúdo principal
-    const main = document.querySelector('.entry-content, .event-content, article .content, main article, .post-content');
-    const body = main || document.querySelector('main') || document.body;
-    const fullText = body.innerText || '';
+    // OG image
+    const ogImg = html.match(/property="og:image"[^>]+content="([^"]+)"/)?.[1]
+      || html.match(/content="([^"]+)"[^>]+property="og:image"/)?.[1] || '';
 
-    // Parágrafos limpos para descrição
-    const ps = body.querySelectorAll('p');
-    const paragraphs = Array.from(ps)
-      .map(p => (p.textContent || '').trim())
-      .filter(t => t.length > 20 && !t.includes('Procurar') && !t.includes('Tipo de conteúdo') && !t.includes('Selecionar'));
-    const descFull = paragraphs.join('\n\n').slice(0, 3000);
-    const descShort = paragraphs[0]?.slice(0, 300) || '';
+    // JSON-LD structured data
+    const ldMatch = html.match(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/i);
+    let ld: any = null;
+    if (ldMatch) try { ld = JSON.parse(ldMatch[1]); } catch {}
 
-    // Datas no conteúdo
-    const dateMatches = fullText.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
+    // Content area — get text between entry-content or after h1
+    const contentHtml = between(html, /class="[^"]*entry-content[^"]*"/i, /<\/article|<footer/i)
+      || between(html, /<h1/i, /<footer/i);
+    const contentText = strip(contentHtml);
 
-    // Hora
-    const timeMatch = fullText.match(/(\d{1,2})[hH:](\d{2})/);
-    const time = timeMatch ? `${timeMatch[1].padStart(2, '0')}:${timeMatch[2]}` : '';
+    // Dates
+    const dates = contentText.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
+    const date = (dates[0] ? parsePT(dates[0]) : null)
+      || (ld?.startDate ? ld.startDate.slice(0, 10) : null)
+      || new Date().toISOString().slice(0, 10);
+    const endDate = (dates[1] ? parsePT(dates[1]) : null)
+      || (ld?.endDate ? ld.endDate.slice(0, 10) : undefined);
 
-    // Localização — procurar padrões comuns
+    // Time
+    const timeM = contentText.match(/(\d{1,2})[hH:](\d{2})/);
+    const time = timeM ? `${timeM[1].padStart(2, '0')}:${timeM[2]}` : undefined;
+
+    // Location
     const locPatterns = [
-      /(?:Local|Onde|Venue)[:\s]+([^\n]+)/i,
-      /(Auditório[^.\n,]{0,60})/i,
-      /(Piscina[^.\n,]{0,60})/i,
-      /(Biblioteca[^.\n,]{0,60})/i,
-      /(Mercado[^.\n,]{0,60})/i,
-      /(Parque[^.\n,]{0,60})/i,
-      /(Mata[^.\n,]{0,60})/i,
-      /(Galeria[^.\n,]{0,60})/i,
-      /(Pavilhão[^.\n,]{0,60})/i,
-      /(AMAC[^.\n,]{0,60})/i,
+      /(?:Local|Onde)[:\s]+([^\n.]{5,60})/i,
+      /(Auditório[^.\n,]{0,50})/i, /(Piscina[^.\n,]{0,50})/i,
+      /(Biblioteca[^.\n,]{0,50})/i, /(Mercado[^.\n,]{0,50})/i,
+      /(Mata[^.\n,]{0,50})/i, /(Parque[^.\n,]{0,50})/i,
+      /(Pavilhão[^.\n,]{0,50})/i, /(Espaço J[^.\n,]{0,30})/i,
     ];
     let location = '';
     for (const re of locPatterns) {
-      const m = fullText.match(re);
-      if (m) { location = m[1]?.trim() || m[0]?.trim(); break; }
+      const m = contentText.match(re);
+      if (m) { location = (m[1] || m[0]).trim(); break; }
     }
+    if (!location) location = 'Barreiro';
 
-    // Preço
-    const priceMatch = fullText.match(/gratuito|entrada\s+livre|€\s*\d+[,.]?\d*/i);
-    const price = priceMatch ? (/gratuito|livre/i.test(priceMatch[0]) ? 'Gratuito' : priceMatch[0]) : '';
+    // Price
+    const priceM = contentText.match(/gratuito|entrada\s+livre|€\s*\d+[,.]?\d*/i);
+    const price = priceM ? (/gratuito|livre/i.test(priceM[0]) ? 'Gratuito' : priceM[0]) : '';
 
-    // Imagem — og:image ou primeira imagem do conteúdo
-    const ogImg = document.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
-    const contentImg = body.querySelector('img:not([src*="logo"])')?.getAttribute('src') || '';
-    const imageUrl = ogImg || contentImg;
+    // Description — clean paragraphs from HTML
+    const paragraphs = contentHtml.match(/<p[^>]*>([\s\S]*?)<\/p>/gi) || [];
+    const cleanPs = paragraphs.map(p => strip(p)).filter(t => t.length > 15 && !/Procurar|Selecionar|Tipo de conteúdo|cookies/i.test(t));
+    const descFull = cleanPs.join('\n\n').slice(0, 3000);
+    const desc = cleanPs[0]?.slice(0, 300) || '';
 
-    // Organizador
-    const orgMatch = fullText.match(/(?:Organização|Org\.|Promoção)[:\s]+([^\n]{3,60})/i);
-    const organizer = orgMatch ? orgMatch[1].trim() : '';
+    // Organizer
+    const orgM = contentText.match(/Org\.?[:\s]*(CMB[^\n.]{0,50}|Câmara[^\n.]{0,50}|[^\n.]{3,50})/i);
+    const organizer = orgM ? orgM[1].trim() : undefined;
 
-    // Contactos
-    const phones = fullText.match(/(?:2\d{2}\s?\d{3}\s?\d{3}|9\d{2}\s?\d{3}\s?\d{3})/g) || [];
-    const emails = fullText.match(/[\w.-]+@[\w.-]+\.\w+/g) || [];
-    const contacts = [...phones, ...emails].join(' · ');
+    // Contacts
+    const phones = contentText.match(/(?:2\d{2}\s?\d{3}\s?\d{3}|9\d{2}\s?\d{3}\s?\d{3})/g) || [];
+    const emails = contentText.match(/[\w.-]+@[\w.-]+\.\w+/g) || [];
+    const contacts = [...phones, ...emails].filter(c => !c.includes('cm-barreiro')).join(' · ') || undefined;
 
-    // Bilheteira
-    const ticketEl = body.querySelector('a[href*="ticketline"], a[href*="bilhete"], a[href*="xistarca"], a[href*="inscrição"], a[href*="inscricao"]') as HTMLAnchorElement;
-    const ticketUrl = ticketEl?.href || '';
+    // Ticket URL
+    const ticketM = contentHtml.match(/href="([^"]*(?:ticketline|xistarca|bilhete|inscri)[^"]*)"/i);
+    const ticketUrl = ticketM ? ticketM[1] : undefined;
 
-    // Classificação etária
-    const ageMatch = fullText.match(/M\/(\d+)\s*anos/i);
-    const ageRating = ageMatch ? `M/${ageMatch[1]} anos` : '';
+    // Age rating
+    const ageM = contentText.match(/M\/(\d+)\s*anos/i);
+    const ageRating = ageM ? `M/${ageM[1]} anos` : undefined;
+
+    const cleanUrl = url.split('?')[0];
 
     return {
-      title, descShort, descFull, time, location, price, imageUrl,
+      id: `${slug(title)}-${date}`,
+      title, category: cat(`${title} ${desc}`),
+      date, endDate, time, location, price,
+      description: desc, descriptionFull: descFull,
+      sourceUrl: cleanUrl,
+      imageUrl: ogImg || undefined,
       organizer, contacts, ticketUrl, ageRating,
-      dates: dateMatches.slice(0, 4),
+      source: 'cm-barreiro.pt',
+      scrapedAt: new Date().toISOString(),
     };
-  });
+  } catch (err: any) {
+    console.warn(`  ✗ ${url.split('/eventos/')[1]?.slice(0,40)} — ${err.message.slice(0, 50)}`);
+    return null;
+  }
+}
 
-  if (!data.title || data.title.length < 3) return null;
+// ─── Discover new URLs from the agenda page (Playwright) ────────
 
-  // Usar data da listagem (mais fiável) ou da página de detalhe
-  const date = listDate || (data.dates[0] ? parseDatePT(data.dates[0]) : null) || new Date().toISOString().slice(0, 10);
-  const endDate = listEndDate || (data.dates[1] ? parseDatePT(data.dates[1]) : undefined);
+async function discoverUrls(): Promise<string[]> {
+  try {
+    const { chromium } = await import('playwright');
+    console.log('🔍 A descobrir novos eventos na agenda (Playwright)...');
+    const b = await chromium.launch({ headless: true });
+    const p = await b.newPage();
+    await p.goto('https://www.cm-barreiro.pt/conhecer/agenda-de-eventos/', {
+      waitUntil: 'domcontentloaded', timeout: 15000,
+    });
+    try { await p.locator('text=Aceitar tudo').click({ timeout: 2000 }); } catch {}
+    await p.waitForTimeout(4000);
+    for (let i = 0; i < 5; i++) { await p.mouse.wheel(0, 600); await p.waitForTimeout(300); }
 
-  return {
-    id: `${slug(data.title)}-${date}`,
-    title: data.title,
-    category: detectCat(`${data.title} ${data.descShort}`),
-    date,
-    endDate,
-    time: data.time || undefined,
-    location: data.location || 'Barreiro',
-    price: data.price,
-    description: data.descShort,
-    descriptionFull: data.descFull,
-    sourceUrl: item.href.split('?')[0],
-    imageUrl: data.imageUrl || item.img || undefined,
-    organizer: data.organizer || undefined,
-    contacts: data.contacts || undefined,
-    ticketUrl: data.ticketUrl || undefined,
-    ageRating: data.ageRating || undefined,
-    source: 'cm-barreiro.pt',
-    scrapedAt: new Date().toISOString(),
-  };
+    const urls = await p.evaluate(() => {
+      const links = document.querySelectorAll('a[href*="/eventos/"]');
+      const result: string[] = [];
+      const seen = new Set<string>();
+      links.forEach(a => {
+        const href = (a as HTMLAnchorElement).href.split('?')[0];
+        if (seen.has(href)) return;
+        seen.add(href);
+        const u = new URL(href);
+        if (u.pathname.match(/^\/eventos\/[^/]+\/?$/)) result.push(href);
+      });
+      return result;
+    });
+
+    await b.close();
+    console.log(`  Encontrados ${urls.length} URLs na agenda`);
+    return urls;
+  } catch (err: any) {
+    console.warn(`  ⚠️ Playwright falhou: ${err.message.slice(0, 60)}`);
+    return [];
+  }
+}
+
+// ─── Main scraper ───────────────────────────────────────────────
+
+export async function scrapeEvents(): Promise<Event[]> {
+  console.log('═══════════════════════════════════════');
+  console.log('  Agenda Barreiro — Scraper v6');
+  console.log('  fetch + Playwright discovery');
+  console.log('═══════════════════════════════════════\n');
+
+  // 1. Collect all unique URLs
+  const urlSet = new Set<string>(SEED_URLS);
+
+  // 2. Try to discover more from the agenda page
+  const discovered = await discoverUrls();
+  // Filter: only 2026+ events, exclude old archive pages
+  const now = new Date().getFullYear();
+  for (const u of discovered) {
+    const path = new URL(u).pathname;
+    const yearMatch = path.match(/20(\d{2})/);
+    if (yearMatch) {
+      const yr = 2000 + parseInt(yearMatch[1]);
+      if (yr < now) continue; // skip old events
+    }
+    urlSet.add(u);
+  }
+
+  console.log(`\n📋 ${urlSet.size} URLs únicos para processar\n`);
+
+  // 3. Fetch all event pages (fast, parallel in batches of 3)
+  const urls = Array.from(urlSet);
+  const events: Event[] = [];
+
+  for (let i = 0; i < urls.length; i += 3) {
+    const batch = urls.slice(i, i + 3);
+    const results = await Promise.all(batch.map(async url => {
+      const ev = await fetchEvent(url);
+      if (ev) console.log(`  ✓ ${ev.title} (${ev.date})`);
+      return ev;
+    }));
+    for (const r of results) if (r) events.push(r);
+  }
+
+  // 4. Sort by date, mark featured
+  events.sort((a, b) => a.date.localeCompare(b.date));
+  const today = new Date().toISOString().slice(0, 10);
+  const upcoming = events.filter(e => e.date >= today);
+  if (upcoming.length > 0) upcoming[0].featured = true;
+
+  // 5. Deduplicate by title similarity
+  const unique: Event[] = [];
+  const seen = new Set<string>();
+  for (const e of events) {
+    const key = slug(e.title);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    unique.push(e);
+  }
+
+  console.log(`\n✅ ${unique.length} eventos únicos extraídos`);
+  return unique;
 }
