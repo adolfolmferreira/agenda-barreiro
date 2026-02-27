@@ -1,6 +1,5 @@
-// lib/scraper.ts
-// Scraper para cm-barreiro.pt — usa fetch para páginas individuais (rápido)
-// + Playwright só para descobrir novos URLs na listagem da agenda (AJAX)
+// lib/scraper.ts — v7
+// Scraper com paginação completa via Playwright + fetch para páginas individuais
 
 export interface Event {
   id: string;
@@ -23,19 +22,6 @@ export interface Event {
   scrapedAt: string;
   featured?: boolean;
 }
-
-// ─── Seed URLs (known 2026 events) ─────────────────────────────
-// These are discovered via Google and updated by the agenda scraper
-const SEED_URLS = [
-  'https://www.cm-barreiro.pt/eventos/circuito-de-torneios-de-xadrez-do-barreiro-2026/',
-  'https://www.cm-barreiro.pt/eventos/barreiro-machada-trail-noturno-2026/',
-  'https://www.cm-barreiro.pt/eventos/exposicao-cem-peixes/',
-  'https://www.cm-barreiro.pt/eventos/exposicao-oleandras/',
-  'https://www.cm-barreiro.pt/eventos/2o-festival-de-bebes-circuito-de-natacao-do-barreiro-2025-2026/',
-  'https://www.cm-barreiro.pt/eventos/hora-do-conto-com-pozinhos-de-perlimpimpi-do-inicio-ao-fim-de-ana-frias-fev2026/',
-  'https://www.cm-barreiro.pt/eventos/cria-o-teu-projeto-2026/',
-  'https://www.cm-barreiro.pt/eventos/carnaval-das-escolas-2026-desfiles/',
-];
 
 // ─── Helpers ────────────────────────────────────────────────────
 
@@ -62,13 +48,13 @@ const CR: [RegExp, string][] = [
   [/concert|música|fado|zambujo|ivandro|jazz|hip.?hop|punk|banda/i, 'Música'],
   [/exposiç|ilustra|mostra|galeria|pintura|fotografia/i, 'Exposição'],
   [/dança|flamen|ballet|coreograf/i, 'Dança'],
-  [/teatro|peça|dramatur|comédia|palco|espetáculo/i, 'Teatro'],
-  [/trail|natação|atletismo|xadrez|desport|corta.?mato|torneio|circuito|piscina|corrida|festival de bebé/i, 'Desporto'],
-  [/oficina|workshop|curso|formação|treinador/i, 'Workshop'],
+  [/teatro|peça|dramatur|comédia|palco|espetáculo|marioneta/i, 'Teatro'],
+  [/trail|natação|natacao|atletismo|xadrez|desport|corta.?mato|torneio|circuito|piscina|corrida|festival de bebé|walking.?football|aqua|meeting/i, 'Desporto'],
+  [/oficina|workshop|curso|formação|treinador|masterclass/i, 'Workshop'],
   [/visita|patrimon|roteiro|guiad/i, 'Visitas'],
-  [/conto|leitura|livro|biblioteca|hora do conto/i, 'Leitura'],
+  [/conto|leitura|livro|biblioteca|hora do conto|clube de leitura/i, 'Leitura'],
   [/cinema|filme|sessão/i, 'Cinema'],
-  [/carnaval|feira|mercado|gastronom|festas|projeto|desfile/i, 'Comunidade'],
+  [/carnaval|feira|mercado|gastronom|festas|projeto|desfile|baile|namorados/i, 'Comunidade'],
 ];
 
 function cat(text: string): string {
@@ -101,26 +87,21 @@ async function fetchEvent(url: string): Promise<Event | null> {
     if (!res.ok) return null;
     const html = await res.text();
 
-    // Title from <h1>
     const h1Raw = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || '';
     const title = strip(h1Raw).replace(/\s*Atualizado em.*/i, '').trim();
     if (!title || title.length < 3) return null;
 
-    // OG image
     const ogImg = html.match(/property="og:image"[^>]+content="([^"]+)"/)?.[1]
       || html.match(/content="([^"]+)"[^>]+property="og:image"/)?.[1] || '';
 
-    // JSON-LD structured data
     const ldMatch = html.match(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/i);
     let ld: any = null;
     if (ldMatch) try { ld = JSON.parse(ldMatch[1]); } catch {}
 
-    // Content area — get text between entry-content or after h1
     const contentHtml = between(html, /class="[^"]*entry-content[^"]*"/i, /<\/article|<footer/i)
       || between(html, /<h1/i, /<footer/i);
     const contentText = strip(contentHtml);
 
-    // Dates
     const dates = contentText.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
     const date = (dates[0] ? parsePT(dates[0]) : null)
       || (ld?.startDate ? ld.startDate.slice(0, 10) : null)
@@ -128,11 +109,9 @@ async function fetchEvent(url: string): Promise<Event | null> {
     const endDate = (dates[1] ? parsePT(dates[1]) : null)
       || (ld?.endDate ? ld.endDate.slice(0, 10) : undefined);
 
-    // Time
     const timeM = contentText.match(/(\d{1,2})[hH:](\d{2})/);
     const time = timeM ? `${timeM[1].padStart(2, '0')}:${timeM[2]}` : undefined;
 
-    // Location
     const locPatterns = [
       /(?:Local|Onde)[:\s]+([^\n.]{5,60})/i,
       /(Auditório[^.\n,]{0,50})/i, /(Piscina[^.\n,]{0,50})/i,
@@ -147,30 +126,24 @@ async function fetchEvent(url: string): Promise<Event | null> {
     }
     if (!location) location = 'Barreiro';
 
-    // Price
     const priceM = contentText.match(/gratuito|entrada\s+livre|€\s*\d+[,.]?\d*/i);
     const price = priceM ? (/gratuito|livre/i.test(priceM[0]) ? 'Gratuito' : priceM[0]) : '';
 
-    // Description — clean paragraphs from HTML
     const paragraphs = contentHtml.match(/<p[^>]*>([\s\S]*?)<\/p>/gi) || [];
     const cleanPs = paragraphs.map(p => strip(p)).filter(t => t.length > 15 && !/Procurar|Selecionar|Tipo de conteúdo|cookies/i.test(t));
     const descFull = cleanPs.join('\n\n').slice(0, 3000);
     const desc = cleanPs[0]?.slice(0, 300) || '';
 
-    // Organizer
     const orgM = contentText.match(/Org\.?[:\s]*(CMB[^\n.]{0,50}|Câmara[^\n.]{0,50}|[^\n.]{3,50})/i);
     const organizer = orgM ? orgM[1].trim() : undefined;
 
-    // Contacts
     const phones = contentText.match(/(?:2\d{2}\s?\d{3}\s?\d{3}|9\d{2}\s?\d{3}\s?\d{3})/g) || [];
     const emails = contentText.match(/[\w.-]+@[\w.-]+\.\w+/g) || [];
     const contacts = [...phones, ...emails].filter(c => !c.includes('cm-barreiro')).join(' · ') || undefined;
 
-    // Ticket URL
     const ticketM = contentHtml.match(/href="([^"]*(?:ticketline|xistarca|bilhete|inscri)[^"]*)"/i);
     const ticketUrl = ticketM ? ticketM[1] : undefined;
 
-    // Age rating
     const ageM = contentText.match(/M\/(\d+)\s*anos/i);
     const ageRating = ageM ? `M/${ageM[1]} anos` : undefined;
 
@@ -188,100 +161,133 @@ async function fetchEvent(url: string): Promise<Event | null> {
       scrapedAt: new Date().toISOString(),
     };
   } catch (err: any) {
-    console.warn(`  ✗ ${url.split('/eventos/')[1]?.slice(0,40)} — ${err.message.slice(0, 50)}`);
+    console.warn(`  ✗ ${url.split('/eventos/')[1]?.slice(0, 40)} — ${err.message.slice(0, 50)}`);
     return null;
   }
 }
 
-// ─── Discover new URLs from the agenda page (Playwright) ────────
+// ─── Discover ALL URLs via pagination ───────────────────────────
 
-async function discoverUrls(): Promise<string[]> {
-  try {
-    const { chromium } = await import('playwright');
-    console.log('🔍 A descobrir novos eventos na agenda (Playwright)...');
-    const b = await chromium.launch({ headless: true });
-    const p = await b.newPage();
-    await p.goto('https://www.cm-barreiro.pt/conhecer/agenda-de-eventos/', {
-      waitUntil: 'domcontentloaded', timeout: 15000,
-    });
-    try { await p.locator('text=Aceitar tudo').click({ timeout: 2000 }); } catch {}
-    await p.waitForTimeout(4000);
-    for (let i = 0; i < 5; i++) { await p.mouse.wheel(0, 600); await p.waitForTimeout(300); }
+async function discoverAllUrls(): Promise<string[]> {
+  const { chromium } = await import('playwright');
+  console.log('🔍 A descobrir eventos com paginação (Playwright)...\n');
+  const b = await chromium.launch({ headless: true });
+  const p = await b.newPage();
+  await p.goto('https://www.cm-barreiro.pt/conhecer/agenda-de-eventos/', {
+    waitUntil: 'networkidle', timeout: 20000,
+  });
 
+  // Dismiss cookies
+  try { await p.locator('text=Aceitar tudo').click({ timeout: 2000 }); } catch {}
+  await p.waitForTimeout(3000);
+
+  const allUrls = new Set<string>();
+  let pageNum = 1;
+  const MAX_PAGES = 50; // safety limit
+
+  while (pageNum <= MAX_PAGES) {
+    // Scroll to load lazy content
+    for (let i = 0; i < 3; i++) {
+      await p.mouse.wheel(0, 500);
+      await p.waitForTimeout(200);
+    }
+
+    // Extract event URLs from current page
     const urls = await p.evaluate(() => {
       const links = document.querySelectorAll('a[href*="/eventos/"]');
       const result: string[] = [];
-      const seen = new Set<string>();
       links.forEach(a => {
         const href = (a as HTMLAnchorElement).href.split('?')[0];
-        if (seen.has(href)) return;
-        seen.add(href);
         const u = new URL(href);
         if (u.pathname.match(/^\/eventos\/[^/]+\/?$/)) result.push(href);
       });
       return result;
     });
 
-    await b.close();
-    console.log(`  Encontrados ${urls.length} URLs na agenda`);
-    return urls;
-  } catch (err: any) {
-    console.warn(`  ⚠️ Playwright falhou: ${err.message.slice(0, 60)}`);
-    return [];
+    const newCount = urls.filter(u => !allUrls.has(u)).length;
+    urls.forEach(u => allUrls.add(u));
+    console.log(`  📄 Página ${pageNum}: ${urls.length} links (${newCount} novos) — total: ${allUrls.size}`);
+
+    // If no new URLs found, we might be looping
+    if (newCount === 0 && pageNum > 2) {
+      console.log('  ⏹ Sem novos URLs, a parar');
+      break;
+    }
+
+    // Try clicking next page button
+    const nextBtn = await p.$('button.pag-001-next:not(.pag-arrow--disabled)');
+    if (!nextBtn) {
+      console.log('  ⏹ Última página alcançada');
+      break;
+    }
+
+    await nextBtn.click();
+    await p.waitForTimeout(2500);
+    pageNum++;
   }
+
+  await b.close();
+  console.log(`\n📦 ${allUrls.size} URLs totais descobertos em ${pageNum} páginas`);
+  return Array.from(allUrls);
 }
 
 // ─── Main scraper ───────────────────────────────────────────────
 
 export async function scrapeEvents(): Promise<Event[]> {
   console.log('═══════════════════════════════════════');
-  console.log('  Agenda Barreiro — Scraper v6');
-  console.log('  fetch + Playwright discovery');
+  console.log('  Agenda Barreiro — Scraper v7');
+  console.log('  Paginação completa + fetch');
   console.log('═══════════════════════════════════════\n');
 
-  // 1. Collect all unique URLs
-  const urlSet = new Set<string>(SEED_URLS);
+  // 1. Discover all URLs via pagination
+  const allDiscovered = await discoverAllUrls();
 
-  // 2. Try to discover more from the agenda page
-  const discovered = await discoverUrls();
-  // Filter: only 2026+ events, exclude old archive pages
-  const now = new Date().getFullYear();
-  for (const u of discovered) {
+  // 2. Filter: only keep events with 2025/2026 in URL or no year (current)
+  const currentYear = new Date().getFullYear();
+  const urls = allDiscovered.filter(u => {
     const path = new URL(u).pathname;
     const yearMatch = path.match(/20(\d{2})/);
-    if (yearMatch) {
-      const yr = 2000 + parseInt(yearMatch[1]);
-      if (yr < now) continue; // skip old events
-    }
-    urlSet.add(u);
-  }
+    if (!yearMatch) return true; // no year in URL = probably current
+    const yr = 2000 + parseInt(yearMatch[1]);
+    return yr >= currentYear - 1; // keep 2025 and 2026+
+  });
 
-  console.log(`\n📋 ${urlSet.size} URLs únicos para processar\n`);
+  console.log(`\n📋 ${urls.length} URLs de eventos actuais (filtrados de ${allDiscovered.length})\n`);
 
-  // 3. Fetch all event pages (fast, parallel in batches of 3)
-  const urls = Array.from(urlSet);
+  // 3. Fetch all event pages in parallel batches of 4
   const events: Event[] = [];
-
-  for (let i = 0; i < urls.length; i += 3) {
-    const batch = urls.slice(i, i + 3);
+  for (let i = 0; i < urls.length; i += 4) {
+    const batch = urls.slice(i, i + 4);
     const results = await Promise.all(batch.map(async url => {
       const ev = await fetchEvent(url);
-      if (ev) console.log(`  ✓ ${ev.title} (${ev.date})`);
+      if (ev) {
+        const icon = ev.date >= '2026-01-01' ? '✓' : '⚠';
+        console.log(`  ${icon} ${ev.title.slice(0, 50)} (${ev.date})`);
+      }
       return ev;
     }));
     for (const r of results) if (r) events.push(r);
   }
 
-  // 4. Sort by date, mark featured
-  events.sort((a, b) => a.date.localeCompare(b.date));
-  const today = new Date().toISOString().slice(0, 10);
-  const upcoming = events.filter(e => e.date >= today);
-  if (upcoming.length > 0) upcoming[0].featured = true;
+  // 4. Filter: only events with date in 2025-2026 range
+  const filtered = events.filter(e => {
+    const year = parseInt(e.date.slice(0, 4));
+    return year >= currentYear - 1 && year <= currentYear + 1;
+  });
 
-  // 5. Deduplicate by title similarity
+  // 5. Sort by date
+  filtered.sort((a, b) => a.date.localeCompare(b.date));
+
+  // 6. Mark featured (next upcoming with image)
+  const today = new Date().toISOString().slice(0, 10);
+  const upcoming = filtered.filter(e => (e.endDate || e.date) >= today);
+  const feat = upcoming.find(e => e.imageUrl) || upcoming[0];
+  if (feat) feat.featured = true;
+
+  // 7. Deduplicate by slug
   const unique: Event[] = [];
   const seen = new Set<string>();
-  for (const e of events) {
+  for (const e of filtered) {
     const key = slug(e.title);
     if (seen.has(key)) continue;
     seen.add(key);
