@@ -1,16 +1,27 @@
-// app/page.tsx
-import { loadEvents, getLastUpdated } from '@/lib/store';
-import type { Event } from '@/lib/scraper';
+import { promises as fs } from 'fs';
+import path from 'path';
 import ClientPage from './client-page';
 
-export const revalidate = 300;
+// Revalidate every 6 hours — Next.js ISR
+// When deployed on Vercel, the page rebuilds automatically after this interval
+export const revalidate = 21600; // 6h in seconds
 
-export default async function Home() {
-  let events: Event[] = [];
-  let updatedAt: string | null = null;
+async function getEvents() {
   try {
-    events = await loadEvents();
-    updatedAt = await getLastUpdated();
-  } catch {}
-  return <ClientPage events={events} updatedAt={updatedAt} />;
+    const filePath = path.join(process.cwd(), 'data', 'events.json');
+    const raw = await fs.readFile(filePath, 'utf-8');
+    const data = JSON.parse(raw);
+    return {
+      events: data.events || data || [],
+      lastUpdated: data.lastUpdated || data.scrapedAt || null,
+    };
+  } catch (e) {
+    console.error('Failed to load events.json:', e);
+    return { events: [], lastUpdated: null };
+  }
+}
+
+export default async function Page() {
+  const { events, lastUpdated } = await getEvents();
+  return <ClientPage events={events} lastUpdated={lastUpdated} />;
 }
