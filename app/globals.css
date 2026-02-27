@@ -409,7 +409,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ═══ PDF EDITIONS — magazine-size covers ═══ */
 .tsl-pdf {
   padding: 80px 48px 96px;
-  border-top: 1px solid #e5e5e5;
+  background: #1a1a1a;
   overflow: hidden;
 }
 
@@ -418,7 +418,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-style: italic;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 400;
-  color: #1a1a1a;
+  color: #fff;
   text-align: center;
   margin-bottom: 56px;
   letter-spacing: -1px;
@@ -440,7 +440,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .tsl-pdf-item {
   flex: 0 0 auto;
-  width: clamp(260px, 22vw, 340px);
+  width: clamp(340px, 30vw, 480px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -458,28 +458,28 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-family: 'Instrument Serif', serif;
   font-size: 18px;
   font-weight: 400;
-  color: #888;
+  color: rgba(255,255,255,.6);
   margin-bottom: 20px;
   letter-spacing: 0.3px;
   transition: color 0.2s;
 }
 
 .tsl-pdf-item:hover .tsl-pdf-label {
-  color: #1a1a1a;
+  color: #fff;
 }
 
 .tsl-pdf-cover {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 710 / 480;
   overflow: hidden;
-  background: #1a1a1a;
+  background: #333;
   border-radius: 2px;
-  box-shadow: 0 8px 40px rgba(0,0,0,.12);
+  box-shadow: 0 8px 40px rgba(0,0,0,.3);
   transition: box-shadow 0.4s, transform 0.4s;
 }
 
 .tsl-pdf-item:hover .tsl-pdf-cover {
-  box-shadow: 0 16px 56px rgba(0,0,0,.22);
+  box-shadow: 0 16px 56px rgba(0,0,0,.5);
   transform: translateY(-8px);
 }
 

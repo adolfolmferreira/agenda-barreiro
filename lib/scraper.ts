@@ -103,8 +103,24 @@ async function fetchEvent(url: string): Promise<Event | null> {
     const contentText = strip(contentHtml);
 
     const dates = contentText.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
+
+    // Try to extract date from image URL (e.g. /2026-03-15-Oficina...)
+    let imgDate: string | null = null;
+    if (ogImg) {
+      const imgDateMatch = ogImg.match(/(20\d{2})-(\d{2})-(\d{2})/);
+      if (imgDateMatch) imgDate = `${imgDateMatch[1]}-${imgDateMatch[2]}-${imgDateMatch[3]}`;
+    }
+
+    // Try to extract date from the page URL slug (e.g. /eventos/21-fevereiro-2026/)
+    const urlPath = new URL(url).pathname;
+    const urlDateMatch = urlPath.match(/(\d{1,2})-(?:de-)?(\w+)-(?:de-)?(\d{4})/i);
+    let urlDate: string | null = null;
+    if (urlDateMatch) urlDate = parsePT(`${urlDateMatch[1]} ${urlDateMatch[2]} ${urlDateMatch[3]}`);
+
     const date = (dates[0] ? parsePT(dates[0]) : null)
       || (ld?.startDate ? ld.startDate.slice(0, 10) : null)
+      || imgDate
+      || urlDate
       || new Date().toISOString().slice(0, 10);
     const endDate = (dates[1] ? parsePT(dates[1]) : null)
       || (ld?.endDate ? ld.endDate.slice(0, 10) : undefined);
