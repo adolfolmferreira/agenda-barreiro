@@ -24,7 +24,7 @@ const DEMO = [
   { id:17, t:"Circuito de Xadrez", s:"GD Independente Quinta Lomba", cat:"Desporto", d:"2026-03-29", tm:"15:00", loc:"Quinta Lomba – Sede", pr:"Gratuito", desc:"27ª edição.", u:"https://www.cm-barreiro.pt/eventos/circuito-de-torneios-de-xadrez-do-barreiro-2026/" },
 ];
 
-interface EV { id:any; t:string; s:string; cat:string; d:string; tm?:string; ed?:string; loc:string; pr:string; desc:string; u:string; f?:number; img?:string; }
+interface EV { id:any; t:string; s:string; cat:string; d:string; tm?:string; ed?:string; loc:string; pr:string; desc:string; descFull?:string; u:string; f?:number; img?:string; org?:string; contacts?:string; ticket?:string; age?:string; }
 
 const CATS = ["Música","Exposição","Dança","Desporto","Workshop","Visitas","Comunidade"];
 const CC: Record<string,string> = { Música:"#D62828", Exposição:"#E76F51", Dança:"#9B5DE5", Desporto:"#2A9D8F", Workshop:"#F72585", Visitas:"#4895EF", Comunidade:"#E9C46A" };
@@ -33,7 +33,7 @@ const MS = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","D
 const dt = (d:string) => new Date(d+"T00:00:00");
 
 function mapServer(events:any[]): EV[] {
-  return events.map((e:any,i:number) => ({ id:e.id||i+1, t:e.title||'', s:e.subtitle||'', cat:e.category||'Comunidade', d:e.date||'', tm:e.time, ed:e.endDate, loc:e.location||'', pr:e.price||'', desc:e.description||'', u:e.url||'', f:e.featured?1:undefined, img:e.imageUrl }));
+  return events.map((e:any,i:number) => ({ id:e.id||i+1, t:e.title||'', s:e.subtitle||'', cat:e.category||'Comunidade', d:e.date||'', tm:e.time, ed:e.endDate, loc:e.location||'', pr:e.price||'', desc:e.description||'', descFull:e.descriptionFull, u:e.url||'', f:e.featured?1:undefined, img:e.imageUrl, org:e.organizer, contacts:e.contacts, ticket:e.ticketUrl, age:e.ageRating }));
 }
 
 interface Props { events?:any[]; updatedAt?:string|null; }
@@ -96,10 +96,42 @@ export default function ClientPage({ events:srv, updatedAt }: Props) {
                 </div>
               ))}
             </div>
-            <p style={{ fontFamily:serif, fontSize:20, lineHeight:1.7, color:"#333", fontStyle:"italic" }}>{ev.desc}</p>
-            <a href={ev.u} target="_blank" rel="noopener noreferrer" style={{ display:"inline-flex", alignItems:"center", gap:8, background:"#0a0a0a", color:"#fff", padding:"14px 28px", textDecoration:"none", fontSize:13, fontWeight:700, marginTop:32 }}>
-              Ver em cm-barreiro.pt ↗
-            </a>
+            <p style={{ fontFamily:serif, fontSize:20, lineHeight:1.7, color:"#333", fontStyle:"italic" }}>{ev.descFull || ev.desc}</p>
+
+            {/* ─── Extra info ─── */}
+            {(ev.org || ev.contacts || ev.age) && (
+              <div style={{ marginTop:32, padding:"24px 0", borderTop:"1px solid #eee", display:"flex", flexDirection:"column", gap:16 }}>
+                {ev.org && (
+                  <div>
+                    <div style={{ fontSize:10, fontWeight:700, letterSpacing:2, textTransform:"uppercase", color:"#bbb", marginBottom:4 }}>Organização</div>
+                    <div style={{ fontSize:15, color:"#444" }}>{ev.org}</div>
+                  </div>
+                )}
+                {ev.age && (
+                  <div>
+                    <div style={{ fontSize:10, fontWeight:700, letterSpacing:2, textTransform:"uppercase", color:"#bbb", marginBottom:4 }}>Classificação etária</div>
+                    <div style={{ fontSize:15, color:"#444" }}>{ev.age}</div>
+                  </div>
+                )}
+                {ev.contacts && (
+                  <div>
+                    <div style={{ fontSize:10, fontWeight:700, letterSpacing:2, textTransform:"uppercase", color:"#bbb", marginBottom:4 }}>Contactos</div>
+                    <div style={{ fontSize:15, color:"#444" }}>{ev.contacts}</div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            <div style={{ display:"flex", gap:12, flexWrap:"wrap", marginTop:32 }}>
+              <a href={ev.u} target="_blank" rel="noopener noreferrer" style={{ display:"inline-flex", alignItems:"center", gap:8, background:"#0a0a0a", color:"#fff", padding:"14px 28px", textDecoration:"none", fontSize:13, fontWeight:700 }}>
+                Ver em cm-barreiro.pt ↗
+              </a>
+              {ev.ticket && (
+                <a href={ev.ticket} target="_blank" rel="noopener noreferrer" style={{ display:"inline-flex", alignItems:"center", gap:8, background:c, color:"#fff", padding:"14px 28px", textDecoration:"none", fontSize:13, fontWeight:700 }}>
+                  Comprar bilhetes ↗
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </>

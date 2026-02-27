@@ -21,8 +21,14 @@ export interface Event {
   location: string;
   price: string;
   description: string;
+  descriptionFull: string;  // descrição completa da página de detalhe
   url: string;
   imageUrl?: string;
+  organizer?: string;       // organizador (ex: CMB, Sons em Trânsito)
+  contacts?: string;        // telefones, emails
+  ticketUrl?: string;       // link de bilheteira
+  ageRating?: string;       // ex: M/6 anos
+  tags?: string[];          // palavras-chave extraídas
   source: string;
   scrapedAt: string;
 }
@@ -219,46 +225,83 @@ export async function scrapeEvents(): Promise<Event[]> {
 async function scrapeEventDetail(page: Page, url: string, listing: any): Promise<Event | null> {
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(1500);
 
     const data = await page.evaluate(() => {
       const title = document.querySelector('h1, .entry-title, .event-title')?.textContent?.trim() || '';
-      const content = document.querySelector('.entry-content, .event-content, article, main')?.textContent?.trim() || '';
+      const contentEl = document.querySelector('.entry-content, .event-content, article, main');
+      const content = contentEl?.textContent?.trim() || '';
+      const contentHtml = contentEl?.innerHTML || '';
 
-      // Try to extract structured event data from JSON-LD
+      // ─── Full description (clean paragraphs) ───
+      const paragraphs = contentEl?.querySelectorAll('p');
+      const descFull = paragraphs
+        ? Array.from(paragraphs).map(p => p.textContent?.trim()).filter(t => t && t.length > 10).join('\n\n')
+        : content.slice(0, 1000);
+
+      // ─── JSON-LD structured data ───
       const jsonLd = document.querySelector('script[type="application/ld+json"]');
       let structured: any = null;
-      if (jsonLd) {
-        try { structured = JSON.parse(jsonLd.textContent || ''); } catch {}
-      }
+      if (jsonLd) { try { structured = JSON.parse(jsonLd.textContent || ''); } catch {} }
 
-      // Extract dates from the page content
+      // ─── Dates ───
       const datePatterns = content.match(/(\d{1,2}\s+(?:de\s+)?\w+(?:\s+(?:de\s+)?\d{4})?)/gi) || [];
       const timePattern = content.match(/(\d{1,2})[h:](\d{2})?/);
       const time = timePattern ? `${timePattern[1].padStart(2,'0')}:${timePattern[2]||'00'}` : '';
 
-      // Look for price
-      const priceMatch = content.match(/(?:€|EUR)\s*(\d+[,.]?\d*)|(\d+[,.]?\d*)\s*(?:€|EUR)|gratuito|entrada\s+livre/i);
+      // ─── Price ───
+      const priceMatch = content.match(/(?:ingressos?|preço|bilhete)[:\s]*(?:€|EUR)\s*(\d+[,.]?\d*)|(?:€|EUR)\s*(\d+[,.]?\d*)|(\d+[,.]?\d*)\s*(?:€|EUR)|gratuito|entrada\s+livre/i);
       let price = '';
       if (priceMatch) {
         if (/gratuito|livre/i.test(priceMatch[0])) price = 'Gratuito';
-        else price = '€' + (priceMatch[1] || priceMatch[2]);
+        else price = '€' + (priceMatch[1] || priceMatch[2] || priceMatch[3]);
       }
 
-      // Location
-      const locMatch = content.match(/(Auditório|Piscina|Biblioteca|Mercado|Parque|Moinho|Mata)[^.\n]*/i);
-      const location = locMatch ? locMatch[0].trim() : '';
+      // ─── Location ───
+      const locMatch = content.match(/(Auditório[^.\n]*|Piscina[^.\n]*|Biblioteca[^.\n]*|Mercado[^.\n]*|Parque[^.\n]*|Moinho[^.\n]*|Mata[^.\n]*|AMAC[^.\n]*)/i);
+      const location = locMatch ? locMatch[0].trim().slice(0, 80) : '';
 
-      const img = document.querySelector('.event-image img, .wp-post-image, article img');
+      // ─── Organizer ───
+      const orgMatch = content.match(/Org\.?[:\s]*(CMB[^.\n]*|Câmara[^.\n]*|[^.\n]{3,50})/i);
+      const organizer = orgMatch ? orgMatch[1].trim() : '';
+
+      // ─── Contacts ───
+      const phoneMatch = content.match(/(\d{3}\s?\d{3}\s?\d{3})/g);
+      const emailMatch = content.match(/[\w.-]+@[\w.-]+\.\w+/g);
+      const contacts = [
+        ...(phoneMatch || []),
+        ...(emailMatch || []),
+      ].join(' · ') || '';
+
+      // ─── Ticket URL ───
+      const ticketLink = contentEl?.querySelector('a[href*="ticketline"], a[href*="bilhete"], a[href*="inscrição"], a[href*="inscricao"], a[href*="xistarca"]');
+      const ticketUrl = (ticketLink as HTMLAnchorElement)?.href || '';
+
+      // ─── Age rating ───
+      const ageMatch = content.match(/M\/(\d+)\s*anos/i);
+      const ageRating = ageMatch ? `M/${ageMatch[1]} anos` : '';
+
+      // ─── Image ───
+      const img = document.querySelector('.wp-post-image, .event-image img, article img, .entry-content img');
+      const imageUrl = (img as HTMLImageElement)?.src || '';
+
+      // ─── OG image fallback ───
+      const ogImg = document.querySelector('meta[property="og:image"]');
+      const ogImageUrl = ogImg?.getAttribute('content') || '';
 
       return {
         title,
         content: content.slice(0, 500),
+        descFull: descFull.slice(0, 2000),
         dates: datePatterns.slice(0, 3),
         time,
         price,
         location,
-        imageUrl: (img as HTMLImageElement)?.src || '',
+        organizer,
+        contacts,
+        ticketUrl,
+        ageRating,
+        imageUrl: imageUrl || ogImageUrl,
         structured,
       };
     });
@@ -279,8 +322,13 @@ async function scrapeEventDetail(page: Page, url: string, listing: any): Promise
       location: data.location || listing?.location || 'Barreiro',
       price: data.price || '',
       description: data.content.slice(0, 300),
+      descriptionFull: data.descFull,
       url,
       imageUrl: data.imageUrl || listing?.imageUrl,
+      organizer: data.organizer || undefined,
+      contacts: data.contacts || undefined,
+      ticketUrl: data.ticketUrl || undefined,
+      ageRating: data.ageRating || undefined,
       source: 'cm-barreiro.pt',
       scrapedAt: new Date().toISOString(),
     };

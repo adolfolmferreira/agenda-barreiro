@@ -16,8 +16,14 @@ export interface Event {
   location: string;
   price: string;
   description: string;
+  descriptionFull?: string;
   url: string;
   imageUrl?: string;
+  organizer?: string;
+  contacts?: string;
+  ticketUrl?: string;
+  ageRating?: string;
+  tags?: string[];
   source: string;
   scrapedAt: string;
 }
