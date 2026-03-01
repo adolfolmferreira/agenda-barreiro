@@ -343,12 +343,12 @@ export default function ClientPage({ events, lastUpdated }: Props) {
         <h2 className="tsl-pdf-heading">edição em pdf</h2>
         <div className="tsl-pdf-grid">
           {[
-            { title: 'março / abril 2026', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/12/710x480px_agenda2830_noticias-1.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-marco-abril-2026-ja-disponivel/' },
-            { title: 'janeiro / fevereiro 2026', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/12/710x480px_agenda2830_noticias-1.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-2830-janeiro-fevereiro-2026-ja-disponivel/' },
+            { title: 'março / abril 2026', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2026/02/Agenda-de-Eventos-Barreiro-marco-abril-2026_galeria_agenda2830.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-marco-abril-2026-ja-disponivel/' },
+            { title: 'janeiro / fevereiro 2026', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x1150px_galeria_agenda2830-1.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-2830-janeiro-fevereiro-2026-ja-disponivel/' },
             { title: 'especial natal 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/12/710x480px_agenda2830_noticias.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-2830-especial-natal-2025-ja-disponivel/' },
             { title: 'novembro / dezembro 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/10/710x480px_agenda2830_noticias-4.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-novembro-dezembro-2025-ja-disponivel/' },
             { title: 'setembro / outubro 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/08/710x480px_agenda2830_noticias.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-2830-setembro-outubro-2025-ja-disponivel/' },
-            { title: 'julho / agosto 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/06/710x480px_agenda2830_noticias-1.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-2830-julho-agosto-2025-ja-disponivel-2/' },
+            { title: 'julho / agosto 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/06/../2026/02/Agenda-de-Eventos-Barreiro-marco-abril-2026_galeria_agenda2830.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-2830-julho-agosto-2025-ja-disponivel-2/' },
           ].map((ed, i) => (
             <a key={i} className="tsl-pdf-item" href={ed.url} target="_blank" rel="noopener noreferrer">
               <div className="tsl-pdf-label">{ed.title}</div>
