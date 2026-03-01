@@ -26,9 +26,18 @@ export interface Event {
 // ─── Helpers ────────────────────────────────────────────────────
 
 const MP: Record<string, string> = {
-  janeiro:'01', fevereiro:'02', 'março':'03', marco:'03', abril:'04',
-  maio:'05', junho:'06', julho:'07', agosto:'08', setembro:'09',
-  outubro:'10', novembro:'11', dezembro:'12',
+  janeiro:'01', jan:'01',
+  fevereiro:'02', fev:'02',
+  'março':'03', marco:'03', mar:'03',
+  abril:'04', abr:'04',
+  maio:'05', mai:'05',
+  junho:'06', jun:'06',
+  julho:'07', jul:'07',
+  agosto:'08', ago:'08',
+  setembro:'09', set:'09',
+  outubro:'10', out:'10',
+  novembro:'11', nov:'11',
+  dezembro:'12', dez:'12',
 };
 
 function parsePT(text: string): string | null {
