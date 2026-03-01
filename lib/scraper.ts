@@ -126,15 +126,51 @@ async function fetchEvent(url: string): Promise<Event | null> {
     const contentText = strip(contentHtml);
 
     // ─── DATE EXTRACTION (cascading fallbacks) ──────────────
+    // First try structured LD+JSON (most reliable when available)
+    const ldDate = ld?.startDate ? ld.startDate.slice(0, 10) : null;
+
+    // Then try content text for standard date patterns
     const dates = contentText.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
     const parsedContentDate = dates[0] ? parsePT(dates[0]) : null;
-    const ldDate = ld?.startDate ? ld.startDate.slice(0, 10) : null;
+
+    // Then try description paragraphs for patterns like "dia 21 de março de 2026",
+    // "próximo dia 16 de março", "manhã de 7 de março"
+    const descText = cleanPs.join(' ');
+    const descDates = descText.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
+    const parsedDescDate = descDates[0] ? parsePT(descDates[0]) : null;
+
+    // Also try short patterns in description: "dia 7 de março" (without year — assume 2026)
+    let shortDescDate: string | null = null;
+    if (!parsedDescDate) {
+      const shortM = descText.match(/(?:dia|manhã de|tarde de|noite de)\s+(\d{1,2})\s+(?:de\s+)?(\w+)/i);
+      if (shortM) {
+        const k = shortM[2].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        const mo = MP[k];
+        if (mo) shortDescDate = `2026-${mo}-${shortM[1].padStart(2, '0')}`;
+      }
+    }
+
+    // Try image URL and page URL
     const imgDate = ogImg ? dateFromImageUrl(ogImg) : null;
     const urlDate = dateFromPageUrl(url);
 
+    // Also try short date in image filename: _16mar26.png
+    let imgShortDate: string | null = null;
+    if (ogImg) {
+      const shortImgM = ogImg.match(/[_-](\d{1,2})(jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)(\d{2})/i);
+      if (shortImgM) {
+        const moMap: Record<string, string> = {
+          jan:'01',fev:'02',mar:'03',abr:'04',mai:'05',jun:'06',
+          jul:'07',ago:'08',set:'09',out:'10',nov:'11',dez:'12'
+        };
+        const mo = moMap[shortImgM[2].toLowerCase()];
+        if (mo) imgShortDate = `20${shortImgM[3]}-${mo}-${shortImgM[1].padStart(2, '0')}`;
+      }
+    }
+
     // Use today ONLY as absolute last resort
     const today = new Date().toISOString().slice(0, 10);
-    const date = parsedContentDate || ldDate || imgDate || urlDate || today;
+    const date = ldDate || parsedContentDate || parsedDescDate || shortDescDate || imgDate || imgShortDate || urlDate || today;
     const usedFallback = date === today ? ' ⚠ FALLBACK' : '';
 
     const endDate = (dates[1] ? parsePT(dates[1]) : null)
