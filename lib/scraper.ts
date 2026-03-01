@@ -1,5 +1,5 @@
-// lib/scraper.ts — v8
-// Scraper com paginação completa + fallback de data via URL da imagem
+// lib/scraper.ts — v10
+// Best of v8 (working content extraction) + og:description for date fixing
 
 export interface Event {
   id: string;
@@ -39,6 +39,14 @@ function parsePT(text: string): string | null {
   return mo ? `${m[3]}-${mo}-${m[1].padStart(2, '0')}` : null;
 }
 
+function parseShortPT(text: string): string | null {
+  const m = text.match(/(?:dia|manhã de|tarde de|noite de|próximo dia)\s+(\d{1,2})\s+(?:de\s+)?(\w+)/i);
+  if (!m) return null;
+  const k = m[2].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const mo = MP[k];
+  return mo ? `2026-${mo}-${m[1].padStart(2, '0')}` : null;
+}
+
 function slug(t: string): string {
   return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
@@ -76,24 +84,28 @@ function between(html: string, start: RegExp, end: RegExp): string {
   return e ? rest.slice(0, e.index) : rest.slice(0, 5000);
 }
 
-/** Extract YYYY-MM-DD from an image URL like /2026-03-15-Oficina... or /2026/03/image.jpg */
 function dateFromImageUrl(imgUrl: string): string | null {
-  // Pattern 1: /2026-03-15-Something or /2026-03-15_Something
-  const m1 = imgUrl.match(/(20\d{2})-(\d{2})-(\d{2})/);
+  // Only match full YYYY-MM-DD (not just YYYY/MM from uploads path)
+  const m1 = imgUrl.match(/(\d{4})-(\d{2})-(\d{2})/);
   if (m1) return `${m1[1]}-${m1[2]}-${m1[3]}`;
-  // Pattern 2: /uploads/2026/03/
-  const m2 = imgUrl.match(/uploads\/(20\d{2})\/(\d{2})\//);
-  if (m2) return `${m2[1]}-${m2[2]}-01`;
   return null;
 }
 
-/** Extract YYYY-MM-DD from the page URL slug like /eventos/21-fevereiro-2026/ */
+function dateFromImageShort(imgUrl: string): string | null {
+  const m = imgUrl.match(/[_-](\d{1,2})(jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)(\d{2})/i);
+  if (!m) return null;
+  const moMap: Record<string, string> = {
+    jan:'01',fev:'02',mar:'03',abr:'04',mai:'05',jun:'06',
+    jul:'07',ago:'08',set:'09',out:'10',nov:'11',dez:'12'
+  };
+  const mo = moMap[m[2].toLowerCase()];
+  return mo ? `20${m[3]}-${mo}-${m[1].padStart(2, '0')}` : null;
+}
+
 function dateFromPageUrl(url: string): string | null {
   const path = new URL(url).pathname;
-  // Pattern: /14-marco-2026/ or /14-de-marco-de-2026/
   const m = path.match(/(\d{1,2})-(?:de-)?(\w+)-(?:de-)?(20\d{2})/i);
   if (m) return parsePT(`${m[1]} ${m[2]} ${m[3]}`);
-  // Pattern: /2026-03-14-something/
   const m2 = path.match(/(20\d{2})-(\d{2})-(\d{2})/);
   if (m2) return `${m2[1]}-${m2[2]}-${m2[3]}`;
   return null;
@@ -104,114 +116,111 @@ function dateFromPageUrl(url: string): string | null {
 async function fetchEvent(url: string): Promise<Event | null> {
   try {
     const res = await fetch(url, {
-      signal: AbortSignal.timeout(10000),
+      signal: AbortSignal.timeout(15000),
       headers: { 'Accept-Language': 'pt-PT,pt;q=0.9' },
     });
     if (!res.ok) return null;
     const html = await res.text();
 
+    // ─── Title ──────────────────────────────────────────────
     const h1Raw = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || '';
     const title = strip(h1Raw).replace(/\s*Atualizado em.*/i, '').trim();
     if (!title || title.length < 3) return null;
 
+    // ─── OG Image ───────────────────────────────────────────
     const ogImg = html.match(/property="og:image"[^>]+content="([^"]+)"/)?.[1]
       || html.match(/content="([^"]+)"[^>]+property="og:image"/)?.[1] || '';
 
+    // ─── OG Description (reliable event text) ───────────────
+    const ogDescRaw = html.match(/property="og:description"[^>]+content="([^"]+)"/i)?.[1]
+      || html.match(/content="([^"]+)"[^>]+property="og:description"/i)?.[1] || '';
+    const ogDesc = strip(ogDescRaw);
+
+    // ─── LD+JSON ────────────────────────────────────────────
     const ldMatch = html.match(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/i);
     let ld: any = null;
     if (ldMatch) try { ld = JSON.parse(ldMatch[1]); } catch {}
 
+    // ─── Content extraction (original v8 approach: h1 to footer) ──
     const contentHtml = between(html, /class="[^"]*entry-content[^"]*"/i, /<\/article|<footer/i)
       || between(html, /<h1/i, /<footer/i);
     const contentText = strip(contentHtml);
 
+    // ─── Paragraphs / Description ───────────────────────────
+    const paragraphs = contentHtml.match(/<p[^>]*>([\s\S]*?)<\/p>/gi) || [];
+    const cleanPs = paragraphs.map(p => strip(p)).filter(t => t.length > 15 && !/Procurar|Selecionar|Tipo de conteúdo|cookies/i.test(t));
+    const descFull = cleanPs.join('\n\n').slice(0, 3000) || ogDesc.slice(0, 3000);
+    const desc = cleanPs[0]?.slice(0, 300) || ogDesc.slice(0, 300);
+
     // ─── DATE EXTRACTION (cascading fallbacks) ──────────────
-    // First try structured LD+JSON (most reliable when available)
+    // Priority 1: LD+JSON
     const ldDate = ld?.startDate ? ld.startDate.slice(0, 10) : null;
 
-    // Then try content text for standard date patterns
-    const dates = contentText.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
-    const parsedContentDate = dates[0] ? parsePT(dates[0]) : null;
+    // Priority 2: og:description — most reliable event-specific text
+    const ogDates = ogDesc.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
+    const parsedOgDate = ogDates[0] ? parsePT(ogDates[0]) : null;
 
-    // Then try description paragraphs for patterns like "dia 21 de março de 2026",
-    // "próximo dia 16 de março", "manhã de 7 de março"
-    const descText = cleanPs.join(' ');
-    const descDates = descText.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
-    const parsedDescDate = descDates[0] ? parsePT(descDates[0]) : null;
+    // Priority 3: og:description short pattern — "dia 7 de março" (no year)
+    const shortOgDate = parseShortPT(ogDesc);
 
-    // Also try short patterns in description: "dia 7 de março" (without year — assume 2026)
-    let shortDescDate: string | null = null;
-    if (!parsedDescDate) {
-      const shortM = descText.match(/(?:dia|manhã de|tarde de|noite de)\s+(\d{1,2})\s+(?:de\s+)?(\w+)/i);
-      if (shortM) {
-        const k = shortM[2].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-        const mo = MP[k];
-        if (mo) shortDescDate = `2026-${mo}-${shortM[1].padStart(2, '0')}`;
-      }
-    }
+    // Priority 4: Content text (h1-to-footer, may include menu noise)
+    const contentDates = contentText.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
+    const parsedContentDate = contentDates[0] ? parsePT(contentDates[0]) : null;
 
-    // Try image URL and page URL
+    // Priority 5: Image URL with full date — /2026-03-15-Oficina...
     const imgDate = ogImg ? dateFromImageUrl(ogImg) : null;
+
+    // Priority 6: Image filename short — _16mar26.png
+    const imgShortDate = ogImg ? dateFromImageShort(ogImg) : null;
+
+    // Priority 7: Page URL
     const urlDate = dateFromPageUrl(url);
 
-    // Also try short date in image filename: _16mar26.png
-    let imgShortDate: string | null = null;
-    if (ogImg) {
-      const shortImgM = ogImg.match(/[_-](\d{1,2})(jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)(\d{2})/i);
-      if (shortImgM) {
-        const moMap: Record<string, string> = {
-          jan:'01',fev:'02',mar:'03',abr:'04',mai:'05',jun:'06',
-          jul:'07',ago:'08',set:'09',out:'10',nov:'11',dez:'12'
-        };
-        const mo = moMap[shortImgM[2].toLowerCase()];
-        if (mo) imgShortDate = `20${shortImgM[3]}-${mo}-${shortImgM[1].padStart(2, '0')}`;
-      }
-    }
-
-    // Use today ONLY as absolute last resort
+    // Priority 8: Today (last resort)
     const today = new Date().toISOString().slice(0, 10);
-    const date = ldDate || parsedContentDate || parsedDescDate || shortDescDate || imgDate || imgShortDate || urlDate || today;
-    const usedFallback = date === today ? ' ⚠ FALLBACK' : '';
+    const date = ldDate || parsedOgDate || shortOgDate || parsedContentDate || imgDate || imgShortDate || urlDate || today;
 
-    const endDate = (dates[1] ? parsePT(dates[1]) : null)
+    const endDate = (contentDates[1] ? parsePT(contentDates[1]) : null)
       || (ld?.endDate ? ld.endDate.slice(0, 10) : undefined);
 
-    const timeM = contentText.match(/(\d{1,2})[hH:](\d{2})/);
+    // ─── Time ───────────────────────────────────────────────
+    const timeM = contentText.match(/(\d{1,2})[hH:](\d{2})/) || ogDesc.match(/(\d{1,2})[hH:](\d{2})/);
     const time = timeM ? `${timeM[1].padStart(2, '0')}:${timeM[2]}` : undefined;
 
+    // ─── Location ───────────────────────────────────────────
+    const allText = contentText + ' ' + ogDesc;
     const locPatterns = [
       /(?:Local|Onde)[:\s]+([^\n.]{5,60})/i,
       /(Auditório[^.\n,]{0,50})/i, /(Piscina[^.\n,]{0,50})/i,
       /(Biblioteca[^.\n,]{0,50})/i, /(Mercado[^.\n,]{0,50})/i,
       /(Mata[^.\n,]{0,50})/i, /(Parque[^.\n,]{0,50})/i,
       /(Pavilhão[^.\n,]{0,50})/i, /(Espaço J[^.\n,]{0,30})/i,
+      /(StartUp[^.\n,]{0,30})/i, /(Igreja[^.\n,]{0,50})/i,
+      /(CEA[^.\n,]{0,60})/i, /(Campo de[^.\n,]{0,50})/i,
     ];
     let location = '';
     for (const re of locPatterns) {
-      const m = contentText.match(re);
+      const m = allText.match(re);
       if (m) { location = (m[1] || m[0]).trim(); break; }
     }
     if (!location) location = 'Barreiro';
 
-    const priceM = contentText.match(/gratuito|entrada\s+livre|€\s*\d+[,.]?\d*/i);
+    // ─── Price ──────────────────────────────────────────────
+    const priceM = allText.match(/gratuito|entrada\s+livre|€\s*\d+[,.]?\d*/i);
     const price = priceM ? (/gratuito|livre/i.test(priceM[0]) ? 'Gratuito' : priceM[0]) : '';
 
-    const paragraphs = contentHtml.match(/<p[^>]*>([\s\S]*?)<\/p>/gi) || [];
-    const cleanPs = paragraphs.map(p => strip(p)).filter(t => t.length > 15 && !/Procurar|Selecionar|Tipo de conteúdo|cookies/i.test(t));
-    const descFull = cleanPs.join('\n\n').slice(0, 3000);
-    const desc = cleanPs[0]?.slice(0, 300) || '';
-
-    const orgM = contentText.match(/Org\.?[:\s]*(CMB[^\n.]{0,50}|Câmara[^\n.]{0,50}|[^\n.]{3,50})/i);
+    // ─── Other metadata ─────────────────────────────────────
+    const orgM = allText.match(/Org\.?[:\s]*(CMB[^\n.]{0,50}|Câmara[^\n.]{0,50}|[^\n.]{3,50})/i);
     const organizer = orgM ? orgM[1].trim() : undefined;
 
-    const phones = contentText.match(/(?:2\d{2}\s?\d{3}\s?\d{3}|9\d{2}\s?\d{3}\s?\d{3})/g) || [];
-    const emails = contentText.match(/[\w.-]+@[\w.-]+\.\w+/g) || [];
+    const phones = allText.match(/(?:2\d{2}\s?\d{3}\s?\d{3}|9\d{2}\s?\d{3}\s?\d{3})/g) || [];
+    const emails = allText.match(/[\w.-]+@[\w.-]+\.\w+/g) || [];
     const contacts = [...phones, ...emails].filter(c => !c.includes('cm-barreiro')).join(' · ') || undefined;
 
     const ticketM = contentHtml.match(/href="([^"]*(?:ticketline|xistarca|bilhete|inscri)[^"]*)"/i);
     const ticketUrl = ticketM ? ticketM[1] : undefined;
 
-    const ageM = contentText.match(/M\/(\d+)\s*anos/i);
+    const ageM = allText.match(/M\/(\d+)\s*anos/i);
     const ageRating = ageM ? `M/${ageM[1]} anos` : undefined;
 
     const cleanUrl = url.split('?')[0];
@@ -298,13 +307,12 @@ async function discoverAllUrls(): Promise<string[]> {
 
 export async function scrapeEvents(): Promise<Event[]> {
   console.log('═══════════════════════════════════════');
-  console.log('  Agenda Barreiro — Scraper v8');
-  console.log('  Paginação + image URL date fallback');
+  console.log('  Agenda Barreiro — Scraper v10');
+  console.log('  og:description date + original content');
   console.log('═══════════════════════════════════════\n');
 
   const allDiscovered = await discoverAllUrls();
 
-  // Filter: exclude obviously old events (2024 or earlier in URL)
   const urls = allDiscovered.filter(u => {
     const path = new URL(u).pathname;
     const yearMatch = path.match(/20(\d{2})/);
@@ -315,10 +323,9 @@ export async function scrapeEvents(): Promise<Event[]> {
 
   console.log(`\n📋 ${urls.length} URLs de eventos actuais (filtrados de ${allDiscovered.length})\n`);
 
-  // Fetch all event pages in parallel batches of 4
   const events: Event[] = [];
-  for (let i = 0; i < urls.length; i += 4) {
-    const batch = urls.slice(i, i + 4);
+  for (let i = 0; i < urls.length; i += 3) {
+    const batch = urls.slice(i, i + 3);
     const results = await Promise.all(batch.map(async url => {
       const ev = await fetchEvent(url);
       if (ev) {
@@ -330,22 +337,18 @@ export async function scrapeEvents(): Promise<Event[]> {
     for (const r of results) if (r) events.push(r);
   }
 
-  // Filter: only 2025-2026
   const filtered = events.filter(e => {
     const year = parseInt(e.date.slice(0, 4));
     return year >= 2025 && year <= 2026;
   });
 
-  // Sort by date
   filtered.sort((a, b) => a.date.localeCompare(b.date));
 
-  // Mark featured (next upcoming with image)
   const today = new Date().toISOString().slice(0, 10);
   const upcoming = filtered.filter(e => (e.endDate || e.date) >= today);
   const feat = upcoming.find(e => e.imageUrl) || upcoming[0];
   if (feat) feat.featured = true;
 
-  // Deduplicate by slug
   const unique: Event[] = [];
   const seen = new Set<string>();
   for (const e of filtered) {
@@ -355,12 +358,10 @@ export async function scrapeEvents(): Promise<Event[]> {
     unique.push(e);
   }
 
-  // Log date source stats
   const withToday = unique.filter(e => e.date === today).length;
   console.log(`\n✅ ${unique.length} eventos únicos extraídos`);
-  if (withToday > 0) console.log(`⚠ ${withToday} eventos ainda com data de hoje (fallback)`);
+  if (withToday > 0) console.log(`⚠ ${withToday} eventos com data de hoje (fallback)`);
 
-  // Log March events specifically
   const march = unique.filter(e => e.date.startsWith('2026-03'));
   if (march.length > 0) {
     console.log(`\n📅 Eventos de Março: ${march.length}`);
