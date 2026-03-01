@@ -113,7 +113,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
   }, [events]);
 
   const months = useMemo(() => {
-    const s = new Set(events.filter(e => e.date >= "2026-01-01").map(e => mk(e.date)).filter(k => k.length === 7));
+    const s = new Set(events.filter(e => e.date >= "2026-01-01" && e.date <= "2026-06-30").map(e => mk(e.date)).filter(k => k.length === 7));
     return ['Todos os Meses', ...Array.from(s).sort().reverse()];
   }, [events]);
 
@@ -124,7 +124,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
   }, [events]);
 
   const filtered = useMemo(() => {
-    let list = events.filter(e => e.date >= "2026-01-01" && e.date < "2027-01-01");
+    let list = events.filter(e => e.date >= "2026-01-01" && e.date <= "2026-06-30");
     if (selCat !== 'Todos os Eventos') list = list.filter(e => e.category === selCat);
     if (selMon !== 'Todos os Meses') list = list.filter(e => mk(e.date) === selMon);
     // Exclude hero from grid
