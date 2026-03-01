@@ -90,7 +90,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
   const [catOpen, setCatOpen] = useState(false);
   const [monOpen, setMonOpen] = useState(false);
   const [selCat, setSelCat] = useState('Todos os Eventos');
-  const currentMk = `${new Date().getFullYear()}-${String(new Date().getMonth()+1).padStart(2,'0')}`; const [selMon, setSelMon] = useState(currentMk);
+  const [selMon, setSelMon] = useState('Todos os Meses');
   const [detail, setDetail] = useState<Event | null>(null);
 
   useEffect(() => { if (detail) window.scrollTo({ top: 0, behavior: 'smooth' }); }, [detail]);
@@ -114,7 +114,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
 
   const months = useMemo(() => {
     const s = new Set(events.filter(e => e.date >= "2026-01-01").map(e => mk(e.date)).filter(k => k.length === 7));
-    return ['Todos os Meses', ...Array.from(s).sort()];
+    return ['Todos os Meses', ...Array.from(s).sort().reverse()];
   }, [events]);
 
   // Hero: next upcoming with image
@@ -124,12 +124,12 @@ export default function ClientPage({ events, lastUpdated }: Props) {
   }, [events]);
 
   const filtered = useMemo(() => {
-    let list = events.filter(e => e.date >= "2026-01-01");
+    let list = events.filter(e => e.date >= "2026-01-01" && e.date < "2027-01-01");
     if (selCat !== 'Todos os Eventos') list = list.filter(e => e.category === selCat);
     if (selMon !== 'Todos os Meses') list = list.filter(e => mk(e.date) === selMon);
     // Exclude hero from grid
     if (hero) list = list.filter(e => e.id !== hero.id);
-    list.sort((a, b) => a.date.localeCompare(b.date));
+    list.sort((a, b) => b.date.localeCompare(a.date));
     return list;
   }, [events, selCat, selMon, hero]);
 
