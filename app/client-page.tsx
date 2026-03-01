@@ -90,7 +90,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
   const [catOpen, setCatOpen] = useState(false);
   const [monOpen, setMonOpen] = useState(false);
   const [selCat, setSelCat] = useState('Todos os Eventos');
-  const [selMon, setSelMon] = useState('Todos os Meses');
+  const currentMk = `${new Date().getFullYear()}-${String(new Date().getMonth()+1).padStart(2,'0')}`; const [selMon, setSelMon] = useState(currentMk);
   const [detail, setDetail] = useState<Event | null>(null);
 
   useEffect(() => { if (detail) window.scrollTo({ top: 0, behavior: 'smooth' }); }, [detail]);
