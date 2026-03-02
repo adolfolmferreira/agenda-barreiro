@@ -180,6 +180,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
   useEffect(() => {
     fetch('/api/cinema').then(r => r.json()).then(setCinema).catch(() => {});
   }, []);
+  const [page, setPage] = useState<'home' | 'agenda'>('home');
   const [detail, setDetail] = useState<Event | null>(null);
 
   useEffect(() => { if (detail) window.scrollTo({ top: 0, behavior: 'smooth' }); }, [detail]);
@@ -319,14 +320,15 @@ export default function ClientPage({ events, lastUpdated }: Props) {
             <span className="tsl-logo-wordmark">Agenda<br/>Barreiro</span>
           </a>
           <nav className="tsl-nav">
-            <a className="tsl-nav-link active">Agenda</a>
+            <a className={`tsl-nav-link ${page === 'home' && !detail ? 'active' : ''}`} onClick={() => { setPage('home'); setDetail(null); }}>Início</a>
+            <a className={`tsl-nav-link ${page === 'agenda' && !detail ? 'active' : ''}`} onClick={() => { setPage('agenda'); setDetail(null); }}>Agenda</a>
           </nav>
-          <div className="tsl-head-season">2025–2026</div>
         </div>
       </header>
 
       
 
+      {page === "home" && !detail && <>
       {/* EM DESTAQUE */}
       {(() => {
         const highlights = events.filter(e => ["antonio-zambujo-concerto-2026-03-21", "viagem-a-lisboa-um-espetaculo-d-o-clube-2026-03-14"].includes(e.id));
@@ -353,6 +355,10 @@ export default function ClientPage({ events, lastUpdated }: Props) {
         </section>
       )}
 
+      </>}
+
+      {page === "agenda" && !detail && <>
+      <div className="tsl-agenda-heading"><h1 className="tsl-agenda-title">Agenda</h1></div>
       {/* FILTERS */}
       <div className="tsl-filters">
         <div className="tsl-filters-row">
@@ -447,6 +453,8 @@ export default function ClientPage({ events, lastUpdated }: Props) {
           </div>
         )}
       </main>
+
+      </>}
 
       {/* EDIÇÕES PDF */}
       <section className="tsl-pdf">

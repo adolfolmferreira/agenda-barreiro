@@ -771,3 +771,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .tsl-cinema { padding: 40px 20px; }
   .tsl-cinema-slider { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ── AGENDA PAGE ─────────────────────── */
+.tsl-agenda-heading {
+  padding: 60px 48px 0;
+}
+.tsl-agenda-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 62px;
+  font-weight: 400;
+  color: rgb(16, 31, 42);
+}
+@media (max-width: 768px) {
+  .tsl-agenda-heading { padding: 40px 20px 0; }
+  .tsl-agenda-title { font-size: 36px; }
+}
