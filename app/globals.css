@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Geist:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-::selection { background: #1a1a1a; color: #fff; }
+::selection { background: rgb(16, 31, 42); color: #fff; }
 html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 300;
-  color: #1a1a1a;
+  color: rgb(16, 31, 42);
   background: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,7 +41,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-family: 'Unbounded', sans-serif;
   font-size: 28px;
   font-style: italic;
-  color: #1a1a1a;
+  color: rgb(16, 31, 42);
   line-height: 1;
 }
 
@@ -51,12 +51,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-transform: uppercase;
   letter-spacing: 1.5px;
   line-height: 1.3;
-  color: #1a1a1a;
+  color: rgb(16, 31, 42);
 }
 
 .tsl-nav { display: flex; gap: 32px; }
 .tsl-nav-link { font-size: 14px; font-weight: 500; color: #888; transition: color 0.2s; cursor: pointer; }
-.tsl-nav-link:hover, .tsl-nav-link.active { color: #1a1a1a; }
+.tsl-nav-link:hover, .tsl-nav-link.active { color: rgb(16, 31, 42); }
 
 .tsl-head-season {
   margin-left: auto;
@@ -130,7 +130,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .tsl-hero-feat-title {
   font-family: 'Unbounded', sans-serif;
-  font-size: clamp(44px, 7vw, 96px);
+  font-size: 62px;
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: -3px;
@@ -178,9 +178,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 8px;
   font-size: 15px;
   font-weight: 500;
-  color: #1a1a1a;
+  color: rgb(16, 31, 42);
   padding: 8px 0;
-  border-bottom: 1.5px solid #1a1a1a;
+  border-bottom: 1.5px solid rgb(16, 31, 42);
   min-width: 220px;
   justify-content: space-between;
   transition: border-color 0.2s;
@@ -212,8 +212,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: all 0.15s;
 }
 
-.tsl-dropdown-item:hover { background: #f5f5f5; color: #1a1a1a; }
-.tsl-dropdown-item.active { color: #1a1a1a; font-weight: 600; }
+.tsl-dropdown-item:hover { background: #f5f5f5; color: rgb(16, 31, 42); }
+.tsl-dropdown-item.active { color: rgb(16, 31, 42); font-weight: 600; }
 
 /* ═══ MAIN ═══ */
 .tsl-main {
@@ -229,7 +229,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-family: 'Unbounded', sans-serif;
   font-size: clamp(56px, 8vw, 96px);
   font-weight: 400;
-  color: #1a1a1a;
+  color: rgb(16, 31, 42);
   padding-bottom: 20px;
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 32px;
@@ -312,7 +312,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: clamp(20px, 2vw, 28px);
   font-weight: 400;
   line-height: 1.1;
-  color: #1a1a1a;
+  color: rgb(16, 31, 42);
   transition: color 0.2s;
 }
 
@@ -330,7 +330,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ─── Back to top ─── */
 .tsl-backtop { padding: 48px 0; text-align: right; }
 .tsl-backtop a { font-size: 13px; font-weight: 500; color: #999; cursor: pointer; transition: color 0.2s; }
-.tsl-backtop a:hover { color: #1a1a1a; }
+.tsl-backtop a:hover { color: rgb(16, 31, 42); }
 
 /* ═══ DETAIL ═══ */
 .tsl-detail {
@@ -356,7 +356,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: -2px;
-  color: #1a1a1a;
+  color: rgb(16, 31, 42);
   margin-bottom: 40px;
 }
 
@@ -396,13 +396,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
-  color: #1a1a1a;
-  border: 1.5px solid #1a1a1a;
+  color: rgb(16, 31, 42);
+  border: 1.5px solid rgb(16, 31, 42);
   padding: 14px 32px;
   transition: all 0.2s;
 }
 
-.tsl-detail-cta:hover { background: #1a1a1a; color: #fff; }
+.tsl-detail-cta:hover { background: rgb(16, 31, 42); color: #fff; }
 
 /* ─── Empty ─── */
 .tsl-empty { padding: 100px 0; text-align: center; }
@@ -411,7 +411,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ═══ PDF EDITIONS — magazine-size covers ═══ */
 .tsl-pdf {
   padding: 80px 48px 96px;
-  background: #1a1a1a;
+  background: rgb(16, 31, 42);
   overflow: hidden;
 }
 
@@ -504,7 +504,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ═══ FOOTER ═══ */
-.tsl-foot { background: #1a1a1a; margin-top: auto; }
+.tsl-foot { background: rgb(16, 31, 42); margin-top: auto; }
 
 .tsl-foot-in {
   padding: 48px;
@@ -557,7 +557,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #1a1a1a;
+  color: rgb(16, 31, 42);
   background: none;
   cursor: pointer;
   padding: 12px 0;
