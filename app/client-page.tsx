@@ -94,23 +94,39 @@ function isPast(ev: Event): boolean {
 
 // ─── Component ───────────────────────────────────────────────────
 
+
+function PdfCover({ url }: { url: string }) {
+  const proxyUrl = `/api/pdf-cover?url=${encodeURIComponent(url)}`;
+  return (
+    <iframe
+      src={`${proxyUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
+      className="tsl-pdf-iframe"
+      title="PDF Cover"
+    />
+  );
+}
+
 function getDominantColor(imgUrl: string): Promise<[number, number, number]> {
   return new Promise((resolve) => {
     const img = new Image();
     img.crossOrigin = "anonymous";
     img.onload = () => {
-      const canvas = document.createElement("canvas");
-      canvas.width = 50;
-      canvas.height = 50;
-      const ctx = canvas.getContext("2d");
-      if (!ctx) { resolve([16, 31, 42]); return; }
-      ctx.drawImage(img, 0, 0, 50, 50);
-      const data = ctx.getImageData(0, 0, 50, 50).data;
-      let r = 0, g = 0, b = 0, count = 0;
-      for (let i = 0; i < data.length; i += 16) {
-        r += data[i]; g += data[i + 1]; b += data[i + 2]; count++;
+      try {
+        const canvas = document.createElement("canvas");
+        canvas.width = 50;
+        canvas.height = 50;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) { resolve([16, 31, 42]); return; }
+        ctx.drawImage(img, 0, 0, 50, 50);
+        const data = ctx.getImageData(0, 0, 50, 50).data;
+        let r = 0, g = 0, b = 0, count = 0;
+        for (let i = 0; i < data.length; i += 16) {
+          r += data[i]; g += data[i + 1]; b += data[i + 2]; count++;
+        }
+        resolve([Math.round(r / count), Math.round(g / count), Math.round(b / count)]);
+      } catch {
+        resolve([16, 31, 42]);
       }
-      resolve([Math.round(r / count), Math.round(g / count), Math.round(b / count)]);
     };
     img.onerror = () => resolve([16, 31, 42]);
     img.src = imgUrl;
@@ -412,17 +428,17 @@ export default function ClientPage({ events, lastUpdated }: Props) {
         <h2 className="tsl-pdf-heading">edição em pdf</h2>
         <div className="tsl-pdf-grid">
           {[
-            { title: 'março / abril 2026', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2026/02/Agenda-de-Eventos-Barreiro-marco-abril-2026_galeria_agenda2830.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-marco-abril-2026-ja-disponivel/' },
-            { title: 'janeiro / fevereiro 2026', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x1150px_galeria_agenda2830-1.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-2830-janeiro-fevereiro-2026-ja-disponivel/' },
-            { title: 'especial natal 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/12/710x480px_agenda2830_noticias.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-2830-especial-natal-2025-ja-disponivel/' },
-            { title: 'novembro / dezembro 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/10/710x480px_agenda2830_noticias-4.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-novembro-dezembro-2025-ja-disponivel/' },
-            { title: 'setembro / outubro 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/08/710x480px_agenda2830_noticias.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-2830-setembro-outubro-2025-ja-disponivel/' },
-            { title: 'julho / agosto 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/06/../2026/02/Agenda-de-Eventos-Barreiro-marco-abril-2026_galeria_agenda2830.jpg', url: 'https://www.cm-barreiro.pt/agenda-de-eventos-2830-julho-agosto-2025-ja-disponivel-2/' },
+            { title: 'março / abril 2026', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2026/02/Agenda-de-Eventos-Barreiro-marco-abril-2026_galeria_agenda2830.jpg', pdf: 'https://www.cm-barreiro.pt/wp-content/uploads/2026/02/agenda2830-Barreiro_mar_abr_2026.pdf' },
+            { title: 'janeiro / fevereiro 2026', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x1150px_galeria_agenda2830-1.jpg', pdf: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/12/agenda2830_jan_fev_2026.pdf' },
+            { title: 'especial natal 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x1150px_galeria_agenda2830.jpg', pdf: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/12/Agenda-2830_Natal_25-1.pdf' },
+            { title: 'novembro / dezembro 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/10/1920x1150px_galeria_agenda2830-3.jpg', pdf: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/10/agenda2830_nov_dez_2025.pdf' },
+            { title: 'setembro / outubro 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/08/1920x1150px_galeria_agenda2830.jpg', pdf: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/08/agenda2830_set-out-2025.pdf' },
+            { title: 'julho / agosto 2025', img: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/06/1920x1150px_galeria_agenda2830-1.jpg', pdf: 'https://www.cm-barreiro.pt/wp-content/uploads/2025/06/agenda2830_julho_agosto_2025_editavelFINAL.pdf' },
           ].map((ed, i) => (
-            <a key={i} className="tsl-pdf-item" href={ed.url} target="_blank" rel="noopener noreferrer">
+            <a key={i} className="tsl-pdf-item" href={ed.pdf} target="_blank" rel="noopener noreferrer">
               <div className="tsl-pdf-label">{ed.title}</div>
               <div className="tsl-pdf-cover">
-                <img src={ed.img} alt={`Agenda ${ed.title}`} loading="lazy" />
+                <PdfCover url={ed.pdf} />
               </div>
             </a>
           ))}

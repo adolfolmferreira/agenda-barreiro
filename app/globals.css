@@ -699,3 +699,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .tsl-list-title { font-size: 14px; min-width: 100%; }
   .tsl-list-loc { display: none; }
 }
+
+.tsl-pdf-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.tsl-pdf-iframe {
+  width: 100%;
+  aspect-ratio: 210/297;
+  border: none;
+  border-radius: 4px;
+  pointer-events: none;
+}
