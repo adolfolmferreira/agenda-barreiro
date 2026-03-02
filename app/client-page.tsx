@@ -255,6 +255,27 @@ export default function ClientPage({ events, lastUpdated }: Props) {
         </section>
       )}
 
+
+      {/* EM DESTAQUE */}
+      {(() => {
+        const highlights = events.filter(e => ["antonio-zambujo-concerto-2026-03-21", "viagem-a-lisboa-um-espetaculo-d-o-clube-2026-03-14"].includes(e.id));
+        return highlights.length > 0 ? (
+          <section className="tsl-highlights">
+            <h2 className="tsl-highlights-title">Em Destaque</h2>
+            <div className="tsl-highlights-grid">
+              {highlights.map(ev => (
+                <div key={ev.id} className="tsl-highlight-card" onClick={() => setDetail(ev)}>
+                  <div className="tsl-highlight-info">
+                    <span className="tsl-highlight-cat">{ev.category.toLowerCase()}</span>
+                    <h3 className="tsl-highlight-name">{ev.title}</h3>
+                  </div>
+                  {ev.imageUrl && <img className="tsl-highlight-img" src={ev.imageUrl} alt={ev.title} />}
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : null;
+      })()}
       {/* FILTERS */}
       <div className="tsl-filters">
         <div className="tsl-filters-row">

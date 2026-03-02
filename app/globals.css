@@ -565,3 +565,55 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: opacity 0.2s;
 }
 .tsl-back-btn:hover { opacity: 0.5; }
+
+/* ── EM DESTAQUE ─────────────────────── */
+.tsl-highlights { padding: 60px 48px; }
+.tsl-highlights-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(16, 31, 42);
+  margin-bottom: 32px;
+}
+.tsl-highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.tsl-highlight-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: opacity 0.2s;
+}
+.tsl-highlight-card:hover { opacity: 0.8; }
+.tsl-highlight-info { display: flex; flex-direction: column; gap: 8px; }
+.tsl-highlight-cat {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #888;
+}
+.tsl-highlight-name {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(16, 31, 42);
+  line-height: 1.1;
+}
+.tsl-highlight-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .tsl-highlights { padding: 40px 20px; }
+  .tsl-highlights-grid { grid-template-columns: 1fr; }
+  .tsl-highlight-name { font-size: 22px; }
+}
