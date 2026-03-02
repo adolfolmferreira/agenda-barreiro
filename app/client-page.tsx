@@ -236,25 +236,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
         </div>
       </header>
 
-      {/* HERO — featured event */}
-      {hero && hero.imageUrl && (
-        <section className="tsl-hero-feat" onClick={() => setDetail(hero)}>
-          <div className="tsl-hero-feat-img">
-            <img src={hero.imageUrl} alt={hero.title} />
-            <div className="tsl-hero-feat-overlay" />
-          </div>
-          <div className="tsl-hero-feat-content">
-            <div className="tsl-hero-feat-season">2025–2026</div>
-            <div className="tsl-hero-feat-cat">{hero.category.toLowerCase()}</div>
-            <h1 className="tsl-hero-feat-title">{hero.title}</h1>
-            <div className="tsl-hero-feat-date">{fmtRange(hero.date, hero.endDate)}</div>
-            {hero.location && hero.location !== 'Barreiro' && (
-              <div className="tsl-hero-feat-loc">{hero.location.slice(0, 60)}</div>
-            )}
-          </div>
-        </section>
-      )}
-
+      
 
       {/* EM DESTAQUE */}
       {(() => {
