@@ -436,6 +436,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
                 </a>
               ) : (
                 <a key={ev.id} className="tsl-list-item" onClick={() => setDetail(ev)}>
+                  {ev.imageUrl && <img className="tsl-list-img" src={ev.imageUrl} alt={ev.title} loading="lazy" />}
                   <span className="tsl-list-date">{fmtRange(ev.date, ev.endDate)}</span>
                   <span className="tsl-list-title">{ev.title}</span>
                   <span className="tsl-list-cat">{ev.category.toLowerCase()}</span>

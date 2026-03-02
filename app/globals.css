@@ -703,14 +703,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 4px;
+
 }
 
 .tsl-pdf-iframe {
   width: 100%;
   aspect-ratio: 210/297;
   border: none;
-  border-radius: 4px;
+
   pointer-events: none;
 }
 
@@ -749,7 +749,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 100%;
   aspect-ratio: 2/3;
   object-fit: cover;
-  border-radius: 4px;
+
 }
 .tsl-cinema-name {
   font-family: 'Unbounded', sans-serif;
@@ -785,4 +785,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (max-width: 768px) {
   .tsl-agenda-heading { padding: 40px 20px 0; }
   .tsl-agenda-title { font-size: 36px; }
+}
+
+.tsl-list-img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+.tsl-list-img { width: 80px; height: 56px; }
 }
