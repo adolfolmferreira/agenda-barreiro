@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
+import { LayoutGrid, List } from 'lucide-react';
 
 // ─── Types ───────────────────────────────────────────────────────
 interface Event {
@@ -157,6 +158,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
   const [monOpen, setMonOpen] = useState(false);
   const [selCat, setSelCat] = useState('Todos os Eventos');
   const [selMon, setSelMon] = useState('Todos os Meses');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [detail, setDetail] = useState<Event | null>(null);
 
   useEffect(() => { if (detail) window.scrollTo({ top: 0, behavior: 'smooth' }); }, [detail]);
@@ -348,10 +350,14 @@ export default function ClientPage({ events, lastUpdated }: Props) {
               </div>
             )}
           </div>
+          <div className="tsl-view-toggle">
+            <button className={`tsl-view-btn ${viewMode === 'grid' ? 'active' : ''}`} onClick={() => setViewMode('grid')}><LayoutGrid size={18} /></button>
+            <button className={`tsl-view-btn ${viewMode === 'list' ? 'active' : ''}`} onClick={() => setViewMode('list')}><List size={18} /></button>
+          </div>
         </div>
       </div>
 
-      {/* EVENTS — grouped by month, 4-column grid */}
+      {/* EVENTS — grouped by month */}
       <main className="tsl-main">
         {grouped.length === 0 && (
           <div className="tsl-empty"><p>Sem eventos encontrados</p></div>
@@ -360,8 +366,8 @@ export default function ClientPage({ events, lastUpdated }: Props) {
         {grouped.map(([mkey, evts]) => (
           <section key={mkey} className="tsl-month">
             <h2 className="tsl-month-title">{mkLabel(mkey)}</h2>
-            <div className="tsl-grid">
-              {evts.map(ev => (
+            <div className={viewMode === 'grid' ? "tsl-grid" : "tsl-list"}>
+              {evts.map(ev => viewMode === 'grid' ? (
                 <a key={ev.id} className="tsl-card" onClick={() => setDetail(ev)}>
                   <div className="tsl-card-img">
                     {ev.imageUrl ? (
@@ -380,6 +386,14 @@ export default function ClientPage({ events, lastUpdated }: Props) {
                     )}
                     <span className="tsl-card-more">Ver Mais →</span>
                   </div>
+                </a>
+              ) : (
+                <a key={ev.id} className="tsl-list-item" onClick={() => setDetail(ev)}>
+                  <span className="tsl-list-date">{fmtRange(ev.date, ev.endDate)}</span>
+                  <span className="tsl-list-title">{ev.title}</span>
+                  <span className="tsl-list-cat">{ev.category.toLowerCase()}</span>
+                  {ev.location && cleanLoc(ev.location) && <span className="tsl-list-loc">{cleanLoc(ev.location)}</span>}
+                  <span className="tsl-list-arrow">→</span>
                 </a>
               ))}
             </div>
