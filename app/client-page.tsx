@@ -175,6 +175,11 @@ export default function ClientPage({ events, lastUpdated }: Props) {
   const [selCat, setSelCat] = useState('Todos os Eventos');
   const [selMon, setSelMon] = useState('Todos os Meses');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [cinema, setCinema] = useState<{title: string; url: string; img: string}[]>([]);
+
+  useEffect(() => {
+    fetch('/api/cinema').then(r => r.json()).then(setCinema).catch(() => {});
+  }, []);
   const [detail, setDetail] = useState<Event | null>(null);
 
   useEffect(() => { if (detail) window.scrollTo({ top: 0, behavior: 'smooth' }); }, [detail]);
@@ -328,6 +333,26 @@ export default function ClientPage({ events, lastUpdated }: Props) {
         if (highlights.length === 0) return null;
         return <HighlightsSection highlights={highlights} onSelect={setDetail} />;
       })()}
+      {/* NO CINEMA */}
+      {cinema.length > 0 && (
+        <section className="tsl-cinema">
+          <div className="tsl-cinema-header">
+            <h2 className="tsl-cinema-title">No Cinema</h2>
+            <a className="tsl-cinema-link" href="https://castellolopescinemas.pt/barra-shopping-barreiro/" target="_blank" rel="noopener noreferrer">
+              Ver tudo →
+            </a>
+          </div>
+          <div className="tsl-cinema-slider">
+            {cinema.map((film, i) => (
+              <a key={i} className="tsl-cinema-card" href={film.url} target="_blank" rel="noopener noreferrer">
+                {film.img && <img className="tsl-cinema-poster" src={film.img} alt={film.title} loading="lazy" />}
+                <span className="tsl-cinema-name">{film.title}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* FILTERS */}
       <div className="tsl-filters">
         <div className="tsl-filters-row">

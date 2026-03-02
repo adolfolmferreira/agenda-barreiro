@@ -291,15 +291,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .tsl-card-date {
   display: block;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
   color: #999;
   margin-bottom: 4px;
 }
 
 .tsl-card-cat {
   display: block;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   color: #E63946;
   letter-spacing: 0.5px;
@@ -319,7 +319,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-family: 'Unbounded', sans-serif; color: #555; }
 .tsl-card-loc {
   display: block;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 500;
   color: #bbb;
   margin-top: 6px;
   line-height: 1.4;
@@ -474,12 +475,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   overflow: hidden;
   background: #333;
   border-radius: 2px;
-  box-shadow: 0 8px 40px rgba(0,0,0,.3);
+  
   transition: box-shadow 0.4s, transform 0.4s;
 }
 
 .tsl-pdf-item:hover .tsl-pdf-cover {
-  box-shadow: 0 16px 56px rgba(0,0,0,.5);
+  
   transform: translateY(-8px);
 }
 
@@ -661,8 +662,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .tsl-list-item:hover { opacity: 0.6; }
 .tsl-list-date {
   font-family: 'Geist', sans-serif;
-  font-size: 13px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 700;
   color: #999;
   min-width: 120px;
 }
@@ -674,15 +675,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   flex: 1;
 }
 .tsl-list-cat {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #999;
+  font-size: 16px;
+  font-weight: 700;
+  color: #E63946; letter-spacing: 0.5px;
 }
 .tsl-list-loc {
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 500;
   color: #bbb;
   max-width: 200px;
   overflow: hidden;
@@ -713,4 +712,62 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border: none;
   border-radius: 4px;
   pointer-events: none;
+}
+
+/* ── NO CINEMA ───────────────────────── */
+.tsl-cinema { padding: 60px 48px; }
+.tsl-cinema-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(16, 31, 42);
+  margin-bottom: 32px;
+}
+.tsl-cinema-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.tsl-cinema-slider {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+.tsl-cinema-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.tsl-cinema-card:hover { opacity: 0.8; }
+.tsl-cinema-poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.tsl-cinema-name {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(16, 31, 42);
+  line-height: 1.2;
+}
+.tsl-cinema-link {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(16, 31, 42);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.tsl-cinema-link:hover { opacity: 0.5; }
+@media (max-width: 768px) {
+  .tsl-cinema { padding: 40px 20px; }
+  .tsl-cinema-slider { grid-template-columns: repeat(2, 1fr); }
 }
