@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 ::selection { background: #1a1a1a; color: #fff; }
@@ -38,7 +38,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .tsl-logo { display: flex; align-items: center; gap: 12px; cursor: pointer; }
 
 .tsl-logo-day {
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Unbounded', sans-serif;
   font-size: 28px;
   font-style: italic;
   color: #1a1a1a;
@@ -129,7 +129,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tsl-hero-feat-title {
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Unbounded', sans-serif;
   font-size: clamp(44px, 7vw, 96px);
   font-weight: 400;
   line-height: 0.95;
@@ -226,7 +226,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .tsl-month { margin-top: 56px; }
 
 .tsl-month-title {
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Unbounded', sans-serif;
   font-size: clamp(56px, 8vw, 96px);
   font-weight: 400;
   color: #1a1a1a;
@@ -307,7 +307,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tsl-card-title {
-  font-family: 'Instrument Serif', serif;
+  text-transform: uppercase;
+  font-family: 'Unbounded', sans-serif;
   font-size: clamp(20px, 2vw, 28px);
   font-weight: 400;
   line-height: 1.1;
@@ -316,6 +317,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tsl-card:hover .tsl-card-title { color: #555; }
+  text-transform: uppercase;
 
 .tsl-card-loc {
   display: block;
@@ -349,7 +351,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tsl-detail-title {
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Unbounded', sans-serif;
   font-size: clamp(44px, 6vw, 88px);
   font-weight: 400;
   line-height: 0.95;
@@ -404,7 +406,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ─── Empty ─── */
 .tsl-empty { padding: 100px 0; text-align: center; }
-.tsl-empty p { font-family: 'Instrument Serif', serif; font-size: 28px; color: #ccc; }
+.tsl-empty p { font-family: 'Unbounded', sans-serif; font-size: 28px; color: #ccc; }
 
 /* ═══ PDF EDITIONS — magazine-size covers ═══ */
 .tsl-pdf {
@@ -414,7 +416,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tsl-pdf-heading {
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Unbounded', sans-serif;
   font-style: italic;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 400;
@@ -455,7 +457,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tsl-pdf-label {
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Unbounded', sans-serif;
   font-size: 18px;
   font-weight: 400;
   color: rgba(255,255,255,.6);
@@ -514,7 +516,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tsl-foot-brand {
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Unbounded', sans-serif;
   font-size: 18px;
   color: #fff;
   margin-right: auto;
