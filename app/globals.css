@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Geist:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 ::selection { background: #1a1a1a; color: #fff; }
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 300;
   color: #1a1a1a;
   background: #fff;
   -webkit-font-smoothing: antialiased;
@@ -352,7 +352,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .tsl-detail-title {
   font-family: 'Unbounded', sans-serif;
-  font-size: clamp(44px, 6vw, 88px);
+  font-size: 62px;
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: -2px;
@@ -551,3 +551,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .tsl-logo-wordmark { display: none; }
   .tsl-detail-meta { grid-template-columns: 1fr; }
 }
+.tsl-back-btn {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  background: none;
+  cursor: pointer;
+  padding: 12px 0;
+  margin-bottom: 20px;
+  transition: opacity 0.2s;
+}
+.tsl-back-btn:hover { opacity: 0.5; }

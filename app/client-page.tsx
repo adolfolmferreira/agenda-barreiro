@@ -161,6 +161,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
         </header>
 
         <article className="tsl-detail">
+          <button className="tsl-back-btn" onClick={() => setDetail(null)}>← Voltar</button>
           {ev.imageUrl && (
             <div className="tsl-detail-hero">
               <img src={ev.imageUrl} alt={ev.title} />
