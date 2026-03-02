@@ -187,10 +187,10 @@ export default function ClientPage({ events, lastUpdated }: Props) {
                   <span>{ev.time}</span>
                 </div>
               )}
-              {ev.location && (
+              {ev.location && cleanLoc(ev.location) && (
                 <div className="tsl-detail-meta-item">
                   <span className="tsl-detail-meta-label">Local</span>
-                  <span>{ev.location}</span>
+                  <span>{cleanLoc(ev.location)}</span>
                 </div>
               )}
               {ev.price && (
