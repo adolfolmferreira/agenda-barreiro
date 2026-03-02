@@ -159,7 +159,7 @@ function HighlightsSection({ highlights, onSelect }: { highlights: Event[]; onSe
           <div key={ev.id} className="tsl-highlight-card" onClick={() => onSelect(ev)}>
             <div className="tsl-highlight-info">
               <span className="tsl-highlight-cat" style={{ color: textColor, opacity: 0.7 }}>{ev.category.toLowerCase()}</span>
-              <h3 className="tsl-highlight-name" style={{ color: textColor }}>{ev.title}</h3>
+              <h3 className="tsl-highlight-name" style={{ color: textColor }}>{ev.title.length > 33 ? ev.title.slice(0, 33) + "…" : ev.title}</h3>
             </div>
             {ev.imageUrl && <img className="tsl-highlight-img" src={ev.imageUrl} alt={ev.title} />}
           </div>
