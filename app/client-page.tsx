@@ -92,6 +92,66 @@ function isPast(ev: Event): boolean {
 }
 
 // ─── Component ───────────────────────────────────────────────────
+
+function getDominantColor(imgUrl: string): Promise<[number, number, number]> {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      canvas.width = 50;
+      canvas.height = 50;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) { resolve([16, 31, 42]); return; }
+      ctx.drawImage(img, 0, 0, 50, 50);
+      const data = ctx.getImageData(0, 0, 50, 50).data;
+      let r = 0, g = 0, b = 0, count = 0;
+      for (let i = 0; i < data.length; i += 16) {
+        r += data[i]; g += data[i + 1]; b += data[i + 2]; count++;
+      }
+      resolve([Math.round(r / count), Math.round(g / count), Math.round(b / count)]);
+    };
+    img.onerror = () => resolve([16, 31, 42]);
+    img.src = imgUrl;
+  });
+}
+
+function isLight(r: number, g: number, b: number): boolean {
+  return (r * 299 + g * 587 + b * 114) / 1000 > 140;
+}
+
+function HighlightsSection({ highlights, onSelect }: { highlights: Event[]; onSelect: (ev: Event) => void }) {
+  const [bg, setBg] = useState("rgb(16, 31, 42)");
+  const [textColor, setTextColor] = useState("#fff");
+
+  useEffect(() => {
+    const imgUrl = highlights.find(e => e.imageUrl)?.imageUrl;
+    if (imgUrl) {
+      getDominantColor(imgUrl).then(([r, g, b]) => {
+        setBg(`rgb(${r}, ${g}, ${b})`);
+        setTextColor(isLight(r, g, b) ? "rgb(16, 31, 42)" : "#fff");
+      });
+    }
+  }, [highlights]);
+
+  return (
+    <section className="tsl-highlights" style={{ backgroundColor: bg, color: textColor }}>
+      <h2 className="tsl-highlights-title" style={{ color: textColor }}>{String("Em Destaque")}</h2>
+      <div className="tsl-highlights-grid">
+        {highlights.map(ev => (
+          <div key={ev.id} className="tsl-highlight-card" onClick={() => onSelect(ev)}>
+            <div className="tsl-highlight-info">
+              <span className="tsl-highlight-cat" style={{ color: textColor, opacity: 0.7 }}>{ev.category.toLowerCase()}</span>
+              <h3 className="tsl-highlight-name" style={{ color: textColor }}>{ev.title}</h3>
+            </div>
+            {ev.imageUrl && <img className="tsl-highlight-img" src={ev.imageUrl} alt={ev.title} />}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function ClientPage({ events, lastUpdated }: Props) {
   const [catOpen, setCatOpen] = useState(false);
   const [monOpen, setMonOpen] = useState(false);
@@ -247,22 +307,8 @@ export default function ClientPage({ events, lastUpdated }: Props) {
       {/* EM DESTAQUE */}
       {(() => {
         const highlights = events.filter(e => ["antonio-zambujo-concerto-2026-03-21", "viagem-a-lisboa-um-espetaculo-d-o-clube-2026-03-14"].includes(e.id));
-        return highlights.length > 0 ? (
-          <section className="tsl-highlights">
-            <h2 className="tsl-highlights-title">Em Destaque</h2>
-            <div className="tsl-highlights-grid">
-              {highlights.map(ev => (
-                <div key={ev.id} className="tsl-highlight-card" onClick={() => setDetail(ev)}>
-                  <div className="tsl-highlight-info">
-                    <span className="tsl-highlight-cat">{ev.category.toLowerCase()}</span>
-                    <h3 className="tsl-highlight-name">{ev.title}</h3>
-                  </div>
-                  {ev.imageUrl && <img className="tsl-highlight-img" src={ev.imageUrl} alt={ev.title} />}
-                </div>
-              ))}
-            </div>
-          </section>
-        ) : null;
+        if (highlights.length === 0) return null;
+        return <HighlightsSection highlights={highlights} onSelect={setDetail} />;
       })()}
       {/* FILTERS */}
       <div className="tsl-filters">
