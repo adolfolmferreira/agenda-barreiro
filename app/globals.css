@@ -227,7 +227,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .tsl-month-title {
   font-family: 'Unbounded', sans-serif;
-  font-size: clamp(56px, 8vw, 96px);
+  font-size: 62px;
   font-weight: 400;
   color: rgb(16, 31, 42);
   padding-bottom: 20px;
