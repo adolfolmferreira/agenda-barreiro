@@ -1,0 +1,35 @@
+name: Scrape Cinema
+
+on:
+  schedule:
+    - cron: '0 10 * * 4'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Scrape cinema
+        run: npx tsx scripts/scrape-cinema.ts
+        timeout-minutes: 3
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/cinema.json
+          git diff --staged --quiet || (
+            git commit -m "🎬 Cinema actualizado $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git push
+          )
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
