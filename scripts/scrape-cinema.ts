@@ -8,11 +8,14 @@ async function scrapeCinema() {
   });
   const html = await res.text();
 
-  const paths = [...html.matchAll(/href="(\/filme\/[^"]+)"[^>]*class="button button--call-to-action/gi)];
+  const paths: string[] = [];
+  const re = /href="\/filme\/([^"]+)"[^>]*class="button button--call-to-action/gi;
+  let match: RegExpExecArray | null;
+  while ((match = re.exec(html)) !== null) paths.push(match[1]);
   console.log(`Found ${paths.length} films`);
 
   const films = [];
-  for (const [, path] of paths.slice(0, 5)) {
+  for (const path of paths.slice(0, 5)) {
     const url = 'https://cinecartaz.publico.pt' + path;
     try {
       const r = await fetch(url, { signal: AbortSignal.timeout(10000) });
