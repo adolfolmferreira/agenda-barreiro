@@ -71,6 +71,12 @@ function fmtFull(start: string, end?: string | null): string {
   const mon2 = MO_FULL[d2.getMonth()];
   return `${day1} de ${mon1} – ${day2} de ${mon2} de ${d2.getFullYear()}`;
 }
+function cleanLoc(s: string): string {
+  let c = s.replace(/^(Ponto de encontro:|Partida:)\s*/i, "");
+  c = c.split(/\d|Organização|\sM\/|\sO\s[A-Z]|\sEntre\s|\se\s[a-z]|\sPara\s|\sRua\s|\sa\s[a-z]|Horário|\sOrg[.:]|\sUm\s|A mostra|vai\s|realidade|Inscrição|Info|Preço|Duração|Público|Domingos|tudo pode|a criatividade|a dança|No próximo|Em parceria|às\s/i)[0].trim();
+  if (c.length < 5) return "";
+  return c.length > 50 ? c.slice(0, 50) + "…" : c;
+}
 
 function mk(d: string): string { return d.slice(0, 7); }
 function mkLabel(key: string): string {
@@ -323,11 +329,10 @@ export default function ClientPage({ events, lastUpdated }: Props) {
                     <span className="tsl-card-date">{fmtRange(ev.date, ev.endDate)}</span>
                     <span className="tsl-card-cat">{ev.category.toLowerCase()}</span>
                     <h3 className="tsl-card-title">{ev.title}</h3>
-                    {ev.location && ev.location !== 'Barreiro' && (
-                      <span className="tsl-card-loc">
-                        {ev.location.length > 50 ? ev.location.slice(0, 50) + '…' : ev.location}
-                      </span>
+                    {ev.location && ev.location !== "Barreiro" && cleanLoc(ev.location) && (
+                      <span className="tsl-card-loc">{cleanLoc(ev.location)}</span>
                     )}
+                    <span className="tsl-card-more">Ver Mais →</span>
                   </div>
                 </a>
               ))}

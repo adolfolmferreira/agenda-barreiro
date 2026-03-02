@@ -307,8 +307,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tsl-card-title {
-  text-transform: uppercase;
-  font-family: 'Unbounded', sans-serif;
   font-size: clamp(20px, 2vw, 28px);
   font-weight: 400;
   line-height: 1.1;
@@ -317,8 +315,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .tsl-card:hover .tsl-card-title { color: #555; }
-  text-transform: uppercase;
-
 .tsl-card-loc {
   display: block;
   font-size: 12px;
@@ -603,7 +599,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-family: 'Unbounded', sans-serif;
   font-size: 28px;
   font-weight: 400;
-  text-transform: uppercase;
+  
   color: rgb(16, 31, 42);
   line-height: 1.1;
 }
@@ -617,3 +613,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .tsl-highlights-grid { grid-template-columns: 1fr; }
   .tsl-highlight-name { font-size: 22px; }
 }
+
+.tsl-card-more {
+  display: inline-block;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(16, 31, 42);
+  margin-top: 12px;
+  transition: opacity 0.2s;
+}
+.tsl-card:hover .tsl-card-more { opacity: 0.5; }
