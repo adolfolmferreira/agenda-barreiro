@@ -23,7 +23,7 @@ jobs:
 
       - name: Scrape events
         run: npx tsx scripts/scrape.ts
-        timeout-minutes: 5
+        timeout-minutes: 10
 
       - name: Commit & Push
         run: |
