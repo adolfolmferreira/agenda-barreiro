@@ -470,7 +470,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .tsl-pdf-cover {
   width: 100%;
-  aspect-ratio: 710 / 480;
+  aspect-ratio: 210 / 260;
   overflow: hidden;
   background: #333;
   border-radius: 2px;
