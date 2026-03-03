@@ -221,6 +221,14 @@ async function fetchEvent(url: string): Promise<Event | null> {
     }
     if (!location) location = 'Barreiro';
 
+    // Sanitize location: cut at descriptive text
+    location = location
+      .split(/[?!…]/)[0]
+      .replace(/\s+(Gostas|Vem|Uma|O |A |Em |Para|Com|De |Do |Da |No |Na |Às|Os |As |É |Se ).*$/i, '')
+      .replace(/\s{2,}/g, ' ')
+      .trim();
+    if (location.length < 3) location = 'Barreiro';
+
     // ─── Price ──────────────────────────────────────────────
     const priceM = allText.match(/gratuito|entrada\s+livre|€\s*\d+[,.]?\d*/i);
     const price = priceM ? (/gratuito|livre/i.test(priceM[0]) ? 'Gratuito' : priceM[0]) : '';
