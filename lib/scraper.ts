@@ -389,7 +389,7 @@ export async function scrapeEvents(): Promise<Event[]> {
   const unique: Event[] = [];
   const seen = new Set<string>();
   for (const e of filtered) {
-    const key = slug(e.title);
+    const key = e.id;
     if (seen.has(key)) continue;
     seen.add(key);
     unique.push(e);
