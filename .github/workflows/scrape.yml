@@ -36,3 +36,6 @@ jobs:
           )
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Trigger Vercel Deploy
+        run: curl -s -X POST "https://api.vercel.com/v1/integrations/deploy/prj_zxdNuFX6TIa5u3S50Sx4g3glcIIh/eJaE1rQ3tf"

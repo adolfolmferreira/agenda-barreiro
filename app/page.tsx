@@ -4,7 +4,7 @@ import ClientPage from './client-page';
 
 // Revalidate every 6 hours — Next.js ISR
 // When deployed on Vercel, the page rebuilds automatically after this interval
-export const revalidate = 21600; // 6h in seconds
+export const revalidate = 3600; // 6h in seconds
 
 async function getEvents() {
   try {
