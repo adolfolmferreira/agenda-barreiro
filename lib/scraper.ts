@@ -322,9 +322,11 @@ async function discoverAllUrls(): Promise<string[]> {
       signal: AbortSignal.timeout(15000),
     });
     const html = await res.text();
-    const staticLinks = [...html.matchAll(/href="(https?:\/\/www\.cm-barreiro\.pt\/eventos\/[^"?]+)"/gi)];
+    const re2 = /href="(https?:\/\/www\.cm-barreiro\.pt\/eventos\/[^"?]+)"/gi;
+    let m2: RegExpExecArray | null;
     let added = 0;
-    for (const [, url] of staticLinks) {
+    while ((m2 = re2.exec(html)) !== null) {
+      const url = m2[1];
       const clean = url.replace(/\/$/, '') + '/';
       if (!allUrls.has(clean) && clean.match(/^\/eventos\/[^/]+\/$/) === null) {
         allUrls.add(clean);
