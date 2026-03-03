@@ -509,7 +509,7 @@ export default function ClientPage({ events, lastUpdated }: Props) {
             <a key={i} className="tsl-pdf-item" href={ed.pdf} target="_blank" rel="noopener noreferrer">
               <div className="tsl-pdf-label">{ed.title}</div>
               <div className="tsl-pdf-cover">
-                <PdfCover url={ed.pdf} />
+                <img src={ed.img} alt={ed.title} className="tsl-pdf-img" />
               </div>
             </a>
           ))}
