@@ -180,8 +180,25 @@ export default function ClientPage({ events, lastUpdated }: Props) {
   useEffect(() => {
     fetch('/api/cinema').then(r => r.json()).then(setCinema).catch(() => {});
   }, []);
-  const [page, setPage] = useState<'home' | 'agenda'>('home');
+  const [page, setPageState] = useState<'home' | 'agenda'>('home');
+
+  useEffect(() => {
+    if (window.location.pathname === '/agenda') setPageState('agenda');
+  }, []);
+  const setPage = (p: 'home' | 'agenda') => {
+    setPageState(p);
+    window.history.pushState({}, '', p === 'home' ? '/' : '/agenda');
+  };
   const [detail, setDetail] = useState<Event | null>(null);
+
+  useEffect(() => {
+    const onPop = () => {
+      setPageState(window.location.pathname === '/agenda' ? 'agenda' : 'home');
+      setDetail(null);
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
 
   useEffect(() => { if (detail) window.scrollTo({ top: 0, behavior: 'smooth' }); }, [detail]);
 
