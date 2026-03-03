@@ -315,6 +315,25 @@ async function discoverAllUrls(): Promise<string[]> {
   }
 
   await b.close();
+
+  // Also fetch static HTML to catch links Playwright might miss
+  try {
+    const res = await fetch('https://www.cm-barreiro.pt/conhecer/agenda-de-eventos/', {
+      signal: AbortSignal.timeout(15000),
+    });
+    const html = await res.text();
+    const staticLinks = [...html.matchAll(/href="(https?:\/\/www\.cm-barreiro\.pt\/eventos\/[^"?]+)"/gi)];
+    let added = 0;
+    for (const [, url] of staticLinks) {
+      const clean = url.replace(/\/$/, '') + '/';
+      if (!allUrls.has(clean) && clean.match(/^\/eventos\/[^/]+\/$/) === null) {
+        allUrls.add(clean);
+        added++;
+      }
+    }
+    if (added > 0) console.log(`  📡 ${added} URLs extra do HTML estático`);
+  } catch {}
+
   console.log(`\n📦 ${allUrls.size} URLs totais descobertos em ${pageNum} páginas`);
   return Array.from(allUrls);
 }
