@@ -13,6 +13,7 @@
     "cheerio": "^1.0.0",
     "lucide-react": "^0.576.0",
     "next": "^14.0.0",
+    "pdfjs-dist": "^4.4.168",
     "playwright": "^1.58.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
