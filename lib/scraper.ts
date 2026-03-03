@@ -74,7 +74,14 @@ const CR: [RegExp, string][] = [
   [/carnaval|feira|mercado|gastronom|festas|projeto|desfile|baile|namorados/i, 'Comunidade'],
 ];
 
-function cat(text: string): string {
+function cat(text: string, title: string = ''): string {
+  // Title-based overrides (highest priority)
+  if (/oficina|workshop/i.test(title)) return 'Workshop';
+  if (/teatro|marioneta|comédia|peça/i.test(title)) return 'Teatro';
+  if (/exposiç|mostra/i.test(title)) return 'Exposição';
+  if (/concert|fado|zambujo|ivandro/i.test(title)) return 'Música';
+  if (/dança|flamen|ballet/i.test(title)) return 'Dança';
+  // Fallback to full text matching
   for (const [re, c] of CR) if (re.test(text)) return c;
   return 'Comunidade';
 }
@@ -236,7 +243,7 @@ async function fetchEvent(url: string): Promise<Event | null> {
 
     return {
       id: `${slug(title)}-${date}`,
-      title, category: cat(`${title} ${desc}`),
+      title, category: cat(`${title} ${desc}`, title),
       date, endDate, time, location, price,
       description: desc, descriptionFull: descFull,
       sourceUrl: cleanUrl,
