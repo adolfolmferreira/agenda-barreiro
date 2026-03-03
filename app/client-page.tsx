@@ -183,18 +183,38 @@ export default function ClientPage({ events, lastUpdated }: Props) {
   const [page, setPageState] = useState<'home' | 'agenda'>('home');
 
   useEffect(() => {
-    if (window.location.pathname === '/agenda') setPageState('agenda');
+    const path = window.location.pathname;
+    if (path === '/agenda') setPageState('agenda');
+    else if (path.startsWith('/evento/')) {
+      const id = path.replace('/evento/', '');
+      const ev = events.find(e => e.id === id);
+      if (ev) setDetailState(ev);
+    }
   }, []);
   const setPage = (p: 'home' | 'agenda') => {
     setPageState(p);
     window.history.pushState({}, '', p === 'home' ? '/' : '/agenda');
   };
-  const [detail, setDetail] = useState<Event | null>(null);
+  const [detail, setDetailState] = useState<Event | null>(null);
+  const setDetail = (ev: Event | null) => {
+    setDetailState(ev);
+    if (ev) {
+      window.history.pushState({}, '', `/evento/${ev.id}`);
+    } else {
+      window.history.pushState({}, '', page === 'agenda' ? '/agenda' : '/');
+    }
+  };
 
   useEffect(() => {
     const onPop = () => {
-      setPageState(window.location.pathname === '/agenda' ? 'agenda' : 'home');
-      setDetail(null);
+      const path = window.location.pathname;
+      if (path.startsWith('/evento/')) {
+        const id = path.replace('/evento/', '');
+        const ev = events.find(e => e.id === id);
+        if (ev) { setDetailState(ev); return; }
+      }
+      setDetailState(null);
+      setPageState(path === '/agenda' ? 'agenda' : 'home');
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
