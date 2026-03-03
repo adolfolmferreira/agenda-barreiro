@@ -13,6 +13,22 @@ async function main() {
   const dur = ((Date.now() - t0) / 1000).toFixed(1);
 
   if (events.length > 0) {
+    // Apply manual overrides
+    try {
+      const { promises: fs } = await import('fs');
+      const { join } = await import('path');
+      const raw = await fs.readFile(join(process.cwd(), 'data/overrides.json'), 'utf-8');
+      const ovr = JSON.parse(raw);
+      for (const ev of events) {
+        const fix = ovr[ev.title];
+        if (fix) {
+          if (fix.location !== undefined) ev.location = fix.location;
+          if (fix.category !== undefined) ev.category = fix.category;
+          console.log('  🔧 Override:', ev.title.slice(0, 50));
+        }
+      }
+    } catch {}
+
     await saveEvents(events);
     console.log(`\n💾 Guardados ${events.length} eventos em data/events.json`);
   } else {
