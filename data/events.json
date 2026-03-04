@@ -1665,6 +1665,22 @@
     "featured": true
   },
   {
+    "id": "barreiro-metal-inferno-2026-2026-03-06",
+    "title": "Barreiro Metal Inferno 2026",
+    "date": "2026-03-06",
+    "endDate": "2026-03-07",
+    "time": "20:00",
+    "location": "ADAO - Associação Desenvolvimento Artes e Oficios",
+    "category": "Música",
+    "description": "Barreiro Metal Inferno 2026 » ADAO - Associação Desenvolvimento Artes e Oficios » Concertos + Festivais - 06-03-2026 20:00",
+    "descriptionFull": "Barreiro Metal Inferno 2026 » ADAO - Associação Desenvolvimento Artes e Oficios » Concertos + Festivais - 06-03-2026 20:00",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/19458df47358d18ab3967d6e02924bef-large.jpg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1755533/barreiro-metal-inferno-2026",
+    "featured": false
+  },
+  {
     "id": "formigas-superpoderes-em-miniatura-reserva-na-primavera-2026-03-07",
     "title": "Formigas: superpoderes em miniatura | Reserva na Primavera",
     "category": "Comunidade",
@@ -1679,6 +1695,38 @@
     "contacts": "973920605 · 257953166",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-04T08:52:23.244Z"
+  },
+  {
+    "id": "feira-da-bagageira-no-barreiro-2026-03-07",
+    "title": "Feira da Bagageira no Barreiro",
+    "date": "2026-03-07",
+    "endDate": "",
+    "time": "10:00",
+    "location": "Polis Barreiro",
+    "category": "Feira",
+    "description": "Feira da Bagageira no Barreiro » Polis Barreiro » Mercados e Feiras - 07-03-2026 10:00",
+    "descriptionFull": "Feira da Bagageira no Barreiro » Polis Barreiro » Mercados e Feiras - 07-03-2026 10:00",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1750575-277b88d95a3485af5e3d7f471e0d65e7-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1750575/feira-da-bagageira-no-barreiro",
+    "featured": false
+  },
+  {
+    "id": "tau-urubu-tiago-sousa-rebeca-csalog-2026-03-12",
+    "title": "Tau, Urubu * Tiago Sousa * Rebeca Csalog",
+    "date": "2026-03-12",
+    "endDate": "2026-03-13",
+    "time": "21:00",
+    "location": "Cooperativa Mula",
+    "category": "Música",
+    "description": "Tau, Urubu * Tiago Sousa * Rebeca Csalog » Cooperativa Mula » Concertos + Literatura - 12-03-2026 21:00",
+    "descriptionFull": "Tau, Urubu * Tiago Sousa * Rebeca Csalog » Cooperativa Mula » Concertos + Literatura - 12-03-2026 21:00",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/2330dd77446013323c2c188f9beffb7f-large.jpg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1749671/tau-urubu-tiago-sousa-rebeca-csalog",
+    "featured": false
   },
   {
     "id": "viagem-a-lisboa-um-espetaculo-d-o-clube-2026-03-14",
@@ -1697,6 +1745,22 @@
     "ticketUrl": "mailto:bilheteira@cm-barreiro.pt",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-04T08:52:18.946Z"
+  },
+  {
+    "id": "jooklo-duo-2026-03-14",
+    "title": "Jooklo Duo ▰",
+    "date": "2026-03-14",
+    "endDate": "",
+    "time": "22:00",
+    "location": "Cooperativa Mula",
+    "category": "Música",
+    "description": "Jooklo Duo ▰ » Cooperativa Mula » Concertos - 14-03-2026 22:00",
+    "descriptionFull": "Jooklo Duo ▰ » Cooperativa Mula » Concertos - 14-03-2026 22:00",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1738312-dd156fb4913b22d1fd6f3ac05fc79f02-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1738312/jooklo-duo",
+    "featured": false
   },
   {
     "id": "oficina-big-bang-boom-ilustracao-do-universo-para-bebes-e-fa-2026-03-15",
@@ -1832,6 +1896,22 @@
     "scrapedAt": "2026-03-04T08:52:00.976Z"
   },
   {
+    "id": "carla-santana-carlos-santos-2026-04-09",
+    "title": "Carla Santana & Carlos Santos ▰",
+    "date": "2026-04-09",
+    "endDate": "",
+    "time": "21:30",
+    "location": "Biblioteca Municipal do Barreiro",
+    "category": "Música",
+    "description": "Carla Santana & Carlos Santos ▰ » RNBP - Rede Nacional de Bibliotecas Públicas » Concertos - 09-04-2026 21:30",
+    "descriptionFull": "Carla Santana & Carlos Santos ▰ » RNBP - Rede Nacional de Bibliotecas Públicas » Concertos - 09-04-2026 21:30",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1738313-6128d9d15ce1564c62f1092c9fa109a2-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1738313/carla-santana-carlos-santos",
+    "featured": false
+  },
+  {
     "id": "barreiro-machada-trail-noturno-2026-2026-04-11",
     "title": "Barreiro Machada Trail Noturno 2026",
     "category": "Desporto",
@@ -1865,6 +1945,38 @@
     "scrapedAt": "2026-03-04T08:52:00.963Z"
   },
   {
+    "id": "galo-negro-fest-2026-2026-04-11",
+    "title": "GALO NEGRO FEST 2026",
+    "date": "2026-04-11",
+    "endDate": "",
+    "time": "18:00",
+    "location": "ADAO - Associação Desenvolvimento Artes e Oficios",
+    "category": "Música",
+    "description": "GALO NEGRO FEST 2026  » ADAO - Associação Desenvolvimento Artes e Oficios » Concertos - 11-04-2026 18:00",
+    "descriptionFull": "GALO NEGRO FEST 2026  » ADAO - Associação Desenvolvimento Artes e Oficios » Concertos - 11-04-2026 18:00",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1747049-1150a7ea6c277958f41b54f190b5f4e4-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1747049/galo-negro-fest-2026",
+    "featured": false
+  },
+  {
+    "id": "rakta-rabu-mazda-nas-drums-2026-04-17",
+    "title": "RAKTA / Rabu Mazda Nas Drums ▰",
+    "date": "2026-04-17",
+    "endDate": "",
+    "time": "21:30",
+    "location": "Gasoline- Associação Cultural e Desportiva",
+    "category": "Música",
+    "description": "RAKTA / Rabu Mazda Nas Drums ▰ » Gasoline- Associação Cultural e Desportiva » Concertos - 17-04-2026 21:30",
+    "descriptionFull": "RAKTA / Rabu Mazda Nas Drums ▰ » Gasoline- Associação Cultural e Desportiva » Concertos - 17-04-2026 21:30",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1738314-0859db5e910b957af41e8f5de9da747c-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1738314/rakta-rabu-mazda-nas-drums",
+    "featured": false
+  },
+  {
     "id": "poe-te-a-funcionar-2026-2026-04-18",
     "title": "Põe-te a Funcionar 2026",
     "category": "Comunidade",
@@ -1878,6 +1990,22 @@
     "organizer": "Gabinete da Juventude da CMBCâmara Municipal do Ba",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-04T08:51:56.553Z"
+  },
+  {
+    "id": "guilherme-rodrigues-ze-maria-2026-05-07",
+    "title": "Guilherme Rodrigues & Zé Maria ▰",
+    "date": "2026-05-07",
+    "endDate": "",
+    "time": "21:30",
+    "location": "Biblioteca Municipal do Barreiro",
+    "category": "Música",
+    "description": "Guilherme Rodrigues & Zé Maria ▰ » RNBP - Rede Nacional de Bibliotecas Públicas » Concertos - 07-05-2026 21:30",
+    "descriptionFull": "Guilherme Rodrigues & Zé Maria ▰ » RNBP - Rede Nacional de Bibliotecas Públicas » Concertos - 07-05-2026 21:30",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1738315-d41650302bdcb09945b82b3c688ee5ae-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1738315/guilherme-rodrigues-ze-maria",
+    "featured": false
   },
   {
     "id": "concerto-comemorativo-do-32-aniversario-do-coral-tab-2026-12-01",

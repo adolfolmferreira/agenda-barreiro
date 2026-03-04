@@ -37,5 +37,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Scrape Viral Agenda
+        run: npx tsx scripts/scrape-viral.ts
+        timeout-minutes: 3
+
+      - name: Commit Viral events
+        run: |
+          git add data/events.json
+          git diff --staged --quiet || (
+            git commit -m "🔄 Viral Agenda events updated"
+          )
+
       - name: Trigger Vercel Deploy
         run: curl -s -X POST "https://api.vercel.com/v1/integrations/deploy/prj_zxdNuFX6TIa5u3S50Sx4g3glcIIh/eJaE1rQ3tf"
