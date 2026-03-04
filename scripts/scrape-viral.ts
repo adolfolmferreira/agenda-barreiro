@@ -136,7 +136,7 @@ async function main() {
     const titleSlug = slug(detail.title);
     const isDuplicate = existingSlugs.has(titleSlug) ||
       // Also check partial matches
-      [...existingSlugs].some(s => s.includes(titleSlug) || titleSlug.includes(s));
+      Array.from(existingSlugs).some(s => s.includes(titleSlug) || titleSlug.includes(s));
 
     if (isDuplicate) {
       console.log(`  ⏭ Duplicado: ${detail.title.slice(0, 50)}`);
