@@ -102,6 +102,7 @@ button {
   transition    : color 0.2s;
   cursor        : pointer;
   text-transform: lowercase;
+  transition: 0.3s;
 }
 
 .tsl-nav-link:hover {
