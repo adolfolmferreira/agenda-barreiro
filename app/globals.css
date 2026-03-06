@@ -104,7 +104,10 @@ button {
   text-transform: lowercase;
 }
 
-.tsl-nav-link:hover,
+.tsl-nav-link:hover {
+  opacity: 0.7;
+}
+
 .tsl-nav-link.active {
   color: #EF233C;
 }
