@@ -124,9 +124,23 @@ export default function HomeClient({ events }: { events: Event[] }) {
         <section className="tsl-cinema">
           <div className="tsl-cinema-header">
             <h2 className="tsl-cinema-title">No Cinema</h2>
-            <a className="tsl-cinema-link" href="https://castellolopescinemas.pt/barra-shopping-barreiro/" target="_blank" rel="noopener noreferrer">Ver tudo →</a>
+            <div className="tsl-cinema-header-right">
+              {cinema.length > 5 && (
+                <div className="tsl-cinema-arrows">
+                  <button className="tsl-cinema-arrow" onClick={() => {
+                    const el = document.querySelector('.tsl-cinema-track');
+                    if (el) el.scrollBy({ left: -(el.clientWidth), behavior: 'smooth' });
+                  }}>←</button>
+                  <button className="tsl-cinema-arrow" onClick={() => {
+                    const el = document.querySelector('.tsl-cinema-track');
+                    if (el) el.scrollBy({ left: el.clientWidth, behavior: 'smooth' });
+                  }}>→</button>
+                </div>
+              )}
+              <a className="tsl-cinema-link" href="https://castellolopescinemas.pt/barra-shopping-barreiro/" target="_blank" rel="noopener noreferrer">Ver tudo →</a>
+            </div>
           </div>
-          <div className="tsl-cinema-slider">
+          <div className="tsl-cinema-track">
             {cinema.map((film, i) => (
               <a key={i} className="tsl-cinema-card" href={film.url} target="_blank" rel="noopener noreferrer">
                 {film.img && <img className="tsl-cinema-poster" src={film.img} alt={film.title} loading="lazy" />}

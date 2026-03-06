@@ -731,10 +731,42 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: center;
   margin-bottom: 32px;
 }
-.tsl-cinema-slider {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+.tsl-cinema-track {
+  display: flex;
   gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+.tsl-cinema-track::-webkit-scrollbar { display: none; }
+.tsl-cinema-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.tsl-cinema-arrows {
+  display: flex;
+  gap: 6px;
+}
+.tsl-cinema-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.tsl-cinema-arrow:hover {
+  background: #101f2a;
+  color: #fff;
+  border-color: #101f2a;
 }
 .tsl-cinema-card {
   display: flex;
@@ -743,6 +775,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-decoration: none;
   cursor: pointer;
   transition: opacity 0.2s;
+  flex: 0 0 calc((100% - 96px) / 5);
+  scroll-snap-align: start;
+  min-width: 0;
 }
 .tsl-cinema-card:hover { opacity: 0.8; }
 .tsl-cinema-poster {
@@ -769,7 +804,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .tsl-cinema-link:hover { opacity: 0.5; }
 @media (max-width: 768px) {
   .tsl-cinema { padding: 40px 20px; }
-  .tsl-cinema-slider { grid-template-columns: repeat(2, 1fr); }
+  .tsl-cinema-card { flex: 0 0 calc((100% - 24px) / 2.3); }
+  .tsl-cinema-arrows { display: none; }
 }
 
 /* ── AGENDA PAGE ─────────────────────── */

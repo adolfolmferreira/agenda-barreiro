@@ -1,5 +1,15 @@
 import { writeFileSync, mkdirSync } from 'fs';
 
+const SKIP_PATTERNS = [
+  'castello-lopes', 'button_', 'app-store', 'google-play',
+  'LRE_Theme', 'cinzento', 'white_1', 'logo'
+];
+
+function isPoster(src: string): boolean {
+  const lower = src.toLowerCase();
+  return !SKIP_PATTERNS.some(p => lower.includes(p.toLowerCase()));
+}
+
 async function scrapeCinema() {
   console.log('🎬 Scraping cinema from castellolopescinemas.pt (Barra Shopping Barreiro)...\n');
 
@@ -8,7 +18,6 @@ async function scrapeCinema() {
   });
   const html = await res.text();
 
-  // Extract film URLs and titles from the dropdown or list
   const films: { title: string; url: string; img: string }[] = [];
   const seen = new Set<string>();
   const re = /<option value="(https:\/\/castellolopescinemas\.pt\/filmes\/[^"]+)">([^<]+)<\/option>/gi;
@@ -24,24 +33,22 @@ async function scrapeCinema() {
 
   console.log(`📋 ${films.length} filmes encontrados\n`);
 
-  // Fetch poster for each film
   for (const film of films) {
     try {
       const r = await fetch(film.url, { signal: AbortSignal.timeout(10000) });
       const h = await r.text();
-      const og = h.match(/og:image[^>]+content="([^"]+)"/i);
-      if (og) film.img = og[1].trim();
 
-      // Try to get a better poster image (portrait)
-      const poster = h.match(/wp-content\/uploads\/[^"]*poster[^"]*/i) ||
-                     h.match(/wp-content\/uploads\/[^"]*\.jpg/i);
-      if (poster) {
-        const fullUrl = poster[0].startsWith('http') ? poster[0] : 'https://castellolopescinemas.pt/' + poster[0];
-        // Only use if different from og:image (might be portrait)
-        if (fullUrl !== film.img) film.img = film.img || fullUrl;
+      // Find first content image that's not a logo/button
+      const imgRe = /src="(https:\/\/castellolopescinemas\.pt\/wp-content\/uploads\/[^"]+)"/gi;
+      let im: RegExpExecArray | null;
+      while ((im = imgRe.exec(h)) !== null) {
+        if (isPoster(im[1])) {
+          film.img = im[1];
+          break;
+        }
       }
 
-      console.log(`  ✅ ${film.title}`);
+      console.log(`  ✅ ${film.title}${film.img ? '' : ' (sem poster)'}`);
     } catch {
       console.log(`  ❌ ${film.title} - erro`);
     }
