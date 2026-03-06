@@ -27,3 +27,4 @@ next-env.d.ts
 data/events.json
 data/meta.json
 .vercel
+.DS_Store

@@ -797,3 +797,53 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (max-width: 768px) {
 .tsl-list-img { width: 80px; height: 56px; }
 }
+
+/* ─── Static Pages ────────────────────────────────── */
+.tsl-page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+.tsl-page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #101f2a;
+}
+.tsl-page-content p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 1rem;
+}
+.tsl-page-content strong {
+  color: #101f2a;
+}
+.tsl-link {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* ─── Upcoming Section (Homepage) ─────────────────── */
+.tsl-upcoming {
+  padding: 2rem 1.5rem;
+}
+.tsl-upcoming-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.tsl-upcoming-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #101f2a;
+}
+.tsl-upcoming-link {
+  font-size: 0.9rem;
+  color: #64748b;
+  text-decoration: none;
+}
+.tsl-upcoming-link:hover {
+  color: #101f2a;
+}
