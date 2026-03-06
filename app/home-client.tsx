@@ -181,7 +181,7 @@ export default function HomeClient({ events }: { events: Event[] }) {
     <>
       {highlights.length > 0 && <HighlightsSection highlights={highlights} />}
 
-      {/* Próximos eventos */}
+      {/* ─── SECÇÃO: PRÓXIMOS EVENTOS ─── */}
       {upcoming.length > 0 && (
         <section className="tsl-upcoming">
           <div className="tsl-upcoming-header">
@@ -227,6 +227,122 @@ export default function HomeClient({ events }: { events: Event[] }) {
         </section>
       )}
 
+
+
+      {/* ─── SECÇÃO: PARA OS MAIS NOVOS ─── */}
+      {(() => {
+        const kidsKeywords = [
+          "criança",
+          "junior",
+          "júnior",
+          "bebé",
+          "bebe",
+          "infantil",
+          "família",
+          "familia",
+          "oficina criativa",
+          "marionetas",
+          "animação para",
+          "jovem",
+          "jovens",
+          "kids",
+          "miúdos",
+          "amac júnior",
+        ];
+        const excludeKeywords = [
+          "trail",
+          "corrida",
+          "atletismo",
+          "meia maratona",
+        ];
+        const today = new Date().toISOString().slice(0, 10);
+        const kidsEvents = events
+          .filter((e) => {
+            if (e.date < today) return false;
+            const text = (
+              e.title +
+              " " +
+              (e.description || "") +
+              " " +
+              (e.category || "")
+            ).toLowerCase();
+            const hasKid = kidsKeywords.some((k) => text.includes(k));
+            const hasExclude = excludeKeywords.some((k) => text.includes(k));
+            return hasKid && !hasExclude;
+          })
+          .sort((a, b) => a.date.localeCompare(b.date))
+          .slice(0, 9);
+
+        if (kidsEvents.length === 0) return null;
+        return (
+          <section className="tsl-kids">
+            <div className="tsl-kids-header">
+              <h2 className="tsl-kids-title">Para os Mais Novos</h2>
+              <div className="tsl-kids-header-right">
+                {kidsEvents.length > 3 && (
+                  <div className="tsl-kids-arrows">
+                    <button
+                      className="tsl-cinema-arrow"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const el = document.querySelector(".tsl-kids-track");
+                        if (el)
+                          el.scrollBy({
+                            left: -el.clientWidth,
+                            behavior: "smooth",
+                          });
+                      }}
+                    >
+                      ←
+                    </button>
+                    <button
+                      className="tsl-cinema-arrow"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const el = document.querySelector(".tsl-kids-track");
+                        if (el)
+                          el.scrollBy({
+                            left: el.clientWidth,
+                            behavior: "smooth",
+                          });
+                      }}
+                    >
+                      →
+                    </button>
+                  </div>
+                )}
+                <Link href="/agenda" className="tsl-kids-link">
+                  Ver agenda completa →
+                </Link>
+              </div>
+            </div>
+            <div className="tsl-kids-track">
+              {kidsEvents.map((ev) => (
+                <Link
+                  key={ev.id}
+                  href={`/evento/${ev.id}`}
+                  className="tsl-kids-card"
+                >
+                  <div className="tsl-kids-info">
+                    <span className="tsl-kids-date">{fmtRange(ev.date, ev.endDate)}</span>
+                    <span className="tsl-kids-cat">{ev.category.toLowerCase()}</span>
+                    <h3 className="tsl-kids-name">{ev.title.length > 45 ? ev.title.slice(0, 45) + '…' : ev.title}</h3>
+                    {ev.location && ev.location !== 'Barreiro' && cleanLoc(ev.location) && (
+                      <span className="tsl-kids-loc">{cleanLoc(ev.location)}</span>
+                    )}
+                  </div>
+                  <div className="tsl-kids-img">
+                    {ev.imageUrl ? <img src={ev.imageUrl} alt={ev.title} loading="lazy" /> : <div className="tsl-kids-noimg" />}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
+
+
+      {/* ─── SECÇÃO: NO CINEMA ─── */}
       {cinema.length > 0 && (
         <section className="tsl-cinema">
           <div className="tsl-cinema-header">
@@ -300,7 +416,11 @@ export default function HomeClient({ events }: { events: Event[] }) {
         </section>
       )}
 
-      {/* Edições PDF */}
+
+
+
+
+      {/* ─── SECÇÃO: EDIÇÕES PDF ─── */}
       <section className="tsl-pdf">
         <h2 className="tsl-pdf-heading">
           Agenda 2830 (Edição em PDF)
