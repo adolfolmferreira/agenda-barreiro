@@ -151,13 +151,13 @@ export default function AgendaClient({ events }: { events: Event[] }) {
               className={`tsl-view-btn ${viewMode === "grid" ? "active" : ""}`}
               onClick={() => setViewMode("grid")}
             >
-              <LayoutGrid size={18} />
+              <LayoutGrid size={20} />
             </button>
             <button
               className={`tsl-view-btn ${viewMode === "list" ? "active" : ""}`}
               onClick={() => setViewMode("list")}
             >
-              <List size={18} />
+              <List size={20} />
             </button>
           </div>
         </div>

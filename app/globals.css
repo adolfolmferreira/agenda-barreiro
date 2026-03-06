@@ -638,23 +638,42 @@ button {
 .tsl-foot {
   background: #273239;
   margin-top: auto;
-  height    : 320px;
 }
-
 .tsl-foot-in {
-  padding  : 48px;
-  display  : flex;
-  flex-wrap: wrap;
-  gap      : 24px;
-  font-size: 13px;
-  color    : #888;
+  padding: 32px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #fff;
 }
-
-.tsl-foot-brand {
-  font-family : 'Unbounded', sans-serif;
-  font-size   : 18px;
-  color       : #fff;
-  margin-right: auto;
+.tsl-foot-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tsl-foot-sep {
+  opacity: 0.4;
+}
+.tsl-foot-link {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.tsl-foot-link:hover {
+  opacity: 0.7;
+}
+.tsl-foot-center {
+  text-align: center;
+}
+.tsl-foot-right {
+  display: flex;
+  align-items: center;
+}
+.tsl-foot-logo {
+  height: 60px;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
 
 /* ═══ RESPONSIVE ═══ */
@@ -1548,5 +1567,16 @@ button {
 
   .tsl-nav-link {
     font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .tsl-foot-in {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .tsl-foot-left {
+    justify-content: center;
   }
 }
