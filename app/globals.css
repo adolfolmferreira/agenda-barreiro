@@ -55,7 +55,7 @@ button {
   top          : 0;
   z-index      : 200;
   background   : #EDEBE0;
-  border-bottom: 1px solid rgba(39, 50, 57, 0.4);
+  border-bottom: 1px solid rgba(39, 50, 57, 0.2);
 }
 
 .tsl-head-in {
@@ -980,7 +980,7 @@ button {
 /* ── NO CINEMA ───────────────────────── */
 .tsl-cinema {
   padding      : 80px 48px;
-  border-bottom: 1px solid rgba(39, 50, 57, 0.4);
+  border-bottom: 1px solid rgba(39, 50, 57, 0.2);
 }
 
 .tsl-cinema-title {
@@ -1177,7 +1177,7 @@ button {
 /* ─── Upcoming Section (Homepage) ─────────────────── */
 .tsl-upcoming {
   padding      : 80px 48px;
-  border-bottom: 1px solid rgba(39, 50, 57, 0.4);
+  border-bottom: 1px solid rgba(39, 50, 57, 0.2);
 }
 
 .tsl-upcoming-header {
