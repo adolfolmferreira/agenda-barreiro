@@ -1472,3 +1472,64 @@ button {
   height: 80px;
   width: auto;
 }
+
+/* ─── Mobile Header ───────────────────────────────── */
+.tsl-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 210;
+}
+.tsl-menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #273239;
+  transition: all 0.3s;
+}
+.tsl-menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.tsl-menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.tsl-menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .tsl-menu-toggle {
+    display: flex;
+  }
+  .tsl-head-in {
+    height: 60px;
+    padding: 0 20px;
+  }
+  .tsl-logo-img {
+    height: 28px;
+  }
+  .tsl-nav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #EDEBE0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    z-index: 200;
+  }
+  .tsl-nav.open {
+    display: flex;
+  }
+  .tsl-nav-link {
+    font-size: 28px;
+  }
+}
