@@ -227,8 +227,6 @@ export default function HomeClient({ events }: { events: Event[] }) {
         </section>
       )}
 
-
-
       {/* ─── SECÇÃO: PARA OS MAIS NOVOS ─── */}
       {(() => {
         const kidsKeywords = [
@@ -277,7 +275,11 @@ export default function HomeClient({ events }: { events: Event[] }) {
         return (
           <section className="tsl-kids">
             <div className="tsl-kids-header">
-              <h2 className="tsl-kids-title">Para os Mais Novos</h2>
+              <h2 className="tsl-kids-title">
+                Para os Mais Novos
+                <br />
+                <span className="red-bar"></span>
+              </h2>
               <div className="tsl-kids-header-right">
                 {kidsEvents.length > 3 && (
                   <div className="tsl-kids-arrows">
@@ -324,15 +326,31 @@ export default function HomeClient({ events }: { events: Event[] }) {
                   className="tsl-kids-card"
                 >
                   <div className="tsl-kids-info">
-                    <span className="tsl-kids-date">{fmtRange(ev.date, ev.endDate)}</span>
-                    <span className="tsl-kids-cat">{ev.category.toLowerCase()}</span>
-                    <h3 className="tsl-kids-name">{ev.title.length > 45 ? ev.title.slice(0, 45) + '…' : ev.title}</h3>
-                    {ev.location && ev.location !== 'Barreiro' && cleanLoc(ev.location) && (
-                      <span className="tsl-kids-loc">{cleanLoc(ev.location)}</span>
-                    )}
+                    <span className="tsl-kids-date">
+                      {fmtRange(ev.date, ev.endDate)}
+                    </span>
+                    <span className="tsl-kids-cat">
+                      {ev.category.toLowerCase()}
+                    </span>
+                    <h3 className="tsl-kids-name">
+                      {ev.title.length > 85
+                        ? ev.title.slice(0, 85) + "…"
+                        : ev.title}
+                    </h3>
+                    {ev.location &&
+                      ev.location !== "Barreiro" &&
+                      cleanLoc(ev.location) && (
+                        <span className="tsl-kids-loc">
+                          {cleanLoc(ev.location)}
+                        </span>
+                      )}
                   </div>
                   <div className="tsl-kids-img">
-                    {ev.imageUrl ? <img src={ev.imageUrl} alt={ev.title} loading="lazy" /> : <div className="tsl-kids-noimg" />}
+                    {ev.imageUrl ? (
+                      <img src={ev.imageUrl} alt={ev.title} loading="lazy" />
+                    ) : (
+                      <div className="tsl-kids-noimg" />
+                    )}
                   </div>
                 </Link>
               ))}
@@ -340,7 +358,6 @@ export default function HomeClient({ events }: { events: Event[] }) {
           </section>
         );
       })()}
-
 
       {/* ─── SECÇÃO: NO CINEMA ─── */}
       {cinema.length > 0 && (
@@ -415,10 +432,6 @@ export default function HomeClient({ events }: { events: Event[] }) {
           </div>
         </section>
       )}
-
-
-
-
 
       {/* ─── SECÇÃO: EDIÇÕES PDF ─── */}
       <section className="tsl-pdf">
