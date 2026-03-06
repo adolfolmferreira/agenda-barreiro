@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Geist:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap');
 
 *,
 *::before,
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family            : 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family            : "Instrument Sans", sans-serif;
   font-weight            : 300;
   color                  : rgb(16, 31, 42);
   background             : #fff;
@@ -59,11 +59,12 @@ button {
 }
 
 .tsl-head-in {
-  padding    : 0 48px;
-  height     : 80px;
-  display    : flex;
-  align-items: center;
-  gap        : 48px;
+  padding        : 0 48px;
+  height         : 80px;
+  display        : flex;
+  align-items    : center;
+  gap            : 48px;
+  justify-content: space-between;
 }
 
 .tsl-logo {
@@ -74,7 +75,7 @@ button {
 }
 
 .tsl-logo-day {
-  font-family: 'Unbounded', sans-serif;
+  font-family: "Instrument Sans", sans-serif;
   font-size  : 28px;
   font-style : italic;
   color      : rgb(16, 31, 42);
@@ -286,6 +287,15 @@ button {
   width  : 100%;
 }
 
+.red-bar {
+  background-color: #EF233C;
+  display         : block;
+  width           : 24px;
+  height          : 4px;
+  margin-top      : 10px;
+  margin-bottom   : 20px;
+}
+
 /* ─── Month ─── */
 .tsl-month {
   margin-top: 56px;
@@ -357,10 +367,13 @@ button {
 
 .tsl-card-date {
   display      : block;
-  font-size    : 16px;
+  color        : #21353D;
+  font-family  : "Instrument Sans";
+  font-size    : 18px;
+  font-style   : normal;
   font-weight  : 700;
-  color        : #999;
   margin-bottom: 4px;
+  opacity      : 0.5;
 }
 
 .tsl-card-cat {
@@ -373,17 +386,16 @@ button {
 }
 
 .tsl-card-title {
-  font-family: 'Unbounded', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size  : clamp(20px, 2vw, 28px);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
   color      : rgb(16, 31, 42);
   transition : color 0.2s;
 }
 
 .tsl-card:hover .tsl-card-title {
-  font-family: 'Unbounded', sans-serif;
-  color      : #555;
+  color: #555;
 }
 
 .tsl-card-loc {
@@ -521,19 +533,18 @@ button {
 /* ═══ PDF EDITIONS — magazine-size covers ═══ */
 .tsl-pdf {
   padding   : 80px 48px 96px;
-  background: rgb(16, 31, 42);
+  background: #273239;
   overflow  : hidden;
 }
 
 .tsl-pdf-heading {
-  font-family   : 'Unbounded', sans-serif;
-  font-style    : italic;
-  font-size     : clamp(32px, 4vw, 48px);
+  font-family   : "Instrument Serif", serif;
+  font-size     : 42px;
   font-weight   : 400;
+  text-transform: lowercase;
   color         : #fff;
-  text-align    : center;
-  margin-bottom : 56px;
-  letter-spacing: -1px;
+  margin-bottom : 48px;
+  line-height   : normal;
 }
 
 .tsl-pdf-grid {
@@ -567,13 +578,12 @@ button {
 }
 
 .tsl-pdf-label {
-  font-family   : 'Unbounded', sans-serif;
-  font-size     : 18px;
-  font-weight   : 400;
-  color         : rgba(255, 255, 255, .6);
-  margin-bottom : 20px;
-  letter-spacing: 0.3px;
-  transition    : color 0.2s;
+  font-family  : 'Instrument Sans', sans-serif;
+  font-size    : 24px;
+  font-weight  : 700;
+  color        : #fff;
+  margin-bottom: 20px;
+  transition   : color 0.2s;
 }
 
 .tsl-pdf-item:hover .tsl-pdf-label {
@@ -748,18 +758,19 @@ button {
 
 /* ── EM DESTAQUE ─────────────────────── */
 .tsl-highlights {
-  padding         : 60px 48px;
+  padding         : 40px 48px 80px 48px;
   background-color: #EDEBE0;
+  border-bottom   : 1px solid #273239;
 }
 
 .tsl-highlights-title {
-  font-family   : 'Unbounded', sans-serif;
-  font-size     : 32px;
-  font-weight   : 600;
-  text-transform: lowercase;
-  letter-spacing: 2px;
-  color         : #273239;
-  margin-bottom : 32px;
+  font-family      : "Instrument Serif", serif;
+  font-size        : 42px;
+  font-weight      : 400;
+  text-transform   : lowercase;
+  color            : #273239;
+  /* margin-bottom : 32px; */
+  line-height      : normal;
 }
 
 .tsl-highlights-grid {
@@ -786,19 +797,30 @@ button {
   gap           : 8px;
 }
 
+.tsl-highlight-date {
+  display    : block;
+  color      : #21353D;
+  font-family: "Instrument Sans";
+  font-size  : 18px;
+  font-style : normal;
+  font-weight: 700;
+  opacity    : 0.5;
+}
+
 .tsl-highlight-cat {
-  font-family   : 'Unbounded', sans-serif;
-  font-size     : 11px;
-  font-weight   : 500;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color         : #888;
+  color      : #EF233C;
+  font-family: "Instrument Sans";
+  font-size  : 18px;
+  font-style : normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .tsl-highlight-name {
-  font-family: 'Unbounded', sans-serif;
-  font-size  : 28px;
-  font-weight: 400;
+  font-family: "Instrument Sans", sans-serif;
+  font-size  : 32px;
+  font-weight: 700;
+  color      : #273239;
 
   color      : rgb(16, 31, 42);
   line-height: 1.1;
@@ -958,17 +980,18 @@ button {
 
 /* ── NO CINEMA ───────────────────────── */
 .tsl-cinema {
-  padding: 60px 48px;
+  padding      : 80px 48px;
+  border-bottom: 1px solid #273239;
 }
 
 .tsl-cinema-title {
-  font-family   : 'Unbounded', sans-serif;
-  font-size     : 14px;
-  font-weight   : 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color         : rgb(16, 31, 42);
-  margin-bottom : 32px;
+  font-family     : "Instrument Serif", serif;
+  font-size       : 42px;
+  font-weight     : 400;
+  text-transform  : lowercase;
+  color           : #273239;
+  /*margin-bottom : 32px;*/
+  line-height     : normal;
 }
 
 .tsl-cinema-header {
@@ -1047,18 +1070,19 @@ button {
 }
 
 .tsl-cinema-name {
-  font-family: 'Unbounded', sans-serif;
-  font-size  : 14px;
-  font-weight: 400;
-  color      : rgb(16, 31, 42);
+  font-family: "Instrument Sans", sans-serif;
+  font-size  : 18px;
+  font-weight: 700;
+  color      : #21353D;
+  font-style : normal;
   line-height: 1.2;
 }
 
 .tsl-cinema-link {
-  font-family    : 'Unbounded', sans-serif;
-  font-size      : 12px;
+  font-family    : 'Instrument Sans', sans-serif;
+  font-size      : 16px;
   font-weight    : 500;
-  color          : rgb(16, 31, 42);
+  color          : #21353D;
   text-decoration: none;
   transition     : opacity 0.2s;
 }
@@ -1150,7 +1174,8 @@ button {
 
 /* ─── Upcoming Section (Homepage) ─────────────────── */
 .tsl-upcoming {
-  padding: 2rem 1.5rem;
+  padding      : 80px 48px;
+  border-bottom: 1px solid #273239;
 }
 
 .tsl-upcoming-header {
@@ -1161,15 +1186,22 @@ button {
 }
 
 .tsl-upcoming-title {
-  font-size  : 1.4rem;
-  font-weight: 700;
-  color      : #101f2a;
+  font-family     : "Instrument Serif", serif;
+  font-size       : 42px;
+  font-weight     : 400;
+  text-transform  : lowercase;
+  color           : #273239;
+  /*margin-bottom : 32px;*/
+  line-height     : normal;
 }
 
 .tsl-upcoming-link {
-  font-size      : 0.9rem;
-  color          : #64748b;
+  font-family    : 'Instrument Sans', sans-serif;
+  font-size      : 16px;
+  font-weight    : 500;
+  color          : #21353D;
   text-decoration: none;
+  transition     : opacity 0.2s;
 }
 
 .tsl-upcoming-link:hover {
