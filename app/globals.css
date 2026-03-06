@@ -54,13 +54,13 @@ button {
   position     : sticky;
   top          : 0;
   z-index      : 200;
-  background   : #fff;
-  border-bottom: 1px solid #e5e5e5;
+  background   : #EDEBE0;
+  border-bottom: 1px solid #273239;
 }
 
 .tsl-head-in {
   padding    : 0 48px;
-  height     : 64px;
+  height     : 80px;
   display    : flex;
   align-items: center;
   gap        : 48px;
@@ -102,7 +102,7 @@ button {
   transition    : color 0.2s;
   cursor        : pointer;
   text-transform: lowercase;
-  transition: 0.3s;
+  transition    : 0.3s;
 }
 
 .tsl-nav-link:hover {
