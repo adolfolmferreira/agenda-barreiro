@@ -1,42 +1,55 @@
 import { writeFileSync, mkdirSync } from 'fs';
 
 async function scrapeCinema() {
-  console.log('🎬 Scraping cinema from cinecartaz.publico.pt...');
-  
-  const res = await fetch('https://cinecartaz.publico.pt/cinema/castello-lopes---forum-barreiro-215096', {
+  console.log('🎬 Scraping cinema from castellolopescinemas.pt (Barra Shopping Barreiro)...\n');
+
+  const res = await fetch('https://castellolopescinemas.pt/barra-shopping-barreiro/', {
     signal: AbortSignal.timeout(15000),
   });
   const html = await res.text();
 
-  const paths: string[] = [];
-  const re = /href="\/filme\/([^"]+)"[^>]*class="button button--call-to-action/gi;
-  let match: RegExpExecArray | null;
-  while ((match = re.exec(html)) !== null) paths.push(match[1]);
-  console.log(`Found ${paths.length} films`);
+  // Extract film URLs and titles from the dropdown or list
+  const films: { title: string; url: string; img: string }[] = [];
+  const seen = new Set<string>();
+  const re = /<option value="(https:\/\/castellolopescinemas\.pt\/filmes\/[^"]+)">([^<]+)<\/option>/gi;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(html)) !== null) {
+    const url = m[1];
+    const title = m[2].replace(/&#171;|&#187;/g, '').trim();
+    if (!seen.has(url)) {
+      seen.add(url);
+      films.push({ title, url, img: '' });
+    }
+  }
 
-  const films = [];
-  for (const path of paths.slice(0, 5)) {
-    const url = 'https://cinecartaz.publico.pt' + path;
+  console.log(`📋 ${films.length} filmes encontrados\n`);
+
+  // Fetch poster for each film
+  for (const film of films) {
     try {
-      const r = await fetch(url, { signal: AbortSignal.timeout(10000) });
+      const r = await fetch(film.url, { signal: AbortSignal.timeout(10000) });
       const h = await r.text();
       const og = h.match(/og:image[^>]+content="([^"]+)"/i);
-      const title = h.match(/og:title[^>]+content="([^"]+)"/i);
-      const film = {
-        title: title ? title[1] : path.split('/').pop() || '',
-        url,
-        img: og ? og[1].trim() : '',
-      };
-      films.push(film);
-      console.log(`  ✓ ${film.title}`);
-    } catch (e) {
-      console.log(`  ✗ ${path} - error`);
+      if (og) film.img = og[1].trim();
+
+      // Try to get a better poster image (portrait)
+      const poster = h.match(/wp-content\/uploads\/[^"]*poster[^"]*/i) ||
+                     h.match(/wp-content\/uploads\/[^"]*\.jpg/i);
+      if (poster) {
+        const fullUrl = poster[0].startsWith('http') ? poster[0] : 'https://castellolopescinemas.pt/' + poster[0];
+        // Only use if different from og:image (might be portrait)
+        if (fullUrl !== film.img) film.img = film.img || fullUrl;
+      }
+
+      console.log(`  ✅ ${film.title}`);
+    } catch {
+      console.log(`  ❌ ${film.title} - erro`);
     }
   }
 
   mkdirSync('data', { recursive: true });
   writeFileSync('data/cinema.json', JSON.stringify(films, null, 2));
-  console.log(`\n✅ Saved ${films.length} films to data/cinema.json`);
+  console.log(`\n💾 ${films.length} filmes guardados em data/cinema.json`);
 }
 
 scrapeCinema().catch(console.error);
