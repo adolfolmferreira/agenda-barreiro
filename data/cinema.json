@@ -1,107 +1,90 @@
 [
   {
-    "title": "A Criada",
-    "url": "https://castellolopescinemas.pt/filmes/a-criada/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/09/A-Criada-2-scaled.jpg"
-  },
-  {
     "title": "A Noiva!",
-    "url": "https://castellolopescinemas.pt/filmes/a-noiva/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/The_bride-scaled.jpg"
-  },
-  {
-    "title": "Ângelo na Floresta Mágica (Dob.)",
-    "url": "https://castellolopescinemas.pt/filmes/angelo-na-floresta-magica-dob/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Angelo-Na-Floresta-Magica-scaled.jpg"
-  },
-  {
-    "title": "Avatar: Fogo e Cinzas",
-    "url": "https://castellolopescinemas.pt/filmes/avatar-fogo-e-cinzas/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/07/Avatar-Final.jpg"
-  },
-  {
-    "title": "Crime 101",
-    "url": "https://castellolopescinemas.pt/filmes/crime-101/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Crime-101-3.jpg"
-  },
-  {
-    "title": "GOAT: O Maior de Todos (Dob.)",
-    "url": "https://castellolopescinemas.pt/filmes/goat-o-maior-de-todos-dob/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Goat.jpg"
-  },
-  {
-    "title": "Gritos 7",
-    "url": "https://castellolopescinemas.pt/filmes/gritos-7/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Gritos-7-scaled.jpg"
-  },
-  {
-    "title": "Hamnet",
-    "url": "https://castellolopescinemas.pt/filmes/hamnet/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Hamnet-scaled.jpg"
-  },
-  {
-    "title": "La Vie de Maria Manuela",
-    "url": "https://castellolopescinemas.pt/filmes/la-vie-de-maria-manuela/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/La-Vie-de-Maria-Manuela.jpg"
-  },
-  {
-    "title": "Maria Vitória",
-    "url": "https://castellolopescinemas.pt/filmes/maria-vitoria/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Maria-Vitoria-scaled.jpg"
-  },
-  {
-    "title": "O Homem Mais Sortudo da América",
-    "url": "https://castellolopescinemas.pt/filmes/o-homem-mais-sortudo-da-america/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/O-Homem-Mais-Sortudo-da-America_Comp-scaled.jpg"
-  },
-  {
-    "title": "O Meu Amigo É Ninja 3 (Dob.)",
-    "url": "https://castellolopescinemas.pt/filmes/o-meu-amigo-e-ninja-3-dob/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/12/O-Meu-Amigo-e-Ninja-3-scaled.jpg"
-  },
-  {
-    "title": "O Monte dos Vendavais",
-    "url": "https://castellolopescinemas.pt/filmes/o-monte-dos-vendavais/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/10/O-Monte-dos-Vendavais-scaled.jpg"
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19582",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/The_bride-500x741.jpg",
+    "genre": "Musical, Romance, Terror",
+    "duration": "02h07",
+    "rating": "M/16"
   },
   {
     "title": "Saltitões (Dob.)",
-    "url": "https://castellolopescinemas.pt/filmes/saltitoes-dob/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Saltitoes.jpg"
-  },
-  {
-    "title": "Scarlet",
-    "url": "https://castellolopescinemas.pt/filmes/scarlet/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Scarlet_.jpg"
-  },
-  {
-    "title": "SpongeBob O Filme: À Procura das Calças Quadradas",
-    "url": "https://castellolopescinemas.pt/filmes/spongebob-o-filme-a-procura-das-calcas-quadradas-dob/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Spongebob-2-scaled.jpg"
-  },
-  {
-    "title": "Stray Kids: The dominATE Experience",
-    "url": "https://castellolopescinemas.pt/filmes/stray-kids-the-dominate-experience/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Stray-Kids-scaled.jpg"
-  },
-  {
-    "title": "Terra Vil",
-    "url": "https://castellolopescinemas.pt/filmes/terra-vil/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Terra-Vil-scaled.jpg"
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19587",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Saltitoes-500x714.jpg",
+    "genre": "Animação, Comédia",
+    "duration": "1h45",
+    "rating": "M/6"
   },
   {
     "title": "The Moment, por Charli XCX",
-    "url": "https://castellolopescinemas.pt/filmes/the-moment/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/TheMoment_Poster_320x500px.jpg"
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20533",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/TheMoment_Poster_320x500px.jpg",
+    "genre": "Drama, Ficção, Musical",
+    "duration": "1h43",
+    "rating": "M/12"
   },
   {
-    "title": "Young Hearts: O Primeiro Amor",
-    "url": "https://castellolopescinemas.pt/filmes/young-hearts-o-primeiro-amor/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Young-Hearts.jpg"
+    "title": "O Homem Mais Sortudo da América",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20422",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/O-Homem-Mais-Sortudo-da-America_Comp-500x714.jpg",
+    "genre": "Drama",
+    "duration": "1h31",
+    "rating": "M/12"
+  },
+  {
+    "title": "Gritos 7",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19491",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Gritos-7-500x741.jpg",
+    "genre": "Horror, Mistério",
+    "duration": "1h53",
+    "rating": "M/16"
+  },
+  {
+    "title": "Hamnet",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19384",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Hamnet-500x720.jpg",
+    "genre": "Drama, História, Romance",
+    "duration": "2h05",
+    "rating": "M/12"
+  },
+  {
+    "title": "A Criada",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=18772",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/09/A-Criada-2-500x750.jpg",
+    "genre": "Suspense, Thriller",
+    "duration": "2h11",
+    "rating": "M/14"
+  },
+  {
+    "title": "GOAT: O Maior de Todos (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20247",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Goat-500x720.jpg",
+    "genre": "Animação, Comédia",
+    "duration": "1h33",
+    "rating": "M/6"
+  },
+  {
+    "title": "SpongeBob O Filme: À Procura das Calças Quadradas",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19456",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Spongebob-2-500x714.jpg",
+    "genre": "Animação, Aventura, Comédia",
+    "duration": "1h36",
+    "rating": "M/6"
   },
   {
     "title": "Zootrópolis 2 (Dob.)",
-    "url": "https://castellolopescinemas.pt/filmes/zootropolis-2-dob/",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/05/Zootropolis-2-4-scaled.jpg"
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=17743",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/05/Zootropolis-2-4-500x714.jpg",
+    "genre": "Animação, Aventura",
+    "duration": "1h47",
+    "rating": "M/6"
+  },
+  {
+    "title": "Kill Bill: Toda a Obra Sangrenta",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20468",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Kill-Bill-500x720.png",
+    "genre": "Ação, Crime",
+    "duration": "4h35",
+    "rating": "M/16"
   }
 ]
