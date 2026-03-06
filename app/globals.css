@@ -54,7 +54,7 @@ button {
   position     : sticky;
   top          : 0;
   z-index      : 200;
-  background   : #EDEBE0;
+  background   : #fff;
   border-bottom: 1px solid rgba(39, 50, 57, 0.4);
 }
 
