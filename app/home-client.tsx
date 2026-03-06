@@ -175,7 +175,7 @@ export default function HomeClient({ events }: { events: Event[] }) {
   const upcoming = events
     .filter((e) => e.date >= new Date().toISOString().slice(0, 10))
     .sort((a, b) => a.date.localeCompare(b.date))
-    .slice(0, 6);
+    .slice(0, 8);
 
   return (
     <>
@@ -194,29 +194,36 @@ export default function HomeClient({ events }: { events: Event[] }) {
               Ver agenda completa →
             </Link>
           </div>
-          <div className="tsl-grid">
+          <div className="tsl-upcoming-grid">
             {upcoming.map((ev) => (
-              <Link key={ev.id} href={`/evento/${ev.id}`} className="tsl-card">
-                <div className="tsl-card-img">
+              <Link
+                key={ev.id}
+                href={`/evento/${ev.id}`}
+                className="tsl-upcoming-card"
+              >
+                <div className="tsl-upcoming-thumb">
                   {ev.imageUrl ? (
                     <img src={ev.imageUrl} alt={ev.title} loading="lazy" />
                   ) : (
-                    <div className="tsl-card-noimg" />
+                    <div className="tsl-upcoming-nothumb" />
                   )}
-                  <div className="tsl-card-img-over" />
                 </div>
-                <div className="tsl-card-body">
-                  <span className="tsl-card-date">
+                <div className="tsl-upcoming-info">
+                  <span className="tsl-upcoming-date">
                     {fmtRange(ev.date, ev.endDate)}
                   </span>
-                  <span className="tsl-card-cat">
+                  <span className="tsl-upcoming-cat">
                     {ev.category.toLowerCase()}
                   </span>
-                  <h3 className="tsl-card-title">{ev.title}</h3>
+                  <h3 className="tsl-upcoming-name">
+                    {ev.title.length > 60
+                      ? ev.title.slice(0, 60) + "…"
+                      : ev.title}
+                  </h3>
                   {ev.location &&
                     ev.location !== "Barreiro" &&
                     cleanLoc(ev.location) && (
-                      <span className="tsl-card-loc">
+                      <span className="tsl-upcoming-loc">
                         {cleanLoc(ev.location)}
                       </span>
                     )}

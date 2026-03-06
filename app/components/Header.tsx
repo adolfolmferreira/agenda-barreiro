@@ -10,8 +10,7 @@ export default function Header() {
     <header className="tsl-head">
       <div className="tsl-head-in">
         <Link href="/" className="tsl-logo">
-          <span className="tsl-logo-day">{new Date().getDate()}</span>
-          <span className="tsl-logo-wordmark">Agenda<br/>Barreiro</span>
+          <img src="/agenda-b-logotipo.svg" alt="Agenda Barreiro" className="tsl-logo-img" />
         </Link>
         <nav className="tsl-nav">
           <Link href="/" className={`tsl-nav-link ${path === '/' ? 'active' : ''}`}>Início</Link>

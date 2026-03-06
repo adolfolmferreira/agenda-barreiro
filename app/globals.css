@@ -55,7 +55,7 @@ button {
   top          : 0;
   z-index      : 200;
   background   : #EDEBE0;
-  border-bottom: 1px solid #273239;
+  border-bottom: 1px solid rgba(39, 50, 57, 0.4);
 }
 
 .tsl-head-in {
@@ -93,7 +93,7 @@ button {
 
 .tsl-nav {
   display: flex;
-  gap    : 32px;
+  gap    : 42px;
 }
 
 .tsl-nav-link {
@@ -760,7 +760,7 @@ button {
 .tsl-highlights {
   padding         : 40px 48px 80px 48px;
   background-color: #EDEBE0;
-  border-bottom   : 1px solid #273239;
+  border-bottom   : 1px solid rgba(39, 50, 57, 0.4);
 }
 
 .tsl-highlights-title {
@@ -817,9 +817,9 @@ button {
 }
 
 .tsl-highlight-name {
-  font-family: "Instrument Sans", sans-serif;
-  font-size  : 32px;
-  font-weight: 700;
+  font-family: "Instrument Serif", serif;
+  font-size  : 42px;
+  font-weight: 400;
   color      : #273239;
 
   color      : rgb(16, 31, 42);
@@ -981,7 +981,7 @@ button {
 /* ── NO CINEMA ───────────────────────── */
 .tsl-cinema {
   padding      : 80px 48px;
-  border-bottom: 1px solid #273239;
+  border-bottom: 1px solid rgba(39, 50, 57, 0.4);
 }
 
 .tsl-cinema-title {
@@ -1175,7 +1175,7 @@ button {
 /* ─── Upcoming Section (Homepage) ─────────────────── */
 .tsl-upcoming {
   padding      : 80px 48px;
-  border-bottom: 1px solid #273239;
+  border-bottom: 1px solid rgba(39, 50, 57, 0.4);
 }
 
 .tsl-upcoming-header {
@@ -1211,8 +1211,8 @@ button {
 /* ─── Kids Section (Homepage) ─────────────────────── */
 .tsl-kids {
   padding         : 80px 48px;
-  background-color: #D5EBFF;
-  border-bottom   : 1px solid #273239;
+  background-color: #F6E4EB;
+  border-bottom   : 1px solid rgba(39, 50, 57, 0.4);
 }
 
 .tsl-kids-header {
@@ -1368,4 +1368,107 @@ button {
   width     : 100%;
   height    : 100%;
   background: #94a3b8;
+}
+
+/* ─── Upcoming Grid (Homepage) ────────────────────── */
+.tsl-upcoming-grid {
+  display              : grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap                  : 24px;
+}
+
+.tsl-upcoming-card {
+  display        : flex;
+  gap            : 16px;
+  text-decoration: none;
+  color          : inherit;
+  cursor         : pointer;
+  transition     : opacity 0.3s;
+  padding-bottom : 48px;
+  border-bottom  : 1px solid rgba(39, 50, 57, 0.4);
+}
+
+.tsl-upcoming-grid:has(.tsl-upcoming-card:hover) .tsl-upcoming-card:not(:hover) {
+  opacity: 0.45;
+}
+
+.tsl-upcoming-thumb {
+  flex      : 0 0 64px;
+  width     : 64px;
+  height    : 64px;
+  overflow  : hidden;
+  background: #f0f0f0;
+}
+
+.tsl-upcoming-thumb img {
+  width     : 100%;
+  height    : 100%;
+  object-fit: cover;
+}
+
+.tsl-upcoming-nothumb {
+  width     : 100%;
+  height    : 100%;
+  background: #e2e8f0;
+}
+
+.tsl-upcoming-info {
+  display       : flex;
+  flex-direction: column;
+  gap           : 1px;
+  min-width     : 0;
+}
+
+.tsl-upcoming-date {
+  display      : block;
+  color        : #21353D;
+  font-family  : "Instrument Sans";
+  font-size    : 18px;
+  font-style   : normal;
+  font-weight  : 700;
+  margin-bottom: 4px;
+  opacity      : 0.5;
+}
+
+.tsl-upcoming-cat {
+  display       : block;
+  font-size     : 16px;
+  font-weight   : 700;
+  color         : #E63946;
+  letter-spacing: 0.5px;
+  margin-bottom : 4px;
+}
+
+.tsl-upcoming-name {
+  font-size  : 18px;
+  font-weight: 700;
+  color      : #101f2a;
+  line-height: 1.3;
+  margin     : 0;
+}
+
+.tsl-upcoming-loc {
+  display    : block;
+  font-size  : 16px;
+  font-weight: 500;
+  color      : #bbb;
+  margin-top : 6px;
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .tsl-upcoming-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tsl-upcoming-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ─── Logo Image ──────────────────────────────────── */
+.tsl-logo-img {
+  height: 80px;
+  width: auto;
 }
