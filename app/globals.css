@@ -206,7 +206,7 @@ button {
 
 /* ═══ FILTERS ═══ */
 .tsl-filters {
-  padding: 40px 48px 0;
+  padding: 20px 48px 0;
 }
 
 .tsl-filters-row {
@@ -533,7 +533,7 @@ button {
 /* ═══ PDF EDITIONS — magazine-size covers ═══ */
 .tsl-pdf {
   padding   : 80px 48px 96px;
-  background: #273239;
+  background: rgba(39, 50, 57, 0.2);
   overflow  : hidden;
 }
 
@@ -542,7 +542,7 @@ button {
   font-size     : 42px;
   font-weight   : 400;
   text-transform: lowercase;
-  color         : #fff;
+  color         : #273239;
   margin-bottom : 48px;
   line-height   : normal;
 }
@@ -581,13 +581,13 @@ button {
   font-family  : 'Instrument Sans', sans-serif;
   font-size    : 24px;
   font-weight  : 700;
-  color        : #fff;
+  color        : #273239;
   margin-bottom: 20px;
   transition   : color 0.2s;
 }
 
 .tsl-pdf-item:hover .tsl-pdf-label {
-  color: #fff;
+  color: #273239;
 }
 
 .tsl-pdf-cover {
@@ -636,8 +636,9 @@ button {
 
 /* ═══ FOOTER ═══ */
 .tsl-foot {
-  background: rgb(16, 31, 42);
+  background: #273239;
   margin-top: auto;
+  height    : 320px;
 }
 
 .tsl-foot-in {
@@ -1115,7 +1116,6 @@ button {
   font-weight   : 400;
   text-transform: lowercase;
   color         : #273239;
-  margin-bottom : 48px;
   line-height   : normal;
 }
 
