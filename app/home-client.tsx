@@ -48,8 +48,8 @@ function HighlightsSection({ highlights }: { highlights: Event[] }) {
   }, [highlights]);
 
   return (
-    <section className="tsl-highlights" style={{ backgroundColor: bg, color: textColor }}>
-      <h2 className="tsl-highlights-title" style={{ color: textColor }}>Em Destaque</h2>
+    <section className="tsl-highlights">
+      <h2 className="tsl-highlights-title">Em Destaque</h2>
       <div className="tsl-highlights-grid">
         {highlights.map(ev => (
           <Link key={ev.id} href={`/evento/${ev.id}`} className="tsl-highlight-card">
