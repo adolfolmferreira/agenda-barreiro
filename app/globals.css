@@ -1418,8 +1418,8 @@ button {
   color          : inherit;
   cursor         : pointer;
   transition     : opacity 0.3s;
-  padding-bottom : 48px;
-  border-bottom  : 1px solid rgba(39, 50, 57, 0.4);
+  padding        : 24px 0;
+  border-bottom  : 1px solid rgba(39, 50, 57, 0.2);
 }
 
 .tsl-upcoming-grid:has(.tsl-upcoming-card:hover) .tsl-upcoming-card:not(:hover) {
@@ -1663,8 +1663,8 @@ button {
   display        : flex;
   flex-direction : column;
   gap            : 2px;
-  padding        : 12px 0;
-  border-top     : 1px solid #e2e8f0;
+  padding        : 24px 0;
+  border-bottom  : 1px solid rgba(39, 50, 57, 0.2);
   text-decoration: none;
   color          : inherit;
   transition     : opacity 0.2s;

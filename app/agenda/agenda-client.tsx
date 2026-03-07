@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { LayoutGrid, List } from "lucide-react";
 import type { Event } from "../components/types";
@@ -16,6 +16,12 @@ export default function AgendaClient({ events }: { events: Event[] }) {
   const [catOpen, setCatOpen] = useState(false);
   const [monOpen, setMonOpen] = useState(false);
   const [selCat, setSelCat] = useState("Todos os Eventos");
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('categoria');
+    if (cat) setSelCat(cat);
+  }, []);
   const [selMon, setSelMon] = useState("Todos os Meses");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 

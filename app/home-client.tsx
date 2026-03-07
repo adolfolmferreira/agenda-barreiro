@@ -451,10 +451,13 @@ export default function HomeClient({ events }: { events: Event[] }) {
           "Comunidade",
           "Leitura",
         ];
+        const sixMonthsAgo = new Date();
+        sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+        const cutoff = sixMonthsAgo.toISOString().slice(0, 10);
         const catCards = cats
           .map((cat) => {
             const items = [...events]
-              .filter((e) => e.category === cat)
+              .filter((e) => e.category === cat && e.date >= cutoff)
               .sort((a, b) => b.date.localeCompare(a.date))
               .slice(0, 3);
             if (items.length === 0) return null;
@@ -532,6 +535,7 @@ export default function HomeClient({ events }: { events: Event[] }) {
                           )}
                       </Link>
                     ))}
+                    <Link href={`/agenda?categoria=${encodeURIComponent(cat)}`} className="tsl-cathl-more">Ver mais →</Link>
                   </div>
                 </div>
               ))}
