@@ -440,6 +440,106 @@ export default function HomeClient({ events }: { events: Event[] }) {
         </section>
       )}
 
+      {/* ─── SECÇÃO: DESTAQUES POR CATEGORIA ─── */}
+      {(() => {
+        const cats = [
+          "Teatro",
+          "Música",
+          "Exposição",
+          "Workshop",
+          "Desporto",
+          "Comunidade",
+          "Leitura",
+        ];
+        const catCards = cats
+          .map((cat) => {
+            const items = [...events]
+              .filter((e) => e.category === cat)
+              .sort((a, b) => b.date.localeCompare(a.date))
+              .slice(0, 3);
+            if (items.length === 0) return null;
+            return { cat, items };
+          })
+          .filter(Boolean) as { cat: string; items: typeof events }[];
+
+        if (catCards.length === 0) return null;
+        return (
+          <section className="tsl-cathl">
+            <div className="tsl-cathl-header">
+              <h2 className="tsl-cathl-title">
+                Destaques por Categoria
+                <br />
+                <span className="red-bar"></span>
+              </h2>
+              <div className="tsl-cathl-header-right">
+                {catCards.length > 4 && (
+                  <div className="tsl-cathl-arrows">
+                    <button
+                      className="tsl-cinema-arrow"
+                      onClick={() => {
+                        const el = document.querySelector(".tsl-cathl-track");
+                        if (el)
+                          el.scrollBy({
+                            left: -el.clientWidth,
+                            behavior: "smooth",
+                          });
+                      }}
+                    >
+                      ←
+                    </button>
+                    <button
+                      className="tsl-cinema-arrow"
+                      onClick={() => {
+                        const el = document.querySelector(".tsl-cathl-track");
+                        if (el)
+                          el.scrollBy({
+                            left: el.clientWidth,
+                            behavior: "smooth",
+                          });
+                      }}
+                    >
+                      →
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="tsl-cathl-track">
+              {catCards.map(({ cat, items }) => (
+                <div key={cat} className="tsl-cathl-card">
+                  <h3 className="tsl-cathl-cat">{cat}</h3>
+                  <div className="tsl-cathl-items">
+                    {items.map((ev) => (
+                      <Link
+                        key={ev.id}
+                        href={`/evento/${ev.id}`}
+                        className="tsl-cathl-item"
+                      >
+                        <span className="tsl-cathl-date">
+                          {fmtRange(ev.date, ev.endDate)}
+                        </span>
+                        <span className="tsl-cathl-name">
+                          {ev.title.length > 62
+                            ? ev.title.slice(0, 62) + "…"
+                            : ev.title}
+                        </span>
+                        {ev.location &&
+                          ev.location !== "Barreiro" &&
+                          cleanLoc(ev.location) && (
+                            <span className="tsl-cathl-loc">
+                              {cleanLoc(ev.location)}
+                            </span>
+                          )}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
+
       {/* ─── SECÇÃO: EDIÇÕES PDF ─── */}
       <section className="tsl-pdf">
         <h2 className="tsl-pdf-heading">

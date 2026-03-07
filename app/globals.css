@@ -302,12 +302,12 @@ button {
 }
 
 .tsl-month-title {
-  font-family   : 'Unbounded', sans-serif;
-  font-size     : 62px;
-  font-weight   : 400;
-  color         : rgb(16, 31, 42);
+  font-family   : 'Instrument Sans', sans-serif;
+  font-size     : 82px;
+  font-weight   : 700;
+  color         : #273239;
   padding-bottom: 20px;
-  border-bottom : 1px solid #e5e5e5;
+  border-bottom : 1px solid rgba(39, 50, 57, 0.4);
   margin-bottom : 32px;
   letter-spacing: -2px;
 }
@@ -639,40 +639,48 @@ button {
   background: #273239;
   margin-top: auto;
 }
+
 .tsl-foot-in {
-  padding: 32px 48px;
-  display: flex;
-  align-items: center;
+  padding        : 32px 48px;
+  display        : flex;
+  align-items    : center;
   justify-content: space-between;
-  font-size: 16px;
-  color: #fff;
+  font-size      : 16px;
+  color          : #fff;
 }
+
 .tsl-foot-left {
-  display: flex;
+  display    : flex;
   align-items: center;
-  gap: 8px;
+  gap        : 8px;
 }
+
 .tsl-foot-sep {
   opacity: 0.4;
 }
+
 .tsl-foot-link {
-  color: #fff;
-  text-decoration: underline;
+  color                : #fff;
+  text-decoration      : underline;
   text-underline-offset: 2px;
 }
+
 .tsl-foot-link:hover {
   opacity: 0.7;
 }
+
 .tsl-foot-center {
   text-align: center;
 }
+
 .tsl-foot-right {
-  display: flex;
+  display    : flex;
   align-items: center;
 }
+
 .tsl-foot-logo {
   height: 60px;
-  width: auto;
+  width : auto;
   filter: brightness(0) invert(1);
 }
 
@@ -837,9 +845,9 @@ button {
 }
 
 .tsl-highlight-name {
-  font-family: "Instrument Serif", serif;
-  font-size  : 42px;
-  font-weight: 400;
+  font-family: "Instrument Sans", sans-serif;
+  font-size  : 48px;
+  font-weight: 700;
   color      : #273239;
   line-height: 1.1;
 }
@@ -1569,14 +1577,143 @@ button {
     font-size: 28px;
   }
 }
+
 @media (max-width: 768px) {
   .tsl-foot-in {
     flex-direction: column;
-    gap: 16px;
-    padding: 24px 20px;
-    text-align: center;
+    gap           : 16px;
+    padding       : 24px 20px;
+    text-align    : center;
   }
+
   .tsl-foot-left {
     justify-content: center;
+  }
+}
+
+/* ─── Category Highlights ─────────────────────────── */
+.tsl-cathl {
+  padding         : 80px 48px;
+  background-color: #fff;
+}
+
+.tsl-cathl-header {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  margin-bottom  : 1.5rem;
+}
+
+.tsl-cathl-title {
+  font-family     : "Instrument Serif", serif;
+  font-size       : 42px;
+  font-weight     : 400;
+  text-transform  : lowercase;
+  color           : #273239;
+  /*margin-bottom : 32px;*/
+  line-height     : normal;
+}
+
+.tsl-cathl-header-right {
+  display    : flex;
+  align-items: center;
+  gap        : 16px;
+}
+
+.tsl-cathl-arrows {
+  display: flex;
+  gap    : 6px;
+}
+
+.tsl-cathl-track {
+  display                   : flex;
+  gap                       : 24px;
+  overflow-x                : auto;
+  scroll-snap-type          : x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width           : none;
+  padding-bottom            : 4px;
+}
+
+.tsl-cathl-track::-webkit-scrollbar {
+  display: none;
+}
+
+.tsl-cathl-card {
+  flex             : 0 0 calc((100% - 72px) / 4);
+  scroll-snap-align: start;
+  min-width        : 0;
+}
+
+.tsl-cathl-cat {
+  font-size     : 32px;
+  font-weight   : 700;
+  text-transform: lowercase;
+  color         : #EF233C;
+  margin        : 0 0 12px;
+}
+
+.tsl-cathl-items {
+  display       : flex;
+  flex-direction: column;
+  gap           : 0;
+}
+
+.tsl-cathl-item {
+  display        : flex;
+  flex-direction : column;
+  gap            : 2px;
+  padding        : 12px 0;
+  border-top     : 1px solid #e2e8f0;
+  text-decoration: none;
+  color          : inherit;
+  transition     : opacity 0.2s;
+}
+
+.tsl-cathl-item:hover {
+  opacity: 0.6;
+}
+
+.tsl-cathl-date {
+  display      : block;
+  color        : #21353D;
+  font-family  : "Instrument Sans";
+  font-size    : 18px;
+  font-style   : normal;
+  font-weight  : 700;
+  margin-bottom: 4px;
+  opacity      : 0.5;
+}
+
+.tsl-cathl-name {
+  font-family: "Instrument Sans", sans-serif;
+  font-size  : 18px;
+  font-weight: 700;
+  color      : #273239;
+  line-height: 1.3;
+}
+
+.tsl-cathl-loc {
+  display    : block;
+  font-size  : 16px;
+  font-weight: 500;
+  color      : #bbb;
+  margin-top : 6px;
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .tsl-cathl-card {
+    flex: 0 0 calc((100% - 24px) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .tsl-cathl-card {
+    flex: 0 0 85%;
+  }
+
+  .tsl-cathl-arrows {
+    display: none;
   }
 }

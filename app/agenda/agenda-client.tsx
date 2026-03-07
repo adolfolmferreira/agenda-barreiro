@@ -27,8 +27,8 @@ export default function AgendaClient({ events }: { events: Event[] }) {
   const months = useMemo(() => {
     const s = new Set(
       events
-        .filter((e) => e.date >= "2026-01-01" && e.date <= "2026-06-30")
-        .map((e) => mk(e.date))
+        .filter((e) => (e.endDate || e.date) >= "2026-01-01" && e.date <= "2026-06-30")
+        .map((e) => e.date < "2026-01-01" && e.endDate && e.endDate >= "2026-01-01" ? "2026-01" : mk(e.date))
         .filter((k) => k.length === 7),
     );
     return ["Todos os Meses", ...Array.from(s).sort().reverse()];
@@ -36,19 +36,22 @@ export default function AgendaClient({ events }: { events: Event[] }) {
 
   const hero = useMemo(() => {
     const upcoming = events
-      .filter((e) => e.date >= "2026-01-01" && e.imageUrl)
+      .filter((e) => (e.endDate || e.date) >= "2026-01-01" && e.imageUrl)
       .sort((a, b) => a.date.localeCompare(b.date));
     return upcoming.find((e) => e.featured) || upcoming[0] || null;
   }, [events]);
 
   const filtered = useMemo(() => {
     let list = events.filter(
-      (e) => e.date >= "2026-01-01" && e.date <= "2026-06-30",
+      (e) => (e.endDate || e.date) >= "2026-01-01" && e.date <= "2026-06-30",
     );
     if (selCat !== "Todos os Eventos")
       list = list.filter((e) => e.category === selCat);
     if (selMon !== "Todos os Meses")
-      list = list.filter((e) => mk(e.date) === selMon);
+      list = list.filter((e) => {
+        if (e.date < "2026-01-01" && e.endDate && e.endDate >= "2026-01-01") return selMon === "2026-01";
+        return mk(e.date) === selMon;
+      });
     if (hero) list = list.filter((e) => e.id !== hero.id);
     list.sort((a, b) => b.date.localeCompare(a.date));
     return list;
@@ -57,7 +60,10 @@ export default function AgendaClient({ events }: { events: Event[] }) {
   const grouped = useMemo(() => {
     const map = new Map<string, Event[]>();
     for (const ev of filtered) {
-      const k = mk(ev.date);
+      // For ongoing events (start before 2026), group by start of range
+      const k = ev.date < "2026-01-01" && ev.endDate && ev.endDate >= "2026-01-01"
+        ? mk(ev.endDate < "2026-06-30" ? "2026-01-01" : ev.endDate)
+        : mk(ev.date);
       if (!map.has(k)) map.set(k, []);
       map.get(k)!.push(ev);
     }

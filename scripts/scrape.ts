@@ -24,6 +24,8 @@ async function main() {
         if (fix) {
           if (fix.location !== undefined) ev.location = fix.location;
           if (fix.category !== undefined) ev.category = fix.category;
+          if (fix.date !== undefined) ev.date = fix.date;
+          if (fix.endDate !== undefined) ev.endDate = fix.endDate;
           console.log('  🔧 Override:', ev.title.slice(0, 50));
         }
       }

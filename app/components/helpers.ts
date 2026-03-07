@@ -20,9 +20,9 @@ export function fmtRange(start: string, end?: string | null): string {
   if (!d1) return '';
   const day1 = d1.getDate();
   const mon1 = MO[d1.getMonth()];
-  if (!end) return `${day1} ${mon1}`;
+  if (!end || end === start) return `${day1} ${mon1}`;
   const d2 = pd(end);
-  if (!d2) return `${day1} ${mon1}`;
+  if (!d2 || d2.getTime() === d1.getTime()) return `${day1} ${mon1}`;
   const day2 = d2.getDate();
   const mon2 = MO[d2.getMonth()];
   if (d1.getMonth() === d2.getMonth() && d1.getFullYear() === d2.getFullYear()) {

@@ -157,6 +157,14 @@ async function fetchEvent(url: string): Promise<Event | null> {
     let ld: any = null;
     if (ldMatch) try { ld = JSON.parse(ldMatch[1]); } catch {}
 
+    // Also look for inline JSON with startDate/endDate
+    const inlineJson = html.match(/\{"name":"[^"]*","startDate":"([^"]+)","endDate":"([^"]+)"/);
+    if (inlineJson) {
+      if (!ld) ld = {};
+      ld.startDate = inlineJson[1];
+      ld.endDate = inlineJson[2];
+    }
+
     // ─── Content extraction (original v8 approach: h1 to footer) ──
     const contentHtml = between(html, /class="[^"]*entry-content[^"]*"/i, /<\/article|<footer/i)
       || between(html, /<h1/i, /<footer/i);
@@ -170,7 +178,17 @@ async function fetchEvent(url: string): Promise<Event | null> {
 
     // ─── DATE EXTRACTION (cascading fallbacks) ──────────────
     // Priority 1: LD+JSON
-    const ldDate = ld?.startDate ? ld.startDate.slice(0, 10) : null;
+    const fixLdDate = (d: string | undefined): string | undefined => {
+      if (!d) return undefined;
+      const s = d.slice(0, 10);
+      // Already YYYY-MM-DD
+      if (s.match(/^\d{4}-\d{2}-\d{2}$/)) return s;
+      // MM-DD-YYYY
+      const m = s.match(/^(\d{2})-(\d{2})-(\d{4})$/);
+      if (m) return `${m[3]}-${m[1]}-${m[2]}`;
+      return undefined;
+    }
+    const ldDate = fixLdDate(ld?.startDate);
 
     // Priority 2: og:description — most reliable event-specific text
     const ogDates = ogDesc.match(/(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/gi) || [];
@@ -196,8 +214,12 @@ async function fetchEvent(url: string): Promise<Event | null> {
     const today = new Date().toISOString().slice(0, 10);
     const date = ldDate || parsedOgDate || shortOgDate || parsedContentDate || imgDate || imgShortDate || urlDate || today;
 
-    const endDate = (contentDates[1] ? parsePT(contentDates[1]) : null)
-      || (ld?.endDate ? ld.endDate.slice(0, 10) : undefined);
+    // Try "até" pattern first for explicit end dates
+    const ateMatch = contentText.match(/at[eé]\s+(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/i)
+      || ogDesc.match(/at[eé]\s+(\d{1,2}\s+(?:de\s+)?\w+\s+(?:de\s+)?\d{4})/i);
+    const endDate = (ateMatch ? parsePT(ateMatch[1]) : null)
+      || (contentDates[1] ? parsePT(contentDates[1]) : null)
+      || fixLdDate(ld?.endDate);
 
     // ─── Time ───────────────────────────────────────────────
     const timeM = contentText.match(/(\d{1,2})[hH:](\d{2})/) || ogDesc.match(/(\d{1,2})[hH:](\d{2})/);
