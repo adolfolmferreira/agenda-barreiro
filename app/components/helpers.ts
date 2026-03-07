@@ -45,7 +45,12 @@ export function fmtFull(start: string, end?: string | null): string {
 }
 
 export function cleanLoc(s: string): string {
-  let c = s.replace(/^(Ponto de encontro:|Partida:)\s*/i, "");
+  // Decode HTML entities
+  let c = s.replace(/&aacute;/g,'á').replace(/&eacute;/g,'é').replace(/&iacute;/g,'í')
+    .replace(/&oacute;/g,'ó').replace(/&uacute;/g,'ú').replace(/&atilde;/g,'ã')
+    .replace(/&otilde;/g,'õ').replace(/&ccedil;/g,'ç').replace(/&amp;/g,'&')
+    .replace(/&nbsp;/g,' ').replace(/&#8211;/g,'–').replace(/&#8220;/g,'"').replace(/&#8221;/g,'"');
+  c = c.replace(/^(Ponto de encontro:|Partida:)\s*/i, "");
   c = c.split(/\d|Organização|\sM\/|\sO\s[A-Z]|\sEntre\s|\se\s[a-z]|\sPara\s|\sRua\s|\sa\s[a-z]|Horário|\sOrg[.:]|\sUm\s|A mostra|vai\s|realidade|Inscrição|Info|Preço|Duração|Público|Domingos|tudo pode|a criatividade|a dança|No próximo|Em parceria|às\s/i)[0].trim();
   if (c.length < 5) return "";
   return c.length > 50 ? c.slice(0, 50) + "…" : c;
