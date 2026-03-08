@@ -97,7 +97,7 @@ button {
 }
 
 .tsl-nav-link {
-  font-size     : 24px;
+  font-size     : 28px;
   font-weight   : 700;
   color         : #273239;
   transition    : color 0.2s;
@@ -307,7 +307,7 @@ button {
   font-weight   : 700;
   color         : #273239;
   padding-bottom: 20px;
-  border-bottom : 1px solid rgba(39, 50, 57, 0.4);
+  border-bottom : 1px solid rgba(39, 50, 57, 0.2);
   margin-bottom : 32px;
   letter-spacing: -2px;
 }
@@ -390,7 +390,7 @@ button {
   font-size  : clamp(20px, 2vw, 28px);
   font-weight: 700;
   line-height: 1.1;
-  color      : rgb(16, 31, 42);
+  color      : #273239;
   transition : color 0.2s;
 }
 
@@ -428,7 +428,7 @@ button {
 /* ═══ DETAIL ═══ */
 .tsl-detail {
   max-width: 960px;
-  margin   : 0 auto;
+  margin   : 80px auto 0 auto;
   padding  : 0 48px 80px;
 }
 
@@ -452,12 +452,12 @@ button {
 }
 
 .tsl-detail-title {
-  font-family   : 'Unbounded', sans-serif;
+  font-family   : 'Instrument Sans', sans-serif;
   font-size     : 62px;
-  font-weight   : 400;
+  font-weight   : 700;
   line-height   : 0.95;
-  letter-spacing: -2px;
-  color         : rgb(16, 31, 42);
+  letter-spacing: normal;
+  color         : #273239;
   margin-bottom : 40px;
 }
 
@@ -486,15 +486,16 @@ button {
 }
 
 .tsl-detail-meta-item span:last-child {
-  font-size  : 15px;
-  color      : #333;
+  font-size  : 16px;
+  color      : #273239;
+  font-weight: 500;
   line-height: 1.5;
 }
 
 .tsl-detail-text {
   font-size    : 17px;
   line-height  : 1.8;
-  color        : #444;
+  color        : #273239;
   max-width    : 640px;
   margin-bottom: 40px;
 }
@@ -505,16 +506,16 @@ button {
 
 .tsl-detail-cta {
   display    : inline-block;
-  font-size  : 14px;
-  font-weight: 600;
-  color      : rgb(16, 31, 42);
-  border     : 1.5px solid rgb(16, 31, 42);
+  font-size  : 18px;
+  font-weight: 700;
+  color      : #273239;
+  border     : 1.5px solid #273239;
   padding    : 14px 32px;
   transition : all 0.2s;
 }
 
 .tsl-detail-cta:hover {
-  background: rgb(16, 31, 42);
+  background: #273239;
   color     : #fff;
 }
 
@@ -767,12 +768,12 @@ button {
 }
 
 .tsl-back-btn {
-  font-family   : 'Unbounded', sans-serif;
-  font-size     : 14px;
-  font-weight   : 500;
-  text-transform: uppercase;
+  font-family   : 'Instrument Sans', sans-serif;
+  font-size     : 18px;
+  font-weight   : 700;
+  text-transform: lowercase;
   letter-spacing: 1px;
-  color         : rgb(16, 31, 42);
+  color         : #273239;
   background    : none;
   cursor        : pointer;
   padding       : 12px 0;
@@ -919,7 +920,7 @@ button {
   align-items    : center;
   gap            : 24px;
   padding        : 16px 0;
-  border-bottom  : 1px solid #e5e5e5;
+  border-bottom  : 1px solid rgba(39, 50, 57, 0.2);
   cursor         : pointer;
   transition     : opacity 0.2s;
   text-decoration: none;
@@ -931,18 +932,20 @@ button {
 }
 
 .tsl-list-date {
-  font-family: 'Geist', sans-serif;
-  font-size  : 16px;
-  font-weight: 700;
-  color      : #999;
-  min-width  : 120px;
+  color        : #21353D;
+  font-family  : "Instrument Sans";
+  font-size    : 18px;
+  font-style   : normal;
+  font-weight  : 700;
+  margin-bottom: 4px;
+  opacity      : 0.5;
 }
 
 .tsl-list-title {
-  font-family: 'Unbounded', sans-serif;
-  font-size  : 16px;
-  font-weight: 400;
-  color      : rgb(16, 31, 42);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size  : 24px;
+  font-weight: 700;
+  color      : #273239;
   flex       : 1;
 }
 
@@ -1106,7 +1109,7 @@ button {
 
 .tsl-cinema-link {
   font-family    : 'Instrument Sans', sans-serif;
-  font-size      : 16px;
+  font-size      : 18px;
   font-weight    : 700;
   color          : #21353D;
   text-transform : lowercase;
@@ -1173,16 +1176,18 @@ button {
 
 /* ─── Static Pages ────────────────────────────────── */
 .tsl-page {
-  max-width: 680px;
+  max-width: 960px;
   margin   : 0 auto;
-  padding  : 3rem 1.5rem 4rem;
+  padding  : 40px 48px 0;
 }
 
 .tsl-page-title {
-  font-size    : 2rem;
-  font-weight  : 700;
-  margin-bottom: 1.5rem;
-  color        : #101f2a;
+  font-family   : "Instrument Serif", serif;
+  font-size     : 42px;
+  font-weight   : 400;
+  text-transform: lowercase;
+  color         : #273239;
+  line-height   : normal;
 }
 
 .tsl-page-content p {
@@ -1226,7 +1231,7 @@ button {
 
 .tsl-upcoming-link {
   font-family    : 'Instrument Sans', sans-serif;
-  font-size      : 16px;
+  font-size      : 18px;
   font-weight    : 700;
   color          : #21353D;
   text-transform : lowercase;
@@ -1264,7 +1269,7 @@ button {
 
 .tsl-kids-link {
   font-family    : 'Instrument Sans', sans-serif;
-  font-size      : 16px;
+  font-size      : 18px;
   font-weight    : 700;
   color          : #21353D;
   text-transform : lowercase;
@@ -1700,6 +1705,21 @@ button {
   color      : #bbb;
   margin-top : 6px;
   line-height: 1.4;
+}
+
+.tsl-cathl-more {
+  font-family    : 'Instrument Sans', sans-serif;
+  font-size      : 18px;
+  font-weight    : 700;
+  color          : #21353D;
+  text-transform : lowercase;
+  text-decoration: none;
+  transition     : opacity 0.2s;
+  margin-top     : 20px;
+}
+
+.tsl-cathl-more:hover {
+  opacity: 0.5;
 }
 
 @media (max-width: 1024px) {

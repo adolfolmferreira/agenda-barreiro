@@ -1,7 +1,7 @@
 export default function SobrePage() {
   return (
     <div className="tsl-page">
-      <h1 className="tsl-page-title">Sobre</h1>
+      <h1 className="tsl-page-title">Sobre<br/><span className="red-bar"></span></h1>
       <div className="tsl-page-content">
         <p>
           A <strong>Agenda Barreiro</strong> é um projecto independente que reúne num único lugar todos os eventos culturais, 
