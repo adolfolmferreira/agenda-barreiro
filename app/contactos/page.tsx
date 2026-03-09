@@ -1,7 +1,7 @@
 export default function ContactosPage() {
   return (
     <div className="tsl-page">
-      <h1 className="tsl-page-title">Contactos</h1>
+      <h1 className="tsl-page-title">Contactos<br/><span className="red-bar"></span></h1>
       <div className="tsl-page-content">
         <p>
           Tem um evento no Barreiro que não aparece na nossa agenda? Encontrou algum erro nos dados? 
