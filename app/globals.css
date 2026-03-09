@@ -595,10 +595,9 @@ button {
   width        : 100%;
   aspect-ratio : 210 / 260;
   overflow     : hidden;
-  background   : #333;
+  background   : #fff;
   border-radius: 2px;
-
-  transition: box-shadow 0.4s, transform 0.4s;
+  transition   : box-shadow 0.4s, transform 0.4s;
 }
 
 .tsl-pdf-item:hover .tsl-pdf-cover {
