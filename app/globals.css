@@ -874,13 +874,15 @@ button {
 }
 
 .tsl-card-more {
-  display    : inline-block;
-  font-family: 'Unbounded', sans-serif;
-  font-size  : 12px;
-  font-weight: 500;
-  color      : rgb(16, 31, 42);
-  margin-top : 12px;
-  transition : opacity 0.2s;
+  display        : inline-block;
+  font-family    : 'Instrument Sans', sans-serif;
+  font-size      : 18px;
+  font-weight    : 700;
+  color          : #21353D;
+  text-transform : lowercase;
+  text-decoration: none;
+  transition     : opacity 0.2s;
+  margin-top     : 10px;
 }
 
 .tsl-card:hover .tsl-card-more {

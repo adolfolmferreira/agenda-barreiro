@@ -51,6 +51,9 @@ export function cleanLoc(s: string): string {
     .replace(/&otilde;/g,'õ').replace(/&ccedil;/g,'ç').replace(/&amp;/g,'&')
     .replace(/&nbsp;/g,' ').replace(/&#8211;/g,'–').replace(/&#8220;/g,'"').replace(/&#8221;/g,'"');
   c = c.replace(/^(Ponto de encontro:|Partida:)\s*/i, "");
+  // Normalize Mercado locations
+  if (/mercado\s*(municipal\s*)?1/i.test(c)) c = 'Mercado Municipal 1º de Maio';
+  if (/^largo\s*mercado/i.test(c)) c = 'Mercado Municipal 1º de Maio';
   c = c.split(/\d|Organização|\sM\/|\sO\s[A-Z]|\sEntre\s|\se\s[a-z]|\sPara\s|\sRua\s|\sa\s[a-z]|Horário|\sOrg[.:]|\sUm\s|A mostra|vai\s|realidade|Inscrição|Info|Preço|Duração|Público|Domingos|tudo pode|a criatividade|a dança|No próximo|Em parceria|às\s/i)[0].trim();
   if (c.length < 5) return "";
   return c.length > 50 ? c.slice(0, 50) + "…" : c;
