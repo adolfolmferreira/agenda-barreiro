@@ -444,11 +444,11 @@ button {
 }
 
 .tsl-detail-cat {
-  font-size     : 14px;
+  font-size     : 16px;
   font-weight   : 700;
   color         : #E63946;
   letter-spacing: 0.5px;
-  margin-bottom : 16px;
+  margin-bottom : 20px;
 }
 
 .tsl-detail-title {
@@ -493,11 +493,11 @@ button {
 }
 
 .tsl-detail-text {
-  font-size    : 17px;
-  line-height  : 1.8;
-  color        : #273239;
-  max-width    : 640px;
-  margin-bottom: 40px;
+  font-size      : 16px;
+  line-height    : 1.8;
+  color          : #273239;
+  /*max-width    : 640px;*/
+  margin-bottom  : 40px;
 }
 
 .tsl-detail-text p {
