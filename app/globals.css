@@ -54,7 +54,7 @@ button {
   position     : sticky;
   top          : 0;
   z-index      : 200;
-  background   : #EDEBE0;
+  background   : #f5f4f2;
   border-bottom: 1px solid rgba(39, 50, 57, 0.2);
 }
 
@@ -787,7 +787,7 @@ button {
 /* ── EM DESTAQUE ─────────────────────── */
 .tsl-highlights {
   padding         : 40px 48px 80px 48px;
-  background-color: #EDEBE0;
+  background-color: #f5f4f2;
   border-bottom   : 1px solid rgba(39, 50, 57, 0.2);
 }
 
@@ -1247,8 +1247,8 @@ button {
 /* ─── Kids Section (Homepage) ─────────────────────── */
 .tsl-kids {
   padding         : 80px 48px;
-  background-color: #F6E4EB;
-  border-bottom   : 1px solid rgba(39, 50, 57, 0.4);
+  background-color: #fff5f9;
+  border-bottom   : 1px solid rgba(39, 50, 57, 0.2);
 }
 
 .tsl-kids-header {
@@ -1567,7 +1567,7 @@ button {
     left           : 0;
     right          : 0;
     bottom         : 0;
-    background     : #EDEBE0;
+    background     : #f5f4f2;
     flex-direction : column;
     align-items    : center;
     justify-content: center;
