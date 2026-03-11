@@ -201,13 +201,13 @@ export default function HomeClient({ events }: { events: Event[] }) {
                 href={`/evento/${ev.id}`}
                 className="tsl-upcoming-card"
               >
-                <div className="tsl-upcoming-thumb">
+                {/*<div className="tsl-upcoming-thumb">
                   {ev.imageUrl ? (
                     <img src={ev.imageUrl} alt={ev.title} loading="lazy" />
                   ) : (
                     <div className="tsl-upcoming-nothumb" />
                   )}
-                </div>
+                </div>*/}
                 <div className="tsl-upcoming-info">
                   <span className="tsl-upcoming-date">
                     {fmtRange(ev.date, ev.endDate)}
@@ -216,8 +216,8 @@ export default function HomeClient({ events }: { events: Event[] }) {
                     {ev.category.toLowerCase()}
                   </span>
                   <h3 className="tsl-upcoming-name">
-                    {ev.title.length > 60
-                      ? ev.title.slice(0, 60) + "…"
+                    {ev.title.length > 80
+                      ? ev.title.slice(0, 80) + "…"
                       : ev.title}
                   </h3>
                   {ev.location &&
@@ -450,6 +450,8 @@ export default function HomeClient({ events }: { events: Event[] }) {
           "Desporto",
           "Comunidade",
           "Leitura",
+          "Visitas",
+          "Dança"
         ];
         const sixMonthsAgo = new Date();
         sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 *,
 *::before,
@@ -9,7 +10,7 @@
 }
 
 ::selection {
-  background: rgb(16, 31, 42);
+  background: #111111;
   color     : #fff;
 }
 
@@ -18,9 +19,9 @@ html {
 }
 
 body {
-  font-family            : "Instrument Sans", sans-serif;
+  font-family            : "Inter", sans-serif;
   font-weight            : 300;
-  color                  : rgb(16, 31, 42);
+  color                  : #111111;
   background             : #fff;
   -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -54,8 +55,8 @@ button {
   position     : sticky;
   top          : 0;
   z-index      : 200;
-  background   : #f5f4f2;
-  border-bottom: 1px solid rgba(39, 50, 57, 0.2);
+  background   : #ffffff;
+  border-bottom: 1px solid #111111;
 }
 
 .tsl-head-in {
@@ -75,10 +76,10 @@ button {
 }
 
 .tsl-logo-day {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size  : 28px;
   font-style : italic;
-  color      : rgb(16, 31, 42);
+  color      : #111111;
   line-height: 1;
 }
 
@@ -88,7 +89,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   line-height   : 1.3;
-  color         : rgb(16, 31, 42);
+  color         : #111111;
 }
 
 .tsl-nav {
@@ -97,12 +98,12 @@ button {
 }
 
 .tsl-nav-link {
-  font-size     : 28px;
-  font-weight   : 700;
+  font-size     : 32px;
+  font-weight   : 400;
   color         : #111111;
   transition    : color 0.2s;
   cursor        : pointer;
-  text-transform: lowercase;
+  text-transform: uppercase;
   transition    : 0.3s;
 }
 
@@ -111,7 +112,7 @@ button {
 }
 
 .tsl-nav-link.active {
-  color: #EF233C;
+  color: #96d3e5;
 }
 
 .tsl-head-season {
@@ -177,13 +178,14 @@ button {
 .tsl-hero-feat-cat {
   font-size     : 14px;
   font-weight   : 700;
-  color         : #E63946;
+  color         : #96d3e5;
   letter-spacing: 0.5px;
   margin-bottom : 12px;
+  text-transform: capitalize;
 }
 
 .tsl-hero-feat-title {
-  font-family   : 'Unbounded', sans-serif;
+  font-family   : "Inter", sans-serif;
   font-size     : 62px;
   font-weight   : 400;
   line-height   : 0.95;
@@ -234,9 +236,9 @@ button {
   gap            : 8px;
   font-size      : 15px;
   font-weight    : 500;
-  color          : rgb(16, 31, 42);
+  color          : #111111;
   padding        : 8px 0;
-  border-bottom  : 1.5px solid rgb(16, 31, 42);
+  border-bottom  : 1.5px solid #111111;
   min-width      : 220px;
   justify-content: space-between;
   transition     : border-color 0.2s;
@@ -272,11 +274,11 @@ button {
 
 .tsl-dropdown-item:hover {
   background: #f5f5f5;
-  color     : rgb(16, 31, 42);
+  color     : #111111;
 }
 
 .tsl-dropdown-item.active {
-  color      : rgb(16, 31, 42);
+  color      : #111111;
   font-weight: 600;
 }
 
@@ -288,12 +290,13 @@ button {
 }
 
 .red-bar {
-  background-color: #EF233C;
+  background-color: #96d3e5;
   display         : block;
-  width           : 24px;
+  width           : 60px;
   height          : 4px;
   margin-top      : 10px;
   margin-bottom   : 20px;
+  border-radius   : 4px;
 }
 
 /* ─── Month ─── */
@@ -302,7 +305,7 @@ button {
 }
 
 .tsl-month-title {
-  font-family   : 'Instrument Sans', sans-serif;
+  font-family   : "Inter", sans-serif;
   font-size     : 82px;
   font-weight   : 700;
   color         : #111111;
@@ -366,27 +369,29 @@ button {
 }
 
 .tsl-card-date {
-  display      : block;
-  color        : #111111;
-  font-family  : "Instrument Sans";
-  font-size    : 18px;
-  font-style   : normal;
-  font-weight  : 700;
-  margin-bottom: 4px;
-  opacity      : 0.5;
+  display       : block;
+  color         : #111111;
+  font-family   : "Inter", sans-serif;
+  font-size     : 18px;
+  font-style    : normal;
+  font-weight   : 700;
+  margin-bottom : 4px;
+  opacity       : 0.5;
+  text-transform: capitalize;
 }
 
 .tsl-card-cat {
   display       : block;
   font-size     : 16px;
   font-weight   : 700;
-  color         : #E63946;
+  color         : #96d3e5;
   letter-spacing: 0.5px;
   margin-bottom : 8px;
+  text-transform: capitalize;
 }
 
 .tsl-card-title {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size  : clamp(20px, 2vw, 28px);
   font-weight: 700;
   line-height: 1.1;
@@ -409,20 +414,23 @@ button {
 
 /* ─── Back to top ─── */
 .tsl-backtop {
-  padding   : 48px 0;
+  padding   : 48px 0 0 0;
   text-align: right;
 }
 
 .tsl-backtop a {
-  font-size  : 13px;
-  font-weight: 500;
-  color      : #999;
-  cursor     : pointer;
-  transition : color 0.2s;
+  cursor         : pointer;
+  font-family    : "Inter", sans-serif;
+  font-size      : 18px;
+  font-weight    : 700;
+  color          : #111111;
+  text-transform : lowercase;
+  text-decoration: none;
+  transition     : opacity 0.2s;
 }
 
 .tsl-backtop a:hover {
-  color: rgb(16, 31, 42);
+  opacity: 0.5;
 }
 
 /* ═══ DETAIL ═══ */
@@ -446,13 +454,13 @@ button {
 .tsl-detail-cat {
   font-size     : 16px;
   font-weight   : 700;
-  color         : #E63946;
+  color         : #96d3e5;
   letter-spacing: 0.5px;
   margin-bottom : 20px;
 }
 
 .tsl-detail-title {
-  font-family   : 'Instrument Sans', sans-serif;
+  font-family   : "Inter", sans-serif;
   font-size     : 62px;
   font-weight   : 700;
   line-height   : 0.95;
@@ -466,8 +474,8 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap                  : 24px;
   padding              : 32px 0;
-  border-top           : 1px solid #e5e5e5;
-  border-bottom        : 1px solid #e5e5e5;
+  border-top           : 1px solid #111111;
+  border-bottom        : 1px solid #111111;
   margin-bottom        : 40px;
 }
 
@@ -526,7 +534,7 @@ button {
 }
 
 .tsl-empty p {
-  font-family: 'Unbounded', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size  : 28px;
   color      : #ccc;
 }
@@ -534,15 +542,15 @@ button {
 /* ═══ PDF EDITIONS — magazine-size covers ═══ */
 .tsl-pdf {
   padding   : 80px 48px 96px;
-  background: rgba(39, 50, 57, 0.2);
+  background: #f5f4f2;
   overflow  : hidden;
 }
 
 .tsl-pdf-heading {
-  font-family   : "Instrument Serif", serif;
+  font-family   : "Inter", sans-serif;
   font-size     : 42px;
   font-weight   : 400;
-  text-transform: lowercase;
+  text-transform: uppercase;
   color         : #111111;
   margin-bottom : 48px;
   line-height   : normal;
@@ -579,7 +587,7 @@ button {
 }
 
 .tsl-pdf-label {
-  font-family  : 'Instrument Sans', sans-serif;
+  font-family  : "Inter", sans-serif;
   font-size    : 24px;
   font-weight  : 700;
   color        : #111111;
@@ -767,10 +775,10 @@ button {
 }
 
 .tsl-back-btn {
-  font-family   : 'Instrument Sans', sans-serif;
+  font-family   : "Inter", sans-serif;
   font-size     : 18px;
-  font-weight   : 700;
-  text-transform: lowercase;
+  font-weight   : 400;
+  text-transform: capitalize;
   letter-spacing: 1px;
   color         : #111111;
   background    : none;
@@ -787,15 +795,15 @@ button {
 /* ── EM DESTAQUE ─────────────────────── */
 .tsl-highlights {
   padding         : 40px 48px 80px 48px;
-  background-color: #f5f4f2;
-  border-bottom   : 1px solid rgba(39, 50, 57, 0.2);
+  background-color: #ffffff;
+  border-bottom   : 1px solid #111111;
 }
 
 .tsl-highlights-title {
-  font-family      : "Instrument Serif", serif;
+  font-family      : "Inter", serif;
   font-size        : 42px;
   font-weight      : 400;
-  text-transform   : lowercase;
+  text-transform   : uppercase;
   color            : #111111;
   /* margin-bottom : 32px; */
   line-height      : normal;
@@ -826,26 +834,28 @@ button {
 }
 
 .tsl-highlight-date {
-  display    : block;
-  color      : #111111;
-  font-family: "Instrument Sans";
-  font-size  : 18px;
-  font-style : normal;
-  font-weight: 700;
-  opacity    : 0.5;
+  display       : block;
+  color         : #111111;
+  font-family   : "Inter", sans-serif;
+  font-size     : 18px;
+  font-style    : normal;
+  font-weight   : 700;
+  opacity       : 0.5;
+  text-transform: capitalize;
 }
 
 .tsl-highlight-cat {
-  color      : #EF233C;
-  font-family: "Instrument Sans";
-  font-size  : 18px;
-  font-style : normal;
-  font-weight: 700;
-  line-height: normal;
+  color         : #96d3e5;
+  font-family   : "Inter", sans-serif;
+  font-size     : 18px;
+  font-style    : normal;
+  font-weight   : 700;
+  line-height   : normal;
+  text-transform: capitalize;
 }
 
 .tsl-highlight-name {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size  : 48px;
   font-weight: 700;
   color      : #111111;
@@ -874,11 +884,11 @@ button {
 
 .tsl-card-more {
   display        : inline-block;
-  font-family    : 'Instrument Sans', sans-serif;
+  font-family    : "Inter", sans-serif;
   font-size      : 18px;
-  font-weight    : 700;
+  font-weight    : 400;
   color          : #111111;
-  text-transform : lowercase;
+  text-transform : capitalize;
   text-decoration: none;
   transition     : opacity 0.2s;
   margin-top     : 10px;
@@ -903,11 +913,11 @@ button {
 }
 
 .tsl-view-btn.active {
-  color: rgb(16, 31, 42);
+  color: #111111;
 }
 
 .tsl-view-btn:hover {
-  color: rgb(16, 31, 42);
+  color: #111111;
 }
 
 /* ── List View ───────────────────────── */
@@ -933,17 +943,18 @@ button {
 }
 
 .tsl-list-date {
-  color        : #111111;
-  font-family  : "Instrument Sans";
-  font-size    : 18px;
-  font-style   : normal;
-  font-weight  : 700;
-  margin-bottom: 4px;
-  opacity      : 0.5;
+  color         : #111111;
+  font-family   : "Inter", sans-serif;
+  font-size     : 18px;
+  font-style    : normal;
+  font-weight   : 700;
+  margin-bottom : 4px;
+  opacity       : 0.5;
+  text-transform: capitalize;
 }
 
 .tsl-list-title {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size  : 24px;
   font-weight: 700;
   color      : #111111;
@@ -953,8 +964,9 @@ button {
 .tsl-list-cat {
   font-size     : 16px;
   font-weight   : 700;
-  color         : #E63946;
+  color         : #96d3e5;
   letter-spacing: 0.5px;
+  text-transform: capitalize;
 }
 
 .tsl-list-loc {
@@ -979,8 +991,9 @@ button {
   }
 
   .tsl-list-date {
-    min-width: 100px;
-    font-size: 12px;
+    min-width     : 100px;
+    font-size     : 12px;
+    text-transform: capitalize;
   }
 
   .tsl-list-title {
@@ -1011,14 +1024,14 @@ button {
 /* ── NO CINEMA ───────────────────────── */
 .tsl-cinema {
   padding      : 80px 48px;
-  border-bottom: 1px solid rgba(39, 50, 57, 0.2);
+  border-bottom: 1px solid #111111;
 }
 
 .tsl-cinema-title {
-  font-family     : "Instrument Serif", serif;
+  font-family     : "Inter", sans-serif;
   font-size       : 42px;
   font-weight     : 400;
-  text-transform  : lowercase;
+  text-transform  : uppercase;
   color           : #111111;
   /*margin-bottom : 32px;*/
   line-height     : normal;
@@ -1060,7 +1073,7 @@ button {
   width          : 32px;
   height         : 32px;
   border-radius  : 50%;
-  border         : 1px solid #d1d5db;
+  border         : 1px solid #111111;
   background     : #fff;
   cursor         : pointer;
   font-size      : 14px;
@@ -1100,7 +1113,7 @@ button {
 }
 
 .tsl-cinema-name {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size  : 18px;
   font-weight: 700;
   color      : #111111;
@@ -1109,11 +1122,11 @@ button {
 }
 
 .tsl-cinema-link {
-  font-family    : 'Instrument Sans', sans-serif;
+  font-family    : "Inter", sans-serif;
   font-size      : 18px;
-  font-weight    : 700;
+  font-weight    : 400;
   color          : #111111;
-  text-transform : lowercase;
+  text-transform : capitalize;
   text-decoration: none;
   transition     : opacity 0.2s;
 }
@@ -1142,10 +1155,10 @@ button {
 }
 
 .tsl-agenda-title {
-  font-family   : "Instrument Serif", serif;
+  font-family   : "Inter", sans-serif;
   font-size     : 42px;
   font-weight   : 400;
-  text-transform: lowercase;
+  text-transform: uppercase;
   color         : #111111;
   line-height   : normal;
 }
@@ -1183,34 +1196,45 @@ button {
 }
 
 .tsl-page-title {
-  font-family   : "Instrument Serif", serif;
+  font-family   : "Inter", sans-serif;
   font-size     : 42px;
   font-weight   : 400;
-  text-transform: lowercase;
+  text-transform: uppercase;
   color         : #111111;
   line-height   : normal;
 }
 
+
+.tsl-page-content h1 {
+  font-weight  : 500;
+  margin-bottom: 32px;
+}
+
+
 .tsl-page-content p {
-  font-size    : 1.05rem;
+  font-size    : 18px;
   line-height  : 1.75;
-  color        : #334155;
-  margin-bottom: 1rem;
+  color        : #111111;
+  margin-bottom: 32px;
 }
 
 .tsl-page-content strong {
-  color: #101f2a;
+  font-weight: 700;
+}
+
+.tsl-page-content p:last-child {
+  margin-bottom: 100px;
 }
 
 .tsl-link {
-  color          : #2563eb;
+  color          : #96d3e5;
   text-decoration: underline;
 }
 
 /* ─── Upcoming Section (Homepage) ─────────────────── */
 .tsl-upcoming {
   padding      : 80px 48px;
-  border-bottom: 1px solid rgba(39, 50, 57, 0.2);
+  border-bottom: 1px solid #111111;
 }
 
 .tsl-upcoming-header {
@@ -1221,21 +1245,21 @@ button {
 }
 
 .tsl-upcoming-title {
-  font-family     : "Instrument Serif", serif;
+  font-family     : "Inter", sans-serif;
   font-size       : 42px;
   font-weight     : 400;
-  text-transform  : lowercase;
+  text-transform  : uppercase;
   color           : #111111;
   /*margin-bottom : 32px;*/
   line-height     : normal;
 }
 
 .tsl-upcoming-link {
-  font-family    : 'Instrument Sans', sans-serif;
+  font-family    : "Inter", sans-serif;
   font-size      : 18px;
-  font-weight    : 700;
+  font-weight    : 400;
   color          : #111111;
-  text-transform : lowercase;
+  text-transform : capitalize;
   text-decoration: none;
   transition     : opacity 0.2s;
 }
@@ -1247,8 +1271,8 @@ button {
 /* ─── Kids Section (Homepage) ─────────────────────── */
 .tsl-kids {
   padding         : 80px 48px;
-  background-color: #fff5f9;
-  border-bottom   : 1px solid rgba(39, 50, 57, 0.2);
+  background-color: #E7BBE3;
+  border-bottom   : 1px solid #111111;
 }
 
 .tsl-kids-header {
@@ -1259,21 +1283,21 @@ button {
 }
 
 .tsl-kids-title {
-  font-family     : "Instrument Serif", serif;
+  font-family     : "Inter", serif;
   font-size       : 42px;
   font-weight     : 400;
-  text-transform  : lowercase;
+  text-transform  : uppercase;
   color           : #111111;
   /*margin-bottom : 32px;*/
   line-height     : normal;
 }
 
 .tsl-kids-link {
-  font-family    : 'Instrument Sans', sans-serif;
+  font-family    : 'Inter', sans-serif;
   font-size      : 18px;
-  font-weight    : 700;
+  font-weight    : 400;
   color          : #111111;
-  text-transform : lowercase;
+  text-transform : capitalize;
   text-decoration: none;
   transition     : opacity 0.2s;
 }
@@ -1346,27 +1370,29 @@ button {
 }
 
 .tsl-kids-date {
-  display      : block;
-  color        : #111111;
-  font-family  : "Instrument Sans";
-  font-size    : 18px;
-  font-style   : normal;
-  font-weight  : 700;
-  margin-bottom: 4px;
-  opacity      : 0.5;
+  display       : block;
+  color         : #111111;
+  font-family   : "Inter", sans-serif;
+  font-size     : 18px;
+  font-style    : normal;
+  font-weight   : 700;
+  margin-bottom : 4px;
+  opacity       : 0.5;
+  text-transform: capitalize;
 }
 
 .tsl-kids-cat {
   display       : block;
   font-size     : 16px;
   font-weight   : 700;
-  color         : #E63946;
+  color         : #fff;
   letter-spacing: 0.5px;
   margin-bottom : 8px;
+  text-transform: capitalize;
 }
 
 .tsl-kids-name {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size  : 24px;
   font-weight: 700;
   color      : #101f2a;
@@ -1424,8 +1450,8 @@ button {
   color          : inherit;
   cursor         : pointer;
   transition     : opacity 0.3s;
-  padding        : 24px 0;
-  border-bottom  : 1px solid rgba(39, 50, 57, 0.2);
+  padding        : 24px 0 0 0;
+  border-top     : 1px solid #111111;
 }
 
 .tsl-upcoming-grid:has(.tsl-upcoming-card:hover) .tsl-upcoming-card:not(:hover) {
@@ -1460,27 +1486,29 @@ button {
 }
 
 .tsl-upcoming-date {
-  display      : block;
-  color        : #111111;
-  font-family  : "Instrument Sans";
-  font-size    : 18px;
-  font-style   : normal;
-  font-weight  : 700;
-  margin-bottom: 4px;
-  opacity      : 0.5;
+  display       : block;
+  color         : #111111;
+  font-family   : "Inter", sans-serif;
+  font-size     : 18px;
+  font-style    : normal;
+  font-weight   : 700;
+  margin-bottom : 4px;
+  opacity       : 0.5;
+  text-transform: capitalize;
 }
 
 .tsl-upcoming-cat {
   display       : block;
   font-size     : 16px;
   font-weight   : 700;
-  color         : #E63946;
+  color         : #96d3e5;
   letter-spacing: 0.5px;
   margin-bottom : 4px;
+  text-transform: capitalize;
 }
 
 .tsl-upcoming-name {
-  font-size  : 18px;
+  font-size  : 24px;
   font-weight: 700;
   color      : #101f2a;
   line-height: 1.3;
@@ -1655,13 +1683,14 @@ button {
   font-size     : 32px;
   font-weight   : 700;
   text-transform: lowercase;
-  color         : #EF233C;
+  color         : #96d3e5;
   margin        : 0 0 12px;
 }
 
 .tsl-cathl-items {
   display       : flex;
   flex-direction: column;
+  border-top    : 1px solid #111111;
   gap           : 0;
 }
 
@@ -1670,7 +1699,7 @@ button {
   flex-direction : column;
   gap            : 2px;
   padding        : 24px 0;
-  border-bottom  : 1px solid rgba(39, 50, 57, 0.2);
+  border-bottom  : 1px solid #111111;
   text-decoration: none;
   color          : inherit;
   transition     : opacity 0.2s;
@@ -1681,18 +1710,19 @@ button {
 }
 
 .tsl-cathl-date {
-  display      : block;
-  color        : #111111;
-  font-family  : "Instrument Sans";
-  font-size    : 18px;
-  font-style   : normal;
-  font-weight  : 700;
-  margin-bottom: 4px;
-  opacity      : 0.5;
+  display       : block;
+  color         : #111111;
+  font-family   : "Inter", sans-serif;
+  font-size     : 18px;
+  font-style    : normal;
+  font-weight   : 700;
+  margin-bottom : 4px;
+  opacity       : 0.5;
+  text-transform: capitalize;
 }
 
 .tsl-cathl-name {
-  font-family: "Instrument Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size  : 18px;
   font-weight: 700;
   color      : #111111;
@@ -1716,7 +1746,7 @@ button {
   text-transform : lowercase;
   text-decoration: none;
   transition     : opacity 0.2s;
-  margin-top     : 20px;
+  margin-top     : 24px;
 }
 
 .tsl-cathl-more:hover {

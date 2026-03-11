@@ -1,19 +1,55 @@
 export default function SobrePage() {
   return (
     <div className="tsl-page">
-      <h1 className="tsl-page-title">Sobre<br/><span className="red-bar"></span></h1>
+      <h1 className="tsl-page-title">
+        Sobre a Agenda B
+        <br />
+        <span className="red-bar"></span>
+      </h1>
       <div className="tsl-page-content">
+        <h1>
+          A <strong>Agenda B</strong> é um pequeno projecto independente que
+          reúne num único lugar eventos culturais, desportivos e comunitários
+          que acontecem no Barreiro.
+        </h1>
         <p>
-          A <strong>Agenda Barreiro</strong> é um projecto independente que reúne num único lugar todos os eventos culturais, 
-          desportivos e comunitários que acontecem no Barreiro.
+          A ideia surgiu de um problema simples: muitas vezes há coisas a
+          acontecer na cidade — concertos, exposições, workshops ou iniciativas
+          de associações — mas a informação está espalhada por vários sites,
+          páginas de <strong>Facebook</strong> e agendas diferentes. Muitas
+          vezes só descobrimos os eventos tarde demais… ou nem chegamos a saber
+          que aconteceram.
         </p>
         <p>
-          Os dados são recolhidos automaticamente a partir de fontes públicas, incluindo o site da 
-          Câmara Municipal do Barreiro e a Viral Agenda, e actualizados várias vezes por dia.
+          A <strong>Agenda B</strong> tenta resolver esse problema juntando essa
+          informação num único sítio, de forma simples e fácil de consultar.
         </p>
         <p>
-          Este projecto não tem qualquer afiliação oficial com a Câmara Municipal do Barreiro ou outras entidades. 
-          É um esforço comunitário para facilitar o acesso à informação sobre o que se passa na cidade.
+          Os eventos são recolhidos automaticamente a partir de várias fontes
+          públicas, incluindo o site da{" "}
+          <strong>Câmara Municipal do Barreiro</strong> e a{" "}
+          <strong>Viral Agenda</strong>, e são actualizados várias vezes por
+          dia.
+        </p>
+        <p>
+          O projecto foi criado por Adolfo Ferreira, designer de produto, como
+          uma iniciativa pessoal desenvolvida no tempo livre. A ideia é simples:
+          tornar mais fácil descobrir o que está a acontecer na cidade e dar
+          mais visibilidade às iniciativas locais.
+        </p>
+        <p>
+          Este projecto não tem qualquer afiliação oficial com a{" "}
+          <strong>Câmara Municipal do Barreiro</strong> ou outras entidades.
+        </p>
+        <p>
+          Se quiser saber mais sobre o meu trabalho pode visitar:{" "}
+          <a
+            href="https://adolfoferreira.com/"
+            target="_blank"
+            rel="noopener noreferrer" className="tsl-link"
+          >
+            adolfoferreira.com
+          </a>
         </p>
       </div>
     </div>

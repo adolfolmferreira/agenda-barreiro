@@ -7,8 +7,9 @@ export default function Footer({ lastUpdated }: { lastUpdated?: string | null })
     <footer className="tsl-foot">
       <div className="tsl-foot-in">
         <div className="tsl-foot-left">
-          <span>Made in Barreiro with ❤️</span>
+          <span>Feito no Barreiro para o Barreiro ❤️</span>
           <span className="tsl-foot-sep">|</span>
+          <span>Design by:</span>
           <a href="https://adolfoferreira.com" target="_blank" rel="noopener noreferrer" className="tsl-foot-link">adolfoferreira.com</a>
         </div>
         <div className="tsl-foot-center">
