@@ -119,7 +119,7 @@ button {
   margin-left   : auto;
   font-size     : 12px;
   font-weight   : 500;
-  color         : #bbb;
+  color         : #999999;
   letter-spacing: 1px;
 }
 
@@ -407,7 +407,7 @@ button {
   display    : block;
   font-size  : 16px;
   font-weight: 500;
-  color      : #bbb;
+  color      : #999999;
   margin-top : 6px;
   line-height: 1.4;
 }
@@ -640,6 +640,10 @@ button {
   .tsl-pdf-grid {
     gap: 20px;
   }
+
+  .tsl-pdf-heading {
+    font-size: 28px;
+  }
 }
 
 /* ═══ FOOTER ═══ */
@@ -802,7 +806,7 @@ button {
 .tsl-highlights-title {
   font-family      : "Inter", serif;
   font-size        : 42px;
-  font-weight      : 400;
+  font-weight      : 300;
   text-transform   : uppercase;
   color            : #111111;
   /* margin-bottom : 32px; */
@@ -869,6 +873,7 @@ button {
 }
 
 @media (max-width: 768px) {
+
   .tsl-highlights {
     padding: 40px 20px;
   }
@@ -880,6 +885,11 @@ button {
   .tsl-highlight-name {
     font-size: 22px;
   }
+
+  .tsl-highlights-title {
+    font-size: 28px;
+  }
+
 }
 
 .tsl-card-more {
@@ -907,7 +917,7 @@ button {
 
 .tsl-view-btn {
   padding   : 8px;
-  color     : #bbb;
+  color     : #999999;
   cursor    : pointer;
   transition: color 0.2s;
 }
@@ -972,7 +982,7 @@ button {
 .tsl-list-loc {
   font-size    : 16px;
   font-weight  : 500;
-  color        : #bbb;
+  color        : #999999;
   max-width    : 200px;
   overflow     : hidden;
   text-overflow: ellipsis;
@@ -980,7 +990,7 @@ button {
 }
 
 .tsl-list-arrow {
-  color    : #bbb;
+  color    : #999999;
   font-size: 16px;
 }
 
@@ -1030,7 +1040,7 @@ button {
 .tsl-cinema-title {
   font-family     : "Inter", sans-serif;
   font-size       : 42px;
-  font-weight     : 400;
+  font-weight     : 300;
   text-transform  : uppercase;
   color           : #111111;
   /*margin-bottom : 32px;*/
@@ -1136,6 +1146,13 @@ button {
 }
 
 @media (max-width: 768px) {
+
+  .tsl-cinema-header {
+    display       : flex;
+    flex-direction: column;
+    align-items   : flex-start
+  }
+
   .tsl-cinema {
     padding: 40px 20px;
   }
@@ -1147,6 +1164,10 @@ button {
   .tsl-cinema-arrows {
     display: none;
   }
+
+  .tsl-cinema-title {
+    font-size: 28px;
+  }
 }
 
 /* ── AGENDA PAGE ─────────────────────── */
@@ -1157,7 +1178,7 @@ button {
 .tsl-agenda-title {
   font-family   : "Inter", sans-serif;
   font-size     : 42px;
-  font-weight   : 400;
+  font-weight   : 300;
   text-transform: uppercase;
   color         : #111111;
   line-height   : normal;
@@ -1198,7 +1219,7 @@ button {
 .tsl-page-title {
   font-family   : "Inter", sans-serif;
   font-size     : 42px;
-  font-weight   : 400;
+  font-weight   : 300;
   text-transform: uppercase;
   color         : #111111;
   line-height   : normal;
@@ -1231,6 +1252,12 @@ button {
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .tsl-page {
+    padding: 40px 20px;
+  }
+}
+
 /* ─── Upcoming Section (Homepage) ─────────────────── */
 .tsl-upcoming {
   padding      : 80px 48px;
@@ -1247,7 +1274,7 @@ button {
 .tsl-upcoming-title {
   font-family     : "Inter", sans-serif;
   font-size       : 42px;
-  font-weight     : 400;
+  font-weight     : 300;
   text-transform  : uppercase;
   color           : #111111;
   /*margin-bottom : 32px;*/
@@ -1268,6 +1295,26 @@ button {
   opacity: 0.4;
 }
 
+@media (max-width: 768px) {
+  .tsl-upcoming {
+    padding: 40px 20px;
+  }
+
+  .tsl-upcoming-name {
+    font-size: 22px!important;
+  }
+
+  .tsl-upcoming-title {
+    font-size: 28px;
+  }
+
+  .tsl-upcoming-header {
+    display       : flex;
+    flex-direction: column;
+    align-items   : flex-start
+  }
+}
+
 /* ─── Kids Section (Homepage) ─────────────────────── */
 .tsl-kids {
   padding         : 80px 48px;
@@ -1285,7 +1332,7 @@ button {
 .tsl-kids-title {
   font-family     : "Inter", serif;
   font-size       : 42px;
-  font-weight     : 400;
+  font-weight     : 300;
   text-transform  : uppercase;
   color           : #111111;
   /*margin-bottom : 32px;*/
@@ -1340,12 +1387,31 @@ button {
 }
 
 @media (max-width: 768px) {
+
+  .tsl-kids {
+    padding: 40px 20px;
+  }
+
   .tsl-kids-card {
     flex: 0 0 calc((100% - 24px) / 2.3);
   }
 
   .tsl-kids-arrows {
     display: none;
+  }
+
+  .tsl-kids-title {
+    font-size: 28px;
+  }
+
+  .tsl-kids-header {
+    display       : flex;
+    flex-direction: column;
+    align-items   : flex-start
+  }
+
+  .tsl-kids-name {
+    font-size: 22px!important;
   }
 }
 
@@ -1519,7 +1585,7 @@ button {
   display    : block;
   font-size  : 16px;
   font-weight: 500;
-  color      : #bbb;
+  color      : #999999;
   margin-top : 6px;
   line-height: 1.4;
 }
@@ -1639,10 +1705,10 @@ button {
 }
 
 .tsl-cathl-title {
-  font-family     : "Instrument Serif", serif;
+  font-family     : "Inter", sans-serif;
   font-size       : 42px;
-  font-weight     : 400;
-  text-transform  : lowercase;
+  font-weight     : 300;
+  text-transform  : uppercase;
   color           : #111111;
   /*margin-bottom : 32px;*/
   line-height     : normal;
@@ -1682,7 +1748,7 @@ button {
 .tsl-cathl-cat {
   font-size     : 32px;
   font-weight   : 700;
-  text-transform: lowercase;
+  text-transform: capitalize;
   color         : #96d3e5;
   margin        : 0 0 12px;
 }
@@ -1733,17 +1799,17 @@ button {
   display    : block;
   font-size  : 16px;
   font-weight: 500;
-  color      : #bbb;
+  color      : #999999;
   margin-top : 6px;
   line-height: 1.4;
 }
 
 .tsl-cathl-more {
-  font-family    : 'Instrument Sans', sans-serif;
+  font-family    : "Inter", sans-serif;
   font-size      : 18px;
-  font-weight    : 700;
+  font-weight    : 400;
   color          : #111111;
-  text-transform : lowercase;
+  text-transform : capitalize;
   text-decoration: none;
   transition     : opacity 0.2s;
   margin-top     : 24px;
@@ -1760,11 +1826,19 @@ button {
 }
 
 @media (max-width: 768px) {
+  .tsl-cathl {
+    padding: 40px 20px;
+  }
+
   .tsl-cathl-card {
     flex: 0 0 85%;
   }
 
   .tsl-cathl-arrows {
     display: none;
+  }
+
+  .tsl-cathl-title {
+    font-size: 28px;
   }
 }
