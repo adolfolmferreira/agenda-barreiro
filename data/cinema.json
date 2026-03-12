@@ -1,11 +1,11 @@
 [
   {
-    "title": "A Noiva!",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19582",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/The_bride-500x741.jpg",
-    "genre": "Musical, Romance, Terror",
-    "duration": "02h07",
-    "rating": "M/16"
+    "title": "Jogada de Mestre",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20652",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Jogada-De-Mestre-500x713.jpg",
+    "genre": "Comédia, Drama, Thriller",
+    "duration": "1h49",
+    "rating": "M/12"
   },
   {
     "title": "Saltitões (Dob.)",
@@ -16,27 +16,19 @@
     "rating": "M/6"
   },
   {
-    "title": "The Moment, por Charli XCX",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20533",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/TheMoment_Poster_320x500px.jpg",
-    "genre": "Drama, Ficção, Musical",
-    "duration": "1h43",
-    "rating": "M/12"
-  },
-  {
-    "title": "O Homem Mais Sortudo da América",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20422",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/O-Homem-Mais-Sortudo-da-America_Comp-500x714.jpg",
-    "genre": "Drama",
-    "duration": "1h31",
-    "rating": "M/12"
-  },
-  {
     "title": "Gritos 7",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=19491",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Gritos-7-500x741.jpg",
     "genre": "Horror, Mistério",
     "duration": "1h53",
+    "rating": "M/16"
+  },
+  {
+    "title": "Kill Bill: Toda a Obra Sangrenta",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20468",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Kill-Bill-500x720.png",
+    "genre": "Ação, Crime",
+    "duration": "4h35",
     "rating": "M/16"
   },
   {
@@ -48,7 +40,7 @@
     "rating": "M/12"
   },
   {
-    "title": "A Criada",
+    "title": "A CRIADA",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=18772",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/09/A-Criada-2-500x750.jpg",
     "genre": "Suspense, Thriller",
@@ -80,11 +72,19 @@
     "rating": "M/6"
   },
   {
-    "title": "Kill Bill: Toda a Obra Sangrenta",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20468",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Kill-Bill-500x720.png",
-    "genre": "Ação, Crime",
-    "duration": "4h35",
-    "rating": "M/16"
+    "title": "O Monte dos Vendavais",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19075",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/10/O-Monte-dos-Vendavais-500x741.jpg",
+    "genre": "Drama, Romance",
+    "duration": "2h16",
+    "rating": "M/14"
+  },
+  {
+    "title": "Super Mario Galaxy: O Filme (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20619",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Super_Mario_2_poster-480x760.jpg",
+    "genre": "Ação, Animação, Aventura, Comédia, Fantasia",
+    "duration": "NA",
+    "rating": "NA"
   }
 ]
