@@ -48,7 +48,7 @@ export default function SobrePage() {
             target="_blank"
             rel="noopener noreferrer" className="tsl-link"
           >
-            adolfoferreira.com
+            www.adolfoferreira.com
           </a>
         </p>
       </div>

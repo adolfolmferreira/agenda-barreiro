@@ -381,12 +381,18 @@ button {
 
 .tsl-card-cat {
   display       : block;
+  color         : #111111;
+  font-family   : "Inter", sans-serif;
   font-size     : 16px;
-  font-weight   : 700;
-  color         : #96d3e5;
-  letter-spacing: normal;
-  margin-bottom : 8px;
+  font-style    : normal;
+  font-weight   : 300;
+  line-height   : normal;
   text-transform: capitalize;
+  width         : max-content;
+  border        : 1px solid #111111;
+  padding       : 4px 16px;
+  border-radius : 50px;
+  margin        : 12px 0;
 }
 
 .tsl-card-title {
@@ -451,12 +457,18 @@ button {
 }
 
 .tsl-detail-cat {
+  color         : #111111;
+  font-family   : "Inter", sans-serif;
   font-size     : 16px;
-  font-weight   : 700;
-  color         : #96d3e5;
-  letter-spacing: normal;
-  margin-bottom : 20px;
+  font-style    : normal;
+  font-weight   : 300;
+  line-height   : normal;
   text-transform: capitalize;
+  width         : max-content;
+  border        : 1px solid #111111;
+  padding       : 4px 16px;
+  border-radius : 50px;
+  margin        : 12px 0;
 }
 
 .tsl-detail-title {
@@ -845,7 +857,7 @@ button {
 .tsl-highlight-info {
   display       : flex;
   flex-direction: column;
-  gap           : 8px;
+  gap           : 12px;
 }
 
 .tsl-highlight-date {
@@ -860,13 +872,17 @@ button {
 }
 
 .tsl-highlight-cat {
-  color         : #96d3e5;
+  color         : #111111;
   font-family   : "Inter", sans-serif;
-  font-size     : 18px;
+  font-size     : 16px;
   font-style    : normal;
-  font-weight   : 700;
+  font-weight   : 300;
   line-height   : normal;
   text-transform: capitalize;
+  width         : max-content;
+  border        : 1px solid #111111;
+  padding       : 4px 16px;
+  border-radius : 50px;
 }
 
 .tsl-highlight-name {
@@ -983,11 +999,18 @@ button {
 }
 
 .tsl-list-cat {
+  color         : #111111;
+  font-family   : "Inter", sans-serif;
   font-size     : 16px;
-  font-weight   : 700;
-  color         : #96d3e5;
-  letter-spacing: normal;
+  font-style    : normal;
+  font-weight   : 300;
+  line-height   : normal;
   text-transform: capitalize;
+  width         : max-content;
+  border        : 1px solid #111111;
+  padding       : 4px 16px;
+  border-radius : 50px;
+  margin        : 12px 0;
 }
 
 .tsl-list-loc {
@@ -1105,9 +1128,9 @@ button {
 }
 
 .tsl-cinema-arrow:hover {
-  background  : #101f2a;
+  background  : #96d3e5;
   color       : #fff;
-  border-color: #101f2a;
+  border-color: #111111;
 }
 
 .tsl-cinema-card {
@@ -1345,7 +1368,7 @@ button {
 /* ─── Kids Section (Homepage) ─────────────────────── */
 .tsl-kids {
   padding         : 80px 48px;
-  background-color: #E7BBE3;
+  background-color: #f3f3f3;
   border-bottom   : 1px solid #111111;
 }
 
@@ -1458,7 +1481,7 @@ button {
 .tsl-kids-info {
   display       : flex;
   flex-direction: column;
-  gap           : 2px;
+  gap           : 12px;
   margin-bottom : 16px;
 }
 
@@ -1475,13 +1498,17 @@ button {
 }
 
 .tsl-kids-cat {
-  display       : block;
+  color         : #111111;
+  font-family   : "Inter", sans-serif;
   font-size     : 16px;
-  font-weight   : 700;
-  color         : #fff;
-  letter-spacing: normal;
-  margin-bottom : 8px;
+  font-style    : normal;
+  font-weight   : 300;
+  line-height   : normal;
   text-transform: capitalize;
+  width         : max-content;
+  border        : 1px solid #111111;
+  padding       : 4px 16px;
+  border-radius : 50px;
 }
 
 .tsl-kids-name {
@@ -1574,7 +1601,7 @@ button {
 .tsl-upcoming-info {
   display       : flex;
   flex-direction: column;
-  gap           : 1px;
+  gap           : 12px;
   min-width     : 0;
 }
 
@@ -1591,13 +1618,17 @@ button {
 }
 
 .tsl-upcoming-cat {
-  display       : block;
+  color         : #111111;
+  font-family   : "Inter", sans-serif;
   font-size     : 16px;
-  font-weight   : 700;
-  color         : #96d3e5;
-  letter-spacing: normal;
-  margin-bottom : 4px;
+  font-style    : normal;
+  font-weight   : 300;
+  line-height   : normal;
   text-transform: capitalize;
+  width         : max-content;
+  border        : 1px solid #111111;
+  padding       : 4px 16px;
+  border-radius : 50px;
 }
 
 .tsl-upcoming-name {
@@ -1722,6 +1753,7 @@ button {
 .tsl-cathl {
   padding         : 80px 48px;
   background-color: #fff;
+  border-bottom   : 1px solid #111111;
 }
 
 .tsl-cathl-header {
