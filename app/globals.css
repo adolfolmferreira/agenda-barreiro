@@ -310,9 +310,9 @@ button {
   font-weight   : 700;
   color         : #111111;
   padding-bottom: 20px;
-  border-bottom : 1px solid rgba(39, 50, 57, 0.2);
+  border-bottom : 1px solid #111111;
   margin-bottom : 32px;
-  letter-spacing: -2px;
+  letter-spacing: normal;
 }
 
 /* ─── 4-column grid ─── */
@@ -374,10 +374,9 @@ button {
   font-family   : "Inter", sans-serif;
   font-size     : 18px;
   font-style    : normal;
-  font-weight   : 700;
+  font-weight   : 400;
   margin-bottom : 4px;
-  opacity       : 0.5;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .tsl-card-cat {
@@ -385,7 +384,7 @@ button {
   font-size     : 16px;
   font-weight   : 700;
   color         : #96d3e5;
-  letter-spacing: 0.5px;
+  letter-spacing: normal;
   margin-bottom : 8px;
   text-transform: capitalize;
 }
@@ -455,8 +454,9 @@ button {
   font-size     : 16px;
   font-weight   : 700;
   color         : #96d3e5;
-  letter-spacing: 0.5px;
+  letter-spacing: normal;
   margin-bottom : 20px;
+  text-transform: capitalize;
 }
 
 .tsl-detail-title {
@@ -542,14 +542,14 @@ button {
 /* ═══ PDF EDITIONS — magazine-size covers ═══ */
 .tsl-pdf {
   padding   : 80px 48px 96px;
-  background: #f5f4f2;
+  background: #f3f3f3;
   overflow  : hidden;
 }
 
 .tsl-pdf-heading {
   font-family   : "Inter", sans-serif;
   font-size     : 42px;
-  font-weight   : 400;
+  font-weight   : 300;
   text-transform: uppercase;
   color         : #111111;
   margin-bottom : 48px;
@@ -587,12 +587,13 @@ button {
 }
 
 .tsl-pdf-label {
-  font-family  : "Inter", sans-serif;
-  font-size    : 24px;
-  font-weight  : 700;
-  color        : #111111;
-  margin-bottom: 20px;
-  transition   : color 0.2s;
+  font-family   : "Inter", sans-serif;
+  font-size     : 24px;
+  font-weight   : 700;
+  color         : #111111;
+  text-transform: capitalize;
+  margin-bottom : 20px;
+  transition    : color 0.2s;
 }
 
 .tsl-pdf-item:hover .tsl-pdf-label {
@@ -710,6 +711,11 @@ button {
 }
 
 @media (max-width: 640px) {
+
+  .tsl-month {
+    margin-top: 0px;
+  }
+
   .tsl-head-in {
     padding: 0 20px;
     gap    : 20px;
@@ -754,7 +760,12 @@ button {
   }
 
   .tsl-detail {
-    padding: 0 20px 60px;
+    padding   : 0 20px 60px;
+    margin-top: 40px;
+  }
+
+  .tsl-detail-title {
+    font-size: 32px;
   }
 
   .tsl-detail-meta {
@@ -843,9 +854,9 @@ button {
   font-family   : "Inter", sans-serif;
   font-size     : 18px;
   font-style    : normal;
-  font-weight   : 700;
+  font-weight   : 400;
   opacity       : 0.5;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .tsl-highlight-cat {
@@ -957,10 +968,10 @@ button {
   font-family   : "Inter", sans-serif;
   font-size     : 18px;
   font-style    : normal;
-  font-weight   : 700;
+  font-weight   : 400;
   margin-bottom : 4px;
   opacity       : 0.5;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .tsl-list-title {
@@ -975,7 +986,7 @@ button {
   font-size     : 16px;
   font-weight   : 700;
   color         : #96d3e5;
-  letter-spacing: 0.5px;
+  letter-spacing: normal;
   text-transform: capitalize;
 }
 
@@ -1192,6 +1203,10 @@ button {
   .tsl-agenda-title {
     font-size: 36px;
   }
+
+  .tsl-month-title {
+    font-size: 48px;
+  }
 }
 
 .tsl-list-img {
@@ -1256,6 +1271,18 @@ button {
   .tsl-page {
     padding: 40px 20px;
   }
+
+  .tsl-page-title {
+    font-size: 28px;
+  }
+
+  .tsl-page-content h1 {
+    font-size: 24px;
+  }
+
+  .tsl-page-content p:last-child {
+    margin-bottom: 30px;
+  }
 }
 
 /* ─── Upcoming Section (Homepage) ─────────────────── */
@@ -1301,7 +1328,7 @@ button {
   }
 
   .tsl-upcoming-name {
-    font-size: 22px!important;
+    font-size: 22px !important;
   }
 
   .tsl-upcoming-title {
@@ -1411,7 +1438,7 @@ button {
   }
 
   .tsl-kids-name {
-    font-size: 22px!important;
+    font-size: 22px !important;
   }
 }
 
@@ -1441,10 +1468,10 @@ button {
   font-family   : "Inter", sans-serif;
   font-size     : 18px;
   font-style    : normal;
-  font-weight   : 700;
+  font-weight   : 400;
   margin-bottom : 4px;
   opacity       : 0.5;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .tsl-kids-cat {
@@ -1452,7 +1479,7 @@ button {
   font-size     : 16px;
   font-weight   : 700;
   color         : #fff;
-  letter-spacing: 0.5px;
+  letter-spacing: normal;
   margin-bottom : 8px;
   text-transform: capitalize;
 }
@@ -1557,10 +1584,10 @@ button {
   font-family   : "Inter", sans-serif;
   font-size     : 18px;
   font-style    : normal;
-  font-weight   : 700;
+  font-weight   : 400;
   margin-bottom : 4px;
   opacity       : 0.5;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .tsl-upcoming-cat {
@@ -1568,7 +1595,7 @@ button {
   font-size     : 16px;
   font-weight   : 700;
   color         : #96d3e5;
-  letter-spacing: 0.5px;
+  letter-spacing: normal;
   margin-bottom : 4px;
   text-transform: capitalize;
 }
@@ -1781,10 +1808,10 @@ button {
   font-family   : "Inter", sans-serif;
   font-size     : 18px;
   font-style    : normal;
-  font-weight   : 700;
+  font-weight   : 400;
   margin-bottom : 4px;
   opacity       : 0.5;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .tsl-cathl-name {
