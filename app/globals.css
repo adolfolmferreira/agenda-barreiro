@@ -112,7 +112,7 @@ button {
 }
 
 .tsl-nav-link.active {
-  color: #96d3e5;
+  color: #64a1de;
 }
 
 .tsl-head-season {
@@ -178,7 +178,7 @@ button {
 .tsl-hero-feat-cat {
   font-size     : 14px;
   font-weight   : 700;
-  color         : #96d3e5;
+  color         : #64a1de;
   letter-spacing: 0.5px;
   margin-bottom : 12px;
   text-transform: capitalize;
@@ -290,13 +290,12 @@ button {
 }
 
 .red-bar {
-  background-color: #96d3e5;
+  background-color: #64a1de;
   display         : block;
-  width           : 60px;
+  width           : 30px;
   height          : 4px;
   margin-top      : 10px;
   margin-bottom   : 20px;
-  border-radius   : 4px;
 }
 
 /* ─── Month ─── */
@@ -560,7 +559,7 @@ button {
 
 .tsl-pdf-heading {
   font-family   : "Inter", sans-serif;
-  font-size     : 42px;
+  font-size     : 32px;
   font-weight   : 300;
   text-transform: uppercase;
   color         : #111111;
@@ -822,16 +821,16 @@ button {
 /* ── EM DESTAQUE ─────────────────────── */
 .tsl-highlights {
   padding         : 40px 48px 80px 48px;
-  background-color: #ffffff;
+  background-color: #111111;
   border-bottom   : 1px solid #111111;
 }
 
 .tsl-highlights-title {
   font-family      : "Inter", serif;
-  font-size        : 42px;
+  font-size        : 32px;
   font-weight      : 300;
   text-transform   : uppercase;
-  color            : #111111;
+  color            : #ffffff;
   /* margin-bottom : 32px; */
   line-height      : normal;
 }
@@ -862,17 +861,16 @@ button {
 
 .tsl-highlight-date {
   display       : block;
-  color         : #111111;
+  color         : #ffffff;
   font-family   : "Inter", sans-serif;
   font-size     : 18px;
   font-style    : normal;
   font-weight   : 400;
-  opacity       : 0.5;
   text-transform: uppercase;
 }
 
 .tsl-highlight-cat {
-  color         : #111111;
+  color         : #ffffff;
   font-family   : "Inter", sans-serif;
   font-size     : 16px;
   font-style    : normal;
@@ -880,7 +878,7 @@ button {
   line-height   : normal;
   text-transform: capitalize;
   width         : max-content;
-  border        : 1px solid #111111;
+  border        : 1px solid #ffffff;
   padding       : 4px 16px;
   border-radius : 50px;
 }
@@ -889,7 +887,7 @@ button {
   font-family: "Inter", sans-serif;
   font-size  : 48px;
   font-weight: 700;
-  color      : #111111;
+  color      : #ffffff;
   line-height: 1.1;
 }
 
@@ -986,7 +984,6 @@ button {
   font-style    : normal;
   font-weight   : 400;
   margin-bottom : 4px;
-  opacity       : 0.5;
   text-transform: uppercase;
 }
 
@@ -1073,7 +1070,7 @@ button {
 
 .tsl-cinema-title {
   font-family     : "Inter", sans-serif;
-  font-size       : 42px;
+  font-size       : 32px;
   font-weight     : 300;
   text-transform  : uppercase;
   color           : #111111;
@@ -1128,7 +1125,7 @@ button {
 }
 
 .tsl-cinema-arrow:hover {
-  background  : #96d3e5;
+  background  : #64a1de;
   color       : #fff;
   border-color: #111111;
 }
@@ -1211,7 +1208,7 @@ button {
 
 .tsl-agenda-title {
   font-family   : "Inter", sans-serif;
-  font-size     : 42px;
+  font-size     : 32px;
   font-weight   : 300;
   text-transform: uppercase;
   color         : #111111;
@@ -1256,7 +1253,7 @@ button {
 
 .tsl-page-title {
   font-family   : "Inter", sans-serif;
-  font-size     : 42px;
+  font-size     : 32px;
   font-weight   : 300;
   text-transform: uppercase;
   color         : #111111;
@@ -1286,7 +1283,7 @@ button {
 }
 
 .tsl-link {
-  color          : #96d3e5;
+  color          : #64a1de;
   text-decoration: underline;
 }
 
@@ -1323,7 +1320,7 @@ button {
 
 .tsl-upcoming-title {
   font-family     : "Inter", sans-serif;
-  font-size       : 42px;
+  font-size       : 32px;
   font-weight     : 300;
   text-transform  : uppercase;
   color           : #111111;
@@ -1381,7 +1378,7 @@ button {
 
 .tsl-kids-title {
   font-family     : "Inter", serif;
-  font-size       : 42px;
+  font-size       : 32px;
   font-weight     : 300;
   text-transform  : uppercase;
   color           : #111111;
@@ -1493,7 +1490,6 @@ button {
   font-style    : normal;
   font-weight   : 400;
   margin-bottom : 4px;
-  opacity       : 0.5;
   text-transform: uppercase;
 }
 
@@ -1613,7 +1609,6 @@ button {
   font-style    : normal;
   font-weight   : 400;
   margin-bottom : 4px;
-  opacity       : 0.5;
   text-transform: uppercase;
 }
 
@@ -1765,7 +1760,7 @@ button {
 
 .tsl-cathl-title {
   font-family     : "Inter", sans-serif;
-  font-size       : 42px;
+  font-size       : 32px;
   font-weight     : 300;
   text-transform  : uppercase;
   color           : #111111;
@@ -1808,7 +1803,7 @@ button {
   font-size     : 32px;
   font-weight   : 700;
   text-transform: capitalize;
-  color         : #96d3e5;
+  color         : #64a1de;
   margin        : 0 0 12px;
 }
 
@@ -1842,7 +1837,6 @@ button {
   font-style    : normal;
   font-weight   : 400;
   margin-bottom : 4px;
-  opacity       : 0.5;
   text-transform: uppercase;
 }
 
