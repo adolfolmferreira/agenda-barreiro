@@ -12,5 +12,6 @@ export interface Event {
   imageUrl?: string;
   sourceUrl?: string;
   contacts?: string;
+  ticketUrl?: string;
   featured?: boolean;
 }

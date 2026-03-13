@@ -1925,3 +1925,14 @@ button {
   border: none;
   border-radius: 8px;
 }
+
+/* ─── Detail Links ────────────────────────────────── */
+.tsl-detail-link {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-all;
+}
+.tsl-detail-link:hover {
+  opacity: 0.7;
+}

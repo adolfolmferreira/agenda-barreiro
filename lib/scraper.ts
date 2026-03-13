@@ -265,8 +265,16 @@ async function fetchEvent(url: string): Promise<Event | null> {
     if (location.length < 3) location = 'Barreiro';
 
     // ─── Price ──────────────────────────────────────────────
-    const priceM = allText.match(/gratuito|entrada\s+livre|€\s*\d+[,.]?\d*/i);
-    const price = priceM ? (/gratuito|livre/i.test(priceM[0]) ? 'Gratuito' : priceM[0]) : '';
+    const priceText = decodeHtml(allText);
+    const priceM = priceText.match(/gratuito|entrada\s+livre|€\s*\d+[,.]?\d*|\d+[,.]?\d*\s*€|ingresso[:\s]+[^\n]{0,30}€[^\n]{0,10}|ingresso[:\s]+\d+[,.]?\d*\s*€/i);
+    let price = '';
+    if (priceM) {
+      if (/gratuito|livre/i.test(priceM[0])) price = 'Gratuito';
+      else {
+        const euros = priceM[0].match(/(\d+[,.]?\d*)\s*€|€\s*(\d+[,.]?\d*)/);
+        price = euros ? (euros[1] || euros[2]) + '€' : priceM[0].trim();
+      }
+    }
 
     // ─── Other metadata ─────────────────────────────────────
     const orgM = allText.match(/Org\.?[:\s]*(CMB[^\n.]{0,50}|Câmara[^\n.]{0,50}|[^\n.]{3,50})/i);
