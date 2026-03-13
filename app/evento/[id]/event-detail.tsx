@@ -16,8 +16,9 @@ function decodeHtml(s: string): string {
     .replace(/&ndash;/g,'–').replace(/&mdash;/g,'—').replace(/&hellip;/g,'…')
     .replace(/&ordm;/g,'º').replace(/&ordf;/g,'ª').replace(/&acirc;/g,'â')
     .replace(/&ecirc;/g,'ê').replace(/&ocirc;/g,'ô').replace(/&agrave;/g,'à')
+    .replace(/&rsquo;/g,"'").replace(/&lsquo;/g,"'").replace(/&raquo;/g,'»').replace(/&laquo;/g,'«')
     .replace(/&#8211;/g,'–').replace(/&#8220;/g,'"').replace(/&#8221;/g,'"')
-    .replace(/&#8230;/g,'…');
+    .replace(/&#8216;/g,"'").replace(/&#8217;/g,"'").replace(/&#8230;/g,'…');
 }
 
 export default function EventDetail({ event }: { event: Event | null }) {
@@ -41,7 +42,7 @@ export default function EventDetail({ event }: { event: Event | null }) {
       )}
       <div className="tsl-detail-body">
         <div className="tsl-detail-cat">{ev.category.toLowerCase()}</div>
-        <h1 className="tsl-detail-title">{ev.title}</h1>
+        <h1 className="tsl-detail-title">{decodeHtml(ev.title)}</h1>
         <div className="tsl-detail-meta">
           <div className="tsl-detail-meta-item">
             <span className="tsl-detail-meta-label">Data</span>
@@ -56,13 +57,13 @@ export default function EventDetail({ event }: { event: Event | null }) {
           {ev.location && cleanLoc(ev.location) && (
             <div className="tsl-detail-meta-item">
               <span className="tsl-detail-meta-label">Local</span>
-              <span>{cleanLoc(ev.location)}</span>
+              <span>{cleanLoc(decodeHtml(ev.location))}</span>
             </div>
           )}
           {ev.price && (
             <div className="tsl-detail-meta-item">
               <span className="tsl-detail-meta-label">Preço</span>
-              <span>{ev.price}</span>
+              <span>{ev.price ? decodeHtml(ev.price) : ""}</span>
             </div>
           )}
         </div>
@@ -77,6 +78,19 @@ export default function EventDetail({ event }: { event: Event | null }) {
           <a href={ev.sourceUrl} target="_blank" rel="noopener noreferrer" className="tsl-detail-cta">
             Ver no site oficial →
           </a>
+        )}
+
+        {ev.location && cleanLoc(decodeHtml(ev.location)) && cleanLoc(decodeHtml(ev.location)) !== 'Barreiro' && (
+          <div className="tsl-detail-map">
+            <h2 className="tsl-detail-map-title">Localização</h2>
+            <iframe
+              className="tsl-detail-map-iframe"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(cleanLoc(decodeHtml(ev.location)) + ', Barreiro, Portugal')}`}
+              allowFullScreen
+            />
+          </div>
         )}
       </div>
     </article>

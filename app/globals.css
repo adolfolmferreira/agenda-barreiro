@@ -1909,3 +1909,19 @@ button {
     font-size: 28px;
   }
 }
+/* ─── Event Detail Map ────────────────────────────── */
+.tsl-detail-map {
+  margin-top: 2rem;
+}
+.tsl-detail-map-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #101f2a;
+  margin-bottom: 0.75rem;
+}
+.tsl-detail-map-iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+}
