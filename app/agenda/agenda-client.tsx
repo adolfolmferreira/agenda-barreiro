@@ -13,14 +13,14 @@ import {
 } from "../components/helpers";
 
 export default function AgendaClient({ events }: { events: Event[] }) {
-  const [catOpen, setCatOpen] = useState(false);
-  const [monOpen, setMonOpen] = useState(false);
-  const [selCat, setSelCat] = useState("Todos os Eventos");
+
+
+  const [selCats, setSelCats] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const cat = params.get('categoria');
-    if (cat) setSelCat(cat);
+    if (cat) setSelCats(new Set([cat]));
   }, []);
   const [selMon, setSelMon] = useState("Todos os Meses");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
@@ -51,8 +51,8 @@ export default function AgendaClient({ events }: { events: Event[] }) {
     let list = events.filter(
       (e) => (e.endDate || e.date) >= "2026-01-01" && e.date <= "2026-06-30",
     );
-    if (selCat !== "Todos os Eventos")
-      list = list.filter((e) => e.category === selCat);
+    if (selCats.size > 0)
+      list = list.filter((e) => selCats.has(e.category));
     if (selMon !== "Todos os Meses")
       list = list.filter((e) => {
         if (e.date < "2026-01-01" && e.endDate && e.endDate >= "2026-01-01") return selMon === "2026-01";
@@ -61,7 +61,7 @@ export default function AgendaClient({ events }: { events: Event[] }) {
     if (hero) list = list.filter((e) => e.id !== hero.id);
     list.sort((a, b) => b.date.localeCompare(a.date));
     return list;
-  }, [events, selCat, selMon, hero]);
+  }, [events, selCats, selMon, hero]);
 
   const grouped = useMemo(() => {
     const map = new Map<string, Event[]>();
@@ -88,75 +88,52 @@ export default function AgendaClient({ events }: { events: Event[] }) {
 
       <div className="tsl-filters">
         <div className="tsl-filters-row">
-          <div
-            className="tsl-dropdown"
-            onClick={() => {
-              setCatOpen((v) => !v);
-              setMonOpen(false);
-            }}
-          >
-            <div className="tsl-dropdown-label">Categoria</div>
-            <button className="tsl-dropdown-trigger">
-              {selCat}
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path
-                  d="M2 4l4 4 4-4"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-              </svg>
-            </button>
-            {catOpen && (
-              <div className="tsl-dropdown-menu">
-                {categories.map((c) => (
-                  <button
-                    key={c}
-                    className={`tsl-dropdown-item ${selCat === c ? "active" : ""}`}
-                    onClick={() => {
-                      setSelCat(c);
-                      setCatOpen(false);
-                    }}
-                  >
-                    {c}
-                  </button>
-                ))}
-              </div>
-            )}
+          <div className="tsl-filter-group">
+            <div className="tsl-filter-label">Categoria</div>
+            <div className="tsl-pills">
+              <button
+                className={`tsl-pill ${selCats.size === 0 ? "active" : ""}`}
+                onClick={() => setSelCats(new Set())}
+              >
+                Todas
+              </button>
+              {categories.filter(c => c !== 'Todos os Eventos').map((c) => (
+                <button
+                  key={c}
+                  className={`tsl-pill ${selCats.has(c) ? "active" : ""}`}
+                  onClick={() => {
+                    setSelCats(prev => {
+                      const next = new Set(prev);
+                      if (next.has(c)) next.delete(c);
+                      else next.add(c);
+                      return next;
+                    });
+                  }}
+                >
+                  {c}
+                </button>
+              ))}
+            </div>
           </div>
-          <div
-            className="tsl-dropdown"
-            onClick={() => {
-              setMonOpen((v) => !v);
-              setCatOpen(false);
-            }}
-          >
-            <div className="tsl-dropdown-label">Mês</div>
-            <button className="tsl-dropdown-trigger">
-              {selMon === "Todos os Meses" ? selMon : mkLabel(selMon)}
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path
-                  d="M2 4l4 4 4-4"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-              </svg>
-            </button>
-            {monOpen && (
-              <div className="tsl-dropdown-menu">
-                {months.map((m) => (
-                  <button
-                    key={m}
-                    className={`tsl-dropdown-item ${selMon === m ? "active" : ""}`}
-                    onClick={() => {
-                      setSelMon(m);
-                      setMonOpen(false);
-                    }}
-                  >
-                    {m === "Todos os Meses" ? m : mkLabel(m)}
-                  </button>
-                ))}
-              </div>
-            )}
+          <div className="tsl-filter-group">
+            <div className="tsl-filter-label">Mês</div>
+            <div className="tsl-pills">
+              <button
+                className={`tsl-pill ${selMon === 'Todos os Meses' ? 'active' : ''}`}
+                onClick={() => setSelMon('Todos os Meses')}
+              >
+                Todos
+              </button>
+              {months.filter(m => m !== 'Todos os Meses').map((m) => (
+                <button
+                  key={m}
+                  className={`tsl-pill ${selMon === m ? 'active' : ''}`}
+                  onClick={() => setSelMon(m)}
+                >
+                  {mkLabel(m)}
+                </button>
+              ))}
+            </div>
           </div>
           <div className="tsl-view-toggle">
             <button

@@ -1936,3 +1936,52 @@ button {
 .tsl-detail-link:hover {
   opacity: 0.7;
 }
+
+/* ─── Category Pills ──────────────────────────────── */
+.tsl-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.tsl-pill {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.tsl-pill:hover {
+  border-color: #101f2a;
+  color: #101f2a;
+}
+.tsl-pill.active {
+  background: #101f2a;
+  border-color: #101f2a;
+  color: #fff;
+}
+.tsl-pill-clear {
+  border-style: dashed;
+  color: #94a3b8;
+}
+.tsl-pill-clear:hover {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+/* ─── Filter Groups ───────────────────────────────── */
+.tsl-filter-group {
+  margin-bottom: 12px;
+}
+.tsl-filter-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
