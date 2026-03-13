@@ -558,26 +558,32 @@ export default function HomeClient({ events }: { events: Event[] }) {
             {
               title: "março / abril 2026",
               pdf: "https://www.cm-barreiro.pt/wp-content/uploads/2026/02/agenda2830-Barreiro_mar_abr_2026.pdf",
+              img: "https://www.cm-barreiro.pt/wp-content/uploads/2026/02/Agenda-de-Eventos-Barreiro-marco-abril-2026_galeria_agenda2830.jpg",
             },
             {
               title: "janeiro / fevereiro 2026",
               pdf: "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/agenda2830_jan_fev_2026.pdf",
+              img: "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x1150px_galeria_agenda2830-1.jpg",
             },
             {
               title: "especial natal 2025",
               pdf: "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/Agenda-2830_Natal_25-1.pdf",
+              img: "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x1150px_galeria_agenda2830.jpg",
             },
             {
               title: "novembro / dezembro 2025",
               pdf: "https://www.cm-barreiro.pt/wp-content/uploads/2025/10/agenda2830_nov_dez_2025.pdf",
+              img: "https://www.cm-barreiro.pt/wp-content/uploads/2025/10/1920x1150px_galeria_agenda2830-3.jpg",
             },
             {
               title: "setembro / outubro 2025",
               pdf: "https://www.cm-barreiro.pt/wp-content/uploads/2025/08/agenda2830_set-out-2025.pdf",
+              img: "https://www.cm-barreiro.pt/wp-content/uploads/2025/08/1920x1150px_galeria_agenda2830.jpg",
             },
             {
               title: "julho / agosto 2025",
               pdf: "https://www.cm-barreiro.pt/wp-content/uploads/2025/06/agenda2830_julho_agosto_2025_editavelFINAL.pdf",
+              img: "https://www.cm-barreiro.pt/wp-content/uploads/2025/06/1920x1150px_galeria_agenda2830-1.jpg",
             },
           ].map((ed, i) => (
             <a

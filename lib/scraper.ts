@@ -1,5 +1,18 @@
 // lib/scraper.ts — v10
-// Best of v8 (working content extraction) + og:description for date fixing
+
+function decodeHtml(s: string): string {
+  return s
+    .replace(/&aacute;/g,'á').replace(/&eacute;/g,'é').replace(/&iacute;/g,'í')
+    .replace(/&oacute;/g,'ó').replace(/&uacute;/g,'ú').replace(/&atilde;/g,'ã')
+    .replace(/&otilde;/g,'õ').replace(/&ccedil;/g,'ç').replace(/&Aacute;/g,'Á')
+    .replace(/&Eacute;/g,'É').replace(/&Iacute;/g,'Í').replace(/&Oacute;/g,'Ó')
+    .replace(/&Uacute;/g,'Ú').replace(/&Atilde;/g,'Ã').replace(/&Otilde;/g,'Õ')
+    .replace(/&Ccedil;/g,'Ç').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ')
+    .replace(/&euro;/g,'€').replace(/&ldquo;/g,'"').replace(/&rdquo;/g,'"')
+    .replace(/&ndash;/g,'–').replace(/&mdash;/g,'—').replace(/&hellip;/g,'…')
+    .replace(/&ordm;/g,'º').replace(/&#8211;/g,'–').replace(/&#8220;/g,'"')
+    .replace(/&#8221;/g,'"').replace(/&#8230;/g,'…');
+}
 
 export interface Event {
   id: string;
@@ -273,12 +286,13 @@ async function fetchEvent(url: string): Promise<Event | null> {
 
     return {
       id: `${slug(title)}-${date}`,
-      title, category: cat(`${title} ${desc}`, title),
-      date, endDate, time, location, price,
-      description: desc, descriptionFull: descFull,
+      title: decodeHtml(title), category: cat(`${title} ${desc}`, title),
+      date, endDate, time, location: decodeHtml(location), price: price ? decodeHtml(price) : price,
+      description: decodeHtml(desc), descriptionFull: decodeHtml(descFull),
       sourceUrl: cleanUrl,
       imageUrl: ogImg || undefined,
-      organizer, contacts, ticketUrl, ageRating,
+      organizer: organizer ? decodeHtml(organizer) : organizer,
+      contacts, ticketUrl, ageRating,
       source: 'cm-barreiro.pt',
       scrapedAt: new Date().toISOString(),
     };

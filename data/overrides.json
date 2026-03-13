@@ -10,6 +10,7 @@
     "location": "Auditório Municipal Augusto Cabrita"
   },
   "Formigas: superpoderes em miniatura | Reserva na Primavera": {
+    "date": "2026-03-07",
     "location": "Centro de Educação Ambiental da Mata da Machada"
   },
   "Galari Galarooó | Oficina criativa para crianças": {
@@ -41,5 +42,9 @@
   "A garota não": {
     "category": "Música",
     "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Clube de Leitura Júnior | Harry Potter e a Pedra Filosofal": {
+    "date": "2026-03-14",
+    "location": "Biblioteca Municipal do Barreiro"
   }
 }
