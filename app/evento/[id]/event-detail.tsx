@@ -4,6 +4,22 @@ import Link from 'next/link';
 import type { Event } from '../../components/types';
 import { fmtFull, cleanLoc } from '../../components/helpers';
 
+function decodeHtml(s: string): string {
+  return s
+    .replace(/&aacute;/g,'á').replace(/&eacute;/g,'é').replace(/&iacute;/g,'í')
+    .replace(/&oacute;/g,'ó').replace(/&uacute;/g,'ú').replace(/&atilde;/g,'ã')
+    .replace(/&otilde;/g,'õ').replace(/&ccedil;/g,'ç').replace(/&Aacute;/g,'Á')
+    .replace(/&Eacute;/g,'É').replace(/&Iacute;/g,'Í').replace(/&Oacute;/g,'Ó')
+    .replace(/&Uacute;/g,'Ú').replace(/&Atilde;/g,'Ã').replace(/&Otilde;/g,'Õ')
+    .replace(/&Ccedil;/g,'Ç').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ')
+    .replace(/&euro;/g,'€').replace(/&ldquo;/g,'"').replace(/&rdquo;/g,'"')
+    .replace(/&ndash;/g,'–').replace(/&mdash;/g,'—').replace(/&hellip;/g,'…')
+    .replace(/&ordm;/g,'º').replace(/&ordf;/g,'ª').replace(/&acirc;/g,'â')
+    .replace(/&ecirc;/g,'ê').replace(/&ocirc;/g,'ô').replace(/&agrave;/g,'à')
+    .replace(/&#8211;/g,'–').replace(/&#8220;/g,'"').replace(/&#8221;/g,'"')
+    .replace(/&#8230;/g,'…');
+}
+
 export default function EventDetail({ event }: { event: Event | null }) {
   if (!event) {
     return (
@@ -52,7 +68,7 @@ export default function EventDetail({ event }: { event: Event | null }) {
         </div>
         {(ev.descriptionFull || ev.description) && (
           <div className="tsl-detail-text">
-            {(ev.descriptionFull || ev.description || '').split('\n\n').map((p, i) => (
+            {decodeHtml(ev.descriptionFull || ev.description || '').split('\n\n').map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>

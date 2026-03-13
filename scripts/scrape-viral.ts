@@ -62,8 +62,21 @@ async function scrapeEventDetail(url: string): Promise<{
       ? ogTitle[1].replace(/ - Viral Agenda$/, '').replace(/ - Barreiro$/, '').trim()
       : '';
 
-    const locMatch = html.match(/location:\s*"([^"]*)"/);
-    const location = locMatch ? locMatch[1].trim() : 'Barreiro';
+    let location = '';
+    // Try JSON-LD location name
+    const ldLoc = html.match(/"location"\s*:\s*\{[^}]*"name"\s*:\s*"([^"]+)"/);
+    if (ldLoc) location = ldLoc[1].trim();
+    // Try place name from p- div
+    if (!location) {
+      const pname = html.match(/id="p-[^"]+"[\s\S]*?<h\d[^>]*>([^<]+)/i);
+      if (pname) location = pname[1].trim();
+    }
+    // Try location JS var
+    if (!location) {
+      const locVar = html.match(/location:\s*"([^"]+)"/);
+      if (locVar) location = locVar[1].trim();
+    }
+    if (!location) location = 'Barreiro';
 
     const ogImage = html.match(/og:image[^>]*content="([^"]*)"/);
     const image = ogImage ? ogImage[1] : '';

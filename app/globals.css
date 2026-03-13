@@ -56,7 +56,7 @@ button {
   top          : 0;
   z-index      : 200;
   background   : #ffffff;
-  border-bottom: 1px solid #111111;
+  border-bottom: 2px solid #111111;
 }
 
 .tsl-head-in {
@@ -309,7 +309,7 @@ button {
   font-weight   : 700;
   color         : #111111;
   padding-bottom: 20px;
-  border-bottom : 1px solid #111111;
+  border-bottom : 2px solid #111111;
   margin-bottom : 32px;
   letter-spacing: normal;
 }
@@ -326,6 +326,7 @@ button {
   cursor    : pointer;
   overflow  : hidden;
   transition: opacity 0.3s;
+  border    : 2px solid #111111;
 }
 
 .tsl-grid:has(.tsl-card:hover) .tsl-card:not(:hover) {
@@ -364,7 +365,8 @@ button {
 }
 
 .tsl-card-body {
-  padding: 14px 0 20px;
+  /*padding: 14px 0 20px;*/
+  padding: 24px;
 }
 
 .tsl-card-date {
@@ -426,9 +428,9 @@ button {
   cursor         : pointer;
   font-family    : "Inter", sans-serif;
   font-size      : 18px;
-  font-weight    : 700;
+  font-weight    : 400;
   color          : #111111;
-  text-transform : lowercase;
+  text-transform : capitalize;
   text-decoration: none;
   transition     : opacity 0.2s;
 }
@@ -512,8 +514,8 @@ button {
 }
 
 .tsl-detail-text {
-  font-size      : 16px;
-  line-height    : 1.8;
+  font-size      : 18px;
+  line-height    : 1.75;
   color          : #111111;
   /*max-width    : 640px;*/
   margin-bottom  : 40px;
@@ -569,7 +571,7 @@ button {
 
 .tsl-pdf-grid {
   display                   : flex;
-  gap                       : 32px;
+  gap                       : 24px;
   overflow-x                : auto;
   scroll-snap-type          : x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -613,7 +615,7 @@ button {
 
 .tsl-pdf-cover {
   width       : 100%;
-  aspect-ratio: 210 / 260;
+  aspect-ratio: 16 / 10;
   overflow    : hidden;
   background  : #fff;
   transition  : box-shadow 0.4s, transform 0.4s;
@@ -1068,7 +1070,7 @@ button {
 /* ── NO CINEMA ───────────────────────── */
 .tsl-cinema {
   padding      : 80px 48px;
-  border-bottom: 1px solid #111111;
+  border-bottom: 2px solid #111111;
 }
 
 .tsl-cinema-title {
@@ -1312,7 +1314,7 @@ button {
 /* ─── Upcoming Section (Homepage) ─────────────────── */
 .tsl-upcoming {
   padding      : 80px 48px;
-  border-bottom: 1px solid #111111;
+  border-bottom: 2px solid #111111;
 }
 
 .tsl-upcoming-header {
@@ -1370,7 +1372,7 @@ button {
 .tsl-kids {
   padding         : 80px 48px;
   background-color: #f3f3f3;
-  border-bottom   : 1px solid #111111;
+  border-bottom   : 2px solid #111111;
 }
 
 .tsl-kids-header {
@@ -1437,6 +1439,7 @@ button {
   color            : inherit;
   border           : 2px solid #111111;
   background-color : #ffffff;
+  height           : fit-content;
 }
 
 @media (max-width: 768px) {
@@ -1756,7 +1759,7 @@ button {
 .tsl-cathl {
   padding         : 80px 48px;
   background-color: #fff;
-  border-bottom   : 1px solid #111111;
+  border-bottom   : 2px solid #111111;
 }
 
 .tsl-cathl-header {
