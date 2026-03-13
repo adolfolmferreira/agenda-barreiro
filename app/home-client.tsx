@@ -595,7 +595,7 @@ export default function HomeClient({ events }: { events: Event[] }) {
             >
               <div className="tsl-pdf-label">{ed.title}</div>
               <div className="tsl-pdf-cover">
-                <PdfCover key={i}url={ed.pdf} />
+                <img src={ed.img} alt={ed.title} className="tsl-pdf-img" />
               </div>
             </a>
           ))}
