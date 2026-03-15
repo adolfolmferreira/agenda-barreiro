@@ -65,9 +65,9 @@ function fmtFull(start: string, end?: string | null): string {
   if (!d1) return start;
   const day1 = d1.getDate();
   const mon1 = MO_FULL[d1.getMonth()];
-  if (!end) return `${day1} de ${mon1} de ${d1.getFullYear()}`;
+  if (!end || end === start) return `${day1} de ${mon1} de ${d1.getFullYear()}`;
   const d2 = pd(end);
-  if (!d2) return `${day1} de ${mon1} de ${d1.getFullYear()}`;
+  if (!d2 || d2.getTime() === d1.getTime()) return `${day1} de ${mon1} de ${d1.getFullYear()}`;
   const day2 = d2.getDate();
   const mon2 = MO_FULL[d2.getMonth()];
   return `${day1} de ${mon1} – ${day2} de ${mon2} de ${d2.getFullYear()}`;

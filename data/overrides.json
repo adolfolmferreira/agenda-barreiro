@@ -46,5 +46,11 @@
   "Clube de Leitura Júnior | Harry Potter e a Pedra Filosofal": {
     "date": "2026-03-14",
     "location": "Biblioteca Municipal do Barreiro"
+  },
+  "Concerto Músicas de Abril": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Caminhada pelo Património Ferroviário": {
+    "location": "Barreiro"
   }
 }
