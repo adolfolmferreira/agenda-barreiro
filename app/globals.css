@@ -1,4 +1,3 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 *,
@@ -213,7 +212,7 @@ button {
 
 .tsl-filters-row {
   display  : flex;
-  gap      : 40px;
+  gap      : 10px;
   flex-wrap: wrap;
 }
 
@@ -1909,79 +1908,92 @@ button {
     font-size: 28px;
   }
 }
+
 /* ─── Event Detail Map ────────────────────────────── */
 .tsl-detail-map {
   margin-top: 2rem;
 }
+
 .tsl-detail-map-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #101f2a;
+  font-size    : 1.1rem;
+  font-weight  : 700;
+  color        : #101f2a;
   margin-bottom: 0.75rem;
 }
+
 .tsl-detail-map-iframe {
-  width: 100%;
-  height: 300px;
-  border: none;
+  width        : 100%;
+  height       : 300px;
+  border       : none;
   border-radius: 8px;
 }
 
 /* ─── Detail Links ────────────────────────────────── */
 .tsl-detail-link {
-  color: #2563eb;
-  text-decoration: underline;
+  color                : #2563eb;
+  text-decoration      : underline;
   text-underline-offset: 2px;
-  word-break: break-all;
+  word-break           : break-all;
 }
+
 .tsl-detail-link:hover {
   opacity: 0.7;
 }
 
 /* ─── Category Pills ──────────────────────────────── */
 .tsl-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display      : flex;
+  flex-wrap    : wrap;
+  gap          : 8px;
   margin-bottom: 8px;
 }
+
 .tsl-pill {
-  padding: 6px 16px;
-  border-radius: 20px;
-  border: 1px solid #d1d5db;
-  background: #fff;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #475569;
-  cursor: pointer;
-  transition: all 0.2s;
+  color         : #111111;
+  font-family   : "Inter", sans-serif;
+  font-size     : 16px;
+  font-style    : normal;
+  font-weight   : 300;
+  line-height   : normal;
+  text-transform: capitalize;
+  width         : max-content;
+  border        : 1px solid #111111;
+  padding       : 6px 16px;
+  border-radius : 50px;
+  cursor        : pointer;
+  transition    : all 0.2s;
 }
+
 .tsl-pill:hover {
-  border-color: #101f2a;
-  color: #101f2a;
+  opacity: 0.3;
 }
+
 .tsl-pill.active {
-  background: #101f2a;
-  border-color: #101f2a;
-  color: #fff;
+  background  : #64a1de;
+  border-color: #111111;
+  color       : #fff;
 }
+
 .tsl-pill-clear {
   border-style: dashed;
-  color: #94a3b8;
+  color       : #94a3b8;
 }
+
 .tsl-pill-clear:hover {
   border-color: #dc2626;
-  color: #dc2626;
+  color       : #dc2626;
 }
 
 /* ─── Filter Groups ───────────────────────────────── */
 .tsl-filter-group {
   margin-bottom: 12px;
 }
+
 .tsl-filter-label {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size     : 0.75rem;
+  font-weight   : 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #94a3b8;
-  margin-bottom: 8px;
+  color         : #94a3b8;
+  margin-bottom : 8px;
 }
