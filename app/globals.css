@@ -1997,3 +1997,22 @@ button {
   color         : #94a3b8;
   margin-bottom : 8px;
 }
+/* ─── Footer Mobile ───────────────────────────────── */
+.tsl-foot-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}
+@media (max-width: 768px) {
+  .tsl-foot-in {
+    display: none !important;
+  }
+  .tsl-foot-mobile {
+    display: flex;
+  }
+}

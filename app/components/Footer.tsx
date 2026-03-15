@@ -9,8 +9,7 @@ export default function Footer({ lastUpdated }: { lastUpdated?: string | null })
         <div className="tsl-foot-left">
           <span>Feito no Barreiro para o Barreiro ❤️</span>
           <span className="tsl-foot-sep">|</span>
-          <span>Design by:</span>
-          <a href="https://adolfoferreira.com" target="_blank" rel="noopener noreferrer" className="tsl-foot-link">www.adolfoferreira.com</a>
+          <span>Design by: <a href="https://adolfoferreira.com" target="_blank" rel="noopener noreferrer" className="tsl-foot-link">adolfoferreira.com</a></span>
         </div>
         <div className="tsl-foot-center">
           <span>{year} © Agenda B — Dados de fontes públicas</span>
@@ -18,6 +17,12 @@ export default function Footer({ lastUpdated }: { lastUpdated?: string | null })
         <div className="tsl-foot-right">
           <img src="/agenda-b-logotipo.svg" alt="Agenda Barreiro" className="tsl-foot-logo" />
         </div>
+      </div>
+      <div className="tsl-foot-mobile">
+        <img src="/agenda-b-logotipo.svg" alt="Agenda Barreiro" className="tsl-foot-logo" />
+        <span>Feito no Barreiro para o Barreiro ❤️</span>
+        <span>Design by: <a href="https://adolfoferreira.com" target="_blank" rel="noopener noreferrer" className="tsl-foot-link">adolfoferreira.com</a></span>
+        <span>{year} © Agenda B — Dados de fontes públicas</span>
       </div>
     </footer>
   );
