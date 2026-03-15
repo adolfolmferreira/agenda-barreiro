@@ -46,7 +46,10 @@ jobs:
           git add data/events.json
           git diff --staged --quiet || (
             git commit -m "🔄 Viral Agenda events updated"
+            git push
           )
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Trigger Netlify Deploy
         run: curl -s -X POST "https://api.netlify.com/build_hooks/69afe8f721e75f7c8c60c7be"
