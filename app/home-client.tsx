@@ -164,12 +164,33 @@ export default function HomeClient({ events }: { events: Event[] }) {
       .catch(() => {});
   }, []);
 
-  const highlights = events.filter((e) =>
-    [
-      "antonio-zambujo-concerto-2026-03-21",
-      "viagem-a-lisboa-um-espetaculo-d-o-clube-2026-03-14",
-    ].includes(e.id),
-  );
+  const highlights = (() => {
+    const today = new Date().toISOString().slice(0, 10);
+    const hlCats = ['Música', 'Teatro', 'Dança', 'Exposição', 'Festival'];
+    const future = events
+      .filter(e => e.date >= today && e.imageUrl && hlCats.includes(e.category))
+      .sort((a, b) => a.date.localeCompare(b.date));
+    // Pick first from each category to get variety
+    const picked: typeof events = [];
+    const usedCats = new Set<string>();
+    for (const e of future) {
+      if (!usedCats.has(e.category)) {
+        picked.push(e);
+        usedCats.add(e.category);
+        if (picked.length >= 2) break;
+      }
+    }
+    // If less than 2, fill with next available
+    if (picked.length < 2) {
+      for (const e of future) {
+        if (!picked.includes(e)) {
+          picked.push(e);
+          if (picked.length >= 2) break;
+        }
+      }
+    }
+    return picked;
+  })();
 
   // Next upcoming events for preview
   const upcoming = events
