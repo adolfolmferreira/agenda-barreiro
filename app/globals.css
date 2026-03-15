@@ -1448,7 +1448,7 @@ button {
   }
 
   .tsl-kids-card {
-    flex: 0 0 calc((100% - 24px) / 2.3);
+    flex: 0 0 85%;
   }
 
   .tsl-kids-arrows {
