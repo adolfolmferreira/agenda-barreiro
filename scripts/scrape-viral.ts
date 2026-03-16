@@ -185,13 +185,31 @@ async function main() {
 
   const dur = ((Date.now() - t0) / 1000).toFixed(1);
 
+  const merged = [...existing, ...newEvents];
+
+  // Apply manual overrides to all events
+  try {
+    const ovrRaw = readFileSync(join(process.cwd(), 'data', 'overrides.json'), 'utf-8');
+    const ovr = JSON.parse(ovrRaw);
+    for (const ev of merged) {
+      const fix = ovr[ev.title];
+      if (fix) {
+        if (fix.location !== undefined) ev.location = fix.location;
+        if (fix.category !== undefined) ev.category = fix.category;
+        if (fix.date !== undefined) ev.date = fix.date;
+        if (fix.endDate !== undefined) ev.endDate = fix.endDate;
+        if (fix.price !== undefined) ev.price = fix.price;
+      }
+    }
+  } catch {}
+
+  merged.sort((a, b) => a.date.localeCompare(b.date));
+  writeFileSync(eventsPath, JSON.stringify(merged, null, 2));
+
   if (newEvents.length > 0) {
-    const merged = [...existing, ...newEvents];
-    merged.sort((a, b) => a.date.localeCompare(b.date));
-    writeFileSync(eventsPath, JSON.stringify(merged, null, 2));
     console.log(`\n💾 ${newEvents.length} novos eventos adicionados (total: ${merged.length})`);
   } else {
-    console.log('\n📭 Nenhum evento novo encontrado');
+    console.log(`\n📭 Nenhum evento novo (overrides aplicados, total: ${merged.length})`);
   }
 
   console.log(`\n══════════════════════════════════════`);
