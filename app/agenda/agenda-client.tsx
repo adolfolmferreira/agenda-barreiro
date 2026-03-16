@@ -201,27 +201,21 @@ export default function AgendaClient({ events }: { events: Event[] }) {
                     href={`/evento/${ev.id}`}
                     className="tsl-list-item"
                   >
-                    {ev.imageUrl && (
-                      <img
-                        className="tsl-list-img"
-                        src={ev.imageUrl}
-                        alt={ev.title}
-                        loading="lazy"
-                      />
-                    )}
-                    <span className="tsl-list-date">
-                      {fmtRange(ev.date, ev.endDate)}
-                    </span>
-                    <span className="tsl-list-title">{ev.title}</span>
-                    <span className="tsl-list-cat">
-                      {ev.category.toLowerCase()}
-                    </span>
-                    {ev.location && cleanLoc(ev.location) && (
-                      <span className="tsl-list-loc">
-                        {cleanLoc(ev.location)}
-                      </span>
-                    )}
-                    <span className="tsl-list-arrow">→</span>
+                    <div className="tsl-list-thumb">
+                      {ev.imageUrl ? (
+                        <img src={ev.imageUrl} alt={ev.title} loading="lazy" />
+                      ) : (
+                        <div className="tsl-list-nothumb" />
+                      )}
+                    </div>
+                    <div className="tsl-list-info">
+                      <span className="tsl-list-date">{fmtRange(ev.date, ev.endDate)}</span>
+                      <span className="tsl-list-cat">{ev.category.toLowerCase()}</span>
+                      <span className="tsl-list-title">{ev.title}</span>
+                      {ev.location && cleanLoc(ev.location) && (
+                        <span className="tsl-list-loc">{cleanLoc(ev.location)}</span>
+                      )}
+                    </div>
                   </Link>
                 ),
               )}
