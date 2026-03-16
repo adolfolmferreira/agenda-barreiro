@@ -5,21 +5,28 @@ import type { Event } from '../../components/types';
 import { fmtFull, cleanLoc } from '../../components/helpers';
 
 function decodeHtml(s: string): string {
+  if (typeof document !== 'undefined') {
+    const el = document.createElement('textarea');
+    el.innerHTML = s;
+    return el.value;
+  }
   return s
-    .replace(/&aacute;/g,'á').replace(/&eacute;/g,'é').replace(/&iacute;/g,'í')
-    .replace(/&oacute;/g,'ó').replace(/&uacute;/g,'ú').replace(/&atilde;/g,'ã')
-    .replace(/&otilde;/g,'õ').replace(/&ccedil;/g,'ç').replace(/&Aacute;/g,'Á')
-    .replace(/&Eacute;/g,'É').replace(/&Iacute;/g,'Í').replace(/&Oacute;/g,'Ó')
-    .replace(/&Uacute;/g,'Ú').replace(/&Atilde;/g,'Ã').replace(/&Otilde;/g,'Õ')
-    .replace(/&Ccedil;/g,'Ç').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ')
-    .replace(/&euro;/g,'€').replace(/&ldquo;/g,'\u201c').replace(/&rdquo;/g,'\u201d')
-    .replace(/&ndash;/g,'–').replace(/&mdash;/g,'—').replace(/&hellip;/g,'…')
-    .replace(/&ordm;/g,'º').replace(/&ordf;/g,'ª').replace(/&acirc;/g,'â')
-    .replace(/&ecirc;/g,'ê').replace(/&ocirc;/g,'ô').replace(/&agrave;/g,'à')
-    .replace(/&rsquo;/g,'\u2019').replace(/&lsquo;/g,'\u2018')
-    .replace(/&raquo;/g,'»').replace(/&laquo;/g,'«')
-    .replace(/&#8211;/g,'–').replace(/&#8220;/g,'\u201c').replace(/&#8221;/g,'\u201d')
-    .replace(/&#8216;/g,'\u2018').replace(/&#8217;/g,'\u2019').replace(/&#8230;/g,'…');
+    .replace(/&[a-z]+;/gi, m => {
+      const map: Record<string, string> = {
+        '&aacute;':'á','&Aacute;':'Á','&eacute;':'é','&Eacute;':'É',
+        '&iacute;':'í','&Iacute;':'Í','&oacute;':'ó','&Oacute;':'Ó',
+        '&uacute;':'ú','&Uacute;':'Ú','&atilde;':'ã','&Atilde;':'Ã',
+        '&otilde;':'õ','&Otilde;':'Õ','&ccedil;':'ç','&Ccedil;':'Ç',
+        '&acirc;':'â','&Acirc;':'Â','&ecirc;':'ê','&Ecirc;':'Ê',
+        '&ocirc;':'ô','&Ocirc;':'Ô','&agrave;':'à','&Agrave;':'À',
+        '&amp;':'&','&nbsp;':' ','&euro;':'€','&ordm;':'º','&ordf;':'ª',
+        '&ldquo;':'"','&rdquo;':'"','&lsquo;':"'",'&rsquo;':"'",
+        '&ndash;':'–','&mdash;':'—','&hellip;':'…',
+        '&raquo;':'»','&laquo;':'«',
+      };
+      return map[m.toLowerCase()] || m;
+    })
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(parseInt(n)));
 }
 
 function linkify(text: string): (string | JSX.Element)[] {
