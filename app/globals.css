@@ -397,7 +397,7 @@ button {
 
 .tsl-card-title {
   font-family: "Inter", sans-serif;
-  font-size  : clamp(20px, 2vw, 28px);
+  font-size  : 24px;
   font-weight: 700;
   line-height: 1.1;
   color      : #111111;
@@ -1051,10 +1051,6 @@ button {
     flex  : 0 0 70px;
     width : 70px;
     height: 50px;
-  }
-
-  .tsl-list-title {
-    font-size: 0.9rem;
   }
 }
 
