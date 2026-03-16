@@ -105,12 +105,10 @@ export default function EventDetail({ event }: { event: Event | null }) {
               <span>{loc}</span>
             </div>
           )}
-          {ev.price && (
-            <div className="tsl-detail-meta-item">
-              <span className="tsl-detail-meta-label">Preço</span>
-              <span>{decodeHtml(ev.price)}</span>
-            </div>
-          )}
+          <div className="tsl-detail-meta-item">
+            <span className="tsl-detail-meta-label">Preço</span>
+            <span>{ev.price ? decodeHtml(ev.price) : 'Gratuito'}</span>
+          </div>
 
 
         </div>
