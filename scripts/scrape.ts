@@ -26,6 +26,7 @@ async function main() {
           if (fix.category !== undefined) ev.category = fix.category;
           if (fix.date !== undefined) ev.date = fix.date;
           if (fix.endDate !== undefined) ev.endDate = fix.endDate;
+          if (fix.price !== undefined) ev.price = fix.price;
           console.log('  🔧 Override:', ev.title.slice(0, 50));
         }
       }
