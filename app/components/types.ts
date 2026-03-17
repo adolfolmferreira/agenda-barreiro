@@ -13,5 +13,6 @@ export interface Event {
   sourceUrl?: string;
   contacts?: string;
   ticketUrl?: string;
+  tags?: string;
   featured?: boolean;
 }

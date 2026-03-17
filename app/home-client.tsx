@@ -274,6 +274,13 @@ export default function HomeClient({ events }: { events: Event[] }) {
           "kids",
           "miúdos",
           "amac júnior",
+          "hora do conto",
+          "leitura júnior",
+          "clube de leitura júnior",
+          "para bebés",
+          "para crianças",
+          "para famílias",
+          "festival de bebés",
         ];
         const excludeKeywords = [
           "trail",
@@ -293,8 +300,9 @@ export default function HomeClient({ events }: { events: Event[] }) {
               (e.category || "")
             ).toLowerCase();
             const hasKid = kidsKeywords.some((k) => text.includes(k));
+            const hasTag = e.tags === 'kids';
             const hasExclude = excludeKeywords.some((k) => text.includes(k));
-            return hasKid && !hasExclude;
+            return (hasKid || hasTag) && !hasExclude;
           })
           .sort((a, b) => a.date.localeCompare(b.date))
           .slice(0, 9);
