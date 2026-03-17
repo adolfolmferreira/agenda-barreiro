@@ -166,7 +166,7 @@ export default function HomeClient({ events }: { events: Event[] }) {
 
   const highlights = (() => {
     const today = new Date().toISOString().slice(0, 10);
-    const hlCats = ['Música', 'Teatro', 'Dança', 'Exposição', 'Festival'];
+    const hlCats = ['Música', 'Teatro'];
     const future = events
       .filter(e => e.date >= today && e.imageUrl && hlCats.includes(e.category))
       .sort((a, b) => a.date.localeCompare(b.date));
