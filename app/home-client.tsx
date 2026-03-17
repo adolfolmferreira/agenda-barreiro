@@ -471,17 +471,7 @@ export default function HomeClient({ events }: { events: Event[] }) {
 
       {/* ─── SECÇÃO: DESTAQUES POR CATEGORIA ─── */}
       {(() => {
-        const cats = [
-          "Teatro",
-          "Música",
-          "Exposição",
-          "Workshop",
-          "Desporto",
-          "Comunidade",
-          "Leitura",
-          "Visitas",
-          "Dança"
-        ];
+        const cats = Array.from(new Set(events.map(e => e.category).filter(Boolean))).sort();
         const sixMonthsAgo = new Date();
         sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
         const cutoff = sixMonthsAgo.toISOString().slice(0, 10);
