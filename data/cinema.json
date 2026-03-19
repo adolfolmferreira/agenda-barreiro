@@ -1,19 +1,27 @@
 [
   {
+    "title": "Projeto Hail Mary",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20543",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/ProjetoHailMary-500x721.jpg",
+    "genre": "Drama, Ficção científica, Thriller",
+    "duration": "2h46",
+    "rating": "M/12"
+  },
+  {
+    "title": "Palestina 36",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20635",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Palestina-36-500x714.jpg",
+    "genre": "Drama, História",
+    "duration": "1h59",
+    "rating": "M/12"
+  },
+  {
     "title": "Jogada de Mestre",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=20652",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Jogada-De-Mestre-500x713.jpg",
     "genre": "Comédia, Drama, Thriller",
     "duration": "1h49",
     "rating": "M/12"
-  },
-  {
-    "title": "Saltitões (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19587",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Saltitoes-500x714.jpg",
-    "genre": "Animação, Comédia",
-    "duration": "1h45",
-    "rating": "M/6"
   },
   {
     "title": "Gritos 7",
@@ -24,28 +32,36 @@
     "rating": "M/16"
   },
   {
-    "title": "Kill Bill: Toda a Obra Sangrenta",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20468",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Kill-Bill-500x720.png",
-    "genre": "Ação, Crime",
-    "duration": "4h35",
-    "rating": "M/16"
-  },
-  {
     "title": "Hamnet",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=19384",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Hamnet-500x720.jpg",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/hamnet-novo-poster-500x721.jpg",
     "genre": "Drama, História, Romance",
     "duration": "2h05",
     "rating": "M/12"
   },
   {
-    "title": "A CRIADA",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=18772",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/09/A-Criada-2-500x750.jpg",
-    "genre": "Suspense, Thriller",
-    "duration": "2h11",
-    "rating": "M/14"
+    "title": "Batalha Atrás de Batalha",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20904",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/one-battle-after-another_poster-500x741.jpg",
+    "genre": "Ação, Drama, Suspense",
+    "duration": "2h42",
+    "rating": "M/16"
+  },
+  {
+    "title": "Pecadores",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20898",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/SINNERS_Main_70x100-poster-500x714.jpg",
+    "genre": "Ação, Drama, Horror, Thriller",
+    "duration": "2h18",
+    "rating": "M/16"
+  },
+  {
+    "title": "Saltitões (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19587",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Saltitoes-500x714.jpg",
+    "genre": "Animação, Comédia",
+    "duration": "1h45",
+    "rating": "M/6"
   },
   {
     "title": "GOAT: O Maior de Todos (Dob.)",
@@ -72,19 +88,19 @@
     "rating": "M/6"
   },
   {
-    "title": "O Monte dos Vendavais",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19075",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/10/O-Monte-dos-Vendavais-500x741.jpg",
-    "genre": "Drama, Romance",
-    "duration": "2h16",
-    "rating": "M/14"
+    "title": "Tudo Me Lembra de Ti",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19918",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2023/11/Poster1_TudoMeLembraDeTi_720x1024px-500x711.jpg",
+    "genre": "Drama",
+    "duration": "N/A",
+    "rating": "NA"
   },
   {
     "title": "Super Mario Galaxy: O Filme (Dob.)",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=20619",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Super_Mario_2_poster-480x760.jpg",
     "genre": "Ação, Animação, Aventura, Comédia, Fantasia",
-    "duration": "NA",
+    "duration": "1h55",
     "rating": "NA"
   }
 ]
