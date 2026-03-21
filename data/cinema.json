@@ -24,38 +24,6 @@
     "rating": "M/12"
   },
   {
-    "title": "Gritos 7",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19491",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Gritos-7-500x741.jpg",
-    "genre": "Horror, Mistério",
-    "duration": "1h53",
-    "rating": "M/16"
-  },
-  {
-    "title": "Hamnet",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19384",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/hamnet-novo-poster-500x721.jpg",
-    "genre": "Drama, História, Romance",
-    "duration": "2h05",
-    "rating": "M/12"
-  },
-  {
-    "title": "Batalha Atrás de Batalha",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20904",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/one-battle-after-another_poster-500x741.jpg",
-    "genre": "Ação, Drama, Suspense",
-    "duration": "2h42",
-    "rating": "M/16"
-  },
-  {
-    "title": "Pecadores",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20898",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/SINNERS_Main_70x100-poster-500x714.jpg",
-    "genre": "Ação, Drama, Horror, Thriller",
-    "duration": "2h18",
-    "rating": "M/16"
-  },
-  {
     "title": "Saltitões (Dob.)",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=19587",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Saltitoes-500x714.jpg",
@@ -64,12 +32,28 @@
     "rating": "M/6"
   },
   {
+    "title": "Gritos 7",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19491",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Gritos-7-500x741.jpg",
+    "genre": "Horror, Mistério",
+    "duration": "1h53",
+    "rating": "M/16"
+  },
+  {
     "title": "GOAT: O Maior de Todos (Dob.)",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=20247",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Goat-500x720.jpg",
     "genre": "Animação, Comédia",
     "duration": "1h33",
     "rating": "M/6"
+  },
+  {
+    "title": "Hamnet",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19384",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/hamnet-novo-poster-500x721.jpg",
+    "genre": "Drama, História, Romance",
+    "duration": "2h05",
+    "rating": "M/12"
   },
   {
     "title": "SpongeBob O Filme: À Procura das Calças Quadradas",
@@ -88,12 +72,28 @@
     "rating": "M/6"
   },
   {
+    "title": "Batalha Atrás de Batalha",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20904",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/one-battle-after-another_poster-500x741.jpg",
+    "genre": "Ação, Drama, Suspense",
+    "duration": "2h42",
+    "rating": "M/16"
+  },
+  {
+    "title": "Pecadores",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20898",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/SINNERS_Main_70x100-poster-500x714.jpg",
+    "genre": "Ação, Drama, Horror, Thriller",
+    "duration": "2h18",
+    "rating": "M/16"
+  },
+  {
     "title": "Tudo Me Lembra de Ti",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=19918",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2023/11/Poster1_TudoMeLembraDeTi_720x1024px-500x711.jpg",
     "genre": "Drama",
-    "duration": "N/A",
-    "rating": "NA"
+    "duration": "01h55",
+    "rating": "M/12"
   },
   {
     "title": "Super Mario Galaxy: O Filme (Dob.)",
