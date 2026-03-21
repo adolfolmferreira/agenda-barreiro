@@ -1,28 +1,27 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contactos',
+  description: 'Entre em contacto com a Agenda B. Sugira eventos, reporte erros ou proponha melhorias.',
+  alternates: { canonical: '/contactos' },
+};
+
 export default function ContactosPage() {
   return (
     <div className="tsl-page">
-      <h1 className="tsl-page-title">
-        Contactos
-        <br />
-        <span className="red-bar"></span>
-      </h1>
+      <h1 className="tsl-page-title">Contactos</h1>
       <div className="tsl-page-content">
-        <h1>
-          Tem um evento no Barreiro que não aparece na <strong>Agenda B</strong>
-          ? Encontrou algum erro na informação de um evento? Ou tem alguma
-          sugestão para melhorar o projecto?
-        </h1>
         <p>
-          Pode entrar em contacto através do email:<br/>{" "}
-          <a href="mailto:agenda@agendab.pt" title="agenda@agendab.pt" className="tsl-link">
-            agenda@agendab.pt
-          </a>
+          Tem um evento no Barreiro que não aparece na nossa agenda? Encontrou algum erro nos dados?
+          Quer sugerir uma melhoria?
         </p>
         <p>
-          Se organiza eventos no Barreiro e quer garantir que aparecem na <strong>Agenda B</strong>, a forma mais simples é publicá-los numa das fontes que a agenda
-          utiliza, como o site da <strong>Câmara Municipal do Barreiro</strong> ou a <strong>Viral
-          Agenda</strong>. Os eventos dessas plataformas são recolhidos automaticamente e
-          adicionados à agenda.
+          Entre em contacto connosco através do email: <a href="mailto:agenda@agendab.pt" className="tsl-link">agenda@agendab.pt</a>
+        </p>
+        <p>
+          Se é organizador de eventos no Barreiro e quer garantir que os seus eventos aparecem na agenda,
+          publique-os no site da Câmara Municipal do Barreiro ou na Viral Agenda — os nossos scrapers
+          recolhem automaticamente os dados dessas fontes.
         </p>
       </div>
     </div>

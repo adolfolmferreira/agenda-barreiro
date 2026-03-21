@@ -83,7 +83,35 @@ export default function EventDetail({ event }: { event: Event | null }) {
   const ev = event;
   const loc = ev.location ? cleanLoc(decodeHtml(ev.location)) : '';
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: decodeHtml(ev.title),
+    startDate: ev.date,
+    ...(ev.endDate && ev.endDate !== ev.date ? { endDate: ev.endDate } : {}),
+    ...(ev.time && ev.time !== '00:00' ? { doorTime: ev.time } : {}),
+    location: {
+      '@type': 'Place',
+      name: loc || 'Barreiro',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Barreiro',
+        addressCountry: 'PT',
+      },
+    },
+    ...(ev.imageUrl ? { image: ev.imageUrl } : {}),
+    ...(ev.description ? { description: decodeHtml(ev.description).slice(0, 300) } : {}),
+    ...(ev.price === 'Gratuito' || !ev.price ? { isAccessibleForFree: true } : {
+      offers: { '@type': 'Offer', price: ev.price.replace(/[^0-9.,]/g, ''), priceCurrency: 'EUR' },
+    }),
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <article className="tsl-detail">
       <Link href="/agenda" className="tsl-back-btn">← Voltar</Link>
       {ev.imageUrl && (
@@ -146,5 +174,6 @@ export default function EventDetail({ event }: { event: Event | null }) {
         )}
       </div>
     </article>
+    </>
   );
 }
