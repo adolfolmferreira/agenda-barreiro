@@ -20,7 +20,11 @@ async function scrapeCinema() {
   // Fetch sessions for all dates to get complete film list
   const filmMap = new Map<string, { title: string; url: string; img: string; genre: string; duration: string; rating: string; sessions: string[] }>();
 
-  for (const date of dates) {
+  // Only check next 3 days
+  const limitDates = dates.slice(0, 3);
+  console.log('  Verificando ' + limitDates.length + ' datas: ' + limitDates.join(', '));
+
+  for (const date of limitDates) {
     try {
       const res = await fetch(`https://castellolopescinemas.pt/wp-json/sessions/cinema?cinema=Forum%20Barreiro&date=${date}`, {
         signal: AbortSignal.timeout(10000),
