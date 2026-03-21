@@ -51,5 +51,19 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Scrape AML
+        run: npx tsx scripts/scrape-aml.ts
+        timeout-minutes: 3
+
+      - name: Commit AML events
+        run: |
+          git add data/events.json
+          git diff --staged --quiet || (
+            git commit -m "🔄 AML events updated"
+            git push
+          )
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Trigger Netlify Deploy
         run: curl -s -X POST "https://api.netlify.com/build_hooks/69afe8f721e75f7c8c60c7be"
