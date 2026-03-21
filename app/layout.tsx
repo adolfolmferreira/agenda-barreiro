@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import Script from "next/script";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { promises as fs } from 'fs';
@@ -69,6 +70,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-QECRTJC5LH" strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-QECRTJC5LH');`}
+        </Script>
       </head>
       <body>
         <div className="tsl">
