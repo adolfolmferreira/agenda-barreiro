@@ -9,19 +9,23 @@ export const metadata: Metadata = {
 export default function ContactosPage() {
   return (
     <div className="tsl-page">
-      <h1 className="tsl-page-title">Contactos</h1>
+      <h2 className="tsl-page-title">
+        Contactos
+        <br />
+        <span className="red-bar"></span>
+      </h2>
       <div className="tsl-page-content">
         <p>
-          Tem um evento no Barreiro que não aparece na nossa agenda? Encontrou algum erro nos dados?
-          Quer sugerir uma melhoria?
+          Tem um evento no Barreiro que não aparece na Agenda B? Encontrou algum erro na informação de um evento?
+          Ou tem alguma sugestão para melhorar o projecto?
         </p>
         <p>
-          Entre em contacto connosco através do email: <a href="mailto:agenda@agendab.pt" className="tsl-link">agenda@agendab.pt</a>
+          Pode entrar em contacto através do email: <a href="mailto:agenda@barreiro.pt" className="tsl-link">agenda@barreiro.pt</a>
         </p>
         <p>
-          Se é organizador de eventos no Barreiro e quer garantir que os seus eventos aparecem na agenda,
-          publique-os no site da Câmara Municipal do Barreiro ou na Viral Agenda — os nossos scrapers
-          recolhem automaticamente os dados dessas fontes.
+          Se organiza eventos no Barreiro e quer garantir que aparecem na Agenda B, a forma mais simples é publicá-los
+          numa das fontes que a agenda utiliza, como o site da Câmara Municipal do Barreiro ou a Viral Agenda.
+          Os eventos dessas plataformas são recolhidos automaticamente e adicionados à agenda.
         </p>
       </div>
     </div>
