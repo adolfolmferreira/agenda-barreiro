@@ -22,7 +22,11 @@ export default function AgendaClient({ events }: { events: Event[] }) {
     const cat = params.get('categoria');
     if (cat) setSelCats(new Set([cat]));
   }, []);
-  const [selMon, setSelMon] = useState("Todos os Meses");
+
+
+  const currentMonth = new Date().toISOString().slice(0, 7);
+  const [selMons, setSelMons] = useState<Set<string>>(new Set());
+  const [monsInitialized, setMonsInitialized] = useState(false);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
   const categories = useMemo(() => {
@@ -40,6 +44,14 @@ export default function AgendaClient({ events }: { events: Event[] }) {
     return ["Todos os Meses", ...Array.from(s).sort().reverse()];
   }, [events]);
 
+  useEffect(() => {
+    if (!monsInitialized && months.length > 1) {
+      const futureMonths = months.filter(m => m !== 'Todos os Meses' && m >= currentMonth);
+      setSelMons(new Set(futureMonths));
+      setMonsInitialized(true);
+    }
+  }, [months, monsInitialized, currentMonth]);
+
   const hero = useMemo(() => {
     const upcoming = events
       .filter((e) => (e.endDate || e.date) >= "2026-01-01" && e.imageUrl)
@@ -53,15 +65,20 @@ export default function AgendaClient({ events }: { events: Event[] }) {
     );
     if (selCats.size > 0)
       list = list.filter((e) => selCats.has(e.category));
-    if (selMon !== "Todos os Meses")
-      list = list.filter((e) => {
-        if (e.date < "2026-01-01" && e.endDate && e.endDate >= "2026-01-01") return selMon === "2026-01";
-        return mk(e.date) === selMon;
-      });
+    if (selMons.size > 0) {
+      const allMonths = months.filter(m => m !== 'Todos os Meses');
+      const allSelected = selMons.size === allMonths.length;
+      if (!allSelected) {
+        list = list.filter((e) => {
+          if (e.date < "2026-01-01" && e.endDate && e.endDate >= "2026-01-01") return selMons.has("2026-01");
+          return selMons.has(mk(e.date));
+        });
+      }
+    }
     if (hero) list = list.filter((e) => e.id !== hero.id);
     list.sort((a, b) => b.date.localeCompare(a.date));
     return list;
-  }, [events, selCats, selMon, hero]);
+  }, [events, selCats, selMons, months, hero]);
 
   const grouped = useMemo(() => {
     const map = new Map<string, Event[]>();
@@ -119,16 +136,26 @@ export default function AgendaClient({ events }: { events: Event[] }) {
             <div className="tsl-filter-label">Mês</div>
             <div className="tsl-pills">
               <button
-                className={`tsl-pill ${selMon === 'Todos os Meses' ? 'active' : ''}`}
-                onClick={() => setSelMon('Todos os Meses')}
+                className={`tsl-pill ${selMons.size === 0 || selMons.size === months.filter(m => m !== 'Todos os Meses').length ? 'active' : ''}`}
+                onClick={() => {
+                  const all = months.filter(m => m !== 'Todos os Meses');
+                  setSelMons(new Set(all));
+                }}
               >
                 Todos
               </button>
               {months.filter(m => m !== 'Todos os Meses').map((m) => (
                 <button
                   key={m}
-                  className={`tsl-pill ${selMon === m ? 'active' : ''}`}
-                  onClick={() => setSelMon(m)}
+                  className={`tsl-pill ${selMons.has(m) ? 'active' : ''}`}
+                  onClick={() => {
+                    setSelMons(prev => {
+                      const next = new Set(prev);
+                      if (next.has(m)) next.delete(m);
+                      else next.add(m);
+                      return next;
+                    });
+                  }}
                 >
                   {mkLabel(m)}
                 </button>
