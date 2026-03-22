@@ -1274,6 +1274,12 @@ button {
   margin-bottom: 32px;
 }
 
+.tsl-page-content h2 {
+  font-weight  : 400;
+  color        : #111111;
+  margin-bottom: 32px;
+}
+
 
 .tsl-page-content p {
   font-size    : 18px;

@@ -9,16 +9,16 @@ export const metadata: Metadata = {
 export default function SobrePage() {
   return (
     <div className="tsl-page">
-      <h2 className="tsl-page-title">
+      <h1 className="tsl-page-title">
         Sobre a Agenda B
         <br />
         <span className="red-bar"></span>
-      </h2>
+      </h1>
       <div className="tsl-page-content">
-        <p>
+        <h2>
           A <strong>Agenda B</strong> é um pequeno projecto independente que reúne num único lugar eventos culturais,
           desportivos e comunitários que acontecem no Barreiro.
-        </p>
+        </h2>
         <p>
           A ideia surgiu de um problema simples: muitas vezes há coisas a acontecer na cidade — concertos, exposições,
           workshops ou iniciativas de associações — mas a informação está espalhada por vários sites, páginas de Facebook

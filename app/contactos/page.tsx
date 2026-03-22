@@ -9,16 +9,16 @@ export const metadata: Metadata = {
 export default function ContactosPage() {
   return (
     <div className="tsl-page">
-      <h2 className="tsl-page-title">
+      <h1 className="tsl-page-title">
         Contactos
         <br />
         <span className="red-bar"></span>
-      </h2>
+      </h1>
       <div className="tsl-page-content">
-        <p>
+        <h2>
           Tem um evento no Barreiro que não aparece na Agenda B? Encontrou algum erro na informação de um evento?
           Ou tem alguma sugestão para melhorar o projecto?
-        </p>
+        </h2>
         <p>
           Pode entrar em contacto através do email: <a href="mailto:agenda@barreiro.pt" className="tsl-link">agenda@barreiro.pt</a>
         </p>
