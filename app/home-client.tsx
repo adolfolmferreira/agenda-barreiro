@@ -264,13 +264,8 @@ export default function HomeClient({ events }: { events: Event[] }) {
           "bebé",
           "bebe",
           "infantil",
-          "família",
-          "familia",
           "oficina criativa",
           "marionetas",
-          "animação para",
-          "jovem",
-          "jovens",
           "kids",
           "miúdos",
           "amac júnior",
@@ -281,6 +276,8 @@ export default function HomeClient({ events }: { events: Event[] }) {
           "para crianças",
           "para famílias",
           "festival de bebés",
+          "atividades lúdicas",
+          "páscoa na machada",
         ];
         const excludeKeywords = [
           "trail",
