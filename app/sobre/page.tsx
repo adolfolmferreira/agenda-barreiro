@@ -25,11 +25,10 @@ export default function SobrePage() {
           e agendas diferentes. Muitas vezes só descobrimos os eventos tarde demais… ou nem chegamos a saber que aconteceram.
         </p>
         <p>
-          A Agenda B tenta resolver esse problema juntando essa informação num único sítio, de forma simples e fácil de consultar.
+          A <strong>Agenda B</strong> tenta resolver esse problema juntando essa informação num único sítio, de forma simples e fácil de consultar.
         </p>
         <p>
-          Os eventos são recolhidos automaticamente a partir de várias fontes públicas, incluindo o site da Câmara Municipal
-          do Barreiro e a Viral Agenda, e são actualizados várias vezes por dia.
+          Os eventos são recolhidos automaticamente a partir de várias fontes públicas, incluindo o site da <strong>Câmara Municipal do Barreiro</strong> e a <strong>Viral Agenda</strong>, e são actualizados várias vezes por dia.
         </p>
         <p>
           O projecto foi criado por <strong>Adolfo Ferreira</strong>, designer de produto, como uma iniciativa pessoal
@@ -37,7 +36,7 @@ export default function SobrePage() {
           e dar mais visibilidade às iniciativas locais.
         </p>
         <p>
-          Este projecto não tem qualquer afiliação oficial com a Câmara Municipal do Barreiro ou outras entidades.
+          Este projecto não tem qualquer afiliação oficial com a <strong>Câmara Municipal do Barreiro</strong> ou outras entidades.
         </p>
         <p>
           Se quiser saber mais sobre o meu trabalho pode visitar: <a href="https://adolfoferreira.com/" target="_blank" rel="noopener noreferrer" className="tsl-link">adolfoferreira.com</a>

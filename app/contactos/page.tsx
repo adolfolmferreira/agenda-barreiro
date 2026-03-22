@@ -16,15 +16,15 @@ export default function ContactosPage() {
       </h1>
       <div className="tsl-page-content">
         <h2>
-          Tem um evento no Barreiro que não aparece na Agenda B? Encontrou algum erro na informação de um evento?
+          Tem um evento no Barreiro que não aparece na <strong>Agenda B</strong>? Encontrou algum erro na informação de um evento?
           Ou tem alguma sugestão para melhorar o projecto?
         </h2>
         <p>
           Pode entrar em contacto através do email: <a href="mailto:agenda@barreiro.pt" className="tsl-link">agenda@barreiro.pt</a>
         </p>
         <p>
-          Se organiza eventos no Barreiro e quer garantir que aparecem na Agenda B, a forma mais simples é publicá-los
-          numa das fontes que a agenda utiliza, como o site da Câmara Municipal do Barreiro ou a Viral Agenda.
+          Se organiza eventos no Barreiro e quer garantir que aparecem na <strong>Agenda B</strong>, a forma mais simples é publicá-los
+          numa das fontes que a agenda utiliza, como o site da <strong>Câmara Municipal do Barreiro</strong> ou a <strong>Viral Agenda</strong>.
           Os eventos dessas plataformas são recolhidos automaticamente e adicionados à agenda.
         </p>
       </div>
