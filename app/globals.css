@@ -1278,6 +1278,7 @@ button {
   font-weight  : 400;
   color        : #111111;
   margin-bottom: 32px;
+  line-height  : 1.5;
 }
 
 
