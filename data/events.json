@@ -88,6 +88,23 @@
     "scrapedAt": "2026-03-23T09:10:04.945Z"
   },
   {
+    "id": "exposicao-de-ilustracao-o-sr-do-turbante-e-a-sra-extravagant-2026-11-22",
+    "title": "Exposição de ilustração | O Sr. do Turbante e a Sra. Extravagante",
+    "category": "Exposição",
+    "date": "2025-11-22",
+    "endDate": "2026-03-28",
+    "time": "16:00",
+    "location": "Biblioteca Municipal",
+    "price": "Gratuito",
+    "description": "Inauguração no dia 22 de novembro, &agrave;s 16h00, na Biblioteca Municipal do Barreiro. Mostra de ilustrações e processo criativo da narrativa visual do livro \"O Sr. do Turbante e a Sra. Extravagante\". Patente ao público até 28 de março d",
+    "descriptionFull": "Inauguração no dia 22 de novembro, &agrave;s 16h00, na Biblioteca Municipal do Barreiro. Mostra de ilustrações e processo criativo da narrativa visual do livro \"O Sr. do Turbante e a Sra. Extravagante\". Patente ao público até 28 de março de 2026. Gratuito Edição: Fazedoras de Histórias Texto: Joana Maurício Ilustração: Cristina Arvana Receitas: Chef Cláudia […]",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/inauguracao-da-exposicao-de-ilustracao-o-sr-do-turbante-e-a-sra-extravagante-de-cristina-arvana/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/10/Crsitina-Arvana-01-scaled.jpg",
+    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-03-23T09:08:00.579Z"
+  },
+  {
     "id": "bosque-de-natal-mercado-de-natal-2025-11-28",
     "title": "Bosque de Natal | Mercado de Natal",
     "category": "Comunidade",
@@ -103,6 +120,21 @@
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-23T09:09:52.795Z"
+  },
+  {
+    "id": "passatempo-caca-aos-duendes-montras-de-natal-2025-2026-12-31",
+    "title": "Passatempo caça aos duendes | Montras de Natal 2025",
+    "category": "Comunidade",
+    "date": "2025-12-01",
+    "endDate": "2025-12-31",
+    "location": "Barreiro",
+    "price": "",
+    "description": "Até ao dia 31 de dezembro está convidado(a) a \"caçar Duendes\", no Passatempo para clientes! Habilite-se a ganhar um Cabaz de Natal coletivo (composto por um produto de cada loja a concurso), reunindo fotografias de todos os Duendes de Natal expostos nas montras inscr",
+    "descriptionFull": "Até ao dia 31 de dezembro está convidado(a) a \"caçar Duendes\", no Passatempo para clientes! Habilite-se a ganhar um Cabaz de Natal coletivo (composto por um produto de cada loja a concurso), reunindo fotografias de todos os Duendes de Natal expostos nas montras inscritas. Saiba tudo sobre este sorteio AQUI",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/passatempo-caca-aos-duendes-montras-de-natal-2025/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x650_thumbnail_Passatempo.jpg",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-03-23T09:09:58.377Z"
   },
   {
     "id": "animacao-de-natal-no-mercado-1-de-maio-2025-12-05",
@@ -299,6 +331,21 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x650_thumbnail_Acao_Industrias.jpg",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-23T09:10:27.966Z"
+  },
+  {
+    "id": "participe-na-votacao-da-sua-montra-de-natal-favorita-2026-12-17",
+    "title": "Participe na votação da sua Montra de Natal favorita",
+    "category": "Comunidade",
+    "date": "2025-12-17",
+    "endDate": "2025-12-31",
+    "location": "Barreiro",
+    "price": "",
+    "description": "Participe na votação da sua montra de Natal favorita, até dia 17 de dezembro, período em que decorre a classificação oficial. Com o seu voto participa no prémio da montra mais votada pelo público. Esta votação é realizada a",
+    "descriptionFull": "Participe na votação da sua montra de Natal favorita, até dia 17 de dezembro, período em que decorre a classificação oficial. Com o seu voto participa no prémio da montra mais votada pelo público. Esta votação é realizada através de QR Code disponível em cada montra, permitindo uma votação válida por pessoa. Dia 19 de dezembro é conhecida a classificação oficial da 24&ordf; edição do Concurso de Montras de Natal, promovido pela C&acirc;mara Municipal do Barreiro, a Associação de Comércio, Indústria e Serviços do Barreiro e Moita e as Freguesias do Concelho.",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/participe-na-votacao-da-sua-montra-de-natal-favorita/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x650_thumbnail_Vote-1.jpg",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-03-23T09:10:27.156Z"
   },
   {
     "id": "concerto-de-natal-putos-do-rock-2025-12-20",
@@ -1289,6 +1336,22 @@
     "scrapedAt": "2026-03-23T09:08:41.564Z"
   },
   {
+    "id": "formigas-superpoderes-em-miniatura-reserva-na-primavera-2026-03-23",
+    "title": "Formigas: superpoderes em miniatura | Reserva na Primavera",
+    "category": "Comunidade",
+    "date": "2026-03-07",
+    "time": "09:00",
+    "location": "Centro de Educação Ambiental da Mata da Machada",
+    "price": "",
+    "description": "Na manhã de 7 de março, pelas 09h00, venha explorar o mundo fascinante das formigas com o mirmecólogo Eduardo Sequeira, da Mirmex, no Centro de Educação Ambiental da Mata da Machada e Sapal do Coina.",
+    "descriptionFull": "Na manhã de 7 de março, pelas 09h00, venha explorar o mundo fascinante das formigas com o mirmecólogo Eduardo Sequeira, da Mirmex, no Centro de Educação Ambiental da Mata da Machada e Sapal do Coina.\n\nInserida na Agenda de Primavera, a oficina \"Formigas – Superpoderes em Miniatura\" vai mostrar como estes pequenos insetos t&ecirc;m superpoderes que os tornam essenciais para o ecossistema. Conheça o comportamento das formigas, os seus incríveis sistemas de comunicação e as suas surpreendentes habilidades, tudo de forma divertida e interativa.\n\nA atividade é destinada maiores de 6 anos e promete ser uma verdadeira aventura no coração da natureza. Não perca a oportunidade de ver o mundo das formigas de uma maneira totalmente nova!\n\nAs inscrições nas ações Reserva na Primavera são gratuitas, mas obrigatórias, e podem ser feitas através da Linha Verde 800 912 070.\n\nA primavera está a chegar &agrave; Reserva natural Local do Barreiro. Venha celebrar a estação com atividades ao ar livre e descubra a beleza e a vida que florescem neste espaço único. Reserve já o seu lugar!",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/formigas-superpoderes-em-miniatura-reserva-na-primavera/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/02/SEO.png",
+    "contacts": "973920605 · 257953166",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-03-23T09:08:32.384Z"
+  },
+  {
     "id": "viagem-a-lisboa-um-espetaculo-d-o-clube-2026-03-14",
     "title": "Viagem a Lisboa Um espetáculo d’O Clube",
     "category": "Teatro",
@@ -1322,6 +1385,39 @@
     "contacts": "212 068 287 · 212 068 535 · 212 068 287 · 212 068 535",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-23T09:08:35.777Z"
+  },
+  {
+    "id": "clube-de-leitura-junior-harry-potter-e-a-pedra-filosofal-2026-03-23",
+    "title": "Clube de Leitura Júnior | Harry Potter e a Pedra Filosofal",
+    "category": "Leitura",
+    "date": "2026-03-14",
+    "time": "11:00",
+    "location": "Biblioteca Municipal do Barreiro",
+    "price": "Gratuito",
+    "description": "Gostas de livros? 5&ordf; sessão com o livro \"Harry Potter e a Pedra Filosofal\", de J. K. Rowling. Vem partilhar as tuas ideias e viajar nas entrelinhas dos livros. 14 março | 11h00 | Biblioteca Municipal do Barreiro Público-alvo: 10 aos 14 anos",
+    "descriptionFull": "Gostas de livros? 5&ordf; sessão com o livro \"Harry Potter e a Pedra Filosofal\", de J. K. Rowling. Vem partilhar as tuas ideias e viajar nas entrelinhas dos livros. 14 março | 11h00 | Biblioteca Municipal do Barreiro Público-alvo: 10 aos 14 anos\n\nGratuito mediante inscrição em biblioteca.municipal@cm-barreiro.pt Duração: 60 min. Org.: CMBCâmara Municipal do Barreiro",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/clube-de-leitura-junior-harry-potter-e-a-pedra-filosofal/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/03/Clube-Leitura-Teen-CMB_1920x650px-Site-SEO-1.jpg",
+    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-03-23T09:08:35.666Z",
+    "featured": true
+  },
+  {
+    "id": "comemoracao-do-dia-da-mulher-2026-03-14",
+    "title": "Comemoração do Dia da Mulher",
+    "date": "2026-03-14",
+    "endDate": "",
+    "time": "",
+    "location": "Cooperativa Cultural Popular Barreirense",
+    "category": "Outro",
+    "description": "Esta iniciativa pretende promover uma reflexão pública sobre a atualidade do Serviço Nacional de Saúde (SNS) e, em particular, sobre a saúde da",
+    "descriptionFull": "Esta iniciativa pretende promover uma reflexão pública sobre a atualidade do Serviço Nacional de Saúde (SNS) e, em particular, sobre a saúde da",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/DIA-DA-MULHER-26_barreiro.jpg",
+    "price": "",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/comemoracao-do-dia-da-mulher/",
+    "featured": false
   },
   {
     "id": "oficina-big-bang-boom-ilustracao-do-universo-para-bebes-e-fa-2026-03-15",
@@ -1493,6 +1589,38 @@
     "scrapedAt": "2026-03-23T09:08:23.289Z"
   },
   {
+    "id": "antonio-zambujo-ao-vivo-no-barreiro-2026-03-21",
+    "title": "António Zambujo ao vivo no Barreiro",
+    "date": "2026-03-21",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita",
+    "category": "Outro",
+    "description": "António Zambujo apresenta ao vivo no Barreiro, “Oração ao Tempo”, no próximo dia 21 de março, às 17h00 e às 22h00 (sessão das 22h00 esgotada), no Auditório",
+    "descriptionFull": "António Zambujo apresenta ao vivo no Barreiro, “Oração ao Tempo”, no próximo dia 21 de março, às 17h00 e às 22h00 (sessão das 22h00 esgotada), no Auditório",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Antonio-Zambujo.jpg",
+    "price": "25 Euros  |",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/antonio-zambujo-ao-vivo-no-barreiro/",
+    "featured": false
+  },
+  {
+    "id": "a-arvore-das-historias-2026-03-21",
+    "title": "A Árvore das Histórias",
+    "date": "2026-03-21",
+    "endDate": "",
+    "time": "",
+    "location": "Biblioteca Municipal do Barreiro",
+    "category": "Outro",
+    "description": "No próximo dia 21 de março, venha comemorar o Dia Da Árvore à Biblioteca Municipal do Barreiro, na iniciativa &quot;A Árvore das Histórias&quot;.",
+    "descriptionFull": "No próximo dia 21 de março, venha comemorar o Dia Da Árvore à Biblioteca Municipal do Barreiro, na iniciativa &quot;A Árvore das Histórias&quot;.",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/A_Arvore_das_Historias_aml.jpg",
+    "price": "Gratuito mediante inscrição em",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/a-arvore-das-historias/",
+    "featured": false
+  },
+  {
     "id": "adiada-oficina-eco-de-memorias-com-ana-biscaia-e-paula-delec-2026-03-22",
     "title": "ADIADA Oficina Eco de Memórias com Ana Biscaia e Paula Delecave",
     "category": "Workshop",
@@ -1560,37 +1688,20 @@
     "scrapedAt": "2026-03-23T09:08:19.187Z"
   },
   {
-    "id": "clube-de-leitura-junior-harry-potter-e-a-pedra-filosofal-2026-03-23",
-    "title": "Clube de Leitura Júnior | Harry Potter e a Pedra Filosofal",
-    "category": "Leitura",
-    "date": "2026-03-14",
-    "time": "11:00",
-    "location": "Biblioteca Municipal do Barreiro",
-    "price": "Gratuito",
-    "description": "Gostas de livros? 5&ordf; sessão com o livro \"Harry Potter e a Pedra Filosofal\", de J. K. Rowling. Vem partilhar as tuas ideias e viajar nas entrelinhas dos livros. 14 março | 11h00 | Biblioteca Municipal do Barreiro Público-alvo: 10 aos 14 anos",
-    "descriptionFull": "Gostas de livros? 5&ordf; sessão com o livro \"Harry Potter e a Pedra Filosofal\", de J. K. Rowling. Vem partilhar as tuas ideias e viajar nas entrelinhas dos livros. 14 março | 11h00 | Biblioteca Municipal do Barreiro Público-alvo: 10 aos 14 anos\n\nGratuito mediante inscrição em biblioteca.municipal@cm-barreiro.pt Duração: 60 min. Org.: CMBCâmara Municipal do Barreiro",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/clube-de-leitura-junior-harry-potter-e-a-pedra-filosofal/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/03/Clube-Leitura-Teen-CMB_1920x650px-Site-SEO-1.jpg",
-    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-03-23T09:08:35.666Z",
-    "featured": true
-  },
-  {
-    "id": "formigas-superpoderes-em-miniatura-reserva-na-primavera-2026-03-23",
-    "title": "Formigas: superpoderes em miniatura | Reserva na Primavera",
-    "category": "Comunidade",
-    "date": "2026-03-07",
-    "time": "09:00",
-    "location": "Centro de Educação Ambiental da Mata da Machada",
-    "price": "",
-    "description": "Na manhã de 7 de março, pelas 09h00, venha explorar o mundo fascinante das formigas com o mirmecólogo Eduardo Sequeira, da Mirmex, no Centro de Educação Ambiental da Mata da Machada e Sapal do Coina.",
-    "descriptionFull": "Na manhã de 7 de março, pelas 09h00, venha explorar o mundo fascinante das formigas com o mirmecólogo Eduardo Sequeira, da Mirmex, no Centro de Educação Ambiental da Mata da Machada e Sapal do Coina.\n\nInserida na Agenda de Primavera, a oficina \"Formigas – Superpoderes em Miniatura\" vai mostrar como estes pequenos insetos t&ecirc;m superpoderes que os tornam essenciais para o ecossistema. Conheça o comportamento das formigas, os seus incríveis sistemas de comunicação e as suas surpreendentes habilidades, tudo de forma divertida e interativa.\n\nA atividade é destinada maiores de 6 anos e promete ser uma verdadeira aventura no coração da natureza. Não perca a oportunidade de ver o mundo das formigas de uma maneira totalmente nova!\n\nAs inscrições nas ações Reserva na Primavera são gratuitas, mas obrigatórias, e podem ser feitas através da Linha Verde 800 912 070.\n\nA primavera está a chegar &agrave; Reserva natural Local do Barreiro. Venha celebrar a estação com atividades ao ar livre e descubra a beleza e a vida que florescem neste espaço único. Reserve já o seu lugar!",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/formigas-superpoderes-em-miniatura-reserva-na-primavera/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/02/SEO.png",
-    "contacts": "973920605 · 257953166",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-03-23T09:08:32.384Z"
+    "id": "workshop-ilustracao-peixes-pedro-salgado-2026-03-22",
+    "title": "Workshop Ilustração Peixes Pedro Salgado",
+    "date": "2026-03-22",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita – Galeria Azul",
+    "category": "Outro",
+    "description": "A oficina - workshop “Ilustração Científica e Naturalista dos Peixes”, com Pedro Salgado, aborda a ilustração científica de peixes, com discussão sobre",
+    "descriptionFull": "A oficina - workshop “Ilustração Científica e Naturalista dos Peixes”, com Pedro Salgado, aborda a ilustração científica de peixes, com discussão sobre",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Workshop-Pedro-Salgado.jpg",
+    "price": "5 Euros",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/workshop-ilustracao-peixes-pedro-salgado/",
+    "featured": false
   },
   {
     "id": "jazz-no-mercado-quartas-a-noite-2026-03-25",
@@ -1695,6 +1806,38 @@
     "contacts": "930586008 · 941307851",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-23T09:08:06.295Z"
+  },
+  {
+    "id": "a-magia-de-matilde-esparteiro-daniela-sa-2026-03-28",
+    "title": "A Magia de Matilde Esparteiro Daniela Sá",
+    "date": "2026-03-28",
+    "endDate": "",
+    "time": "",
+    "location": "Biblioteca Municipal do Barreiro – Sala Multiusos",
+    "category": "Outro",
+    "description": "No próximo dia 28 de março, às 15h00, a Biblioteca Municipal do Barreiro, vai receber os autores do livro &quot;A Magia de Matilde&quot;, Paulo Alexandre Esparteiro e",
+    "descriptionFull": "No próximo dia 28 de março, às 15h00, a Biblioteca Municipal do Barreiro, vai receber os autores do livro &quot;A Magia de Matilde&quot;, Paulo Alexandre Esparteiro e",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Lancamento-livro-A-Magia-de-Matilde_barreiro_aml.jpg",
+    "price": "Gratuito",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/a-magia-de-matilde-esparteiro-daniela-sa/",
+    "featured": false
+  },
+  {
+    "id": "ode-flamenca-companhia-flamenco-joao-lara-2026-03-28",
+    "title": "Ode Flamenca Companhia Flamenco João Lara",
+    "date": "2026-03-28",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita",
+    "category": "Outro",
+    "description": "&quot;Ode Flamenca&quot; é o espetáculo de dança, da Companhia de Flamenco João Lara, que vai ter lugar no Auditório Municipal Augusto Cabrita, no próximo dia 28 de",
+    "descriptionFull": "&quot;Ode Flamenca&quot; é o espetáculo de dança, da Companhia de Flamenco João Lara, que vai ter lugar no Auditório Municipal Augusto Cabrita, no próximo dia 28 de",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Ode_Flamenca_Barreiro_aml.jpg",
+    "price": "12 Euros |",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/ode-flamenca-companhia-flamenco-joao-lara/",
+    "featured": false
   },
   {
     "id": "natacao-atividades-ludicas-da-pascoa-2026-2026-04-04",
@@ -1942,23 +2085,6 @@
     "scrapedAt": "2026-03-23T09:07:35.556Z"
   },
   {
-    "id": "exposicao-de-ilustracao-o-sr-do-turbante-e-a-sra-extravagant-2026-11-22",
-    "title": "Exposição de ilustração | O Sr. do Turbante e a Sra. Extravagante",
-    "category": "Exposição",
-    "date": "2025-11-22",
-    "endDate": "2026-03-28",
-    "time": "16:00",
-    "location": "Biblioteca Municipal",
-    "price": "Gratuito",
-    "description": "Inauguração no dia 22 de novembro, &agrave;s 16h00, na Biblioteca Municipal do Barreiro. Mostra de ilustrações e processo criativo da narrativa visual do livro \"O Sr. do Turbante e a Sra. Extravagante\". Patente ao público até 28 de março d",
-    "descriptionFull": "Inauguração no dia 22 de novembro, &agrave;s 16h00, na Biblioteca Municipal do Barreiro. Mostra de ilustrações e processo criativo da narrativa visual do livro \"O Sr. do Turbante e a Sra. Extravagante\". Patente ao público até 28 de março de 2026. Gratuito Edição: Fazedoras de Histórias Texto: Joana Maurício Ilustração: Cristina Arvana Receitas: Chef Cláudia […]",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/inauguracao-da-exposicao-de-ilustracao-o-sr-do-turbante-e-a-sra-extravagante-de-cristina-arvana/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/10/Crsitina-Arvana-01-scaled.jpg",
-    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-03-23T09:08:00.579Z"
-  },
-  {
     "id": "campeonato-regional-de-marcha-atletica-2025-2026-12-14",
     "title": "Campeonato Regional de Marcha Atlética 2025",
     "category": "Desporto",
@@ -1975,21 +2101,6 @@
     "scrapedAt": "2026-03-23T09:10:37.808Z"
   },
   {
-    "id": "participe-na-votacao-da-sua-montra-de-natal-favorita-2026-12-17",
-    "title": "Participe na votação da sua Montra de Natal favorita",
-    "category": "Comunidade",
-    "date": "2025-12-17",
-    "endDate": "2025-12-31",
-    "location": "Barreiro",
-    "price": "",
-    "description": "Participe na votação da sua montra de Natal favorita, até dia 17 de dezembro, período em que decorre a classificação oficial. Com o seu voto participa no prémio da montra mais votada pelo público. Esta votação é realizada a",
-    "descriptionFull": "Participe na votação da sua montra de Natal favorita, até dia 17 de dezembro, período em que decorre a classificação oficial. Com o seu voto participa no prémio da montra mais votada pelo público. Esta votação é realizada através de QR Code disponível em cada montra, permitindo uma votação válida por pessoa. Dia 19 de dezembro é conhecida a classificação oficial da 24&ordf; edição do Concurso de Montras de Natal, promovido pela C&acirc;mara Municipal do Barreiro, a Associação de Comércio, Indústria e Serviços do Barreiro e Moita e as Freguesias do Concelho.",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/participe-na-votacao-da-sua-montra-de-natal-favorita/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x650_thumbnail_Vote-1.jpg",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-03-23T09:10:27.156Z"
-  },
-  {
     "id": "ginjinha-de-natal-e-um-ecoevento-brindamos-a-amizade-recicla-2026-12-24",
     "title": "Ginjinha de Natal é um ECOEVENTO | Brindamos à amizade, reciclamos pelo futuro",
     "category": "Comunidade",
@@ -2002,20 +2113,5 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x650_thumbnail_ginja.jpg",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-23T09:10:06.310Z"
-  },
-  {
-    "id": "passatempo-caca-aos-duendes-montras-de-natal-2025-2026-12-31",
-    "title": "Passatempo caça aos duendes | Montras de Natal 2025",
-    "category": "Comunidade",
-    "date": "2025-12-01",
-    "endDate": "2025-12-31",
-    "location": "Barreiro",
-    "price": "",
-    "description": "Até ao dia 31 de dezembro está convidado(a) a \"caçar Duendes\", no Passatempo para clientes! Habilite-se a ganhar um Cabaz de Natal coletivo (composto por um produto de cada loja a concurso), reunindo fotografias de todos os Duendes de Natal expostos nas montras inscr",
-    "descriptionFull": "Até ao dia 31 de dezembro está convidado(a) a \"caçar Duendes\", no Passatempo para clientes! Habilite-se a ganhar um Cabaz de Natal coletivo (composto por um produto de cada loja a concurso), reunindo fotografias de todos os Duendes de Natal expostos nas montras inscritas. Saiba tudo sobre este sorteio AQUI",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/passatempo-caca-aos-duendes-montras-de-natal-2025/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x650_thumbnail_Passatempo.jpg",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-03-23T09:09:58.377Z"
   }
 ]
