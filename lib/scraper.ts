@@ -329,7 +329,7 @@ async function discoverAllUrls(): Promise<string[]> {
   let pageNum = 1;
   let noNewCount = 0;
 
-  while (pageNum <= 30) {
+  while (pageNum <= 40) {
     for (let i = 0; i < 3; i++) {
       await p.mouse.wheel(0, 500);
       await p.waitForTimeout(200);
@@ -351,8 +351,8 @@ async function discoverAllUrls(): Promise<string[]> {
     console.log(`  📄 Página ${pageNum}: ${urls.length} links (${newCount} novos) — total: ${allUrls.size}`);
 
     if (newCount === 0) { noNewCount++; } else { noNewCount = 0; }
-    if (noNewCount >= 3) {
-      console.log('  ⏹ 3 páginas sem novos URLs, a parar');
+    if (noNewCount >= 5) {
+      console.log('  ⏹ 5 páginas sem novos URLs, a parar');
       break;
     }
 
@@ -363,7 +363,7 @@ async function discoverAllUrls(): Promise<string[]> {
     }
 
     await nextBtn.click();
-    await p.waitForTimeout(2500);
+    await p.waitForTimeout(4000);
     pageNum++;
   }
 
