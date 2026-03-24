@@ -88,6 +88,23 @@
     "scrapedAt": "2026-03-24T09:04:27.916Z"
   },
   {
+    "id": "exposicao-de-ilustracao-o-sr-do-turbante-e-a-sra-extravagant-2026-11-22",
+    "title": "Exposição de ilustração | O Sr. do Turbante e a Sra. Extravagante",
+    "category": "Exposição",
+    "date": "2025-11-22",
+    "endDate": "2026-03-28",
+    "time": "16:00",
+    "location": "Biblioteca Municipal",
+    "price": "Gratuito",
+    "description": "Inauguração no dia 22 de novembro, &agrave;s 16h00, na Biblioteca Municipal do Barreiro. Mostra de ilustrações e processo criativo da narrativa visual do livro \"O Sr. do Turbante e a Sra. Extravagante\". Patente ao público até 28 de março d",
+    "descriptionFull": "Inauguração no dia 22 de novembro, &agrave;s 16h00, na Biblioteca Municipal do Barreiro. Mostra de ilustrações e processo criativo da narrativa visual do livro \"O Sr. do Turbante e a Sra. Extravagante\". Patente ao público até 28 de março de 2026. Gratuito Edição: Fazedoras de Histórias Texto: Joana Maurício Ilustração: Cristina Arvana Receitas: Chef Cláudia […]",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/inauguracao-da-exposicao-de-ilustracao-o-sr-do-turbante-e-a-sra-extravagante-de-cristina-arvana/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/10/Crsitina-Arvana-01-scaled.jpg",
+    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-03-24T09:02:23.085Z"
+  },
+  {
     "id": "bosque-de-natal-mercado-de-natal-2025-11-28",
     "title": "Bosque de Natal | Mercado de Natal",
     "category": "Comunidade",
@@ -103,6 +120,21 @@
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-24T09:04:16.942Z"
+  },
+  {
+    "id": "passatempo-caca-aos-duendes-montras-de-natal-2025-2026-12-31",
+    "title": "Passatempo caça aos duendes | Montras de Natal 2025",
+    "category": "Comunidade",
+    "date": "2025-12-01",
+    "endDate": "2025-12-31",
+    "location": "Barreiro",
+    "price": "",
+    "description": "Até ao dia 31 de dezembro está convidado(a) a \"caçar Duendes\", no Passatempo para clientes! Habilite-se a ganhar um Cabaz de Natal coletivo (composto por um produto de cada loja a concurso), reunindo fotografias de todos os Duendes de Natal expostos nas montras inscr",
+    "descriptionFull": "Até ao dia 31 de dezembro está convidado(a) a \"caçar Duendes\", no Passatempo para clientes! Habilite-se a ganhar um Cabaz de Natal coletivo (composto por um produto de cada loja a concurso), reunindo fotografias de todos os Duendes de Natal expostos nas montras inscritas. Saiba tudo sobre este sorteio AQUI",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/passatempo-caca-aos-duendes-montras-de-natal-2025/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x650_thumbnail_Passatempo.jpg",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-03-24T09:04:21.666Z"
   },
   {
     "id": "animacao-de-natal-no-mercado-1-de-maio-2025-12-05",
@@ -250,6 +282,21 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x650_thumbnail_Acao_Industrias.jpg",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-24T09:04:47.487Z"
+  },
+  {
+    "id": "participe-na-votacao-da-sua-montra-de-natal-favorita-2026-12-17",
+    "title": "Participe na votação da sua Montra de Natal favorita",
+    "category": "Comunidade",
+    "date": "2025-12-17",
+    "endDate": "2025-12-31",
+    "location": "Barreiro",
+    "price": "",
+    "description": "Participe na votação da sua montra de Natal favorita, até dia 17 de dezembro, período em que decorre a classificação oficial. Com o seu voto participa no prémio da montra mais votada pelo público. Esta votação é realizada a",
+    "descriptionFull": "Participe na votação da sua montra de Natal favorita, até dia 17 de dezembro, período em que decorre a classificação oficial. Com o seu voto participa no prémio da montra mais votada pelo público. Esta votação é realizada através de QR Code disponível em cada montra, permitindo uma votação válida por pessoa. Dia 19 de dezembro é conhecida a classificação oficial da 24&ordf; edição do Concurso de Montras de Natal, promovido pela C&acirc;mara Municipal do Barreiro, a Associação de Comércio, Indústria e Serviços do Barreiro e Moita e as Freguesias do Concelho.",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/participe-na-votacao-da-sua-montra-de-natal-favorita/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x650_thumbnail_Vote-1.jpg",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-03-24T09:04:42.751Z"
   },
   {
     "id": "concerto-de-natal-putos-do-rock-2025-12-20",
@@ -1240,6 +1287,22 @@
     "scrapedAt": "2026-03-24T09:03:05.304Z"
   },
   {
+    "id": "formigas-superpoderes-em-miniatura-reserva-na-primavera-2026-03-24",
+    "title": "Formigas: superpoderes em miniatura | Reserva na Primavera",
+    "category": "Comunidade",
+    "date": "2026-03-07",
+    "time": "09:00",
+    "location": "Centro de Educação Ambiental da Mata da Machada",
+    "price": "",
+    "description": "Na manhã de 7 de março, pelas 09h00, venha explorar o mundo fascinante das formigas com o mirmecólogo Eduardo Sequeira, da Mirmex, no Centro de Educação Ambiental da Mata da Machada e Sapal do Coina.",
+    "descriptionFull": "Na manhã de 7 de março, pelas 09h00, venha explorar o mundo fascinante das formigas com o mirmecólogo Eduardo Sequeira, da Mirmex, no Centro de Educação Ambiental da Mata da Machada e Sapal do Coina.\n\nInserida na Agenda de Primavera, a oficina \"Formigas – Superpoderes em Miniatura\" vai mostrar como estes pequenos insetos t&ecirc;m superpoderes que os tornam essenciais para o ecossistema. Conheça o comportamento das formigas, os seus incríveis sistemas de comunicação e as suas surpreendentes habilidades, tudo de forma divertida e interativa.\n\nA atividade é destinada maiores de 6 anos e promete ser uma verdadeira aventura no coração da natureza. Não perca a oportunidade de ver o mundo das formigas de uma maneira totalmente nova!\n\nAs inscrições nas ações Reserva na Primavera são gratuitas, mas obrigatórias, e podem ser feitas através da Linha Verde 800 912 070.\n\nA primavera está a chegar &agrave; Reserva natural Local do Barreiro. Venha celebrar a estação com atividades ao ar livre e descubra a beleza e a vida que florescem neste espaço único. Reserve já o seu lugar!",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/formigas-superpoderes-em-miniatura-reserva-na-primavera/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/02/SEO.png",
+    "contacts": "973920605 · 257953166",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-03-24T09:03:00.931Z"
+  },
+  {
     "id": "viagem-a-lisboa-um-espetaculo-d-o-clube-2026-03-14",
     "title": "Viagem a Lisboa Um espetáculo d’O Clube",
     "category": "Teatro",
@@ -1273,6 +1336,23 @@
     "contacts": "212 068 287 · 212 068 535 · 212 068 287 · 212 068 535",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-24T09:03:01.081Z"
+  },
+  {
+    "id": "clube-de-leitura-junior-harry-potter-e-a-pedra-filosofal-2026-03-24",
+    "title": "Clube de Leitura Júnior | Harry Potter e a Pedra Filosofal",
+    "category": "Leitura",
+    "date": "2026-03-14",
+    "time": "11:00",
+    "location": "Biblioteca Municipal do Barreiro",
+    "price": "Gratuito",
+    "description": "Gostas de livros? 5&ordf; sessão com o livro \"Harry Potter e a Pedra Filosofal\", de J. K. Rowling. Vem partilhar as tuas ideias e viajar nas entrelinhas dos livros. 14 março | 11h00 | Biblioteca Municipal do Barreiro Público-alvo: 10 aos 14 anos",
+    "descriptionFull": "Gostas de livros? 5&ordf; sessão com o livro \"Harry Potter e a Pedra Filosofal\", de J. K. Rowling. Vem partilhar as tuas ideias e viajar nas entrelinhas dos livros. 14 março | 11h00 | Biblioteca Municipal do Barreiro Público-alvo: 10 aos 14 anos\n\nGratuito mediante inscrição em biblioteca.municipal@cm-barreiro.pt Duração: 60 min. Org.: CMBCâmara Municipal do Barreiro",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/clube-de-leitura-junior-harry-potter-e-a-pedra-filosofal/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/03/Clube-Leitura-Teen-CMB_1920x650px-Site-SEO-1.jpg",
+    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-03-24T09:02:57.588Z",
+    "featured": true
   },
   {
     "id": "oficina-big-bang-boom-ilustracao-do-universo-para-bebes-e-fa-2026-03-15",
@@ -1511,39 +1591,6 @@
     "scrapedAt": "2026-03-24T09:02:44.309Z"
   },
   {
-    "id": "clube-de-leitura-junior-harry-potter-e-a-pedra-filosofal-2026-03-24",
-    "title": "Clube de Leitura Júnior | Harry Potter e a Pedra Filosofal",
-    "category": "Leitura",
-    "date": "2026-03-14",
-    "time": "11:00",
-    "location": "Biblioteca Municipal do Barreiro",
-    "price": "Gratuito",
-    "description": "Gostas de livros? 5&ordf; sessão com o livro \"Harry Potter e a Pedra Filosofal\", de J. K. Rowling. Vem partilhar as tuas ideias e viajar nas entrelinhas dos livros. 14 março | 11h00 | Biblioteca Municipal do Barreiro Público-alvo: 10 aos 14 anos",
-    "descriptionFull": "Gostas de livros? 5&ordf; sessão com o livro \"Harry Potter e a Pedra Filosofal\", de J. K. Rowling. Vem partilhar as tuas ideias e viajar nas entrelinhas dos livros. 14 março | 11h00 | Biblioteca Municipal do Barreiro Público-alvo: 10 aos 14 anos\n\nGratuito mediante inscrição em biblioteca.municipal@cm-barreiro.pt Duração: 60 min. Org.: CMBCâmara Municipal do Barreiro",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/clube-de-leitura-junior-harry-potter-e-a-pedra-filosofal/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/03/Clube-Leitura-Teen-CMB_1920x650px-Site-SEO-1.jpg",
-    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-03-24T09:02:57.588Z",
-    "featured": true
-  },
-  {
-    "id": "formigas-superpoderes-em-miniatura-reserva-na-primavera-2026-03-24",
-    "title": "Formigas: superpoderes em miniatura | Reserva na Primavera",
-    "category": "Comunidade",
-    "date": "2026-03-07",
-    "time": "09:00",
-    "location": "Centro de Educação Ambiental da Mata da Machada",
-    "price": "",
-    "description": "Na manhã de 7 de março, pelas 09h00, venha explorar o mundo fascinante das formigas com o mirmecólogo Eduardo Sequeira, da Mirmex, no Centro de Educação Ambiental da Mata da Machada e Sapal do Coina.",
-    "descriptionFull": "Na manhã de 7 de março, pelas 09h00, venha explorar o mundo fascinante das formigas com o mirmecólogo Eduardo Sequeira, da Mirmex, no Centro de Educação Ambiental da Mata da Machada e Sapal do Coina.\n\nInserida na Agenda de Primavera, a oficina \"Formigas – Superpoderes em Miniatura\" vai mostrar como estes pequenos insetos t&ecirc;m superpoderes que os tornam essenciais para o ecossistema. Conheça o comportamento das formigas, os seus incríveis sistemas de comunicação e as suas surpreendentes habilidades, tudo de forma divertida e interativa.\n\nA atividade é destinada maiores de 6 anos e promete ser uma verdadeira aventura no coração da natureza. Não perca a oportunidade de ver o mundo das formigas de uma maneira totalmente nova!\n\nAs inscrições nas ações Reserva na Primavera são gratuitas, mas obrigatórias, e podem ser feitas através da Linha Verde 800 912 070.\n\nA primavera está a chegar &agrave; Reserva natural Local do Barreiro. Venha celebrar a estação com atividades ao ar livre e descubra a beleza e a vida que florescem neste espaço único. Reserve já o seu lugar!",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/formigas-superpoderes-em-miniatura-reserva-na-primavera/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/02/SEO.png",
-    "contacts": "973920605 · 257953166",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-03-24T09:03:00.931Z"
-  },
-  {
     "id": "jazz-no-mercado-quartas-a-noite-2026-03-25",
     "title": "Jazz no Mercado – Quartas à Noite!",
     "category": "Música",
@@ -1648,6 +1695,38 @@
     "scrapedAt": "2026-03-24T09:02:27.160Z"
   },
   {
+    "id": "pada-56-exhibition-open-studios-2026-03-28",
+    "title": "PADA 56 Exhibition + Open Studios",
+    "date": "2026-03-28",
+    "endDate": "",
+    "time": "18:00",
+    "location": "PADA Studios, Barreiro",
+    "category": "Outro",
+    "description": "PADA 56 Exhibition + Open Studios » PADA » Exposições - 28-03-2026 18:00",
+    "descriptionFull": "PADA 56 Exhibition + Open Studios » PADA » Exposições - 28-03-2026 18:00",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/0d313e522b0f000554611d68c735caf4-large.png",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1765306/pada-56-exhibition-open-studios",
+    "featured": false
+  },
+  {
+    "id": "concerto-nightwachers-fr-xangaih-2026-04-01",
+    "title": "Concerto ||| NIGHTWACHERS(fr) + XANGAIH |||",
+    "date": "2026-04-01",
+    "endDate": "",
+    "time": "19:00",
+    "location": "Cooperativa Mula",
+    "category": "Música",
+    "description": "Concerto ||| NIGHTWACHERS(fr) + XANGAIH ||| » Cooperativa Mula » Concertos - 01-04-2026 19:00",
+    "descriptionFull": "Concerto ||| NIGHTWACHERS(fr) + XANGAIH ||| » Cooperativa Mula » Concertos - 01-04-2026 19:00",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1761771-8d71e5225d16c90922633499fb4e5686-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1761771/concerto-nightwachers-fr-xangaih",
+    "featured": false
+  },
+  {
     "id": "natacao-atividades-ludicas-da-pascoa-2026-2026-04-04",
     "title": "Natação | Atividades Lúdicas da Páscoa 2026",
     "category": "Desporto",
@@ -1680,6 +1759,22 @@
     "contacts": "973920605 · 257953166",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-24T09:02:19.377Z"
+  },
+  {
+    "id": "carla-santana-carlos-santos-2026-04-09",
+    "title": "Carla Santana & Carlos Santos ▰",
+    "date": "2026-04-09",
+    "endDate": "",
+    "time": "21:30",
+    "location": "Biblioteca Municipal do Barreiro",
+    "category": "Música",
+    "description": "Carla Santana & Carlos Santos ▰ » Biblioteca Municipal do Barreiro » Concertos - 09-04-2026 21:30",
+    "descriptionFull": "Carla Santana & Carlos Santos ▰ » Biblioteca Municipal do Barreiro » Concertos - 09-04-2026 21:30",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1738313-6128d9d15ce1564c62f1092c9fa109a2-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1738313/carla-santana-carlos-santos",
+    "featured": false
   },
   {
     "id": "barreiro-machada-trail-noturno-2026-2026-04-11",
@@ -1733,6 +1828,38 @@
     "scrapedAt": "2026-03-24T09:02:19.421Z"
   },
   {
+    "id": "matine-c-underline-fear-the-reaper-karma-2026-04-11",
+    "title": "Matiné c/ UNDERLINE + FEAR THE REAPER + KARMA",
+    "date": "2026-04-11",
+    "endDate": "",
+    "time": "17:00",
+    "location": "Cooperativa Mula",
+    "category": "Música",
+    "description": "Matiné c/ UNDERLINE + FEAR THE REAPER + KARMA  » Cooperativa Mula » Concertos - 11-04-2026 17:00",
+    "descriptionFull": "Matiné c/ UNDERLINE + FEAR THE REAPER + KARMA  » Cooperativa Mula » Concertos - 11-04-2026 17:00",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1761773-ec57b14c582859ba352946e9e837ca82-r.jpeg",
+    "price": "3€",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1761773/matine-c-underline-fear-the-reaper-karma",
+    "featured": false
+  },
+  {
+    "id": "galo-negro-fest-2026-2026-04-11",
+    "title": "GALO NEGRO FEST 2026",
+    "date": "2026-04-11",
+    "endDate": "",
+    "time": "18:00",
+    "location": "ADAO - Associação Desenvolvimento Artes e Oficios",
+    "category": "Música",
+    "description": "GALO NEGRO FEST 2026  » ADAO - Associação Desenvolvimento Artes e Oficios » Concertos - 11-04-2026 18:00",
+    "descriptionFull": "GALO NEGRO FEST 2026  » ADAO - Associação Desenvolvimento Artes e Oficios » Concertos - 11-04-2026 18:00",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1747049-1150a7ea6c277958f41b54f190b5f4e4-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1747049/galo-negro-fest-2026",
+    "featured": false
+  },
+  {
     "id": "fernanda-e-a-inesperada-virtude-de-aprender-a-voar-amac-juni-2026-04-12",
     "title": "Fernanda e a inesperada virtude de aprender a voar | AMAC Júnior",
     "category": "Teatro",
@@ -1749,6 +1876,22 @@
     "ticketUrl": "mailto:bilheteira@cm-barreiro.pt",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-24T09:02:15.581Z"
+  },
+  {
+    "id": "rakta-rabu-mazda-nas-drums-2026-04-17",
+    "title": "RAKTA / Rabu Mazda Nas Drums ▰",
+    "date": "2026-04-17",
+    "endDate": "",
+    "time": "21:30",
+    "location": "Gasoline- Associação Cultural e Desportiva",
+    "category": "Música",
+    "description": "RAKTA / Rabu Mazda Nas Drums ▰ » Gasoline- Associação Cultural e Desportiva » Concertos - 17-04-2026 21:30",
+    "descriptionFull": "RAKTA / Rabu Mazda Nas Drums ▰ » Gasoline- Associação Cultural e Desportiva » Concertos - 17-04-2026 21:30",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1738314-0859db5e910b957af41e8f5de9da747c-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1738314/rakta-rabu-mazda-nas-drums",
+    "featured": false
   },
   {
     "id": "poe-te-a-funcionar-2026-2026-04-18",
@@ -1910,6 +2053,22 @@
     "scrapedAt": "2026-03-24T09:01:59.144Z"
   },
   {
+    "id": "guilherme-rodrigues-ze-maria-2026-05-07",
+    "title": "Guilherme Rodrigues & Zé Maria ▰",
+    "date": "2026-05-07",
+    "endDate": "",
+    "time": "21:30",
+    "location": "Biblioteca Municipal do Barreiro",
+    "category": "Música",
+    "description": "Guilherme Rodrigues & Zé Maria ▰ » Biblioteca Municipal do Barreiro » Concertos - 07-05-2026 21:30",
+    "descriptionFull": "Guilherme Rodrigues & Zé Maria ▰ » Biblioteca Municipal do Barreiro » Concertos - 07-05-2026 21:30",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1738315-d41650302bdcb09945b82b3c688ee5ae-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1738315/guilherme-rodrigues-ze-maria",
+    "featured": false
+  },
+  {
     "id": "alem-palco-pelo-dance-up-project-2026-05-09",
     "title": "Além Palco – Pelo Dance UP Project",
     "category": "Teatro",
@@ -1946,23 +2105,6 @@
     "scrapedAt": "2026-03-24T09:01:58.907Z"
   },
   {
-    "id": "exposicao-de-ilustracao-o-sr-do-turbante-e-a-sra-extravagant-2026-11-22",
-    "title": "Exposição de ilustração | O Sr. do Turbante e a Sra. Extravagante",
-    "category": "Exposição",
-    "date": "2025-11-22",
-    "endDate": "2026-03-28",
-    "time": "16:00",
-    "location": "Biblioteca Municipal",
-    "price": "Gratuito",
-    "description": "Inauguração no dia 22 de novembro, &agrave;s 16h00, na Biblioteca Municipal do Barreiro. Mostra de ilustrações e processo criativo da narrativa visual do livro \"O Sr. do Turbante e a Sra. Extravagante\". Patente ao público até 28 de março d",
-    "descriptionFull": "Inauguração no dia 22 de novembro, &agrave;s 16h00, na Biblioteca Municipal do Barreiro. Mostra de ilustrações e processo criativo da narrativa visual do livro \"O Sr. do Turbante e a Sra. Extravagante\". Patente ao público até 28 de março de 2026. Gratuito Edição: Fazedoras de Histórias Texto: Joana Maurício Ilustração: Cristina Arvana Receitas: Chef Cláudia […]",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/inauguracao-da-exposicao-de-ilustracao-o-sr-do-turbante-e-a-sra-extravagante-de-cristina-arvana/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/10/Crsitina-Arvana-01-scaled.jpg",
-    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-03-24T09:02:23.085Z"
-  },
-  {
     "id": "campeonato-regional-de-marcha-atletica-2025-2026-12-14",
     "title": "Campeonato Regional de Marcha Atlética 2025",
     "category": "Desporto",
@@ -1979,21 +2121,6 @@
     "scrapedAt": "2026-03-24T09:04:58.630Z"
   },
   {
-    "id": "participe-na-votacao-da-sua-montra-de-natal-favorita-2026-12-17",
-    "title": "Participe na votação da sua Montra de Natal favorita",
-    "category": "Comunidade",
-    "date": "2025-12-17",
-    "endDate": "2025-12-31",
-    "location": "Barreiro",
-    "price": "",
-    "description": "Participe na votação da sua montra de Natal favorita, até dia 17 de dezembro, período em que decorre a classificação oficial. Com o seu voto participa no prémio da montra mais votada pelo público. Esta votação é realizada a",
-    "descriptionFull": "Participe na votação da sua montra de Natal favorita, até dia 17 de dezembro, período em que decorre a classificação oficial. Com o seu voto participa no prémio da montra mais votada pelo público. Esta votação é realizada através de QR Code disponível em cada montra, permitindo uma votação válida por pessoa. Dia 19 de dezembro é conhecida a classificação oficial da 24&ordf; edição do Concurso de Montras de Natal, promovido pela C&acirc;mara Municipal do Barreiro, a Associação de Comércio, Indústria e Serviços do Barreiro e Moita e as Freguesias do Concelho.",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/participe-na-votacao-da-sua-montra-de-natal-favorita/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x650_thumbnail_Vote-1.jpg",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-03-24T09:04:42.751Z"
-  },
-  {
     "id": "ginjinha-de-natal-e-um-ecoevento-brindamos-a-amizade-recicla-2026-12-24",
     "title": "Ginjinha de Natal é um ECOEVENTO | Brindamos à amizade, reciclamos pelo futuro",
     "category": "Comunidade",
@@ -2006,20 +2133,5 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x650_thumbnail_ginja.jpg",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-24T09:04:31.903Z"
-  },
-  {
-    "id": "passatempo-caca-aos-duendes-montras-de-natal-2025-2026-12-31",
-    "title": "Passatempo caça aos duendes | Montras de Natal 2025",
-    "category": "Comunidade",
-    "date": "2025-12-01",
-    "endDate": "2025-12-31",
-    "location": "Barreiro",
-    "price": "",
-    "description": "Até ao dia 31 de dezembro está convidado(a) a \"caçar Duendes\", no Passatempo para clientes! Habilite-se a ganhar um Cabaz de Natal coletivo (composto por um produto de cada loja a concurso), reunindo fotografias de todos os Duendes de Natal expostos nas montras inscr",
-    "descriptionFull": "Até ao dia 31 de dezembro está convidado(a) a \"caçar Duendes\", no Passatempo para clientes! Habilite-se a ganhar um Cabaz de Natal coletivo (composto por um produto de cada loja a concurso), reunindo fotografias de todos os Duendes de Natal expostos nas montras inscritas. Saiba tudo sobre este sorteio AQUI",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/passatempo-caca-aos-duendes-montras-de-natal-2025/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/12/1920x650_thumbnail_Passatempo.jpg",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-03-24T09:04:21.666Z"
   }
 ]
