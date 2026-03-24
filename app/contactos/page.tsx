@@ -20,7 +20,7 @@ export default function ContactosPage() {
           Ou tem alguma sugestão para melhorar o projecto?
         </h2>
         <p>
-          Pode entrar em contacto através do email: <a href="mailto:agenda@barreiro.pt" className="tsl-link">agenda@barreiro.pt</a>
+          Pode entrar em contacto através do email: <a href="mailto:agenda@agendab.pt" className="tsl-link">agenda@agendab.pt</a>
         </p>
         <p>
           Se organiza eventos no Barreiro e quer garantir que aparecem na <strong>Agenda B</strong>, a forma mais simples é publicá-los
