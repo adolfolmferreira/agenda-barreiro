@@ -151,6 +151,7 @@ export default function HomeClient({ events }: { events: Event[] }) {
 
   return (
     <>
+      <h1 className="sr-only">Agenda B — Eventos e Cultura no Barreiro</h1>
       {highlights.length > 0 && <HighlightsSection highlights={highlights} />}
 
       {/* ─── SECÇÃO: PRÓXIMOS EVENTOS ─── */}
@@ -406,7 +407,7 @@ export default function HomeClient({ events }: { events: Event[] }) {
                   <img
                     className="tsl-cinema-poster"
                     src={film.img}
-                    alt={film.title}
+                    alt=""
                     loading="lazy"
                   />
                 )}

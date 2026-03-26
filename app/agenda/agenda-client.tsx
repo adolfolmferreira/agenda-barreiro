@@ -198,7 +198,7 @@ export default function AgendaClient({ events }: { events: Event[] }) {
                   >
                     <div className="tsl-card-img">
                       {ev.imageUrl ? (
-                        <img src={ev.imageUrl} alt={ev.title} loading="lazy" />
+                        <img src={ev.imageUrl} alt="" loading="lazy" />
                       ) : (
                         <div className="tsl-card-noimg" />
                       )}
@@ -230,7 +230,7 @@ export default function AgendaClient({ events }: { events: Event[] }) {
                   >
                     <div className="tsl-list-thumb">
                       {ev.imageUrl ? (
-                        <img src={ev.imageUrl} alt={ev.title} loading="lazy" />
+                        <img src={ev.imageUrl} alt="" loading="lazy" />
                       ) : (
                         <div className="tsl-list-nothumb" />
                       )}

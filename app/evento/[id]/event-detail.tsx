@@ -116,7 +116,7 @@ export default function EventDetail({ event }: { event: Event | null }) {
       <Link href="/agenda" className="tsl-back-btn">← Voltar</Link>
       {ev.imageUrl && (
         <div className="tsl-detail-hero">
-          <img src={ev.imageUrl} alt={ev.title} />
+          <img src={ev.imageUrl} alt="" />
         </div>
       )}
       <div className="tsl-detail-body">
