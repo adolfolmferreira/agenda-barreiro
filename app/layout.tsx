@@ -11,7 +11,7 @@ export const revalidate = 3600;
 
 const SITE_URL = 'https://agendab.pt';
 const SITE_NAME = 'Agenda B — Barreiro';
-const SITE_DESC = 'Agenda cultural e de eventos do Barreiro. Concertos, teatro, exposições, workshops e muito mais na cidade do Barreiro.';
+const SITE_DESC = 'Descubra todos os eventos no Barreiro: concertos, teatro, exposições, workshops, cinema e actividades para toda a família. Agenda actualizada diariamente.';
 
 export const metadata: Metadata = {
   title: {
