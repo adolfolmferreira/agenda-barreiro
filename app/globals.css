@@ -2029,3 +2029,66 @@ button {
     display: flex;
   }
 }
+/* ─── Cookie Consent Banner ───────────────────────── */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #1a1a1a;
+  border-top: 1px solid #333;
+  padding: 16px 24px;
+}
+.cookie-banner-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.cookie-banner-content p {
+  font-size: 13px;
+  color: #ccc;
+  margin: 0;
+  flex: 1;
+  line-height: 1.5;
+}
+.cookie-banner-link {
+  color: #64a1de;
+  text-decoration: underline;
+  margin-left: 4px;
+}
+.cookie-banner-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.cookie-btn {
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+.cookie-btn:hover {
+  opacity: 0.8;
+}
+.cookie-btn-accept {
+  background: #fff;
+  color: #111;
+}
+.cookie-btn-reject {
+  background: transparent;
+  color: #ccc;
+  border: 1px solid #555;
+}
+@media (max-width: 768px) {
+  .cookie-banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
