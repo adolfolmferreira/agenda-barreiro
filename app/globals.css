@@ -10,7 +10,7 @@
 
 ::selection {
   background: #111111;
-  color     : #fff;
+  color     : #ffffff;
 }
 
 html {
@@ -21,7 +21,7 @@ body {
   font-family            : "Inter", sans-serif;
   font-weight            : 300;
   color                  : #111111;
-  background             : #fff;
+  background             : #ffffff;
   -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -189,7 +189,7 @@ button {
   font-weight   : 400;
   line-height   : 0.95;
   letter-spacing: -3px;
-  color         : #fff;
+  color         : #ffffff;
   margin-bottom : 16px;
 }
 
@@ -254,7 +254,7 @@ button {
   min-width : 260px;
   max-height: 360px;
   overflow-y: auto;
-  background: #fff;
+  background: #ffffff;
   border    : 1px solid #e5e5e5;
   box-shadow: 0 8px 32px rgba(0, 0, 0, .08);
   z-index   : 300;
@@ -536,7 +536,7 @@ button {
 
 .tsl-detail-cta:hover {
   background: #111111;
-  color     : #fff;
+  color     : #ffffff;
 }
 
 /* ─── Empty ─── */
@@ -616,7 +616,7 @@ button {
   width       : 100%;
   aspect-ratio: 16 / 10;
   overflow    : hidden;
-  background  : #fff;
+  background  : #ffffff;
   transition  : box-shadow 0.4s, transform 0.4s;
   border      : 2px solid #111111;
 }
@@ -671,7 +671,7 @@ button {
   align-items    : center;
   justify-content: space-between;
   font-size      : 16px;
-  color          : #fff;
+  color          : #ffffff;
 }
 
 .tsl-foot-left {
@@ -685,7 +685,7 @@ button {
 }
 
 .tsl-foot-link {
-  color                : #fff;
+  color                : #ffffff;
   text-decoration      : underline;
   text-underline-offset: 2px;
 }
@@ -822,7 +822,7 @@ button {
 /* ── EM DESTAQUE ─────────────────────── */
 .tsl-highlights {
   padding         : 40px 48px 80px 48px;
-  background-color: #111111;
+  background-color: #f3f3f3;
   border-bottom   : 1px solid #111111;
 }
 
@@ -843,13 +843,14 @@ button {
 }
 
 .tsl-highlight-card {
-  cursor        : pointer;
-  display       : flex;
-  flex-direction: column;
-  gap           : 16px;
-  transition    : opacity 0.2s;
-  border        : 2px solid #ffffff;
-  height        : fit-content;
+  cursor          : pointer;
+  display         : flex;
+  flex-direction  : column;
+  gap             : 16px;
+  transition      : opacity 0.2s;
+  border          : 2px solid #111111;
+  height          : fit-content;
+  background-color: #ffffff;
 }
 
 .tsl-highlight-card:hover {
@@ -865,7 +866,7 @@ button {
 
 .tsl-highlight-date {
   display       : block;
-  color         : #ffffff;
+  color         : #111111;
   font-family   : "Inter", sans-serif;
   font-size     : 18px;
   font-style    : normal;
@@ -874,7 +875,7 @@ button {
 }
 
 .tsl-highlight-cat {
-  color         : #ffffff;
+  color         : #111111;
   font-family   : "Inter", sans-serif;
   font-size     : 16px;
   font-style    : normal;
@@ -882,7 +883,7 @@ button {
   line-height   : normal;
   text-transform: capitalize;
   width         : max-content;
-  border        : 1px solid #ffffff;
+  border        : 1px solid #111111;
   padding       : 4px 16px;
   border-radius : 50px;
 }
@@ -891,7 +892,7 @@ button {
   font-family: "Inter", sans-serif;
   font-size  : 48px;
   font-weight: 700;
-  color      : #ffffff;
+  color      : #111111;
   line-height: 1.1;
 }
 
@@ -986,7 +987,7 @@ button {
   width     : 100px;
   height    : 70px;
   overflow  : hidden;
-  background: #fff;
+  background: #ffffff;
 }
 
 .tsl-list-thumb img {
@@ -1122,7 +1123,7 @@ button {
   height         : 32px;
   border-radius  : 50%;
   border         : 1px solid #111111;
-  background     : #fff;
+  background     : #ffffff;
   cursor         : pointer;
   font-size      : 14px;
   display        : flex;
@@ -1133,7 +1134,7 @@ button {
 
 .tsl-cinema-arrow:hover {
   background  : #64a1de;
-  color       : #fff;
+  color       : #ffffff;
   border-color: #111111;
 }
 
@@ -1767,7 +1768,7 @@ button {
 /* ─── Category Highlights ─────────────────────────── */
 .tsl-cathl {
   padding         : 80px 48px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-bottom   : 2px solid #111111;
 }
 
@@ -1981,7 +1982,7 @@ button {
 .tsl-pill.active {
   background  : #64a1de;
   border-color: #111111;
-  color       : #fff;
+  color       : #ffffff;
 }
 
 .tsl-pill-clear {
@@ -2037,8 +2038,8 @@ button {
   left      : 0;
   right     : 0;
   z-index   : 1000;
-  background: #fff;
-  border-top: 2px solid #111;
+  background: #ffffff;
+  border-top: 2px solid #111111;
   padding   : 16px 24px;
 }
 
@@ -2052,7 +2053,7 @@ button {
 
 .cookie-banner-content p {
   font-size  : 13px;
-  color      : #111;
+  color      : #111111;
   margin     : 0;
   flex       : 1;
   line-height: 1.5;
@@ -2085,14 +2086,14 @@ button {
 }
 
 .cookie-btn-accept {
-  background: #111;
-  color     : #fff;
+  background: #111111;
+  color     : #ffffff;
 }
 
 .cookie-btn-reject {
   background: transparent;
-  color     : #111;
-  border    : 1px solid #111;
+  color     : #111111;
+  border    : 1px solid #111111;
 }
 
 @media (max-width: 768px) {
