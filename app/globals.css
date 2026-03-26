@@ -823,7 +823,7 @@ button {
 .tsl-highlights {
   padding         : 40px 48px 80px 48px;
   background-color: #f3f3f3;
-  border-bottom   : 1px solid #111111;
+  border-bottom   : 2px solid #111111;
 }
 
 .tsl-highlights-title {
@@ -831,7 +831,7 @@ button {
   font-size        : 32px;
   font-weight      : 300;
   text-transform   : uppercase;
-  color            : #ffffff;
+  color            : #111111;
   /* margin-bottom : 32px; */
   line-height      : normal;
 }
