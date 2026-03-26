@@ -6,7 +6,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: 'Agenda B — Eventos e Cultura no Barreiro',
-  description: 'Descubra o que se passa no Barreiro. Concertos, teatro, exposições, workshops, cinema e eventos para toda a família.',
+  description: 'Descubra o que se passa no Barreiro. Concertos, teatro, exposições, workshops, cinema e eventos para toda a família. Agenda actualizada diariamente.',
   alternates: { canonical: '/' },
 };
 

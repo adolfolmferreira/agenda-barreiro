@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Política de Privacidade',
-  description: 'Política de privacidade e cookies da Agenda B.',
+  description: 'Política de privacidade e cookies da Agenda B. Saiba como utilizamos cookies, que dados recolhemos e quais são os seus direitos ao abrigo do RGPD.',
   alternates: { canonical: '/privacidade' },
 };
 

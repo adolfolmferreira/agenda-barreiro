@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Sobre',
-  description: 'A Agenda B é um projecto independente que reúne todos os eventos culturais, desportivos e comunitários do Barreiro.',
+  description: 'A Agenda B é um projecto independente que reúne num único lugar todos os eventos culturais, desportivos e comunitários que acontecem no Barreiro.',
   alternates: { canonical: '/sobre' },
 };
 

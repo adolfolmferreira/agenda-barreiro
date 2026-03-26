@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contactos',
-  description: 'Entre em contacto com a Agenda B. Sugira eventos, reporte erros ou proponha melhorias.',
+  description: 'Entre em contacto com a Agenda B. Sugira novos eventos, reporte erros na informação ou proponha melhorias para a agenda cultural do Barreiro.',
   alternates: { canonical: '/contactos' },
 };
 
