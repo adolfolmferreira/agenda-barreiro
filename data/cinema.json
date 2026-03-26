@@ -1,5 +1,13 @@
 [
   {
+    "title": "Entroncamento",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20318",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Entroncamento-500x714.png",
+    "genre": "Drama",
+    "duration": "2h11",
+    "rating": "M/16"
+  },
+  {
     "title": "Projeto Hail Mary",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=20543",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/ProjetoHailMary-500x721.jpg",
@@ -16,20 +24,12 @@
     "rating": "M/12"
   },
   {
-    "title": "Jogada de Mestre",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20652",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Jogada-De-Mestre-500x713.jpg",
-    "genre": "Comédia, Drama, Thriller",
-    "duration": "1h49",
+    "title": "Tudo Me Lembra de Ti",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19918",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2023/11/Poster1_TudoMeLembraDeTi_720x1024px-500x711.jpg",
+    "genre": "Drama",
+    "duration": "01h55",
     "rating": "M/12"
-  },
-  {
-    "title": "Saltitões (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19587",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Saltitoes-500x714.jpg",
-    "genre": "Animação, Comédia",
-    "duration": "1h45",
-    "rating": "M/6"
   },
   {
     "title": "Gritos 7",
@@ -40,14 +40,6 @@
     "rating": "M/16"
   },
   {
-    "title": "GOAT: O Maior de Todos (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20247",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Goat-500x720.jpg",
-    "genre": "Animação, Comédia",
-    "duration": "1h33",
-    "rating": "M/6"
-  },
-  {
     "title": "Hamnet",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=19384",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/hamnet-novo-poster-500x721.jpg",
@@ -56,35 +48,35 @@
     "rating": "M/12"
   },
   {
+    "title": "HITPIG: O Herói da Bicharada (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=17724",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/05/Hitpig-1-500x741.jpg",
+    "genre": "Animação, Aventura, Comédia",
+    "duration": "1h25",
+    "rating": "M/6"
+  },
+  {
+    "title": "Saltitões (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19587",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Saltitoes-500x714.jpg",
+    "genre": "Animação, Comédia",
+    "duration": "1h45",
+    "rating": "M/6"
+  },
+  {
+    "title": "GOAT: O Maior de Todos (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20247",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Goat-500x720.jpg",
+    "genre": "Animação, Comédia",
+    "duration": "1h33",
+    "rating": "M/6"
+  },
+  {
     "title": "SpongeBob O Filme: À Procura das Calças Quadradas",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=19456",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Spongebob-2-500x714.jpg",
     "genre": "Animação, Aventura, Comédia",
     "duration": "1h36",
     "rating": "M/6"
-  },
-  {
-    "title": "Zootrópolis 2 (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=17743",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/05/Zootropolis-2-4-500x714.jpg",
-    "genre": "Animação, Aventura",
-    "duration": "1h47",
-    "rating": "M/6"
-  },
-  {
-    "title": "Batalha Atrás de Batalha",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20904",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/one-battle-after-another_poster-500x741.jpg",
-    "genre": "Ação, Drama, Suspense",
-    "duration": "2h42",
-    "rating": "M/16"
-  },
-  {
-    "title": "Pecadores",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20898",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/SINNERS_Main_70x100-poster-500x714.jpg",
-    "genre": "Ação, Drama, Horror, Thriller",
-    "duration": "2h18",
-    "rating": "M/16"
   }
 ]
