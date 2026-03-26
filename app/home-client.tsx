@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import type { Event } from "./components/types";
 import { fmtRange, cleanLoc } from "./components/helpers";
@@ -102,55 +102,6 @@ function HighlightsSection({ highlights }: { highlights: Event[] }) {
   );
 }
 
-function PdfCover({ url }: { url: string }) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    let cancelled = false;
-    const proxyUrl = `/api/pdf-cover?url=${encodeURIComponent(url)}`;
-    const loadPdf = async () => {
-      try {
-        const pdfjsLib = await import("pdfjs-dist");
-        pdfjsLib.GlobalWorkerOptions.workerSrc =
-          "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs";
-        const pdf = await pdfjsLib.getDocument(proxyUrl).promise;
-        const page = await pdf.getPage(1);
-        const canvas = canvasRef.current;
-        if (!canvas || cancelled) return;
-        const ctx = canvas.getContext("2d");
-        if (!ctx) return;
-        const viewport = page.getViewport({ scale: 1 });
-        const scale = canvas.clientWidth / viewport.width;
-        const scaled = page.getViewport({ scale });
-        canvas.width = scaled.width;
-        canvas.height = scaled.height;
-        await page.render({ canvasContext: ctx, viewport: scaled }).promise;
-        if (!cancelled) setLoaded(true);
-      } catch (e) {
-        console.error("PDF render error:", e);
-      }
-    };
-    loadPdf();
-    return () => {
-      cancelled = true;
-    };
-  }, [url]);
-
-  return (
-    <canvas
-      ref={canvasRef}
-      className="tsl-pdf-canvas"
-      style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        opacity: loaded ? 1 : 0,
-        transition: "opacity 0.3s",
-      }}
-    />
-  );
-}
 
 export default function HomeClient({ events }: { events: Event[] }) {
   const [cinema, setCinema] = useState<
