@@ -28,3 +28,12 @@ data/events.json
 data/meta.json
 .vercel
 .DS_Store
+
+# OpenNext
+.open-next
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
