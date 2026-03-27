@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: 'Agenda B — Eventos e Cultura no Barreiro',
     description: SITE_DESC,
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: SITE_NAME }],
+    images: [{ url: '/agendab-preview.png', width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Agenda B — Eventos e Cultura no Barreiro',
     description: SITE_DESC,
-    images: ['/og-image.jpg'],
+    images: ['/agendab-preview.png'],
   },
   robots: {
     index: true,
