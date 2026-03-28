@@ -1938,6 +1938,22 @@
     "scrapedAt": "2026-03-28T08:54:46.532Z"
   },
   {
+    "id": "comemoracao-do-dia-da-mulher-2026-03-14",
+    "title": "Comemoração do Dia da Mulher",
+    "date": "2026-03-14",
+    "endDate": "",
+    "time": "",
+    "location": "Cooperativa Cultural Popular Barreirense",
+    "category": "Outro",
+    "description": "Esta iniciativa pretende promover uma reflexão pública sobre a atualidade do Serviço Nacional de Saúde (SNS) e, em particular, sobre a saúde da",
+    "descriptionFull": "Esta iniciativa pretende promover uma reflexão pública sobre a atualidade do Serviço Nacional de Saúde (SNS) e, em particular, sobre a saúde da",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/DIA-DA-MULHER-26_barreiro.jpg",
+    "price": "",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/comemoracao-do-dia-da-mulher/",
+    "featured": false
+  },
+  {
     "id": "oficina-big-bang-boom-ilustracao-do-universo-para-bebes-e-fa-2026-03-15",
     "title": "Oficina Big Bang Boom! – Ilustração do Universo para bebés e famílias",
     "category": "Workshop",
@@ -2107,6 +2123,38 @@
     "scrapedAt": "2026-03-28T08:54:31.818Z"
   },
   {
+    "id": "antonio-zambujo-ao-vivo-no-barreiro-2026-03-21",
+    "title": "António Zambujo ao vivo no Barreiro",
+    "date": "2026-03-21",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita",
+    "category": "Outro",
+    "description": "António Zambujo apresenta ao vivo no Barreiro, “Oração ao Tempo”, no próximo dia 21 de março, às 17h00 e às 22h00 (sessão das 22h00 esgotada), no Auditório",
+    "descriptionFull": "António Zambujo apresenta ao vivo no Barreiro, “Oração ao Tempo”, no próximo dia 21 de março, às 17h00 e às 22h00 (sessão das 22h00 esgotada), no Auditório",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Antonio-Zambujo.jpg",
+    "price": "25 Euros  |",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/antonio-zambujo-ao-vivo-no-barreiro/",
+    "featured": false
+  },
+  {
+    "id": "a-arvore-das-historias-2026-03-21",
+    "title": "A Árvore das Histórias",
+    "date": "2026-03-21",
+    "endDate": "",
+    "time": "",
+    "location": "Biblioteca Municipal do Barreiro",
+    "category": "Outro",
+    "description": "No próximo dia 21 de março, venha comemorar o Dia Da Árvore à Biblioteca Municipal do Barreiro, na iniciativa &quot;A Árvore das Histórias&quot;.",
+    "descriptionFull": "No próximo dia 21 de março, venha comemorar o Dia Da Árvore à Biblioteca Municipal do Barreiro, na iniciativa &quot;A Árvore das Histórias&quot;.",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/A_Arvore_das_Historias_aml.jpg",
+    "price": "Gratuito mediante inscrição em",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/a-arvore-das-historias/",
+    "featured": false
+  },
+  {
     "id": "adiada-oficina-eco-de-memorias-com-ana-biscaia-e-paula-delec-2026-03-22",
     "title": "ADIADA Oficina Eco de Memórias com Ana Biscaia e Paula Delecave",
     "category": "Workshop",
@@ -2172,6 +2220,22 @@
     "organizer": "anização Câmara Municipal do Barreiro Horário 10h3",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-03-28T08:54:26.803Z"
+  },
+  {
+    "id": "workshop-ilustracao-peixes-pedro-salgado-2026-03-22",
+    "title": "Workshop Ilustração Peixes Pedro Salgado",
+    "date": "2026-03-22",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita – Galeria Azul",
+    "category": "Outro",
+    "description": "A oficina - workshop “Ilustração Científica e Naturalista dos Peixes”, com Pedro Salgado, aborda a ilustração científica de peixes, com discussão sobre",
+    "descriptionFull": "A oficina - workshop “Ilustração Científica e Naturalista dos Peixes”, com Pedro Salgado, aborda a ilustração científica de peixes, com discussão sobre",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Workshop-Pedro-Salgado.jpg",
+    "price": "5 Euros",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/workshop-ilustracao-peixes-pedro-salgado/",
+    "featured": false
   },
   {
     "id": "jazz-no-mercado-quartas-a-noite-2026-03-25",
@@ -2292,6 +2356,38 @@
     "price": "",
     "source": "viral",
     "sourceUrl": "https://www.viralagenda.com/pt/events/1765306/pada-56-exhibition-open-studios",
+    "featured": false
+  },
+  {
+    "id": "a-magia-de-matilde-esparteiro-daniela-sa-2026-03-28",
+    "title": "A Magia de Matilde Esparteiro Daniela Sá",
+    "date": "2026-03-28",
+    "endDate": "",
+    "time": "",
+    "location": "Biblioteca Municipal do Barreiro – Sala Multiusos",
+    "category": "Outro",
+    "description": "No próximo dia 28 de março, às 15h00, a Biblioteca Municipal do Barreiro, vai receber os autores do livro &quot;A Magia de Matilde&quot;, Paulo Alexandre Esparteiro e",
+    "descriptionFull": "No próximo dia 28 de março, às 15h00, a Biblioteca Municipal do Barreiro, vai receber os autores do livro &quot;A Magia de Matilde&quot;, Paulo Alexandre Esparteiro e",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Lancamento-livro-A-Magia-de-Matilde_barreiro_aml.jpg",
+    "price": "Gratuito",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/a-magia-de-matilde-esparteiro-daniela-sa/",
+    "featured": false
+  },
+  {
+    "id": "ode-flamenca-companhia-flamenco-joao-lara-2026-03-28",
+    "title": "Ode Flamenca Companhia Flamenco João Lara",
+    "date": "2026-03-28",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita",
+    "category": "Outro",
+    "description": "&quot;Ode Flamenca&quot; é o espetáculo de dança, da Companhia de Flamenco João Lara, que vai ter lugar no Auditório Municipal Augusto Cabrita, no próximo dia 28 de",
+    "descriptionFull": "&quot;Ode Flamenca&quot; é o espetáculo de dança, da Companhia de Flamenco João Lara, que vai ter lugar no Auditório Municipal Augusto Cabrita, no próximo dia 28 de",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Ode_Flamenca_Barreiro_aml.jpg",
+    "price": "12 Euros |",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/ode-flamenca-companhia-flamenco-joao-lara/",
     "featured": false
   },
   {
