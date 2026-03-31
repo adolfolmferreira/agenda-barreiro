@@ -43,6 +43,10 @@ export default function PrivacidadePage() {
           Permitem-nos compreender como os visitantes utilizam o site.
           Duração: 180 dias. Estes cookies só são activados após o consentimento do utilizador.
         </p>
+        <p>
+          <strong>_fbp</strong> — Cookie do Meta Pixel (Facebook) utilizado para fins de análise de tráfego.
+          Duração: 90 dias. Este cookie só é activado após o consentimento do utilizador.
+        </p>
 
         <h3>Como gerir os cookies</h3>
         <p>
