@@ -14,7 +14,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - run: npm ci
@@ -32,6 +32,7 @@ jobs:
           git add data/events.json
           git diff --staged --quiet || (
             git commit -m "🔄 Eventos actualizados $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git pull --rebase || true
             git push
           )
         env:
@@ -46,6 +47,7 @@ jobs:
           git add data/events.json
           git diff --staged --quiet || (
             git commit -m "🔄 Viral Agenda events updated"
+            git pull --rebase || true
             git push
           )
         env:
@@ -60,6 +62,7 @@ jobs:
           git add data/events.json
           git diff --staged --quiet || (
             git commit -m "🔄 AML events updated"
+            git pull --rebase || true
             git push
           )
         env:
