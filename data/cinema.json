@@ -1,11 +1,51 @@
 [
   {
-    "title": "Entroncamento",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20318",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Entroncamento-500x714.png",
-    "genre": "Drama",
-    "duration": "2h11",
+    "title": "O Drama",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20640",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/O-Drama-500x713.jpg",
+    "genre": "Comédia, Romance",
+    "duration": "1h45",
+    "rating": "M/14"
+  },
+  {
+    "title": "Caso 137",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20921",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/Poster_Caso-137_70x100-500x714.jpg",
+    "genre": "Crime, Drama",
+    "duration": "1h55",
+    "rating": "M/12"
+  },
+  {
+    "title": "Ladrões da Treta",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20925",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/LE-MILLION_1Sht_68x98_1bleed-500x714.jpg",
+    "genre": "Comédia",
+    "duration": "1h28",
+    "rating": "M/12"
+  },
+  {
+    "title": "Ready or Not 2: O Ritual",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20888",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/RON2_1Sheet_Payoff_68x98-500x714.jpg",
+    "genre": "Ação, Comédia, Terror, Thriller",
+    "duration": "1h48",
     "rating": "M/16"
+  },
+  {
+    "title": "HITPIG: O Herói da Bicharada (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=17724",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/05/Hitpig-1-500x741.jpg",
+    "genre": "Animação, Aventura, Comédia",
+    "duration": "1h25",
+    "rating": "M/6"
+  },
+  {
+    "title": "Super Mario Galaxy: O Filme (Leg.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20613",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Super_Mario_2_poster-480x760.jpg",
+    "genre": "Ação, Animação, Aventura, Comédia, Fantasia",
+    "duration": "1h55",
+    "rating": "M/6"
   },
   {
     "title": "Projeto Hail Mary",
@@ -13,14 +53,6 @@
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/ProjetoHailMary-500x721.jpg",
     "genre": "Drama, Ficção científica, Thriller",
     "duration": "2h46",
-    "rating": "M/12"
-  },
-  {
-    "title": "Palestina 36",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20635",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Palestina-36-500x714.jpg",
-    "genre": "Drama, História",
-    "duration": "1h59",
     "rating": "M/12"
   },
   {
@@ -32,27 +64,11 @@
     "rating": "M/12"
   },
   {
-    "title": "Gritos 7",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19491",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Gritos-7-500x741.jpg",
-    "genre": "Horror, Mistério",
-    "duration": "1h53",
-    "rating": "M/16"
-  },
-  {
-    "title": "Hamnet",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19384",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/hamnet-novo-poster-500x721.jpg",
-    "genre": "Drama, História, Romance",
-    "duration": "2h05",
-    "rating": "M/12"
-  },
-  {
-    "title": "HITPIG: O Herói da Bicharada (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=17724",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/05/Hitpig-1-500x741.jpg",
-    "genre": "Animação, Aventura, Comédia",
-    "duration": "1h25",
+    "title": "Super Mario Galaxy: O Filme (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20619",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Super_Mario_2_poster-480x760.jpg",
+    "genre": "Ação, Animação, Aventura, Comédia, Fantasia",
+    "duration": "1h55",
     "rating": "M/6"
   },
   {
@@ -69,14 +85,6 @@
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Goat-500x720.jpg",
     "genre": "Animação, Comédia",
     "duration": "1h33",
-    "rating": "M/6"
-  },
-  {
-    "title": "SpongeBob O Filme: À Procura das Calças Quadradas",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19456",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Spongebob-2-500x714.jpg",
-    "genre": "Animação, Aventura, Comédia",
-    "duration": "1h36",
     "rating": "M/6"
   }
 ]
