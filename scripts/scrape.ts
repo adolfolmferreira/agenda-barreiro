@@ -28,6 +28,8 @@ async function main() {
           if (fix.endDate !== undefined) ev.endDate = fix.endDate;
           if (fix.price !== undefined) ev.price = fix.price;
           if (fix.tags !== undefined) ev.tags = fix.tags;
+          if (fix.descriptionFull !== undefined) ev.descriptionFull = fix.descriptionFull;
+          if (fix.description !== undefined) ev.description = fix.description;
           console.log('  🔧 Override:', ev.title.slice(0, 50));
         }
       }
