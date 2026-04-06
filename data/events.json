@@ -2243,6 +2243,22 @@
     "scrapedAt": "2026-04-06T09:20:49.139Z"
   },
   {
+    "id": "visita-a-companhia-uniao-fabril-cuf-2026-04-04",
+    "title": "Visita à Companhia União Fabril (CUF)",
+    "date": "2026-04-04",
+    "endDate": "",
+    "time": "",
+    "location": "Antigo complexo industrial da Companhia União Fabril",
+    "category": "Outro",
+    "description": "Percurso pedonal pelo património do antigo complexo industrial da Companhia União Fabril, um dos maiores da Europa no seu tempo e ainda hoje uma referência",
+    "descriptionFull": "Percurso pedonal pelo património do antigo complexo industrial da Companhia União Fabril, um dos maiores da Europa no seu tempo e ainda hoje uma referência",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/CUF.jpg",
+    "price": "Gratuito, com marcação prévia obrigatória | Informações: 212 068 287 e 212 068 535",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/visita-a-companhia-uniao-fabril-cuf/",
+    "featured": false
+  },
+  {
     "id": "pascoa-na-machada-2026-2026-04-06",
     "title": "Páscoa na Machada 2026",
     "category": "Comunidade",
@@ -2426,6 +2442,22 @@
     "scrapedAt": "2026-04-06T09:20:34.007Z"
   },
   {
+    "id": "7-ilustrabd-mostra-bd-ilustracao-barreiro-2026-04-12",
+    "title": "7ª IlustraBD - Mostra BD ilustração Barreiro",
+    "date": "2026-04-12",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita",
+    "category": "Exposição",
+    "description": "Nos dias 11 e 12 de abril, o Auditório Municipal Augusto Cabrita recebe a 7.ª edição do IlustraBD, a Mostra de Banda Desenhada e Ilustração do Barreiro, com",
+    "descriptionFull": "Nos dias 11 e 12 de abril, o Auditório Municipal Augusto Cabrita recebe a 7.ª edição do IlustraBD, a Mostra de Banda Desenhada e Ilustração do Barreiro, com exposições, conversas com autores, feira do livro de autor, oficinas e visitas guiadas.",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Ilustra_BD_Barreiro_aml.jpg",
+    "price": "Gratuito",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/7a-ilustrabd-mostra-bd-ilustracao-barreiro/",
+    "featured": false
+  },
+  {
     "id": "rakta-rabu-mazda-nas-drums-2026-04-17",
     "title": "RAKTA / Rabu Mazda Nas Drums ▰",
     "date": "2026-04-17",
@@ -2529,6 +2561,23 @@
     "scrapedAt": "2026-04-06T09:20:28.271Z"
   },
   {
+    "id": "oficina-pop-up-do-passado-a-liberdade-2026-04-18",
+    "title": "Oficina Pop-Up do Passado à Liberdade",
+    "date": "2026-04-18",
+    "endDate": "",
+    "time": "",
+    "location": "Biblioteca Municipal do Barreiro",
+    "category": "Outro",
+    "description": "No dia 18 de abril, a Biblioteca Municipal do Barreiro convida os mais novos a criar um livro pop-up onde o passado e a liberdade se encontram. Com papel, cor",
+    "descriptionFull": "No dia 18 de abril, a Biblioteca Municipal do Barreiro convida os mais novos a criar um livro pop-up onde o passado e a liberdade se encontram. Com papel, cor e imaginação, cada criança vai descobrir que a liberdade – tal como um pop-up – só existe quando é aberta, partilhada e cuidada.\n\nEntre páginas cinzentas e palavras riscadas, nasce um cravo. O Chaimite avança. E a liberdade salta das páginas!",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Oficina_pop-up_Barreiro_aml.jpg",
+    "price": "Gratuito mediante inscrição em",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/oficina-pop-up-do-passado-a-liberdade/",
+    "featured": false,
+    "tags": "kids"
+  },
+  {
     "id": "festival-de-golfinhos-2026-circuito-de-natacao-do-barreiro-2026-04-19",
     "title": "Festival de Golfinhos 2026 | Circuito de Natação do Barreiro",
     "category": "Desporto",
@@ -2592,6 +2641,38 @@
     "price": "",
     "source": "viral",
     "sourceUrl": "https://www.viralagenda.com/pt/events/1775161/concerto-criancas-ao-poder-tainhas-da-noite-turbo-joia",
+    "featured": false
+  },
+  {
+    "id": "festival-lei-literatura-educacao-ilustracao-2026-04-24",
+    "title": "Festival LEI Literatura Educação Ilustração",
+    "date": "2026-04-24",
+    "endDate": "",
+    "time": "",
+    "location": "Biblioteca Municipal do Barreiro e Agrupamentos de Escolas do concelho",
+    "category": "Outro",
+    "description": "Durante 5 dias, de 20 a 24 de abril, a Biblioteca Municipal e diversas escolas do concelho irão acolher o Festival LEI - Literatura, Educação, Ilustração,",
+    "descriptionFull": "Durante 5 dias, de 20 a 24 de abril, a Biblioteca Municipal e diversas escolas do concelho irão acolher o Festival LEI - Literatura, Educação, Ilustração,",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Festival_LEI_Barreiro_aml.jpg",
+    "price": "",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/festival-lei-literatura-educacao-ilustracao/",
+    "featured": false
+  },
+  {
+    "id": "ivandro-no-parque-da-cidade-2026-04-24",
+    "title": "Ivandro no Parque da Cidade",
+    "date": "2026-04-24",
+    "endDate": "",
+    "time": "",
+    "location": "Parque da Cidade – Barreiro",
+    "category": "Outro",
+    "description": "No âmbito das comemorações dos 52 anos do 25 de Abril no Barreiro, vai ter lugar um concerto com Ivandro, no Parque da Cidade, no dia 24 de abril, às 22h00.",
+    "descriptionFull": "No âmbito das comemorações dos 52 anos do 25 de Abril no Barreiro, vai ter lugar um concerto com Ivandro, no Parque da Cidade, no dia 24 de abril, às 22h00.",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Ivandro_Barreiro_aml.jpg",
+    "price": "Gratuito",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/ivandro-no-parque-da-cidade/",
     "featured": false
   },
   {
