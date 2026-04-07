@@ -250,8 +250,9 @@ export default function HomeClient({ events }: { events: Event[] }) {
             ).toLowerCase();
             const hasKid = kidsKeywords.some((k) => text.includes(k));
             const hasTag = e.tags === 'kids';
+            const noKids = e.tags === 'no-kids';
             const hasExclude = excludeKeywords.some((k) => text.includes(k));
-            return (hasKid || hasTag) && !hasExclude;
+            return (hasKid || hasTag) && !hasExclude && !noKids;
           })
           .sort((a, b) => a.date.localeCompare(b.date))
           .slice(0, 9);
