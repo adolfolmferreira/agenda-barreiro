@@ -126,7 +126,7 @@
   "7ª IlustraBD - Mostra BD ilustração Barreiro": {
     "category": "Exposição",
     "descriptionFull": "Nos dias 11 e 12 de abril, o Auditório Municipal Augusto Cabrita recebe a 7.ª edição do IlustraBD, a Mostra de Banda Desenhada e Ilustração do Barreiro, com exposições, conversas com autores, feira do livro de autor, oficinas e visitas guiadas.",
-    "image": "https://www.aml.pt/wp-content/uploads/2026/03/Ilustra_BD_Barreiro_aml.jpg"
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Ilustra_BD_Barreiro_aml.jpg"
   },
   "Oficina Pop-Up do Passado à Liberdade": {
     "descriptionFull": "No dia 18 de abril, a Biblioteca Municipal do Barreiro convida os mais novos a criar um livro pop-up onde o passado e a liberdade se encontram. Com papel, cor e imaginação, cada criança vai descobrir que a liberdade – tal como um pop-up – só existe quando é aberta, partilhada e cuidada.\n\nEntre páginas cinzentas e palavras riscadas, nasce um cravo. O Chaimite avança. E a liberdade salta das páginas!",
@@ -138,10 +138,10 @@
   },
   "Ivandro no Parque da Cidade": {
     "category": "Música",
-    "image": "https://www.aml.pt/wp-content/uploads/2026/03/Ivandro_Barreiro_aml.jpg"
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Ivandro_Barreiro_aml.jpg"
   },
   "Festival LEI Literatura Educação Ilustração": {
     "category": "Comunidade",
-    "image": "https://www.aml.pt/wp-content/uploads/2026/03/Festival_LEI_Barreiro_aml.jpg"
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Festival_LEI_Barreiro_aml.jpg"
   }
 }

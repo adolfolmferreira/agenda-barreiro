@@ -30,7 +30,7 @@ async function main() {
           if (fix.tags !== undefined) ev.tags = fix.tags;
           if (fix.descriptionFull !== undefined) ev.descriptionFull = fix.descriptionFull;
           if (fix.description !== undefined) ev.description = fix.description;
-          if (fix.image !== undefined) ev.image = fix.image;
+          if (fix.imageUrl !== undefined) ev.imageUrl = fix.imageUrl;
           console.log('  🔧 Override:', ev.title.slice(0, 50));
         }
       }
