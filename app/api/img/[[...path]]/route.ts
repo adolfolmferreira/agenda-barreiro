@@ -9,11 +9,17 @@ const ALLOWED_HOSTS = [
   'cm-barreiro.pt',
 ];
 
-export async function GET(req: NextRequest) {
-  const url = req.nextUrl.searchParams.get('url');
-  if (!url) {
-    return new NextResponse('Missing url param', { status: 400 });
+export async function GET(
+  req: NextRequest,
+  { params }: { params: Promise<{ path?: string[] }> }
+) {
+  const { path } = await params;
+  if (!path || path.length === 0) {
+    return new NextResponse('Missing path', { status: 400 });
   }
+
+  // Reconstruct URL: /api/img/https/www.aml.pt/wp-content/uploads/...
+  const url = path.join('/').replace(/^(https?):\//, '$1://');
 
   let parsed: URL;
   try {

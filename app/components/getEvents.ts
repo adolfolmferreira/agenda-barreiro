@@ -14,7 +14,8 @@ function proxyUrl(url: string | undefined): string | undefined {
   try {
     const parsed = new URL(url);
     if (PROXY_HOSTS.includes(parsed.hostname)) {
-      return `/api/image-proxy?url=${encodeURIComponent(url)}`;
+      // /api/img/https/www.aml.pt/wp-content/uploads/2026/03/img.jpg
+      return `/api/img/${parsed.protocol.replace(':', '')}/${parsed.host}${parsed.pathname}`;
     }
   } catch {}
   return url;
