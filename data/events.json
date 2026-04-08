@@ -2407,7 +2407,8 @@
     "price": "Gratuito",
     "source": "aml",
     "sourceUrl": "https://www.aml.pt/agenda/7a-ilustrabd-mostra-bd-ilustracao-barreiro/",
-    "featured": false
+    "featured": false,
+    "image": "https://www.aml.pt/wp-content/uploads/2026/03/Ilustra_BD_Barreiro_aml.jpg"
   },
   {
     "id": "rakta-rabu-mazda-nas-drums-2026-04-17",
@@ -2618,14 +2619,15 @@
     "endDate": "",
     "time": "",
     "location": "Biblioteca Municipal do Barreiro e Agrupamentos de Escolas do concelho",
-    "category": "Outro",
+    "category": "Comunidade",
     "description": "Durante 5 dias, de 20 a 24 de abril, a Biblioteca Municipal e diversas escolas do concelho irão acolher o Festival LEI - Literatura, Educação, Ilustração,",
     "descriptionFull": "Durante 5 dias, de 20 a 24 de abril, a Biblioteca Municipal e diversas escolas do concelho irão acolher o Festival LEI - Literatura, Educação, Ilustração,",
     "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Festival_LEI_Barreiro_aml.jpg",
     "price": "",
     "source": "aml",
     "sourceUrl": "https://www.aml.pt/agenda/festival-lei-literatura-educacao-ilustracao/",
-    "featured": false
+    "featured": false,
+    "image": "https://www.aml.pt/wp-content/uploads/2026/03/Festival_LEI_Barreiro_aml.jpg"
   },
   {
     "id": "ivandro-no-parque-da-cidade-2026-04-24",
@@ -2634,14 +2636,15 @@
     "endDate": "",
     "time": "",
     "location": "Parque da Cidade – Barreiro",
-    "category": "Outro",
+    "category": "Música",
     "description": "No âmbito das comemorações dos 52 anos do 25 de Abril no Barreiro, vai ter lugar um concerto com Ivandro, no Parque da Cidade, no dia 24 de abril, às 22h00.",
     "descriptionFull": "No âmbito das comemorações dos 52 anos do 25 de Abril no Barreiro, vai ter lugar um concerto com Ivandro, no Parque da Cidade, no dia 24 de abril, às 22h00.",
     "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/03/Ivandro_Barreiro_aml.jpg",
     "price": "Gratuito",
     "source": "aml",
     "sourceUrl": "https://www.aml.pt/agenda/ivandro-no-parque-da-cidade/",
-    "featured": false
+    "featured": false,
+    "image": "https://www.aml.pt/wp-content/uploads/2026/03/Ivandro_Barreiro_aml.jpg"
   },
   {
     "id": "circuito-de-natacao-do-barreiro-2025-2026-3-meeting-taca-da--2026-04-25",
