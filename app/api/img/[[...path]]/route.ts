@@ -19,7 +19,7 @@ export async function GET(
   }
 
   // Reconstruct URL: /api/img/https/www.aml.pt/wp-content/uploads/...
-  const url = path.join('/').replace(/^(https?):\//, '$1://');
+  const url = path.join('/').replace(/^(https?)\//, '$1://');
 
   let parsed: URL;
   try {
