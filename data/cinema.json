@@ -1,43 +1,19 @@
 [
   {
+    "title": "O Barqueiro",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21077",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/O-Barqueiro_cartaz01-428x760.jpg",
+    "genre": "Drama",
+    "duration": "1h46",
+    "rating": "M/16"
+  },
+  {
     "title": "O Drama",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=20640",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/O-Drama-500x713.jpg",
     "genre": "Comédia, Romance",
     "duration": "1h45",
     "rating": "M/14"
-  },
-  {
-    "title": "Caso 137",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20921",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/Poster_Caso-137_70x100-500x714.jpg",
-    "genre": "Crime, Drama",
-    "duration": "1h55",
-    "rating": "M/12"
-  },
-  {
-    "title": "Ladrões da Treta",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20925",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/LE-MILLION_1Sht_68x98_1bleed-500x714.jpg",
-    "genre": "Comédia",
-    "duration": "1h28",
-    "rating": "M/12"
-  },
-  {
-    "title": "Ready or Not 2: O Ritual",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20888",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/RON2_1Sheet_Payoff_68x98-500x714.jpg",
-    "genre": "Ação, Comédia, Terror, Thriller",
-    "duration": "1h48",
-    "rating": "M/16"
-  },
-  {
-    "title": "HITPIG: O Herói da Bicharada (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=17724",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/05/Hitpig-1-500x741.jpg",
-    "genre": "Animação, Aventura, Comédia",
-    "duration": "1h25",
-    "rating": "M/6"
   },
   {
     "title": "Super Mario Galaxy: O Filme (Leg.)",
