@@ -1,19 +1,35 @@
 [
   {
+    "title": "Projecto Global",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21417",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/Poster-Cinema_Projecto-Global-500x714.jpg",
+    "genre": "Drama, História",
+    "duration": "2h21",
+    "rating": "M/14"
+  },
+  {
+    "title": "Chão Verde de Pássaros Escritos",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21061",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/CVPE_Poster_70x100-500x714.jpg",
+    "genre": "Documentário",
+    "duration": "1h17",
+    "rating": "M/12"
+  },
+  {
+    "title": "Michael",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19561",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Michael-480x760.jpg",
+    "genre": "Biografia, Drama",
+    "duration": "2h04",
+    "rating": "M/12"
+  },
+  {
     "title": "A Múmia de Lee Cronin",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=20258",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Untitled-2.jpg",
     "genre": "Terror",
     "duration": "2h16",
     "rating": "M/16"
-  },
-  {
-    "title": "¿De qué casa eres?",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21264",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/¿DE-QUE-CASA-ERES_-Cartaawdawawdawdz-1-500x713.jpg",
-    "genre": "Documentário",
-    "duration": "1h13",
-    "rating": "M/12"
   },
   {
     "title": "O Drama",
@@ -24,24 +40,8 @@
     "rating": "M/14"
   },
   {
-    "title": "Projeto Hail Mary",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20543",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/ProjetoHailMary-500x721.jpg",
-    "genre": "Drama, Ficção científica, Thriller",
-    "duration": "2h46",
-    "rating": "M/12"
-  },
-  {
     "title": "Super Mario Galaxy: O Filme (Dob.)",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=20619",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Super_Mario_2_poster-480x760.jpg",
-    "genre": "Ação, Animação, Aventura, Comédia, Fantasia",
-    "duration": "1h55",
-    "rating": "M/6"
-  },
-  {
-    "title": "Super Mario Galaxy: O Filme (Leg.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20613",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Super_Mario_2_poster-480x760.jpg",
     "genre": "Ação, Animação, Aventura, Comédia, Fantasia",
     "duration": "1h55",
