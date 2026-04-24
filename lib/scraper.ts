@@ -146,7 +146,7 @@ function dateFromPageUrl(url: string): string | null {
 async function fetchEvent(url: string): Promise<Event | null> {
   try {
     const res = await fetch(url, {
-      signal: AbortSignal.timeout(15000),
+      signal: AbortSignal.timeout(8000),
       headers: { 'Accept-Language': 'pt-PT,pt;q=0.9' },
     });
     if (!res.ok) return null;
@@ -363,7 +363,7 @@ async function discoverAllUrls(): Promise<string[]> {
     }
 
     await nextBtn.click();
-    await p.waitForTimeout(4000);
+    await p.waitForTimeout(2000);
     pageNum++;
   }
 
@@ -372,7 +372,7 @@ async function discoverAllUrls(): Promise<string[]> {
   // Also fetch static HTML to catch links Playwright might miss
   try {
     const res = await fetch('https://www.cm-barreiro.pt/conhecer/agenda-de-eventos/', {
-      signal: AbortSignal.timeout(15000),
+      signal: AbortSignal.timeout(8000),
     });
     const html = await res.text();
     const re2 = /href="(https?:\/\/www\.cm-barreiro\.pt\/eventos\/[^"?]+)"/gi;
