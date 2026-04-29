@@ -23,11 +23,11 @@ jobs:
 
       - name: Scrape events
         run: npx tsx scripts/scrape.ts
+        timeout-minutes: 15
 
       - name: Scrape editions
         run: npx tsx scripts/scrape-editions.ts
         timeout-minutes: 3
-        timeout-minutes: 15
 
       - name: Commit & Push
         run: |
@@ -48,6 +48,8 @@ jobs:
 
       - name: Commit Viral events
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/events.json data/editions.json
           git diff --staged --quiet || (
             git commit -m "🔄 Viral Agenda events updated"
@@ -63,6 +65,8 @@ jobs:
 
       - name: Commit AML events
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/events.json data/editions.json
           git diff --staged --quiet || (
             git commit -m "🔄 AML events updated"
