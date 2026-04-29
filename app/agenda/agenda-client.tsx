@@ -35,12 +35,19 @@ export default function AgendaClient({ events }: { events: Event[] }) {
   }, [events]);
 
   const months = useMemo(() => {
-    const s = new Set(
-      events
-        .filter((e) => (e.endDate || e.date) >= "2026-01-01" && e.date <= "2026-06-30")
-        .map((e) => e.date < "2026-01-01" && e.endDate && e.endDate >= "2026-01-01" ? "2026-01" : mk(e.date))
-        .filter((k) => k.length === 7),
-    );
+    const s = new Set<string>();
+    for (const e of events) {
+      if ((e.endDate || e.date) < "2026-01-01") continue;
+      const start = e.date < "2026-01-01" ? "2026-01" : mk(e.date);
+      const end = e.endDate ? mk(e.endDate) : start;
+      let cur = start;
+      while (cur <= end && cur <= "2026-12") {
+        s.add(cur);
+        const [y, m] = cur.split("-").map(Number);
+        const next = m === 12 ? `${y+1}-01` : `${y}-${String(m+1).padStart(2,"0")}`;
+        cur = next;
+      }
+    }
     return ["Todos os Meses", ...Array.from(s).sort().reverse()];
   }, [events]);
 
@@ -70,8 +77,15 @@ export default function AgendaClient({ events }: { events: Event[] }) {
       const allSelected = selMons.size === allMonths.length;
       if (!allSelected) {
         list = list.filter((e) => {
-          if (e.date < "2026-01-01" && e.endDate && e.endDate >= "2026-01-01") return selMons.has("2026-01");
-          return selMons.has(mk(e.date));
+          const start = e.date < "2026-01-01" ? "2026-01" : mk(e.date);
+          const end = e.endDate ? mk(e.endDate) : start;
+          let cur = start;
+          while (cur <= end && cur <= "2026-12") {
+            if (selMons.has(cur)) return true;
+            const [y, m] = cur.split("-").map(Number);
+            cur = m === 12 ? `${y+1}-01` : `${y}-${String(m+1).padStart(2,"0")}`;
+          }
+          return false;
         });
       }
     }
@@ -83,14 +97,17 @@ export default function AgendaClient({ events }: { events: Event[] }) {
   const grouped = useMemo(() => {
     const map = new Map<string, Event[]>();
     for (const ev of filtered) {
-      // For ongoing events (start before 2026), group by start of range
-      const k = ev.date < "2026-01-01" && ev.endDate && ev.endDate >= "2026-01-01"
-        ? mk(ev.endDate < "2026-06-30" ? "2026-01-01" : ev.endDate)
-        : mk(ev.date);
-      if (!map.has(k)) map.set(k, []);
-      map.get(k)!.push(ev);
+      const start = ev.date < "2026-01-01" ? "2026-01" : mk(ev.date);
+      const end = ev.endDate ? mk(ev.endDate) : start;
+      let cur = start;
+      while (cur <= end && cur <= "2026-12") {
+        if (!map.has(cur)) map.set(cur, []);
+        map.get(cur)!.push(ev);
+        const [y, m] = cur.split("-").map(Number);
+        cur = m === 12 ? `${y+1}-01` : `${y}-${String(m+1).padStart(2,"0")}`;
+      }
     }
-    return Array.from(map.entries());
+    return Array.from(map.entries()).sort((a, b) => b[0].localeCompare(a[0]));
   }, [filtered]);
 
   return (
