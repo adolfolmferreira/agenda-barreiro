@@ -36,8 +36,21 @@ async function main() {
       }
     } catch {}
 
-    await saveEvents(events);
-    console.log(`\n💾 Guardados ${events.length} eventos em data/events.json`);
+    // Merge with existing events (keep old events not found in new scrape)
+    try {
+      const { loadEvents } = await import('../lib/store');
+      const existing = await loadEvents();
+      const newIds = new Set(events.map((e: any) => e.id));
+      const kept = existing.filter((e: any) => !newIds.has(e.id));
+      const merged = [...events, ...kept];
+      merged.sort((a: any, b: any) => a.date.localeCompare(b.date));
+      console.log(`  📦 Merge: ${events.length} novos + ${kept.length} mantidos = ${merged.length} total`);
+      await saveEvents(merged);
+    } catch {
+      await saveEvents(events);
+    }
+
+    console.log(`\n💾 Guardados eventos em data/events.json`);
   } else {
     console.log('\n⚠️ Nenhum evento encontrado — data/events.json não alterado');
   }
