@@ -174,10 +174,11 @@ export default function AgendaClient({ events }: { events: Event[] }) {
                   className={`tsl-pill ${selMons.has(m) ? 'active' : ''}`}
                   onClick={() => {
                     setSelMons(prev => {
-                      const next = new Set(prev);
-                      if (next.has(m)) next.delete(m);
-                      else next.add(m);
-                      return next;
+                      if (prev.size === 1 && prev.has(m)) {
+                        const all = months.filter(x => x !== 'Todos os Meses');
+                        return new Set(all);
+                      }
+                      return new Set([m]);
                     });
                   }}
                 >
