@@ -60,8 +60,7 @@ export default function AgendaClient({ events }: { events: Event[] }) {
 
   useEffect(() => {
     if (!monsInitialized && months.length > 1) {
-      const futureMonths = months.filter(m => m !== 'Todos os Meses' && m >= currentMonth);
-      setSelMons(new Set(futureMonths));
+      setMonsInitialized(true);
       setMonsInitialized(true);
     }
   }, [months, monsInitialized, currentMonth]);
@@ -160,10 +159,9 @@ export default function AgendaClient({ events }: { events: Event[] }) {
             <div className="tsl-filter-label">Mês</div>
             <div className="tsl-pills">
               <button
-                className={`tsl-pill ${selMons.size === 0 || selMons.size === months.filter(m => m !== 'Todos os Meses').length ? 'active' : ''}`}
+                className={`tsl-pill ${selMons.size === 0 ? 'active' : ''}`}
                 onClick={() => {
-                  const all = months.filter(m => m !== 'Todos os Meses');
-                  setSelMons(new Set(all));
+                  setSelMons(new Set());
                 }}
               >
                 Todos
@@ -174,11 +172,10 @@ export default function AgendaClient({ events }: { events: Event[] }) {
                   className={`tsl-pill ${selMons.has(m) ? 'active' : ''}`}
                   onClick={() => {
                     setSelMons(prev => {
-                      if (prev.size === 1 && prev.has(m)) {
-                        const all = months.filter(x => x !== 'Todos os Meses');
-                        return new Set(all);
-                      }
-                      return new Set([m]);
+                      const next = new Set(prev);
+                      if (next.has(m)) next.delete(m);
+                      else next.add(m);
+                      return next;
                     });
                   }}
                 >
