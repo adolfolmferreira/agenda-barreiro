@@ -34,14 +34,21 @@ export default function AgendaClient({ events }: { events: Event[] }) {
     return ["Todos os Eventos", ...Array.from(s).sort()];
   }, [events]);
 
+  const maxMonth = useMemo(() => {
+    const d = new Date();
+    d.setMonth(d.getMonth() + 3);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+  }, []);
+
   const months = useMemo(() => {
     const s = new Set<string>();
     for (const e of events) {
       if ((e.endDate || e.date) < "2026-01-01") continue;
       const start = e.date < "2026-01-01" ? "2026-01" : mk(e.date);
       const end = e.endDate ? mk(e.endDate) : start;
+      const cappedEnd = end > maxMonth ? maxMonth : end;
       let cur = start;
-      while (cur <= end && cur <= "2026-12") {
+      while (cur <= cappedEnd && cur <= "2026-12") {
         s.add(cur);
         const [y, m] = cur.split("-").map(Number);
         const next = m === 12 ? `${y+1}-01` : `${y}-${String(m+1).padStart(2,"0")}`;
