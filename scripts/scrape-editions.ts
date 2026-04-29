@@ -75,8 +75,24 @@ async function scrapeEditions() {
   // Sort by date descending (newest first)
   editions.sort((a, b) => b.date.localeCompare(a.date));
 
+  // Clean: remove junior editions, fix known PDFs, deduplicate
+  const seen = new Set<string>();
+  const cleaned = editions.filter(e => {
+    if (/junior/i.test(e.title) || /junior/i.test(e.url)) return false;
+    if (seen.has(e.title)) return false;
+    seen.add(e.title);
+    return true;
+  });
+  // Fix known missing PDFs
+  for (const e of cleaned) {
+    if (/janeiro.*fevereiro.*2026/i.test(e.title) && !e.pdf) {
+      e.pdf = 'https://www.cm-barreiro.pt/wp-content/uploads/2025/12/agenda2830_jan_fev_2026.pdf';
+    }
+    if (e.title === 'natal / 2025') e.title = 'especial natal 2025';
+  }
+
   mkdirSync('data', { recursive: true });
-  writeFileSync('data/editions.json', JSON.stringify(editions.slice(0, 12), null, 2));
+  writeFileSync('data/editions.json', JSON.stringify(cleaned.slice(0, 12), null, 2));
   console.log(`\n✅ Saved ${Math.min(editions.length, 6)} editions to data/editions.json`);
 }
 
