@@ -107,14 +107,17 @@ export default function AgendaClient({ events }: { events: Event[] }) {
       const end = ev.endDate ? mk(ev.endDate) : start;
       let cur = start;
       while (cur <= end && cur <= "2026-12") {
-        if (!map.has(cur)) map.set(cur, []);
-        map.get(cur)!.push(ev);
+        // Only add to months that are selected (or all if none selected)
+        if (selMons.size === 0 || selMons.has(cur)) {
+          if (!map.has(cur)) map.set(cur, []);
+          map.get(cur)!.push(ev);
+        }
         const [y, m] = cur.split("-").map(Number);
         cur = m === 12 ? `${y+1}-01` : `${y}-${String(m+1).padStart(2,"0")}`;
       }
     }
     return Array.from(map.entries()).sort((a, b) => b[0].localeCompare(a[0]));
-  }, [filtered]);
+  }, [filtered, selMons]);
 
   return (
     <>
