@@ -1,18 +1,26 @@
 [
   {
-    "title": "Projecto Global",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21417",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/Poster-Cinema_Projecto-Global-500x714.jpg",
-    "genre": "Drama, História",
-    "duration": "2h21",
+    "title": "Caronte",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21217",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/CARONTE_WEB-1-500x707.jpg",
+    "genre": "Documentário",
+    "duration": "1h00",
+    "rating": "M/12"
+  },
+  {
+    "title": "Sonhos",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19925",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/12/Sonhos-500x714.jpg",
+    "genre": "Drama",
+    "duration": "1h35",
     "rating": "M/14"
   },
   {
-    "title": "Chão Verde de Pássaros Escritos",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21061",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/CVPE_Poster_70x100-500x714.jpg",
-    "genre": "Documentário",
-    "duration": "1h17",
+    "title": "O Diabo Veste Prada 2",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19469",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2023/11/CERULEAN_PAYOFF_POSTER_PORTUGAL-500x714.jpg",
+    "genre": "Comédia, Drama",
+    "duration": "1h59",
     "rating": "M/12"
   },
   {
@@ -32,14 +40,6 @@
     "rating": "M/16"
   },
   {
-    "title": "O Drama",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20640",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/O-Drama-500x713.jpg",
-    "genre": "Comédia, Romance",
-    "duration": "1h45",
-    "rating": "M/14"
-  },
-  {
     "title": "Super Mario Galaxy: O Filme (Dob.)",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=20619",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Super_Mario_2_poster-480x760.jpg",
@@ -53,14 +53,6 @@
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Saltitoes-500x714.jpg",
     "genre": "Animação, Comédia",
     "duration": "1h45",
-    "rating": "M/6"
-  },
-  {
-    "title": "GOAT: O Maior de Todos (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20247",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Goat-500x720.jpg",
-    "genre": "Animação, Comédia",
-    "duration": "1h33",
     "rating": "M/6"
   }
 ]
