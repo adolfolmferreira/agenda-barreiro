@@ -3172,6 +3172,22 @@
     "featured": false
   },
   {
+    "id": "alem-palco-dance-up-project-2026-05-09",
+    "title": "Além Palco - Dance Up Project",
+    "date": "2026-05-09",
+    "endDate": "",
+    "time": "",
+    "location": "Espaço Memória (Arco Ribeirinho Sul)",
+    "category": "Outro",
+    "description": "O projeto de dança Além Palco, da Dance Up Project, propõe a criação e circulação de performances de dança contemporânea por diversos espaços emblemáticos da",
+    "descriptionFull": "O projeto de dança Além Palco, da Dance Up Project, propõe a criação e circulação de performances de dança contemporânea por diversos espaços emblemáticos da",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/05/Alem_Palco_aml.jpg",
+    "price": "Entrada gratuita mediante lotação do espaço",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/alem-palco-dance-up-project/",
+    "featured": false
+  },
+  {
     "id": "movimento-tivo-tivo2830-2026-05-10",
     "title": "Movimento@tivo | @tivo2830",
     "category": "Comunidade",
@@ -3340,6 +3356,22 @@
     "price": "",
     "source": "viral",
     "sourceUrl": "https://www.viralagenda.com/pt/events/1790778/a-fabrica-arteviva-companhia-de-teatro-do-barreiro",
+    "featured": false
+  },
+  {
+    "id": "rita-engedalen-ao-vivo-no-barreiro-2026-05-16",
+    "title": "Rita Engedalen ao vivo no Barreiro",
+    "date": "2026-05-16",
+    "endDate": "",
+    "time": "",
+    "location": "Casa da Cidadania Cabós Gonçalves – Auditório",
+    "category": "Outro",
+    "description": "Rita Engedalen vai atuar no Auditório da Casa da Cidadania Cabós Gonçalves, no Barreiro, no próximo dia 16 de maio, às  21h30.",
+    "descriptionFull": "Rita Engedalen vai atuar no Auditório da Casa da Cidadania Cabós Gonçalves, no Barreiro, no próximo dia 16 de maio, às  21h30.",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/05/Rita-Engedalen.jpg",
+    "price": "7,50 Euros |",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/rita-engedalen-ao-vivo-no-barreiro/",
     "featured": false
   },
   {
@@ -3577,6 +3609,22 @@
     "contacts": "932731558 · 231016292",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-05-07T19:45:29.136Z"
+  },
+  {
+    "id": "7-edicao-ilustra-bd-mostra-de-bd-do-barreiro-2026-07-31",
+    "title": "7ª edição Ilustra BD Mostra de BD do Barreiro",
+    "date": "2026-07-31",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita – Parque da Cidade",
+    "category": "Outro",
+    "description": "O Ilustra BD regressa ao Barreiro para a sua 7ª edição, com uma programação diversificada que reúne autores portugueses e estrangeiros, editores e público,",
+    "descriptionFull": "O Ilustra BD regressa ao Barreiro para a sua 7ª edição, com uma programação diversificada que reúne autores portugueses e estrangeiros, editores e público,",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/05/Ilustra-BD.jpg",
+    "price": "Gratuito",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/7a-edicao-ilustra-bd-mostra-de-bd-do-barreiro/",
+    "featured": false
   },
   {
     "id": "out-fest-2026-2026-10-01",
