@@ -1,19 +1,19 @@
 [
   {
-    "title": "Caronte",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21217",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/CARONTE_WEB-1-500x707.jpg",
-    "genre": "Documentário",
-    "duration": "1h00",
-    "rating": "M/12"
+    "title": "Mortal Kombat II",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20269",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/KOMBAT2_VERT_MAIN_2764x4096-500x741.jpg",
+    "genre": "Ação, Aventura, Fantasia",
+    "duration": "1h56",
+    "rating": "M/14"
   },
   {
-    "title": "Sonhos",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19925",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/12/Sonhos-500x714.jpg",
-    "genre": "Drama",
-    "duration": "1h35",
-    "rating": "M/14"
+    "title": "Billie Eilish: Hit Me Hard and Soft - The Tour",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20974",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/Poster-Teaser_2025x3000_Online-500x741.jpg",
+    "genre": "Documentário, Musical",
+    "duration": "1h54",
+    "rating": "M/12"
   },
   {
     "title": "O Diabo Veste Prada 2",
@@ -32,14 +32,6 @@
     "rating": "M/12"
   },
   {
-    "title": "A Múmia de Lee Cronin",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20258",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Untitled-2.jpg",
-    "genre": "Terror",
-    "duration": "2h16",
-    "rating": "M/16"
-  },
-  {
     "title": "Super Mario Galaxy: O Filme (Dob.)",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=20619",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Super_Mario_2_poster-480x760.jpg",
@@ -53,6 +45,14 @@
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Saltitoes-500x714.jpg",
     "genre": "Animação, Comédia",
     "duration": "1h45",
+    "rating": "M/6"
+  },
+  {
+    "title": "Capitão Dentes de Sabre e a Condessa de Gral (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20679",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Capitao-Dentes-de-Sabre-500x714.jpg",
+    "genre": "Animação",
+    "duration": "1h17",
     "rating": "M/6"
   }
 ]
