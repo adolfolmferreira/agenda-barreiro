@@ -38,6 +38,8 @@ export const metadata: Metadata = {
     description: SITE_DESC,
     images: ['/agendab-preview.png'],
   },
+  authors: [{ name: 'Agenda B', url: 'https://agendab.pt' }],
+  publisher: 'Agenda B',
   robots: {
     index: true,
     follow: true,

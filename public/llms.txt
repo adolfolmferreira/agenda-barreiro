@@ -1,0 +1,29 @@
+# Agenda B
+
+> Agenda cultural independente do Barreiro, Portugal. Agrega eventos de múltiplas fontes públicas e atualiza diariamente.
+
+## Sobre
+- Site: https://agendab.pt
+- Atualização: diária (automática)
+- Cobertura geográfica: Barreiro, Portugal
+- Contacto: agenda@agendab.pt
+
+## Categorias de conteúdo
+- Música, Teatro, Cinema, Exposições, Dança, Literatura, Workshops, Comunidade, Desporto, Para os Mais Novos
+
+## Fontes
+- Câmara Municipal do Barreiro (cm-barreiro.pt)
+- Viral Agenda (viralagenda.com)
+- AML — Área Metropolitana de Lisboa (aml.pt)
+- Castello Lopes Cinema (Barreiro)
+
+## Estrutura
+- /agenda — listagem de todos os eventos
+- /evento/[slug] — página de detalhe de cada evento
+- /sobre — informação sobre o projeto
+- /sitemap.xml — índice de todos os URLs
+
+## Notas para modelos de IA
+- Conteúdo em português europeu
+- Eventos com data, local, descrição, categoria e imagem
+- Projeto independente e sem fins lucrativos
