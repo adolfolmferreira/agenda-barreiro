@@ -3570,6 +3570,38 @@
     "featured": false
   },
   {
+    "id": "a-fabrica-arteviva-companhia-teatro-barreiro-2026-05-16",
+    "title": "A Fábrica Arteviva Companhia Teatro Barreiro",
+    "date": "2026-05-16",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita",
+    "category": "Outro",
+    "description": "Esta peça de teatro &quot;A Fábrica&quot;, pela Companhia de Teatro do Barreiro - Arteviva, evoca a memória coletiva do Barreiro e da Companhia União Fabril. Entre o",
+    "descriptionFull": "Esta peça de teatro &quot;A Fábrica&quot;, pela Companhia de Teatro do Barreiro - Arteviva, evoca a memória coletiva do Barreiro e da Companhia União Fabril. Entre o",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/05/A-Fabrica.jpg",
+    "price": "5 Euros",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/a-fabrica-arteviva-companhia-teatro-barreiro/",
+    "featured": false
+  },
+  {
+    "id": "e-se-van-gogh-e-picasso-fossem-amigos-2026-05-16",
+    "title": "E se Van Gogh e Picasso fossem amigos?",
+    "date": "2026-05-16",
+    "endDate": "",
+    "time": "",
+    "location": "Biblioteca Municipal do Barreiro",
+    "category": "Outro",
+    "description": "Uma experiência que une os girassóis vibrantes de Vincent van Gogh às formas ousadas do cubismo de Pablo Picasso, para conhecer no próximo dia 16 de maio,",
+    "descriptionFull": "Uma experiência que une os girassóis vibrantes de Vincent van Gogh às formas ousadas do cubismo de Pablo Picasso, para conhecer no próximo dia 16 de maio,",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/05/Oficina-Van-Gogh-e-Picasso-2.jpg",
+    "price": "Gratuito mediante inscrição em",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/e-se-van-gogh-e-picasso-fossem-amigos/",
+    "featured": false
+  },
+  {
     "id": "concerto-de-orgao-com-o-organista-luis-cerqueira-2026-05-17",
     "title": "Concerto de Órgão com o Organista Luís Cerqueira",
     "category": "Música",
@@ -3603,6 +3635,22 @@
     "ticketUrl": "mailto:bilheteira@cm-barreiro.pt",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-05-11T19:48:17.054Z"
+  },
+  {
+    "id": "oficina-desenha-a-tua-historia-cria-a-tua-bd-2026-05-17",
+    "title": "Oficina Desenha a tua História cria a tua BD",
+    "date": "2026-05-17",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita",
+    "category": "Outro",
+    "description": "No próximo dia 17 de maio, vai realizar-se no Auditório Municipal Augusto Cabrita, no Barreiro, a Oficina de Ilustração “Desenha a tua História, cria a tua",
+    "descriptionFull": "No próximo dia 17 de maio, vai realizar-se no Auditório Municipal Augusto Cabrita, no Barreiro, a Oficina de Ilustração “Desenha a tua História, cria a tua",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/05/Desenha-a-Tua-Historia-Cria-a-Tua-Banda-Desenhada.jpg",
+    "price": "5 Euros",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/oficina-desenha-a-tua-historia-cria-a-tua-bd/",
+    "featured": false
   },
   {
     "id": "dia-mundial-dos-museus-visitas-guiadas-ao-espaco-memoria-2026-05-18",
