@@ -1,5 +1,21 @@
 [
   {
+    "title": "Top Gun: Maverick - 40º Aniversário",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21479",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/Top-Gun-Maverick_14-MAIO-500x741.jpg",
+    "genre": "Ação, Drama",
+    "duration": "2h11",
+    "rating": "M/12"
+  },
+  {
+    "title": "Obsession: A Felicidade é Relativa",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20987",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/PosterFinal_Obsession_70x100cm_72dpi-500x713.jpg",
+    "genre": "Terror",
+    "duration": "1h48",
+    "rating": "M/16"
+  },
+  {
     "title": "Mortal Kombat II",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=20269",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/KOMBAT2_VERT_MAIN_2764x4096-500x741.jpg",
@@ -8,11 +24,11 @@
     "rating": "M/14"
   },
   {
-    "title": "Billie Eilish: Hit Me Hard and Soft - The Tour",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20974",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/Poster-Teaser_2025x3000_Online-500x741.jpg",
-    "genre": "Documentário, Musical",
-    "duration": "1h54",
+    "title": "Top Gun: Ases Indomáveis - 40º Aniversário",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21484",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/TopGun_13-MAIO_40th-anniversary-500x741.jpg",
+    "genre": "Ação, Drama",
+    "duration": "1h50",
     "rating": "M/12"
   },
   {
@@ -24,12 +40,28 @@
     "rating": "M/12"
   },
   {
+    "title": "Iron Maiden: Burning Ambition",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21389",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/Poster_IronMaidenBurningAmbition_70x100cm_72dpi-500x713.jpg",
+    "genre": "Documentário",
+    "duration": "1h45",
+    "rating": "NA"
+  },
+  {
     "title": "Michael",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=19561",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Michael-480x760.jpg",
     "genre": "Biografia, Drama",
     "duration": "2h04",
     "rating": "M/12"
+  },
+  {
+    "title": "Tom e Jerry A Bússola perdida",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21378",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/FinalPoster_TomEJerry-ABussolaPerdida_CharacterPoster_70x100cm_72dpi-1-500x713.jpg",
+    "genre": "Aventura, Comédia, Família",
+    "duration": "1h44",
+    "rating": "M/6"
   },
   {
     "title": "Super Mario Galaxy: O Filme (Dob.)",
