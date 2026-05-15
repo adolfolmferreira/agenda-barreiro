@@ -3814,6 +3814,22 @@
     "featured": false
   },
   {
+    "id": "pizza-domingueira-com-katyusha-2026-05-17",
+    "title": "Pizza Domingueira com Katyusha",
+    "date": "2026-05-17",
+    "endDate": "",
+    "time": "18:00",
+    "location": "Cooperativa Mula",
+    "category": "Outro",
+    "description": "Pizza Domingueira com Katyusha » Cooperativa Mula » Encontros - 17-05-2026 18:00",
+    "descriptionFull": "Pizza Domingueira com Katyusha » Cooperativa Mula » Encontros - 17-05-2026 18:00",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1796523-364d7374b6753d6be93667fa7e189dde-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1796523/pizza-domingueira-com-katyusha",
+    "featured": false
+  },
+  {
     "id": "dia-mundial-dos-museus-visitas-guiadas-ao-espaco-memoria-2026-05-18",
     "title": "Dia Mundial dos Museus – Visitas guiadas ao Espaço Memória",
     "category": "Visitas",
@@ -3967,6 +3983,22 @@
     "contacts": "212 068 246 · 212 068 287 · 212 068 535 · 212 068 246 · 212 068 287 · 212 068 535",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-05-12T10:38:18.075Z"
+  },
+  {
+    "id": "concerto-carino-muerto-mish-mish-2026-05-23",
+    "title": "concerto ||| CARIÑO MUERTO + MISH MISH |||",
+    "date": "2026-05-23",
+    "endDate": "",
+    "time": "21:00",
+    "location": "Cooperativa Mula",
+    "category": "Música",
+    "description": "concerto ||| CARIÑO MUERTO + MISH MISH ||| » Cooperativa Mula » Concertos - 23-05-2026 21:00",
+    "descriptionFull": "concerto ||| CARIÑO MUERTO + MISH MISH ||| » Cooperativa Mula » Concertos - 23-05-2026 21:00",
+    "imageUrl": "https://cdn.viralagenda.com/images/events/ext/1796524-af39aa478e656da590bcca2b16e04b8b-r.jpeg",
+    "price": "",
+    "source": "viral",
+    "sourceUrl": "https://www.viralagenda.com/pt/events/1796524/concerto-carino-muerto-mish-mish",
+    "featured": false
   },
   {
     "id": "festival-da-criancada-2026-circuito-de-natacao-do-barreiro-2-2026-05-24",
