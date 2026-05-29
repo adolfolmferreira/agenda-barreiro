@@ -101,6 +101,8 @@ export default function EventDetail({ event }: { event: Event | null }) {
     },
     ...(ev.imageUrl ? { image: ev.imageUrl } : {}),
     ...(ev.description ? { description: decodeHtml(ev.description).slice(0, 300) } : {}),
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     ...(ev.price && ev.price !== 'Gratuito'
       ? { offers: { '@type': 'Offer', price: ev.price.replace(/[^0-9.,]/g, ''), priceCurrency: 'EUR' } }
       : { offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', isAccessibleForFree: true } }
