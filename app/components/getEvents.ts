@@ -27,7 +27,7 @@ export async function getEvents(): Promise<Event[]> {
     const raw = await fs.readFile(filePath, 'utf-8');
     const data = JSON.parse(raw);
     const events: Event[] = data.events || data || [];
-    return events.map(e => ({
+    return events.filter((e: any) => !e.hidden).map(e => ({
       ...e,
       imageUrl: proxyUrl(e.imageUrl),
     }));
