@@ -294,7 +294,7 @@ async function fetchEvent(url: string): Promise<Event | null> {
     const cleanUrl = url.split('?')[0];
 
     return {
-      id: `${slug(title)}-${date}`,
+      id: (cleanUrl.split('/eventos/')[1] || slug(title)).replace(/\/$/, '').slice(0, 80) || `${slug(title)}-${date}`,
       title: decodeHtml(title), category: cat(`${title} ${desc}`, title),
       date, endDate, time, location: decodeHtml(location), price: price ? decodeHtml(price) : price,
       description: decodeHtml(desc), descriptionFull: decodeHtml(descFull),
