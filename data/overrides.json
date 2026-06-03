@@ -168,7 +168,8 @@
     "location": "Auditório Municipal Augusto Cabrita"
   },
   "Campeonato Regional de Marcha Atlética 2025": {
-    "date": "2025-12-14"
+    "date": "2025-12-14",
+    "location": "Avenida da Liberdade, Barreiro"
   },
   "Ginjinha de Natal é um ECOEVENTO | Brindamos à amizade, reciclamos pelo futuro": {
     "date": "2025-12-24"
@@ -211,5 +212,125 @@
   },
   "Corrida de Aniversário GDC Estrela Negra – Circuito de Atletismo 2025/2026": {
     "hidden": true
+  },
+  "Oficina criativa para crianças Galari Galarooó": {
+    "location": "Parque da Cidade"
+  },
+  "Floresta Mágica Sense": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Teatro de Marionetas O Rei e as Moscas": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Os livros que devoraram o meu pai no Clube de Leitura Júnior": {
+    "location": "Biblioteca Municipal do Barreiro"
+  },
+  "Clube de Leitura Júnior | Os livros que devoraram o meu pai": {
+    "location": "Biblioteca Municipal do Barreiro"
+  },
+  "Workshop Vamos falar sobre Energia com o CIAC e a S ENERGIA": {
+    "location": "StartUp Barreiro"
+  },
+  "Workshop Vamos falar sobre Energia | CIAC e S.ENERGIA": {
+    "location": "StartUp Barreiro"
+  },
+  "Ação de Voluntariado Operação Raiz Limpa": {
+    "location": "Mata Nacional da Machada"
+  },
+  "Ação de Voluntariado Operação Raiz Limpa | Inscrições abertas": {
+    "location": "Mata Nacional da Machada"
+  },
+  "Provocação de Sabores 2026": {
+    "location": "Mercado Municipal 1º de Maio"
+  },
+  "5ª Edição Provocação de Sabores": {
+    "location": "Mercado Municipal 1º de Maio"
+  },
+  "@tivo2830 | Danç@Barreiro": {
+    "location": "Parque da Cidade"
+  },
+  "Danç@Barreiro | @tivo2830": {
+    "location": "Parque da Cidade"
+  },
+  "Aulas de Chi Kung | @tivo2830": {
+    "location": "Parque da Cidade"
+  },
+  "@tivo2830 | Movimento@tivo": {
+    "location": "Vários Equipamentos Municipais"
+  },
+  "Movimento@tivo | @tivo2830": {
+    "location": "Vários Equipamentos Municipais"
+  },
+  "Visita guiada ao Património Moageiro": {
+    "location": "Moinho de Maré Grande"
+  },
+  "Workshop de Velas | ADIADO PARA 23 MAIO": {
+    "location": "Moinho de Maré Grande"
+  },
+  "All Colors Sunset": {
+    "location": "Moinho de Maré Grande"
+  },
+  "Yog@Flow uma novidade no @tivo2830": {
+    "location": "Moinho de Maré Grande"
+  },
+  "Yog@Flow | Novidade no @tivo2830": {
+    "location": "Moinho de Maré Grande"
+  },
+  "Little Sunset": {
+    "location": "Moinho de Maré Grande"
+  },
+  "Sunset Session com DJ Rico": {
+    "location": "Moinho de Maré Grande"
+  },
+  "Concerto de Órgão | Com a organista Rute Martins": {
+    "location": "Igreja"
+  },
+  "Concerto de Natal CORUTIB": {
+    "location": "Igreja"
+  },
+  "Concerto de Órgão com o Organista Luís Cerqueira": {
+    "location": "Igreja Matriz do Barreiro"
+  },
+  "21º Passeio de BTT São Silvestre": {
+    "location": "Parque da Cidade"
+  },
+  "CANCELADA Visita guiada ao Centro de Interpretação do Campo Arqueológico da Mata da Machada": {
+    "location": "Centro de Educação Ambiental da Mata da Machada"
+  },
+  "Biodiversidade de Alburrica | Reserva no Inverno | Centro de Educação Ambiental": {
+    "location": "Centro de Educação Ambiental da Mata da Machada"
+  },
+  "Visita guiada ao Centro de Interpretação do Campo Arqueológico da Mata da Machada": {
+    "location": "Centro de Educação Ambiental da Mata da Machada"
+  },
+  "Concerto do 25 de Abril com Ivandro": {
+    "location": "Parque da Cidade"
+  },
+  "Desfile da Liberdade 2026": {
+    "location": "Avenida da Liberdade, Barreiro"
+  },
+  "Ivandro | Concerto do 25 de Abril": {
+    "location": "Parque da Cidade"
+  },
+  "Hastear das Bandeiras nas Comemorações do 25 de Abril de 2026": {
+    "location": "Vários locais do Barreiro"
+  },
+  "Hastear das Bandeiras | 25 de Abril de 2026": {
+    "location": "Vários locais do Barreiro"
+  },
+  "DJ Mauro nas Comemorações do 25 de Abril de 2026": {
+    "location": "Parque da Cidade"
+  },
+  "DJ Mauro | Comemorações do 25 de Abril de 2026": {
+    "location": "Parque da Cidade"
+  },
+  "Semana Académica do Barreiro 2026": {
+    "location": "Parque da Cidade"
+  },
+  "5ª Semana Académica do Barreiro": {
+    "location": "Parque da Cidade"
+  },
+  "JAZZ NO PARQUE 2026 | João Barradas Trio + Peter Evans": {
+    "location": "Parque da Cidade"
   }
 }
