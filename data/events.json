@@ -5378,7 +5378,8 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/2026-06-06-3Festival-Bebes-Natacao_1920x650.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro Apoio: Aqua Innovatio",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-05-28T11:43:53.558Z"
+    "scrapedAt": "2026-05-28T11:43:53.558Z",
+    "hidden": true
   },
   {
     "id": "workshop-de-ilustracao-como-criar-uma-banda-desenhada-ao-est-2026-06-07",
@@ -5414,7 +5415,8 @@
     "contacts": "212 068 230 · 212 068 287 · 212 068 535",
     "ticketUrl": "mailto:bilheteira@cm-barreiro.pt",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-02T20:50:16.120Z"
+    "scrapedAt": "2026-06-02T20:50:16.120Z",
+    "hidden": true
   },
   {
     "id": "acao-de-limpeza-ribeirinha-2026-06-07",
@@ -5646,7 +5648,8 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/Clube-Leitura-Teen-CMB_1920x650px-Site-SEO-1.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-05-26T20:10:42.612Z"
+    "scrapedAt": "2026-05-26T20:10:42.612Z",
+    "hidden": true
   },
   {
     "id": "clube-leitura-junior-invencao-de-hugo-cabret-2026-06-13",
