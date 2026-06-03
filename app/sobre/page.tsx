@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   alternates: { canonical: '/sobre' },
 };
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  'name': 'Adolfo Ferreira',
+  'jobTitle': 'Product Designer',
+  'url': 'https://adolfoferreira.com',
+  'sameAs': ['https://adolfoferreira.com', 'https://github.com/adolfolmferreira'],
+  'knowsAbout': ['Product Design', 'Web Development', 'Cultural Events', 'Barreiro']
+};
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -36,6 +46,10 @@ const faqSchema = {
 export default function SobrePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
