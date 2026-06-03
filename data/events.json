@@ -6050,7 +6050,8 @@
     "price": "5  Euros",
     "source": "aml",
     "sourceUrl": "https://www.aml.pt/agenda/como-criar-uma-banda-desenhada-estilo-manga/",
-    "featured": false
+    "featured": false,
+    "hidden": true
   },
   {
     "id": "gimnobarreiro-2026",
@@ -6198,7 +6199,8 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/2026-06-10-Corrida-de-Aniversario-GDC-Estrela-Negra_1920x650.jpg",
     "organizer": "GDC Estrela Negra Coorganização: CMB",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-05-28T11:43:48.802Z"
+    "scrapedAt": "2026-05-28T11:43:48.802Z",
+    "hidden": true
   },
   {
     "id": "santos-no-mercado-1-de-maio-2026-06-10",
@@ -6348,7 +6350,8 @@
     "price": "Gratuito mediante inscrição em",
     "source": "aml",
     "sourceUrl": "https://www.aml.pt/agenda/clube-leitura-junior-invencao-de-hugo-cabret/",
-    "featured": false
+    "featured": false,
+    "hidden": true
   },
   {
     "id": "milhanas-no-barreiro-2026-06-13",
@@ -6364,7 +6367,8 @@
     "price": "10 Euros |",
     "source": "aml",
     "sourceUrl": "https://www.aml.pt/agenda/milhanas-no-barreiro/",
-    "featured": false
+    "featured": false,
+    "hidden": true
   },
   {
     "id": "piratas-ao-sol-com-the-beatles",
