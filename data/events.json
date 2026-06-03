@@ -6541,7 +6541,8 @@
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "ticketUrl": "https://www.cm-barreiro.pt/eventos/machada-em-alerta-2026-com-inscricoes-ja-abertas/",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-03T12:46:38.689Z"
+    "scrapedAt": "2026-06-03T12:46:38.689Z",
+    "hidden": true
   },
   {
     "id": "jazz-no-parque-2026-2026-06-28",
