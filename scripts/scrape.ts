@@ -42,7 +42,8 @@ async function main() {
       const { loadEvents } = await import('../lib/store');
       const existing = await loadEvents();
       const newIds = new Set(events.map((e: any) => e.id));
-      const kept = existing.filter((e: any) => !newIds.has(e.id));
+      const newUrls = new Set(events.map((e: any) => e.sourceUrl).filter(Boolean));
+      const kept = existing.filter((e: any) => !newIds.has(e.id) && !newUrls.has(e.sourceUrl));
       const merged = [...events, ...kept];
       merged.sort((a: any, b: any) => a.date.localeCompare(b.date));
       console.log(`  📦 Merge: ${events.length} novos + ${kept.length} mantidos = ${merged.length} total`);
