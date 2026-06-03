@@ -55,7 +55,8 @@
   },
   "Masterclass com Catarina Casqueiro – Barreiro Festival de Dança 2026": {
     "date": "2026-05-02",
-    "endDate": "2026-05-02"
+    "endDate": "2026-05-02",
+    "location": "Auditório Municipal Augusto Cabrita"
   },
   "Matiné c/ UNDERLINE + FEAR THE REAPER + KARMA": {
     "price": "3€"
@@ -64,7 +65,8 @@
     "tags": "kids"
   },
   "ADIADA Oficina Eco de Memórias com Ana Biscaia e Paula Delecave": {
-    "tags": "kids"
+    "tags": "kids",
+    "location": "Auditório Municipal Augusto Cabrita"
   },
   "Concerto com Milhanas": {
     "location": "Auditório Municipal Augusto Cabrita"
@@ -187,7 +189,8 @@
     "hidden": true
   },
   "Piratas ao Sol com The Beatles": {
-    "tags": "kids"
+    "tags": "kids",
+    "location": "Auditório Municipal Augusto Cabrita"
   },
   "Oficina de ilustração O Barreiro é uma BD com Nuno Saraiva": {
     "tags": "kids"
@@ -332,5 +335,101 @@
   },
   "JAZZ NO PARQUE 2026 | João Barradas Trio + Peter Evans": {
     "location": "Parque da Cidade"
+  },
+  "INDÉ – Teatro para Bebés, de Susana C. Gaspar": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Musical \"Maria, A Neta de Nicolau 2 – Um Dia de Loucos\"": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Escritório do Bebé – Balleteatro": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Viagem a Lisboa Um espetáculo d'O Clube": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Oficina Big Bang Boom! – Ilustração do Universo para bebés e famílias": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "A Fábrica pela Arteviva Companhia de Teatro do Barreiro": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Oficina de ilustração Desenha a Tua História, Cria a Tua Banda Desenhada, com Silvia Rodrigues": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "A Pérola": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Workshop Ilustração Científica e Naturalista dos Peixes com Pedro Salgado": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Mercado de Arte de Natal": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Oficina de expressão plástica para bebés": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Como se fosse um jogo | Oficina com Rachel Caiano e Liliana Lourenço": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Barreiro Festival de Dança 2026 | 6ª Edição": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Festival Laços Companhia (In)diferente, Transformações": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "António Zambujo | Concerto": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Festival Laços, As Preciosas Ridículas de Moliére, 21 Em Cena": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Inauguração da Exposição Coletiva de Artes das Escolas Secundárias do Barreiro": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Concerto de Ano Novo | Camerata Musical do Barreiro": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Exposição | Cem Peixes": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Exposição | Oleandras": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Exposição | Escombros Ecoantes": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Exposição | Entre Nós, Estamos Todos": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "Exposição \"Até Aqui. Por Agora\", de Nic e Inês": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "7ª edição Ilustra BD Mostra de BD do Barreiro": {
+    "location": "Auditório Municipal Augusto Cabrita"
+  },
+  "CombArt Movimento ao Centro": {
+    "location": "Barra Shopping"
+  },
+  "Comb'Art | Movimento ao Centro": {
+    "location": "Barra Shopping"
+  },
+  "Movimento ao Centro | Xeque Mate": {
+    "location": "Barra Shopping"
+  },
+  "Movimento ao Centro Há Música na Praça": {
+    "location": "Barra Shopping"
+  },
+  "Movimento ao Centro | GinástiConvida": {
+    "location": "Barra Shopping"
+  },
+  "Reserva na Primavera: À Descoberta da Flora Local": {
+    "location": "Centro de Educação Ambiental da Mata da Machada"
+  },
+  "Ação de sensibilização sobre as Indústrias no Lavradio": {
+    "location": "AURPIL – Lavradio"
+  },
+  "Visita à Companhia União Fabril (CUF)": {
+    "location": "Espaço Memória – Antigo Complexo CUF"
   }
 }
