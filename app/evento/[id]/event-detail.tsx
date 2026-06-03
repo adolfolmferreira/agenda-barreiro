@@ -88,7 +88,7 @@ export default function EventDetail({ event }: { event: Event | null }) {
     '@type': 'Event',
     name: decodeHtml(ev.title),
     startDate: ev.date,
-    ...(ev.endDate && ev.endDate !== ev.date ? { endDate: ev.endDate } : {}),
+    endDate: ev.endDate || ev.date,
     ...(ev.time && ev.time !== '00:00' ? { doorTime: ev.time } : {}),
     location: {
       '@type': 'Place',
@@ -101,11 +101,22 @@ export default function EventDetail({ event }: { event: Event | null }) {
     },
     ...(ev.imageUrl ? { image: ev.imageUrl } : {}),
     ...(ev.description ? { description: decodeHtml(ev.description).slice(0, 300) } : {}),
+    organizer: {
+      '@type': 'Organization',
+      name: ev.source === 'cm-barreiro.pt' ? 'Câmara Municipal do Barreiro'
+          : ev.source === 'aml' ? 'Área Metropolitana de Lisboa'
+          : ev.source === 'viral' ? 'Viral Agenda'
+          : 'Agenda B',
+      url: ev.source === 'cm-barreiro.pt' ? 'https://www.cm-barreiro.pt'
+         : ev.source === 'aml' ? 'https://www.aml.pt'
+         : ev.source === 'viral' ? 'https://viralagenda.com'
+         : 'https://agendab.pt',
+    },
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     ...(ev.price && ev.price !== 'Gratuito'
-      ? { offers: { '@type': 'Offer', price: ev.price.replace(/[^0-9.,]/g, ''), priceCurrency: 'EUR' } }
-      : { offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', isAccessibleForFree: true } }
+      ? { offers: { '@type': 'Offer', price: ev.price.replace(/[^0-9.,]/g, ''), priceCurrency: 'EUR', availability: 'https://schema.org/InStock' } }
+      : { offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', isAccessibleForFree: true } }
     ),
   };
 

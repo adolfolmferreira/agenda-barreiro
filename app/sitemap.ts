@@ -14,7 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const eventPages = events.map(e => ({
     url: `${baseUrl}/evento/${e.id}`,
-    lastModified: new Date(),
+    lastModified: e.scrapedAt ? new Date(e.scrapedAt) : new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }));
