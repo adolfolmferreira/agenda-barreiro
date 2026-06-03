@@ -162,7 +162,7 @@ async function main() {
     const time = timeMatch ? timeMatch[1] : '';
 
     const event = {
-      id: `${slug(detail.title)}-${date}`,
+      id: (item.url.split('/pt/events/')[1] || slug(detail.title)).replace(/\/$/, '').replace(/\//g, '-').slice(0, 80) || `${slug(detail.title)}-${date}`,
       title: detail.title,
       date,
       endDate: endDate !== date ? endDate : '',

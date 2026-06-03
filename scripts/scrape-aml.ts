@@ -141,7 +141,7 @@ async function main() {
       const category = catMatch ? mapCategory(catMatch[1]) : 'Outro';
 
       const event = {
-        id: `${titleSlug}-${date}`,
+        id: (url.split('/agenda/')[1] || titleSlug).replace(/\/$/, '').slice(0, 80) || `${titleSlug}-${date}`,
         title,
         date,
         endDate: '',
