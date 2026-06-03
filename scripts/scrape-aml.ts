@@ -183,6 +183,7 @@ async function main() {
           if (fix.descriptionFull !== undefined) ev.descriptionFull = fix.descriptionFull;
           if (fix.description !== undefined) ev.description = fix.description;
           if (fix.imageUrl !== undefined) ev.imageUrl = fix.imageUrl;
+          if (fix.hidden !== undefined) (ev as any).hidden = fix.hidden;
       }
     }
   } catch {}

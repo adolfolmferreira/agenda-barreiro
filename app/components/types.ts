@@ -15,4 +15,9 @@ export interface Event {
   ticketUrl?: string;
   tags?: string;
   featured?: boolean;
+  source?: string;
+  organizer?: string;
+  ageRating?: string;
+  scrapedAt?: string;
+  hidden?: boolean;
 }

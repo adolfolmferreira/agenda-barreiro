@@ -14,7 +14,8 @@ export async function saveEvents(events: Event[]): Promise<void> {
 export async function loadEvents(): Promise<Event[]> {
   try {
     const raw = await fs.readFile(EVENTS_FILE, 'utf-8');
-    return JSON.parse(raw);
+    const events = JSON.parse(raw);
+    return events.filter((e: any) => !e.hidden);
   } catch {
     return [];
   }
