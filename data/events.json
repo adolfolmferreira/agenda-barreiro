@@ -5698,7 +5698,8 @@
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "contacts": "212 068 230 · 212 068 287 · 212 068 535 · 212 068 230",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-02T20:50:05.025Z"
+    "scrapedAt": "2026-06-02T20:50:05.025Z",
+    "tags": "kids"
   },
   {
     "id": "caminhada-pela-arquitetura-civil-do-alto-seixalinho-2026-06-20",
@@ -5734,7 +5735,8 @@
     "contacts": "212 068 230 · 212 068 287 · 212 068 535",
     "ticketUrl": "bilheteira@cm-barreiro.pt",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-02T20:50:01.025Z"
+    "scrapedAt": "2026-06-02T20:50:01.025Z",
+    "tags": "kids"
   },
   {
     "id": "clube-de-palavras-cruzadas-2026-06-25",
