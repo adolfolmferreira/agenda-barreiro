@@ -8,14 +8,10 @@ function slug(t: string): string {
     .replace(/^-|-$/g, '').slice(0, 60);
 }
 
+import he from 'he';
+
 function decodeHtml(s: string): string {
-  return s
-    .replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ')
-    .replace(/&bull;/g, '•').replace(/&#8211;/g, '–')
-    .replace(/&aacute;/g,'á').replace(/&eacute;/g,'é').replace(/&iacute;/g,'í')
-    .replace(/&oacute;/g,'ó').replace(/&uacute;/g,'ú').replace(/&atilde;/g,'ã')
-    .replace(/&otilde;/g,'õ').replace(/&ccedil;/g,'ç')
-    .replace(/&acirc;/g,'â').replace(/&ecirc;/g,'ê').replace(/&ocirc;/g,'ô');
+  return he.decode(s);
 }
 
 const MO: Record<string, string> = {

@@ -1,3 +1,4 @@
+import he from 'he';
 import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 
@@ -82,7 +83,7 @@ async function scrapeEventDetail(url: string): Promise<{
     const image = ogImage ? ogImage[1] : '';
 
     const ogDesc = html.match(/og:description[^>]*content="([^"]*)"/);
-    const description = ogDesc ? ogDesc[1].replace(/&raquo;/g, '»').replace(/&amp;/g, '&').trim() : '';
+    const description = ogDesc ? he.decode(ogDesc[1]).trim() : '';
 
     // Category from og:description (format: "Title » Venue » Category - date")
     const catMatch = description.match(/»\s*([^»-]+)\s*-\s*\d/);

@@ -1,17 +1,9 @@
 // lib/scraper.ts — v10
 
+import he from 'he';
+
 function decodeHtml(s: string): string {
-  return s
-    .replace(/&aacute;/g,'á').replace(/&eacute;/g,'é').replace(/&iacute;/g,'í')
-    .replace(/&oacute;/g,'ó').replace(/&uacute;/g,'ú').replace(/&atilde;/g,'ã')
-    .replace(/&otilde;/g,'õ').replace(/&ccedil;/g,'ç').replace(/&Aacute;/g,'Á')
-    .replace(/&Eacute;/g,'É').replace(/&Iacute;/g,'Í').replace(/&Oacute;/g,'Ó')
-    .replace(/&Uacute;/g,'Ú').replace(/&Atilde;/g,'Ã').replace(/&Otilde;/g,'Õ')
-    .replace(/&Ccedil;/g,'Ç').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ')
-    .replace(/&euro;/g,'€').replace(/&ldquo;/g,'"').replace(/&rdquo;/g,'"')
-    .replace(/&ndash;/g,'–').replace(/&mdash;/g,'—').replace(/&hellip;/g,'…')
-    .replace(/&ordm;/g,'º').replace(/&#8211;/g,'–').replace(/&#8220;/g,'"')
-    .replace(/&#8221;/g,'"').replace(/&#8230;/g,'…');
+  return he.decode(s);
 }
 
 export interface Event {
