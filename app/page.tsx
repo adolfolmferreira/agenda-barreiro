@@ -21,7 +21,11 @@ const organizationJsonLd = {
       "logo": "https://agendab.pt/og-image.jpg",
       "description": "Agenda cultural independente do Barreiro, Portugal.",
       "areaServed": "Barreiro, Portugal",
-      "email": "agenda@agendab.pt"
+      "email": "agenda@agendab.pt",
+      "sameAs": [
+        "https://github.com/adolfolmferreira/agenda-barreiro",
+        "https://adolfoferreira.com"
+      ]
     },
     {
       "@type": "WebSite",
