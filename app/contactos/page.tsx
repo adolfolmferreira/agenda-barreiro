@@ -6,9 +6,31 @@ export const metadata: Metadata = {
   alternates: { canonical: '/contactos' },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': [
+    {
+      '@type': 'Question',
+      'name': 'Como posso submeter um evento para a Agenda B?',
+      'acceptedAnswer': { '@type': 'Answer', 'text': 'A forma mais simples é publicar o evento numa das fontes que a Agenda B utiliza, como o site da Câmara Municipal do Barreiro ou a Viral Agenda. Os eventos dessas plataformas são recolhidos automaticamente. Em alternativa, pode entrar em contacto pelo email agenda@agendab.pt.' }
+    },
+    {
+      '@type': 'Question',
+      'name': 'Como reportar um erro na informação de um evento?',
+      'acceptedAnswer': { '@type': 'Answer', 'text': 'Pode reportar erros ou sugerir melhorias através do email agenda@agendab.pt.' }
+    }
+  ]
+};
+
 export default function ContactosPage() {
   return (
-    <div className="tsl-page">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="tsl-page">
       <h1 className="tsl-page-title">
         Contactos
         <br />
@@ -29,5 +51,6 @@ export default function ContactosPage() {
         </p>
       </div>
     </div>
+    </>
   );
 }

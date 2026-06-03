@@ -6,9 +6,41 @@ export const metadata: Metadata = {
   alternates: { canonical: '/sobre' },
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': [
+    {
+      '@type': 'Question',
+      'name': 'O que é a Agenda B?',
+      'acceptedAnswer': { '@type': 'Answer', 'text': 'A Agenda B é um projecto independente que reúne num único lugar eventos culturais, desportivos e comunitários que acontecem no Barreiro, Portugal.' }
+    },
+    {
+      '@type': 'Question',
+      'name': 'De onde vêm os eventos da Agenda B?',
+      'acceptedAnswer': { '@type': 'Answer', 'text': 'Os eventos são recolhidos automaticamente a partir de fontes públicas, incluindo o site da Câmara Municipal do Barreiro, a Viral Agenda e a AML (Área Metropolitana de Lisboa), e são actualizados várias vezes por dia.' }
+    },
+    {
+      '@type': 'Question',
+      'name': 'A Agenda B tem afiliação oficial com a Câmara Municipal do Barreiro?',
+      'acceptedAnswer': { '@type': 'Answer', 'text': 'Não. A Agenda B é um projecto pessoal e independente, sem qualquer afiliação oficial com a Câmara Municipal do Barreiro ou outras entidades.' }
+    },
+    {
+      '@type': 'Question',
+      'name': 'Quem criou a Agenda B?',
+      'acceptedAnswer': { '@type': 'Answer', 'text': 'A Agenda B foi criada por Adolfo Ferreira, designer de produto, como uma iniciativa pessoal desenvolvida no tempo livre para dar mais visibilidade às iniciativas locais do Barreiro.' }
+    }
+  ]
+};
+
 export default function SobrePage() {
   return (
-    <div className="tsl-page">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="tsl-page">
       <h1 className="tsl-page-title">
         Sobre a Agenda B
         <br />
@@ -43,5 +75,6 @@ export default function SobrePage() {
         </p>
       </div>
     </div>
+    </>
   );
 }
