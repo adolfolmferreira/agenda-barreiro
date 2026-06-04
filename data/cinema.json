@@ -1,43 +1,35 @@
 [
   {
-    "title": "Backrooms: O Labirinto",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21531",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/BACKROOMS_POSTER_70X100CM-500x720.jpg",
-    "genre": "Ficção, Terror",
+    "title": "The Amazing Digital Circus: O Último Ato",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21518",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/TADC_Poster-2x3_PT_4-7JUN-500x750.jpg",
+    "genre": "Animação, Aventura, Fantasia",
     "duration": "1h30",
+    "rating": "M/12"
+  },
+  {
+    "title": "Masters of The Universe",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20278",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Masters-of-The-Universe-_-Payoff-Poster_1000x1444-500x722.jpg",
+    "genre": "Ação, Aventura, Fantasia",
+    "duration": "2h20",
+    "rating": "M/12"
+  },
+  {
+    "title": "Tudo o Que Nunca Fomos",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21813",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/TudoOQueNuncaFomos_story-428x760.jpg",
+    "genre": "Drama, Romance",
+    "duration": "1h47",
+    "rating": "M/12"
+  },
+  {
+    "title": "Scary Movie: What's Up?",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21163",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/SCRY_INTL_2025x3000_Online_Teaser1Sht_Theatre_PT@0.33x-500x741.jpg",
+    "genre": "Comédia, Terror",
+    "duration": "1h34",
     "rating": "M/14"
-  },
-  {
-    "title": "Star Wars: The Mandalorian and Grogu",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=18804",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/09/1Mandalorian-and-Grogu_Poster-Final-500x741.jpg",
-    "genre": "Ação, Aventura, Fantasia, Ficção científica",
-    "duration": "2h12",
-    "rating": "M/12"
-  },
-  {
-    "title": "Obsession: A Felicidade é Relativa",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20987",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/PosterFinal_Obsession_70x100cm_72dpi-500x713.jpg",
-    "genre": "Terror",
-    "duration": "1h48",
-    "rating": "M/16"
-  },
-  {
-    "title": "O Diabo Veste Prada 2",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19469",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2023/11/CERULEAN_PAYOFF_POSTER_PORTUGAL-500x714.jpg",
-    "genre": "Comédia, Drama",
-    "duration": "1h59",
-    "rating": "M/12"
-  },
-  {
-    "title": "Michael",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19561",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Michael-480x760.jpg",
-    "genre": "Biografia, Drama",
-    "duration": "2h04",
-    "rating": "M/12"
   },
   {
     "title": "Bichos a Bordo (Dob.)",
@@ -48,12 +40,12 @@
     "rating": "M/6"
   },
   {
-    "title": "A Baleia Cantora (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21679",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/LAST-WHALE-SINGER_POSTER_70X100CM-500x720.jpg",
-    "genre": "Animação, Aventura, Família",
-    "duration": "1h39",
-    "rating": "M/6"
+    "title": "Backrooms: O Labirinto",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21531",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/BACKROOMS_POSTER_70X100CM-500x720.jpg",
+    "genre": "Ficção, Terror",
+    "duration": "1h30",
+    "rating": "M/14"
   },
   {
     "title": "Tom e Jerry A Bússola Perdida (Dob.)",
@@ -70,5 +62,13 @@
     "genre": "Ação, Animação, Aventura, Comédia, Fantasia",
     "duration": "1h55",
     "rating": "M/6"
+  },
+  {
+    "title": "Michael",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19561",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Michael-480x760.jpg",
+    "genre": "Biografia, Drama",
+    "duration": "2h04",
+    "rating": "M/12"
   }
 ]
