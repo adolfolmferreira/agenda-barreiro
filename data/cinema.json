@@ -1,5 +1,13 @@
 [
   {
+    "title": "O Dia da Revelação",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20513",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/MainPoster_ODiaDaRevelacao_70x100cm_72dpi-500x713.jpg",
+    "genre": "Sci-Fi, Thriller",
+    "duration": "2h25",
+    "rating": "M/12"
+  },
+  {
     "title": "The Amazing Digital Circus: O Último Ato",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=21518",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/TADC_Poster-2x3_PT_4-7JUN-500x750.jpg",
@@ -16,14 +24,6 @@
     "rating": "M/12"
   },
   {
-    "title": "Tudo o Que Nunca Fomos",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21813",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/TudoOQueNuncaFomos_story-428x760.jpg",
-    "genre": "Drama, Romance",
-    "duration": "1h47",
-    "rating": "M/12"
-  },
-  {
     "title": "Scary Movie: What's Up?",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=21163",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/SCRY_INTL_2025x3000_Online_Teaser1Sht_Theatre_PT@0.33x-500x741.jpg",
@@ -32,20 +32,28 @@
     "rating": "M/14"
   },
   {
-    "title": "Bichos a Bordo (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19216",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Bichos-a-Bordo-1-500x720.jpg",
-    "genre": "Animação, Aventura, Comédia, Família",
-    "duration": "1h39",
-    "rating": "M/6"
-  },
-  {
     "title": "Backrooms: O Labirinto",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=21531",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/BACKROOMS_POSTER_70X100CM-500x720.jpg",
     "genre": "Ficção, Terror",
     "duration": "1h30",
     "rating": "M/14"
+  },
+  {
+    "title": "Mumbo Jumbo (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21614",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/MUMBO-JUMBO-Poste2080z1800-500x714.jpg",
+    "genre": "Animação, Família",
+    "duration": "1h23",
+    "rating": "M/6"
+  },
+  {
+    "title": "Bichos a Bordo (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19216",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Bichos-a-Bordo-1-500x720.jpg",
+    "genre": "Animação, Aventura, Comédia, Família",
+    "duration": "1h39",
+    "rating": "M/6"
   },
   {
     "title": "Tom e Jerry A Bússola Perdida (Dob.)",
@@ -62,13 +70,5 @@
     "genre": "Ação, Animação, Aventura, Comédia, Fantasia",
     "duration": "1h55",
     "rating": "M/6"
-  },
-  {
-    "title": "Michael",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19561",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Michael-480x760.jpg",
-    "genre": "Biografia, Drama",
-    "duration": "2h04",
-    "rating": "M/12"
   }
 ]
