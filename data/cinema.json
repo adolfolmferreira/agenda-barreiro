@@ -1,26 +1,26 @@
 [
   {
+    "title": "Toy Story 5 (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19461",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Toy_story_poster-500x714.jpg",
+    "genre": "Animação, Aventura, Comédia, Família",
+    "duration": "1h42",
+    "rating": "M/6"
+  },
+  {
+    "title": "Duas Vezes João Liberada",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21540",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/duas-vezes-joao-liberdade-site.jpg",
+    "genre": "Biografia, Drama",
+    "duration": "1h10",
+    "rating": "M/12"
+  },
+  {
     "title": "O Dia da Revelação",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=20513",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/MainPoster_ODiaDaRevelacao_70x100cm_72dpi-500x713.jpg",
     "genre": "Sci-Fi, Thriller",
     "duration": "2h25",
-    "rating": "M/12"
-  },
-  {
-    "title": "The Amazing Digital Circus: O Último Ato",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21518",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/TADC_Poster-2x3_PT_4-7JUN-500x750.jpg",
-    "genre": "Animação, Aventura, Fantasia",
-    "duration": "1h30",
-    "rating": "M/12"
-  },
-  {
-    "title": "Masters of The Universe",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20278",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/01/Masters-of-The-Universe-_-Payoff-Poster_1000x1444-500x722.jpg",
-    "genre": "Ação, Aventura, Fantasia",
-    "duration": "2h20",
     "rating": "M/12"
   },
   {
@@ -32,22 +32,6 @@
     "rating": "M/14"
   },
   {
-    "title": "Backrooms: O Labirinto",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21531",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/BACKROOMS_POSTER_70X100CM-500x720.jpg",
-    "genre": "Ficção, Terror",
-    "duration": "1h30",
-    "rating": "M/14"
-  },
-  {
-    "title": "Mumbo Jumbo (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21614",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/MUMBO-JUMBO-Poste2080z1800-500x714.jpg",
-    "genre": "Animação, Família",
-    "duration": "1h23",
-    "rating": "M/6"
-  },
-  {
     "title": "Bichos a Bordo (Dob.)",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=19216",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Bichos-a-Bordo-1-500x720.jpg",
@@ -56,19 +40,27 @@
     "rating": "M/6"
   },
   {
+    "title": "Backrooms: O Labirinto",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21531",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/BACKROOMS_POSTER_70X100CM-500x720.jpg",
+    "genre": "Ficção, Terror",
+    "duration": "1h30",
+    "rating": "M/14"
+  },
+  {
+    "title": "Toy Story 5 (Leg.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=19466",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Toy_story_poster-500x714.jpg",
+    "genre": "Animação, Aventura, Comédia, Família",
+    "duration": "1h42",
+    "rating": "M/6"
+  },
+  {
     "title": "Tom e Jerry A Bússola Perdida (Dob.)",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=21378",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/FinalPoster_TomEJerry-ABussolaPerdida_CharacterPoster_70x100cm_72dpi-1-500x713.jpg",
     "genre": "Aventura, Comédia, Família",
     "duration": "1h44",
-    "rating": "M/6"
-  },
-  {
-    "title": "Super Mario Galaxy: O Filme (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20619",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/Super_Mario_2_poster-480x760.jpg",
-    "genre": "Ação, Animação, Aventura, Comédia, Fantasia",
-    "duration": "1h55",
     "rating": "M/6"
   }
 ]
