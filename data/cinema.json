@@ -1,19 +1,27 @@
 [
   {
+    "title": "Supergirl",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20508",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/500x760px_Poster-Site.jpg",
+    "genre": "Ação, Fantasia",
+    "duration": "1h49",
+    "rating": "M/12"
+  },
+  {
+    "title": "Dia D: Sob Pressão",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21821",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/1Poster-Cinema-_DIA-D_Data-500x741.jpg",
+    "genre": "Guerra, História, Thriller",
+    "duration": "1h40",
+    "rating": "M/12"
+  },
+  {
     "title": "Toy Story 5 (Dob.)",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=19461",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Toy_story_poster-500x714.jpg",
     "genre": "Animação, Aventura, Comédia, Família",
     "duration": "1h42",
     "rating": "M/6"
-  },
-  {
-    "title": "Duas Vezes João Liberada",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21540",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/duas-vezes-joao-liberdade-site.jpg",
-    "genre": "Biografia, Drama",
-    "duration": "1h10",
-    "rating": "M/12"
   },
   {
     "title": "O Dia da Revelação",
@@ -40,27 +48,11 @@
     "rating": "M/6"
   },
   {
-    "title": "Backrooms: O Labirinto",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21531",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/BACKROOMS_POSTER_70X100CM-500x720.jpg",
-    "genre": "Ficção, Terror",
-    "duration": "1h30",
-    "rating": "M/14"
-  },
-  {
     "title": "Toy Story 5 (Leg.)",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=19466",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Toy_story_poster-500x714.jpg",
     "genre": "Animação, Aventura, Comédia, Família",
     "duration": "1h42",
-    "rating": "M/6"
-  },
-  {
-    "title": "Tom e Jerry A Bússola Perdida (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21378",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/FinalPoster_TomEJerry-ABussolaPerdida_CharacterPoster_70x100cm_72dpi-1-500x713.jpg",
-    "genre": "Aventura, Comédia, Família",
-    "duration": "1h44",
     "rating": "M/6"
   }
 ]
