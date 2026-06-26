@@ -770,7 +770,7 @@
     "contacts": "212068204",
     "ticketUrl": "https://www.cm-barreiro.pt/eventos/curso-de-treinador-de-natacao-2026-inscricoes-ate-12-de-janeiro/",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:13.277Z"
+    "scrapedAt": "2026-06-26T10:58:25.432Z"
   },
   {
     "id": "jazz-as-quartas-jan-fev",
@@ -1911,6 +1911,23 @@
     "scrapedAt": "2026-06-25T20:04:17.121Z"
   },
   {
+    "id": "ilustra-bd-7a-edicao-11-abril-a-31-julho",
+    "title": "Ilustra BD de 11 abril a 31 julho 2026",
+    "category": "Música",
+    "date": "2026-04-11",
+    "endDate": "2026-07-31",
+    "time": "14:00",
+    "location": "Auditório Municipal Augusto Cabrita",
+    "price": "Gratuito",
+    "description": "O Ilustra BD regressa ao Barreiro para a sua 7ª edição, com uma programação diversificada que reúne autores portugueses e estrangeiros, editores e público, numa grande celebração da banda desenhada e da ilustração.",
+    "descriptionFull": "O Ilustra BD regressa ao Barreiro para a sua 7ª edição, com uma programação diversificada que reúne autores portugueses e estrangeiros, editores e público, numa grande celebração da banda desenhada e da ilustração.\n\nAs exposições “Snoopy e os Peanuts”, de Schulz; “Shhhh”, de André da Loba; “Zorro – o Herói Popular”, de Pierre Alary; “Mulheres de Papel” e “Naruto”, de Masashi Kishimoto, estarão patentes ao público no Auditório Municipal Augusto Cabrita, de terça-feira a domingo, entre as 14h00 e as 20h00.\n\n“Snoopy e os Peanuts”, de Schulz: dedicada à icónica personagem que celebrou os seus 75 anos, numa parceria com a editora Penguin.\n\n“Shhhh”, de André da Loba: uma experiência sensorial inspirada no livro homónimo, pensada para o público escolar, onde o autor convida a explorar os sons do dia-a-dia.\n\n“Zorro – o Herói Popular”, de Pierre Alary: exposição sobre o livro que evoca o mito do libertador dos oprimidos, em parceria com a Editora Ala dos Livros.\n\n“Mulheres de Papel”: 16 ilustradoras com curadoria de Hugo Pinto, explora o papel das mulheres na BD portuguesa, reunindo o trabalho de 16 autoras contemporâneas.\n\n“Naruto”, de Masashi Kishimoto: uma viagem pela jornada do lendário ninja, com curadoria de Paulo Monteiro e parceria com a editora DEVIR.\n\nÀ semelhança das edições anteriores, o evento contará com uma feira do livro, sessões de autógrafos, conversas com autores, oficinas e visitas guiadas. A identidade visual desta edição é assinada por Gualter Amaro.\n\n11 abril (sábado)\n\n12 abril (domingo)\n\n17 maio (domingo)\n\n24 maio (domingo) – 10h30 às 13h00 e das 14h00 às 17h00\n\n07 junho (domingo)\n\n21 junho (domingo)\n\nTodas as exposições poderão ser visitadas de terça a domingo entre as 14h00 e as 20h00.\n\nGratuito Org.: CMBCâmara Municipal do Barreiro",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/ilustra-bd-7a-edicao-11-abril-a-31-julho/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/04/WEB_SEO_1920x1150PX.jpg",
+    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-06-26T10:56:53.859Z"
+  },
+  {
     "id": "barreiro-machada-trail-noturno-2026",
     "title": "Barreiro Machada Trail Noturno 2026",
     "category": "Desporto",
@@ -1978,23 +1995,6 @@
     "scrapedAt": "2026-06-25T20:04:12.438Z"
   },
   {
-    "id": "ilustra-bd-7a-edicao-11-abril-a-31-julho",
-    "title": "Ilustra BD de 11 abril a 31 julho 2026",
-    "category": "Música",
-    "date": "2026-04-11",
-    "endDate": "2026-07-31",
-    "time": "14:00",
-    "location": "Auditório Municipal Augusto Cabrita",
-    "price": "Gratuito",
-    "description": "O Ilustra BD regressa ao Barreiro para a sua 7ª edição, com uma programação diversificada que reúne autores portugueses e estrangeiros, editores e público, numa grande celebração da banda desenhada e da ilustração.",
-    "descriptionFull": "O Ilustra BD regressa ao Barreiro para a sua 7ª edição, com uma programação diversificada que reúne autores portugueses e estrangeiros, editores e público, numa grande celebração da banda desenhada e da ilustração.\n\nAs exposições “Snoopy e os Peanuts”, de Schulz; “Shhhh”, de André da Loba; “Zorro – o Herói Popular”, de Pierre Alary; “Mulheres de Papel” e “Naruto”, de Masashi Kishimoto, estarão patentes ao público no Auditório Municipal Augusto Cabrita, de terça-feira a domingo, entre as 14h00 e as 20h00.\n\n“Snoopy e os Peanuts”, de Schulz: dedicada à icónica personagem que celebrou os seus 75 anos, numa parceria com a editora Penguin.\n\n“Shhhh”, de André da Loba: uma experiência sensorial inspirada no livro homónimo, pensada para o público escolar, onde o autor convida a explorar os sons do dia-a-dia.\n\n“Zorro – o Herói Popular”, de Pierre Alary: exposição sobre o livro que evoca o mito do libertador dos oprimidos, em parceria com a Editora Ala dos Livros.\n\n“Mulheres de Papel”: 16 ilustradoras com curadoria de Hugo Pinto, explora o papel das mulheres na BD portuguesa, reunindo o trabalho de 16 autoras contemporâneas.\n\n“Naruto”, de Masashi Kishimoto: uma viagem pela jornada do lendário ninja, com curadoria de Paulo Monteiro e parceria com a editora DEVIR.\n\nÀ semelhança das edições anteriores, o evento contará com uma feira do livro, sessões de autógrafos, conversas com autores, oficinas e visitas guiadas. A identidade visual desta edição é assinada por Gualter Amaro.\n\n11 abril (sábado)\n\n12 abril (domingo)\n\n17 maio (domingo)\n\n24 maio (domingo) – 10h30 às 13h00 e das 14h00 às 17h00\n\n07 junho (domingo)\n\n21 junho (domingo)\n\nTodas as exposições poderão ser visitadas de terça a domingo entre as 14h00 e as 20h00.\n\nGratuito Org.: CMBCâmara Municipal do Barreiro",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/ilustra-bd-7a-edicao-11-abril-a-31-julho/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/04/WEB_SEO_1920x1150PX.jpg",
-    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:13.541Z"
-  },
-  {
     "id": "fernanda-e-a-inesperada-virtude-de-aprender-a-voar-amac-junior",
     "title": "Fernanda e a inesperada virtude de aprender a voar | AMAC Júnior",
     "category": "Teatro",
@@ -2044,7 +2044,7 @@
     "contacts": "212 068 230 · 212 068 287 · 212 068 535 · 931893655 · 962047924",
     "ticketUrl": "mailto:bilheteira@cm-barreiro.pt",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:03:58.174Z"
+    "scrapedAt": "2026-06-26T11:01:14.110Z"
   },
   {
     "id": "movimento-ao-centro-xeque-mate",
@@ -2063,23 +2063,6 @@
     "contacts": "230638224 · 290828200",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-06-25T20:03:58.266Z"
-  },
-  {
-    "id": "visita-guiada-ao-centro-de-interpretacao-do-campo-arqueologico-da-mata-da-machad",
-    "title": "Visita guiada ao Centro de Interpretação do Campo Arqueológico da Mata da Machada",
-    "category": "Visitas",
-    "date": "2026-04-18",
-    "time": "10:00",
-    "location": "Centro de Educação Ambiental da Mata da Machada",
-    "price": "Gratuito",
-    "description": "18 abril | 10h00 | Ponto de encontro: Casa do Centro de Educação Ambiental (CEACentro de Educação Ambiental da Mata Nacional da Machada e...)",
-    "descriptionFull": "18 abril | 10h00 | Ponto de encontro: Casa do Centro de Educação Ambiental (CEACentro de Educação Ambiental da Mata Nacional da Machada e...)\n\nPúblico em geral Gratuito mediante inscrição Máx. 20 participantes\n\nDuração: 120 min. Inscrições no Posto de Turismo do Município (212 068 287 / postodeturismo@cm-barreiro.pt) ou Welcome Center (212 068 535) Org.: CMBCâmara Municipal do Barreiro",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/visita-guiada-ao-centro-de-interpretacao-do-campo-arqueologico-da-mata-da-machada-18-abril-2026/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/03/2026-04-18_Visita-guiada-Centro-Interpretacao-Campo-Arqueologico-Machada_1920x650.jpg",
-    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
-    "contacts": "212 068 287 · 212 068 535 · 224654618 · 269484635 · 212 068 287 · 212 068 535",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:03:58.001Z"
   },
   {
     "id": "1o-torneio-de-ginastica-aerobica-agds",
@@ -2160,7 +2143,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/03/2026-04-19_Natacao_Festival-Golfinhos_1920x650.jpg",
     "organizer": "anização: CMBCâmara Municipal do Bar",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:03:52.556Z",
+    "scrapedAt": "2026-06-26T11:01:06.223Z",
     "tags": "kids"
   },
   {
@@ -2227,7 +2210,7 @@
     "organizer": "CMB\\n\\n\",\"label\":\"Adicionar ao calend\\u00e1rio\",\"opti",
     "contacts": "930586008 · 941307851",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:13.130Z",
+    "scrapedAt": "2026-06-26T10:56:47.821Z",
     "featured": true
   },
   {
@@ -2244,7 +2227,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/04/AF_Thumbnail-SEO_1920x650-25-de-Abril.jpg",
     "organizer": "anização Câmara Municipal do Barreiro No âmb",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:03:39.235Z"
+    "scrapedAt": "2026-06-26T11:00:50.219Z"
   },
   {
     "id": "desfile-da-liberdade-2026",
@@ -2261,7 +2244,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/04/1920x650-Site-Destaque-SEO-5.jpg",
     "organizer": "Movimento Associativo Apoio: CMBCâmara Municipal d",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:03:42.549Z"
+    "scrapedAt": "2026-06-26T11:00:50.165Z"
   },
   {
     "id": "inauguracao-do-elemento-escultorico-de-homenagem-aos-combatentes-barreirenses-fa",
@@ -2441,7 +2424,7 @@
     "contacts": "212 068 230 · 212 068 287 · 212 068 535 · 212 068 230 · 212 068 287 · 212 068 535 · 929379942 · 919485629",
     "ticketUrl": "mailto:bilheteira@cm-barreiro.pt",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:03:34.166Z"
+    "scrapedAt": "2026-06-26T11:00:34.213Z"
   },
   {
     "id": "costurar-liberdades-entre-linhas-e-cores",
@@ -2476,7 +2459,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/04/2026-04-29-Feira-Formacao-e-Emprego-Barreiro-Moita_SEO.png",
     "organizer": "anização do evento em dois dias dist",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:03:28.191Z"
+    "scrapedAt": "2026-06-26T11:00:26.117Z"
   },
   {
     "id": "jazz-no-mercado-quartas-a-noite",
@@ -2611,7 +2594,7 @@
     "organizer": "CMBCâmara Municipal do Barreiro Consulte aqui +INFO s",
     "contacts": "291906113",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:29.592Z"
+    "scrapedAt": "2026-06-26T10:57:12.593Z"
   },
   {
     "id": "aulas-de-chi-kung-ativo2830-maio-junho-2026",
@@ -2629,7 +2612,7 @@
     "organizer": "Aureagym – Associação Desporti",
     "contacts": "291906113",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:41.760Z"
+    "scrapedAt": "2026-06-26T10:57:31.838Z"
   },
   {
     "id": "david-garcez-ao-vivo-musica-no-dia-da-mae-2026",
@@ -2894,6 +2877,24 @@
     "scrapedAt": "2026-05-26T20:11:36.768Z"
   },
   {
+    "id": "a-fabrica-pela-arteviva-companhia-de-teatro-do-barreiro",
+    "title": "A Fábrica pela Arteviva Companhia de Teatro do Barreiro",
+    "category": "Teatro",
+    "date": "2026-05-16",
+    "time": "16:00",
+    "location": "Auditório Municipal Augusto Cabrita",
+    "price": "5€",
+    "description": "16 maio | 16h00 Auditório Municipal Augusto Cabrita A Fábrica – Arteviva Companhia de Teatro do Barreiro",
+    "descriptionFull": "16 maio | 16h00 Auditório Municipal Augusto Cabrita A Fábrica – Arteviva Companhia de Teatro do Barreiro\n\nEsta peça de teatro evoca a memória coletiva do Barreiro e da Companhia União Fabril. Entre o ferro e o fumo, entre as máquinas e os bairros operários, contam-se histórias de quem ali trabalhou, lutou e sonhou. Durante décadas, o Barreiro gravitou em torno da CUF. A fábrica cresceu ao ponto de se confundir com a própria cidade: ofereceu trabalho a milhares de pessoas, atraiu famílias de norte a sul do país.\n\nFicha Artística: Autoria e encenação: Paula Magalhães | Interpretação: Adriana Lopes, Carla Carreiro Mendes, João Parreira, Sara Santinho e Vítor Nuno | Assistência Encenação: Catarina Santana Conceção cenográfica: João Pimenta Figurinos: Ana Pimpista Música Miguel Félix | Canções: Ana Lúcia Santos | Movimento: Andreia Martins | Luminotecnia: João Oliveira Jr. | Operação Técnica: Maria Inês Santos | Design Gráfico: João Pimenta | Vídeo e Fotografia de Promoção do Espetáculo: Cláudio Ferreira | Produção Executiva: Catarina Santana | Apoio Cenográfico Pratical Team Solutions | Agradecimento a Raquel Nunes e Sofia Proença.\n\nPúblico- alvo: M/6\n\nDuração: 50 min. aprox.\n\nIngresso: 5€\n\nInformações: 212 068 230, 212 068 287, 212 068 535 ou bilheteira@cm-barreiro.pt\n\nVenda de ingressos nos locais habituais: AMACAuditório Municipal Augusto Cabrita, Posto de Turismo do Barreiro, Welcome Center e postos aderentes.\n\nOrg.: CMBCâmara Municipal do Barreiro",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/a-fabrica-pela-arteviva-companhia-de-teatro-do-barreiro/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/04/A-Fabrica-CMB_1920x650px-Site-SEO.jpg",
+    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
+    "contacts": "212 068 230 · 212 068 287 · 212 068 535",
+    "ticketUrl": "mailto:bilheteira@cm-barreiro.pt",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-06-26T10:59:46.193Z"
+  },
+  {
     "id": "combart-movimento-ao-centro",
     "title": "CombArt Movimento ao Centro",
     "category": "Comunidade",
@@ -2928,24 +2929,6 @@
     "ticketUrl": "https://www.ticketline.pt/",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-06-25T20:03:06.019Z"
-  },
-  {
-    "id": "a-fabrica-pela-arteviva-companhia-de-teatro-do-barreiro",
-    "title": "A Fábrica pela Arteviva Companhia de Teatro do Barreiro",
-    "category": "Teatro",
-    "date": "2026-05-16",
-    "time": "16:00",
-    "location": "Auditório Municipal Augusto Cabrita",
-    "price": "5€",
-    "description": "16 maio | 16h00 Auditório Municipal Augusto Cabrita A Fábrica – Arteviva Companhia de Teatro do Barreiro",
-    "descriptionFull": "16 maio | 16h00 Auditório Municipal Augusto Cabrita A Fábrica – Arteviva Companhia de Teatro do Barreiro\n\nEsta peça de teatro evoca a memória coletiva do Barreiro e da Companhia União Fabril. Entre o ferro e o fumo, entre as máquinas e os bairros operários, contam-se histórias de quem ali trabalhou, lutou e sonhou. Durante décadas, o Barreiro gravitou em torno da CUF. A fábrica cresceu ao ponto de se confundir com a própria cidade: ofereceu trabalho a milhares de pessoas, atraiu famílias de norte a sul do país.\n\nFicha Artística: Autoria e encenação: Paula Magalhães | Interpretação: Adriana Lopes, Carla Carreiro Mendes, João Parreira, Sara Santinho e Vítor Nuno | Assistência Encenação: Catarina Santana Conceção cenográfica: João Pimenta Figurinos: Ana Pimpista Música Miguel Félix | Canções: Ana Lúcia Santos | Movimento: Andreia Martins | Luminotecnia: João Oliveira Jr. | Operação Técnica: Maria Inês Santos | Design Gráfico: João Pimenta | Vídeo e Fotografia de Promoção do Espetáculo: Cláudio Ferreira | Produção Executiva: Catarina Santana | Apoio Cenográfico Pratical Team Solutions | Agradecimento a Raquel Nunes e Sofia Proença.\n\nPúblico- alvo: M/6\n\nDuração: 50 min. aprox.\n\nIngresso: 5€\n\nInformações: 212 068 230, 212 068 287, 212 068 535 ou bilheteira@cm-barreiro.pt\n\nVenda de ingressos nos locais habituais: AMACAuditório Municipal Augusto Cabrita, Posto de Turismo do Barreiro, Welcome Center e postos aderentes.\n\nOrg.: CMBCâmara Municipal do Barreiro",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/a-fabrica-pela-arteviva-companhia-de-teatro-do-barreiro/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/04/A-Fabrica-CMB_1920x650px-Site-SEO.jpg",
-    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
-    "contacts": "212 068 230 · 212 068 287 · 212 068 535",
-    "ticketUrl": "mailto:bilheteira@cm-barreiro.pt",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:03:05.857Z"
   },
   {
     "id": "caminhada-pelo-patrimonio-ferroviario-13",
@@ -3241,7 +3224,7 @@
     "organizer": "CMBCâmara Municipal do Barreiro +Info sobre o Program",
     "contacts": "939135831",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:29.488Z"
+    "scrapedAt": "2026-06-26T10:57:12.512Z"
   },
   {
     "id": "v-semana-academica-do-barreiro-subordinada-ao-tema-o-barreiro-e-os-rios",
@@ -3291,7 +3274,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2025/10/logo_ativo2830_thumb1920x650.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro Parceria: Gasoline AC",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:37.970Z"
+    "scrapedAt": "2026-06-26T10:57:21.605Z"
   },
   {
     "id": "visita-guiada-a-coina-historica-4",
@@ -3600,7 +3583,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/Transformacoes-CMB_1920x1150px-Site-Eventos-noticia-galeria.jpg",
     "organizer": "CLAP, Escola Bento Jesus Caraça Parceiros:",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:23.718Z"
+    "scrapedAt": "2026-06-26T10:58:42.667Z"
   },
   {
     "id": "festival-lacos-as-preciosas-ridiculas-de-moliere-21-em-cena",
@@ -3663,7 +3646,39 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/2026-06-06-3Festival-Bebes-Natacao_1920x650.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro Apoio: Aqua Innovatio",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:17.472Z"
+    "scrapedAt": "2026-06-26T10:58:33.516Z"
+  },
+  {
+    "id": "a-troca-de-cromos-esta-de-volta",
+    "title": "A Troca de Cromos está de volta",
+    "category": "Comunidade",
+    "date": "2026-06-06",
+    "time": "15:00",
+    "location": "Mercado 1º",
+    "price": "",
+    "description": "Depois do sucesso da primeira edição, voltamos a reunir os apaixonados pela caderneta do Mundial para mais uma tarde de partilha, convívio e muitas trocas.",
+    "descriptionFull": "Depois do sucesso da primeira edição, voltamos a reunir os apaixonados pela caderneta do Mundial para mais uma tarde de partilha, convívio e muitas trocas.\n\nTraz os teus cromos repetidos, encontra outros colecionadores e aproveita para completar a tua coleção num ambiente de respeito, amizade e boa disposição.\n\nNo Mercado 1.º de Maio, no dia 6 de junho, a partir das 15h00.\n\nEvento destinado exclusivamente à troca de cromos.\n\nNão é permitida a venda.\n\nNão faltes e convida os teus amigos colecionadores.",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/a-troca-de-cromos-esta-de-volta/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x650-Site-Destaque-SEO.jpg",
+    "contacts": "240592623",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-06-26T10:58:49.354Z"
+  },
+  {
+    "id": "sunset-session-com-dj-rico",
+    "title": "Sunset Session com DJ Rico",
+    "category": "Comunidade",
+    "date": "2026-06-06",
+    "time": "17:00",
+    "location": "Moinho de Maré Grande",
+    "price": "",
+    "description": "Durante os meses de junho e julho, os sábados ganham uma nova energia junto ao rio, com música, convívio e um pôr do sol único no Moinho de Maré Grande.",
+    "descriptionFull": "Durante os meses de junho e julho, os sábados ganham uma nova energia junto ao rio, com música, convívio e um pôr do sol único no Moinho de Maré Grande.\n\nAbrimos a temporada já no próximo dia 6 de junho.\n\nParceiro: ADN Caco\n\nDas 17h00 às 21h00",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/sunset-session-com-dj-rico/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x650_thumbnail_Sunset.jpg",
+    "contacts": "204925230",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-06-26T10:58:48.379Z"
   },
   {
     "id": "poe-te-a-funcionar-2026",
@@ -3718,38 +3733,6 @@
     "scrapedAt": "2026-06-25T20:02:23.524Z"
   },
   {
-    "id": "a-troca-de-cromos-esta-de-volta",
-    "title": "A Troca de Cromos está de volta",
-    "category": "Comunidade",
-    "date": "2026-06-06",
-    "time": "15:00",
-    "location": "Mercado 1º",
-    "price": "",
-    "description": "Depois do sucesso da primeira edição, voltamos a reunir os apaixonados pela caderneta do Mundial para mais uma tarde de partilha, convívio e muitas trocas.",
-    "descriptionFull": "Depois do sucesso da primeira edição, voltamos a reunir os apaixonados pela caderneta do Mundial para mais uma tarde de partilha, convívio e muitas trocas.\n\nTraz os teus cromos repetidos, encontra outros colecionadores e aproveita para completar a tua coleção num ambiente de respeito, amizade e boa disposição.\n\nNo Mercado 1.º de Maio, no dia 6 de junho, a partir das 15h00.\n\nEvento destinado exclusivamente à troca de cromos.\n\nNão é permitida a venda.\n\nNão faltes e convida os teus amigos colecionadores.",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/a-troca-de-cromos-esta-de-volta/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x650-Site-Destaque-SEO.jpg",
-    "contacts": "240592623",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:27.871Z"
-  },
-  {
-    "id": "sunset-session-com-dj-rico",
-    "title": "Sunset Session com DJ Rico",
-    "category": "Comunidade",
-    "date": "2026-06-06",
-    "time": "17:00",
-    "location": "Moinho de Maré Grande",
-    "price": "",
-    "description": "Durante os meses de junho e julho, os sábados ganham uma nova energia junto ao rio, com música, convívio e um pôr do sol único no Moinho de Maré Grande.",
-    "descriptionFull": "Durante os meses de junho e julho, os sábados ganham uma nova energia junto ao rio, com música, convívio e um pôr do sol único no Moinho de Maré Grande.\n\nAbrimos a temporada já no próximo dia 6 de junho.\n\nParceiro: ADN Caco\n\nDas 17h00 às 21h00",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/sunset-session-com-dj-rico/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x650_thumbnail_Sunset.jpg",
-    "contacts": "204925230",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:26.983Z"
-  },
-  {
     "id": "1809775-open-day-14-0-adao-barreiro",
     "title": "OPEN DAY 14.0 - ADAO BARREIRO",
     "date": "2026-06-06",
@@ -3797,7 +3780,7 @@
     "contacts": "212 068 230 · 212 068 287 · 212 068 535 · 917113371 · 207186013",
     "ticketUrl": "mailto:bilheteira@cm-barreiro.pt",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:13.374Z"
+    "scrapedAt": "2026-06-26T10:58:25.594Z"
   },
   {
     "id": "teatro-para-bebes-inde",
@@ -3815,7 +3798,7 @@
     "contacts": "212 068 230 · 212 068 287 · 212 068 535",
     "ticketUrl": "mailto:bilheteira@cm-barreiro.pt",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:17.933Z",
+    "scrapedAt": "2026-06-26T10:58:33.188Z",
     "hidden": true
   },
   {
@@ -3832,7 +3815,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/SEO-2-1024x347.png",
     "organizer": "anização irá facultar á",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:17.573Z"
+    "scrapedAt": "2026-06-26T10:58:33.364Z"
   },
   {
     "id": "inde-teatro-para-bebes-de-susana-c-gaspar-2026-06-07",
@@ -3866,7 +3849,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/2026-06-09-GimnoBarreiro_1920x650.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro Parceria: Aureagym, A",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:05.836Z"
+    "scrapedAt": "2026-06-26T10:58:19.706Z"
   },
   {
     "id": "inauguracao-da-exposicao-coletiva-de-artes-das-escolas-secundarias-do-barreiro",
@@ -3883,7 +3866,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/Exposicao-Artes-Coletiva-CMB_1920x650px-Site-SEO.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:10.235Z"
+    "scrapedAt": "2026-06-26T10:58:25.278Z"
   },
   {
     "id": "1809067-coletiva-de-artes-2026",
@@ -3916,7 +3899,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/AF_Thumbnail-SEO_1920x650-Santos-no-Mercado-1.jpg",
     "contacts": "233118463 · 220240967",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:29.790Z"
+    "scrapedAt": "2026-06-26T10:57:16.522Z"
   },
   {
     "id": "corrida-de-aniversario-gdc-estrela-negra-circuito-de-atletismo-2025-2026",
@@ -3932,7 +3915,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/2026-06-10-Corrida-de-Aniversario-GDC-Estrela-Negra_1920x650.jpg",
     "organizer": "GDC Estrela Negra Coorganização: CMB",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:09.660Z"
+    "scrapedAt": "2026-06-26T10:58:18.878Z"
   },
   {
     "id": "apresentacao-do-livro-voar",
@@ -3950,7 +3933,7 @@
     "organizer": "CMB, Autoras e Associação NÓS\\n\\",
     "contacts": "945114630 · 978020679",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:09.948Z"
+    "scrapedAt": "2026-06-26T10:58:19.349Z"
   },
   {
     "id": "1811568-apresentacao-do-livro-voar-de-rita-jeurissen-e-ilustracao-de-maria-de-fa",
@@ -3969,24 +3952,6 @@
     "featured": false
   },
   {
-    "id": "visita-guiada-ao-espaco-memoria-13jun",
-    "title": "Visita guiada ao Espaço Memória",
-    "category": "Visitas",
-    "date": "2026-06-13",
-    "endDate": "2026-06-13",
-    "time": "01:00",
-    "location": "Moinho",
-    "price": "Gratuito",
-    "description": "Ponto de encontro: Espaço Memória, Rua 17 Inscrições no Posto de Turismo do Município (212 068 287 / postodeturismo@cm-barreiro.pt)",
-    "descriptionFull": "Ponto de encontro: Espaço Memória, Rua 17 Inscrições no Posto de Turismo do Município (212 068 287 / postodeturismo@cm-barreiro.pt)\n\nPúblico em geral Gratuito mediante inscrição Máx. 20 participantes Duração: 120 min.",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/visita-guiada-ao-espaco-memoria-13jun/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/01/1920x650-Visitas-004.jpg",
-    "organizer": "Câmara Municipal do Barreiro Ponto de encontro: Espa&cce",
-    "contacts": "212 068 287 · 212 068 287 · 241797843 · 212 068 287",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:57.405Z"
-  },
-  {
     "id": "concerto-com-milhanas",
     "title": "Concerto com Milhanas",
     "category": "Música",
@@ -4002,7 +3967,7 @@
     "organizer": "CMB\\n\\n\",\"label\":\"Adicionar ao calend\\u00e1rio\",\"opti",
     "contacts": "932731558 · 231016292",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:01.311Z"
+    "scrapedAt": "2026-06-26T10:58:05.028Z"
   },
   {
     "id": "a-invencao-de-hugo-cabret-no-clube-de-leitura-junior",
@@ -4018,7 +3983,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/Clube-Leitura-Teen-CMB_1920x650px-Site-SEO-1.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:01.194Z"
+    "scrapedAt": "2026-06-26T10:58:05.722Z"
   },
   {
     "id": "movimento-ao-centro-ha-musica-na-praca",
@@ -4034,7 +3999,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/1920x650-Site-Destaque-SEO-4.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro e Movimento Associati",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:05.604Z"
+    "scrapedAt": "2026-06-26T10:58:11.770Z"
   },
   {
     "id": "sunset-session-com-musica-ambiente",
@@ -4051,7 +4016,7 @@
     "organizer": "CMBCâmara Municipal do Barreiro Parceiro: ADN Caco an",
     "contacts": "204925230",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:05.488Z"
+    "scrapedAt": "2026-06-26T10:58:12.396Z"
   },
   {
     "id": "visita-guiada-ao-forno-ceramico-da-mata-da-machada",
@@ -4068,7 +4033,25 @@
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "contacts": "212068287 · 212068287",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:05.631Z"
+    "scrapedAt": "2026-06-26T10:58:11.895Z"
+  },
+  {
+    "id": "visita-guiada-ao-espaco-memoria-13jun",
+    "title": "Visita guiada ao Espaço Memória",
+    "category": "Visitas",
+    "date": "2026-06-13",
+    "endDate": "2026-06-13",
+    "time": "01:00",
+    "location": "Moinho",
+    "price": "Gratuito",
+    "description": "Ponto de encontro: Espaço Memória, Rua 17 Inscrições no Posto de Turismo do Município (212 068 287 / postodeturismo@cm-barreiro.pt)",
+    "descriptionFull": "Ponto de encontro: Espaço Memória, Rua 17 Inscrições no Posto de Turismo do Município (212 068 287 / postodeturismo@cm-barreiro.pt)\n\nPúblico em geral Gratuito mediante inscrição Máx. 20 participantes Duração: 120 min.",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/visita-guiada-ao-espaco-memoria-13jun/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/01/1920x650-Visitas-004.jpg",
+    "organizer": "Câmara Municipal do Barreiro Ponto de encontro: Espa&cce",
+    "contacts": "212 068 287 · 212 068 287 · 241797843 · 212 068 287",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-06-25T20:01:57.405Z"
   },
   {
     "id": "1812129-apresentacao-do-livro-dicionario-genealogico-e-enciclopedico-das-familia",
@@ -4119,7 +4102,7 @@
     "organizer": "ulho português",
     "contacts": "947866095",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:53.564Z"
+    "scrapedAt": "2026-06-26T10:57:49.402Z"
   },
   {
     "id": "arraial-solidario",
@@ -4136,7 +4119,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x650-Site-Destaque-SEO-1.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro e IPSSInstituição Par",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:45.340Z"
+    "scrapedAt": "2026-06-26T10:57:39.067Z"
   },
   {
     "id": "desfile-das-marchas-populares",
@@ -4152,7 +4135,7 @@
     "sourceUrl": "https://www.cm-barreiro.pt/eventos/desfile-das-marchas-populares/",
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x1150px_galeria_Marchas.jpg",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:53.370Z"
+    "scrapedAt": "2026-06-26T10:57:50.219Z"
   },
   {
     "id": "caminhada-pela-arquitetura-civil-do-alto-seixalinho",
@@ -4170,7 +4153,7 @@
     "organizer": "CMB A partir da sede da União das Freguesias d",
     "contacts": "212 068 287 · 212 068 287 · 982880912 · 219720840 · 212 068 287",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:42.395Z"
+    "scrapedAt": "2026-06-26T10:57:39.261Z"
   },
   {
     "id": "oficina-criativa-verao-em-relevo",
@@ -4187,7 +4170,7 @@
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "contacts": "945113546 · 281078723",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:49.455Z"
+    "scrapedAt": "2026-06-26T10:57:43.529Z"
   },
   {
     "id": "inauguracao-do-percurso-permanente-de-orientacao-na-mata-da-machada",
@@ -4203,7 +4186,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/SEO-2-1024x347.png",
     "organizer": "anizada pela NatourTrail (um projeto desportivo da",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:49.082Z"
+    "scrapedAt": "2026-06-26T10:57:43.674Z"
   },
   {
     "id": "sunset-no-moinho-de-mare-grande",
@@ -4219,7 +4202,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x650_thumbnail_Sunset-20jun.jpg",
     "contacts": "227475569 · 206106430",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:49.993Z"
+    "scrapedAt": "2026-06-26T10:57:43.401Z"
   },
   {
     "id": "festa-da-danca-3",
@@ -4235,7 +4218,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x650-festa-da-danca.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro | UTIBUniversidade Sé",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:53.888Z"
+    "scrapedAt": "2026-06-26T10:57:49.794Z"
   },
   {
     "id": "verao-em-relevo-desenhar-moldar-e-brilhar",
@@ -4269,7 +4252,7 @@
     "contacts": "212 068 230 · 212 068 287 · 212 068 535",
     "ticketUrl": "bilheteira@cm-barreiro.pt",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:45.338Z",
+    "scrapedAt": "2026-06-26T10:57:39.303Z",
     "tags": "kids"
   },
   {
@@ -4288,7 +4271,7 @@
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "contacts": "212 068 230 · 212 068 287 · 212 068 535 · 212 068 230 · 212 068 287 · 212 068 535",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:38.173Z"
+    "scrapedAt": "2026-06-26T10:57:26.173Z"
   },
   {
     "id": "1817215-workshop-de-representacao-com-rui-santos",
@@ -4320,7 +4303,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/02Workshop_23junho26.jpg",
     "contacts": "212 068 052 · 210 995 139",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:41.885Z"
+    "scrapedAt": "2026-06-26T10:57:32.264Z"
   },
   {
     "id": "jogos-da-selecao-nacional-no-largo-do-mercado",
@@ -4336,24 +4319,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/AF_Thumbnail-SEO_1920x650-Jogos-no-Mercado-1.jpg",
     "organizer": "ulho português",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:38.649Z"
-  },
-  {
-    "id": "188433",
-    "title": "Apresentação do Dicionário Genealógico e Enciclopédico das Famílias do Concelho do Barreiro",
-    "category": "Leitura",
-    "date": "2026-06-25",
-    "endDate": "1996-06-02",
-    "time": "16:00",
-    "location": "assina",
-    "price": "Gratuito",
-    "description": "13 junho | 16h00 Biblioteca Municipal do Barreiro – Auditório Manuel Cabanas",
-    "descriptionFull": "13 junho | 16h00 Biblioteca Municipal do Barreiro – Auditório Manuel Cabanas\n\nApresentação do Dicionário Genealógico e Enciclopédico das Famílias do Concelho do Barreiro, Volume I, Freguesias do Lavradio e Telha (1606 a 1910), de João Naia da Silva\n\nOradores: Nuno Campos Inácio, escritor, editor e genealogista, e Fernando da Motta, historiador.\n\nJoão Naia da Silva (Barreiro, 2 de junho de 1996) é Mestre em Conservação e Restauro pela Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa e frequenta atualmente a licenciatura em História na Universidade Aberta. É genealogista, membro da Associação Portuguesa de Genealogia desde setembro de 2024 e tem-se dedicado, desde 2021, ao estudo das famílias do concelho do Barreiro, com particular incidência nas freguesias de Coina, Lavradio, Palhais e Telha. Entre 2017 e 2021, exerceu funções como deputado da Assembleia Municipal do Barreiro. Desde 2023, integra o conselho diretivo da Associação Coral TAB. É também colaborador regular do jornal online Rostos, onde assina uma coluna de opinião.\n\n“Uma obra que se considera um exaustivo trabalho de investigação, recolha, tratamento e sistematização de dados e informações, e que permite facilitar a procura da ancestralidade de todos os que descendem do concelho do Barreiro, em especial, neste volume, das freguesias do Lavradio e da Telha. Reúne, neste volume, os mais de 10.000 indivíduos que nasceram, casaram, faleceram ou simplesmente passaram pelas respetivas freguesias do Lavradio e da Telha durante pouco mais de três séculos (1606 a 1910). Procura, desta forma, ser uma obra de referência para estudiosos, investigadores, famílias e curiosos, não apenas no domínio do interesse e da investigação genealógica local, mas também nas áreas da história, da demografia e da análise sociocultural do concelho.”\n\nPúblico em geral Gratuito Org.: CMBCâmara Municipal do Barreiro e Autor",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/188433/",
-    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/1920x650-apresentacao-de-livro_Joao-Naia-da-Silva.jpg",
-    "organizer": "CMBCâmara Municipal do Barreiro e Autor anterior even",
-    "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:02:01.093Z"
+    "scrapedAt": "2026-06-26T10:57:27.101Z"
   },
   {
     "id": "formigas-superpoderes-em-miniatura",
@@ -4401,7 +4367,24 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x650-apresentacao-de-livro_Virgilio-Soares.jpg",
     "organizer": "e Ricardo Rodrigues da Silva (Professor Catedr&aac",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:38.166Z"
+    "scrapedAt": "2026-06-26T10:57:22.072Z"
+  },
+  {
+    "id": "188433",
+    "title": "Apresentação do Dicionário Genealógico e Enciclopédico das Famílias do Concelho do Barreiro",
+    "category": "Leitura",
+    "date": "2026-06-26",
+    "endDate": "1996-06-02",
+    "time": "16:00",
+    "location": "assina",
+    "price": "Gratuito",
+    "description": "13 junho | 16h00 Biblioteca Municipal do Barreiro – Auditório Manuel Cabanas",
+    "descriptionFull": "13 junho | 16h00 Biblioteca Municipal do Barreiro – Auditório Manuel Cabanas\n\nApresentação do Dicionário Genealógico e Enciclopédico das Famílias do Concelho do Barreiro, Volume I, Freguesias do Lavradio e Telha (1606 a 1910), de João Naia da Silva\n\nOradores: Nuno Campos Inácio, escritor, editor e genealogista, e Fernando da Motta, historiador.\n\nJoão Naia da Silva (Barreiro, 2 de junho de 1996) é Mestre em Conservação e Restauro pela Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa e frequenta atualmente a licenciatura em História na Universidade Aberta. É genealogista, membro da Associação Portuguesa de Genealogia desde setembro de 2024 e tem-se dedicado, desde 2021, ao estudo das famílias do concelho do Barreiro, com particular incidência nas freguesias de Coina, Lavradio, Palhais e Telha. Entre 2017 e 2021, exerceu funções como deputado da Assembleia Municipal do Barreiro. Desde 2023, integra o conselho diretivo da Associação Coral TAB. É também colaborador regular do jornal online Rostos, onde assina uma coluna de opinião.\n\n“Uma obra que se considera um exaustivo trabalho de investigação, recolha, tratamento e sistematização de dados e informações, e que permite facilitar a procura da ancestralidade de todos os que descendem do concelho do Barreiro, em especial, neste volume, das freguesias do Lavradio e da Telha. Reúne, neste volume, os mais de 10.000 indivíduos que nasceram, casaram, faleceram ou simplesmente passaram pelas respetivas freguesias do Lavradio e da Telha durante pouco mais de três séculos (1606 a 1910). Procura, desta forma, ser uma obra de referência para estudiosos, investigadores, famílias e curiosos, não apenas no domínio do interesse e da investigação genealógica local, mas também nas áreas da história, da demografia e da análise sociocultural do concelho.”\n\nPúblico em geral Gratuito Org.: CMBCâmara Municipal do Barreiro e Autor",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/188433/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/1920x650-apresentacao-de-livro_Joao-Naia-da-Silva.jpg",
+    "organizer": "CMBCâmara Municipal do Barreiro e Autor anterior even",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-06-26T10:58:05.411Z"
   },
   {
     "id": "pedro-alves-sousa-elvin-brandhi-2026-06-26",
@@ -4421,19 +4404,19 @@
   },
   {
     "id": "hora-do-conto-com-pozinhos-de-perlimpimpim-do-inicio-ao-fim-de-ana-frias-5",
-    "title": "Hora do conto com pozinhos de perlimpimpim do início ao fim… de Ana Frias",
+    "title": "Hora do conto com pozinhos de perlimpimpim do início ao fim, de Ana Frias",
     "category": "Leitura",
     "date": "2026-06-27",
     "time": "11:00",
     "location": "Biblioteca Municipal",
     "price": "",
-    "description": "27 junho | 11h00 e 16h00 Biblioteca Municipal do Barreiro Hora do conto com pozinhos de perlimpimpim do início ao fim… de Ana Frias Na era dos dinossauros andavam todos assustados por terem encontrado um ovo encarnado… BUU! Público-alvo: dos 2 aos 6 anos Para 12 fam&iacut",
-    "descriptionFull": "27 junho | 11h00 e 16h00 Biblioteca Municipal do Barreiro Hora do conto com pozinhos de perlimpimpim do início ao fim… de Ana Frias Na era dos dinossauros andavam todos assustados por terem encontrado um ovo encarnado… BUU! Público-alvo: dos 2 aos 6 anos Para 12 famílias (1 criança + 1 adulto) Entrada gratuita, mediante inscrição através do e-mail biblioteca.municipal@cm-barreiro.pt Duração: 45 min. Org: CMBCâmara Municipal do Barreiro",
+    "description": "27 junho | 11h00 e 16h00 Biblioteca Municipal do Barreiro Hora do conto com pozinhos de perlimpimpim do início ao fim… de Ana Frias",
+    "descriptionFull": "27 junho | 11h00 e 16h00 Biblioteca Municipal do Barreiro Hora do conto com pozinhos de perlimpimpim do início ao fim… de Ana Frias\n\nNa era dos dinossauros andavam todos assustados por terem encontrado um ovo encarnado… BUU!\n\nPúblico-alvo: dos 2 aos 6 anos Para 12 famílias (1 criança + 1 adulto)\n\nEntrada gratuita, mediante inscrição através do e-mail biblioteca.municipal@cm-barreiro.pt Duração: 45 min. Org: CMBCâmara Municipal do Barreiro",
     "sourceUrl": "https://www.cm-barreiro.pt/eventos/hora-do-conto-com-pozinhos-de-perlimpimpim-do-inicio-ao-fim-de-ana-frias-5/",
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/Hora-do-Conto-JUN-CMB_1920x650px-Site-SEO.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:37.913Z"
+    "scrapedAt": "2026-06-26T10:57:21.660Z"
   },
   {
     "id": "latino-americano-sunset",
@@ -4448,7 +4431,7 @@
     "sourceUrl": "https://www.cm-barreiro.pt/eventos/latino-americano-sunset/",
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x650-Site-Destaque-SEO-1-1.jpg",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:38.546Z"
+    "scrapedAt": "2026-06-26T10:57:22.481Z"
   },
   {
     "id": "1814246-apresentacao-do-livro-o-ultimo-espiao-do-reich",
@@ -4467,7 +4450,7 @@
     "featured": false
   },
   {
-    "id": "jazz-no-parque-2026-joao-barradas-trio-peter-evans",
+    "id": "jazz-no-parque-2026",
     "title": "Jazz no Parque 2026",
     "category": "Música",
     "date": "2026-06-28",
@@ -4477,11 +4460,11 @@
     "price": "",
     "description": "O Jazz no Parque está de volta! 26, 27 e 28 junho de 2026, no Parque da Cidade. Entrada gratuita.",
     "descriptionFull": "O Jazz no Parque está de volta! 26, 27 e 28 junho de 2026, no Parque da Cidade. Entrada gratuita.\n\n26 junho 22h00 | João Barradas Trio + Peter Evans João Barradas é um dos acordeonistas mais criativos da Europa, destacando-se entre a música clássica e a improvisação.\n\n23h00 | Emma Rawicz – INKYRA Emma Rawicz é uma saxofonista e compositora britânica emergente, formada na Royal Academy of Music.\n\n27 junho 18h00 | Ensemble Jazz Alumni EJB O Ensemble EJB, formado por alunos da Escola de Jazz do Barreiro, apresenta-se no Festival Jazz no Parque como um projeto vibrante.\n\n19h30 | Colin Vallon Trio Colin Vallon é um pianista suíço nascido em Lausanne, reconhecido pela sensibilidade lírica e por texturas subtis.\n\n22h00 | Louis Sclavis “INDIA” O projeto India de Louis Sclavis é uma viagem musical imaginária inspirada pela Índia.\n\n23h30 | Mark Guilliana Trio Mark Guiliana é um dos bateristas mais influentes, conhecido pela fusão entre jazz acústico e música eletrónica.\n\n28 junho 18h00 | Ensemble da Academia de Jazz – Os Franceses Formado em 2021, este agrupamento é o resultado da simbiose de alunos e professores da Academia de Jazz – Os Franceses.\n\n19h30 | VEIA A que soam dois talentos tão distintos juntos? Onde é que as diferenças se tornam essenciais ao Equilíbrio?\n\n21h30 | Carlos Barretto – LOKOMOTIV O grupo Lokomotiv têm-se destacado pela sua enorme flexibilidade estética.\n\n23h00 | Émile Parisien Juntos há cerca de duas décadas, os músicos deste quarteto mantêm uma interação intensa e uma sonoridade coletiva.\n\nOrg.: CMBCâmara Municipal do Barreiro",
-    "sourceUrl": "https://www.cm-barreiro.pt/eventos/jazz-no-parque-2026-joao-barradas-trio-peter-evans/",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/jazz-no-parque-2026/",
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/Agenda-regional.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:29.792Z",
+    "scrapedAt": "2026-06-26T10:57:12.874Z",
     "hidden": true
   },
   {
@@ -4499,7 +4482,7 @@
     "contacts": "924352514 · 944988381",
     "ticketUrl": "https://www.cm-barreiro.pt/eventos/machada-em-alerta-2026-com-inscricoes-ja-abertas/",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:33.031Z"
+    "scrapedAt": "2026-06-26T10:57:12.879Z"
   },
   {
     "id": "passeios-na-muleta-no-dia-da-cidade-do-barreiro",
@@ -4514,7 +4497,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/seoSITE-1920x650px_muleta_diacidade2026-1.png",
     "contacts": "212 068 287 · 212 068 535",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:33.537Z"
+    "scrapedAt": "2026-06-26T10:57:17.247Z"
   },
   {
     "id": "machada-em-alerta-2026-com-inscricoes-ja-abertas",
@@ -4529,7 +4512,7 @@
     "sourceUrl": "https://www.cm-barreiro.pt/eventos/machada-em-alerta-2026-com-inscricoes-ja-abertas/",
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/05/SEO-1.png",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:10.196Z"
+    "scrapedAt": "2026-06-26T10:56:48.255Z"
   },
   {
     "id": "sunset-com-dj-flipper",
@@ -4547,7 +4530,7 @@
     "contacts": "203257806",
     "ticketUrl": "https://www.cm-barreiro.pt/eventos/machada-em-alerta-2026-com-inscricoes-ja-abertas/",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:28.941Z"
+    "scrapedAt": "2026-06-26T10:57:12.496Z"
   },
   {
     "id": "1817776-concerto-meditativo-com-tacas-tibetanas-e-gongos",
@@ -4595,7 +4578,7 @@
     "sourceUrl": "https://www.cm-barreiro.pt/eventos/campos-de-ferias-da-mata-da-machada-2026/",
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/SEO-1.png",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:13.340Z"
+    "scrapedAt": "2026-06-26T10:56:44.435Z"
   },
   {
     "id": "sunset-com-dj-jose-isac",
@@ -4611,7 +4594,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x650_thumbnail_Sunset-5.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:24.997Z"
+    "scrapedAt": "2026-06-26T10:57:06.262Z"
   },
   {
     "id": "caminhada-pelo-patrimonio-ferroviario-14",
@@ -4628,7 +4611,7 @@
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "contacts": "212 068 287 · 276329797 · 942491962",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:25.378Z"
+    "scrapedAt": "2026-06-26T10:56:59.501Z"
   },
   {
     "id": "sunset-com-dj-gomez-e-dj-tonas",
@@ -4644,7 +4627,7 @@
     "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x650_thumbnail_Sunset-003.jpg",
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:20.604Z"
+    "scrapedAt": "2026-06-26T10:56:59.223Z"
   },
   {
     "id": "visita-ao-centro-de-interpretacao-do-campo-arqueologico-2",
@@ -4661,7 +4644,7 @@
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "contacts": "212 068 287 · 212 068 287",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:25.175Z"
+    "scrapedAt": "2026-06-26T10:57:00.115Z"
   },
   {
     "id": "circuito-arte-urbana-barreiro",
@@ -4678,7 +4661,7 @@
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "contacts": "212 068 287 · 212 068 535",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:17.404Z"
+    "scrapedAt": "2026-06-26T10:56:54.867Z"
   },
   {
     "id": "visita-guiada-a-coina-historica-5",
@@ -4695,7 +4678,7 @@
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "contacts": "212 068 287 · 942245877 · 212 068 287",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:20.492Z"
+    "scrapedAt": "2026-06-26T10:56:54.190Z"
   },
   {
     "id": "7-edicao-ilustra-bd-mostra-de-bd-do-barreiro-2026-07-31",
@@ -4728,7 +4711,24 @@
     "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
     "contacts": "212 068 287 · 212 068 287",
     "source": "cm-barreiro.pt",
-    "scrapedAt": "2026-06-25T20:01:17.114Z"
+    "scrapedAt": "2026-06-26T10:56:53.668Z"
+  },
+  {
+    "id": "visita-guiada-ao-centro-de-interpretacao-do-campo-arqueologico-da-mata-da-machad",
+    "title": "Visita guiada ao Campo Arqueológico",
+    "category": "Visitas",
+    "date": "2026-08-08",
+    "time": "09:00",
+    "location": "CEA – Centro",
+    "price": "Gratuito",
+    "description": "08 agosto | 09h00 Visita guiada ao Centro de Interpretação do Campo Arqueológico da Mata da Machada Ponto de encontro: Casa do Centro de Educação Ambiental (CEACentro de Educação Ambiental da Mata Nacional da Machada e...) Inscrições obrigatóri",
+    "descriptionFull": "08 agosto | 09h00 Visita guiada ao Centro de Interpretação do Campo Arqueológico da Mata da Machada Ponto de encontro: Casa do Centro de Educação Ambiental (CEACentro de Educação Ambiental da Mata Nacional da Machada e...) Inscrições obrigatórias (Posto de Turismo do Município, Tel. 212 068 287; E-mail: postodeturismo@cm-barreiro.pt; Horário: terça-feira a sábado, das 09h30 às 13h00 e das 14h30 às 18h00). Público-alvo: Geral | Gratuito mediante inscrição Máximo de 20 participantes Duração: 120 min. Org.: CMBCâmara Municipal do Barreiro",
+    "sourceUrl": "https://www.cm-barreiro.pt/eventos/visita-guiada-ao-centro-de-interpretacao-do-campo-arqueologico-da-mata-da-machada-3/",
+    "imageUrl": "https://www.cm-barreiro.pt/wp-content/uploads/2026/06/1920x650-Visitas-1.jpg",
+    "organizer": "CMBCâmara Municipal do Barreiro anterior evento anter",
+    "contacts": "212 068 287 · 212 068 287",
+    "source": "cm-barreiro.pt",
+    "scrapedAt": "2026-06-26T10:56:48.669Z"
   },
   {
     "id": "out-fest-2026-2026-10-01",
