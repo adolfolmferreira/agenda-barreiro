@@ -1,27 +1,35 @@
 [
   {
+    "title": "Evil Dead Burn",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21729",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/EVIL-DEAD-BURN_1000x1444_PT-500x722.jpg",
+    "genre": "Mistério, Terror",
+    "duration": "1h50",
+    "rating": "M/18"
+  },
+  {
+    "title": "Vaiana (Leg.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20504",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/CANON_Payoff_1Sht_POR-500x740.jpg",
+    "genre": "Família, Fantasia, Musical",
+    "duration": "1h55",
+    "rating": "M/6"
+  },
+  {
     "title": "Mínimos e Monstros (Dob.)",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=21826",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/lowMinimosEMonstros_IrenePool_70x100cm_72dpi-500x713.jpg",
-    "genre": "Animação, Aventura, Ficção científica",
+    "genre": "Animação, Aventura, Família, Ficção científica",
     "duration": "1h25",
     "rating": "M/6"
   },
   {
-    "title": "Mínimos e Monstros (Leg.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21831",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/lowMinimosEMonstros_IrenePool_70x100cm_72dpi-500x713.jpg",
-    "genre": "Animação, Aventura, Ficção científica",
-    "duration": "1h25",
+    "title": "Vaiana (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20500",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/CANON_Payoff_1Sht_POR-500x740.jpg",
+    "genre": "Família, Fantasia, Musical",
+    "duration": "1h55",
     "rating": "M/6"
-  },
-  {
-    "title": "Supergirl",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20508",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/500x760px_Poster-Site.jpg",
-    "genre": "Ação, Fantasia",
-    "duration": "1h49",
-    "rating": "M/12"
   },
   {
     "title": "Toy Story 5 (Dob.)",
@@ -46,21 +54,5 @@
     "genre": "Comédia, Terror",
     "duration": "1h34",
     "rating": "M/14"
-  },
-  {
-    "title": "Toy Story 5 (Leg.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19466",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Toy_story_poster-500x714.jpg",
-    "genre": "Animação, Aventura, Comédia, Família",
-    "duration": "1h42",
-    "rating": "M/6"
-  },
-  {
-    "title": "Dreams",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22235",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/500x760px_Poster-Site_DREAMS.jpg",
-    "genre": "Drama",
-    "duration": "1h50",
-    "rating": "M/12"
   }
 ]
