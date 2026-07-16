@@ -1,5 +1,21 @@
 [
   {
+    "title": "A Odisseia",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=18525",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/12/500x760px_Poster-Site_A-Odisseia_-Bilhetes-a-Venda.jpg",
+    "genre": "Drama",
+    "duration": "2h53",
+    "rating": "M/14"
+  },
+  {
+    "title": "Rosebush Pruning",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22326",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/2_500x760px_Poster-Site_Rosebush-Pruning.jpg",
+    "genre": "Drama, Thriller",
+    "duration": "1h37",
+    "rating": "M/16"
+  },
+  {
     "title": "Evil Dead Burn",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=21729",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/EVIL-DEAD-BURN_1000x1444_PT-500x722.jpg",
@@ -40,19 +56,11 @@
     "rating": "M/6"
   },
   {
-    "title": "O Dia da Revelação",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20513",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/MainPoster_ODiaDaRevelacao_70x100cm_72dpi-500x713.jpg",
-    "genre": "Sci-Fi, Thriller",
-    "duration": "2h25",
-    "rating": "M/12"
-  },
-  {
-    "title": "Scary Movie: What's Up?",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21163",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/SCRY_INTL_2025x3000_Online_Teaser1Sht_Theatre_PT@0.33x-500x741.jpg",
-    "genre": "Comédia, Terror",
-    "duration": "1h34",
+    "title": "Sonhos",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22422",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/Sonhos-500x714.jpg",
+    "genre": "Drama, Romance",
+    "duration": "1h35",
     "rating": "M/14"
   }
 ]
