@@ -1,11 +1,19 @@
 [
   {
-    "title": "Mais Uma Época de Caça",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21833",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/2MAIS-UMA-EPOCA-500x714.jpg",
-    "genre": "Comédia",
-    "duration": "1h40",
-    "rating": "M/12 "
+    "title": "O Misterioso Olhar do Flamingo",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22267",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/POSTER_OMODF_100x70-500x714.jpg",
+    "genre": "Drama",
+    "duration": "1h48",
+    "rating": "M/16"
+  },
+  {
+    "title": "Homem-Aranha: Um Novo Dia",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21293",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/500x760px_Poster-Site_Homem-Aranha.jpg",
+    "genre": "Ação, Aventura, Fantasia",
+    "duration": "2h30",
+    "rating": "M/12"
   },
   {
     "title": "A Odisseia",
@@ -38,13 +46,5 @@
     "genre": "Animação, Aventura, Comédia, Família",
     "duration": "1h42",
     "rating": "M/6"
-  },
-  {
-    "title": "Girls on Wire",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22530",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/girls-on-wire_poster-500x714.jpg",
-    "genre": "Drama",
-    "duration": "1h52",
-    "rating": "M/16"
   }
 ]
