@@ -1,11 +1,27 @@
 [
   {
-    "title": "O Misterioso Olhar do Flamingo",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22267",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/POSTER_OMODF_100x70-500x714.jpg",
-    "genre": "Drama",
+    "title": "Patrulha Pata: O Filme dos Dinossauros (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21167",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/500x760px_Poster-Site_PATRULHA-PATA-O-FILME-DOS-DINOSSAUROS.jpg",
+    "genre": "Animação, Aventura, Família",
+    "duration": "1h28",
+    "rating": "M/3"
+  },
+  {
+    "title": "Os Miseráveis: A História de Jean Valjean",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22414",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/500x760px_Poster-Site_Os-Miseraveis.jpg",
+    "genre": "Drama, História",
+    "duration": "1h38",
+    "rating": "M/12"
+  },
+  {
+    "title": "Playback",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22061",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/500x760px_Poster-Site_Playback.jpg",
+    "genre": "Biografia",
     "duration": "1h48",
-    "rating": "M/16"
+    "rating": "M/12"
   },
   {
     "title": "Homem-Aranha: Um Novo Dia",
@@ -18,7 +34,7 @@
   {
     "title": "A Odisseia",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=18525",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/12/500x760px_Poster-Site_A-Odisseia_-Bilhetes-a-Venda.jpg",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/12/PosterInternationalHorse_720x1024px-500x711.jpg",
     "genre": "Drama",
     "duration": "2h53",
     "rating": "M/14"
@@ -29,14 +45,6 @@
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/lowMinimosEMonstros_IrenePool_70x100cm_72dpi-500x713.jpg",
     "genre": "Animação, Aventura, Família, Ficção científica",
     "duration": "1h25",
-    "rating": "M/6"
-  },
-  {
-    "title": "Vaiana (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=20500",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/CANON_Payoff_1Sht_POR-500x740.jpg",
-    "genre": "Família, Fantasia, Musical",
-    "duration": "1h55",
     "rating": "M/6"
   },
   {
