@@ -1,5 +1,21 @@
 [
   {
+    "title": "Mutiny: Código Vingança",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21931",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/1Poster-Cinema_MUTINY_Data-500x721.jpg",
+    "genre": "Ação, Aventura, Thriller",
+    "duration": "1h35",
+    "rating": "M/14"
+  },
+  {
+    "title": "Insidious: O Longínquo",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21850",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/500x760px_Poster-Site_Insidious.jpg",
+    "genre": "Terror, Thriller",
+    "duration": "1h50",
+    "rating": "M/16"
+  },
+  {
     "title": "O Fim de Oak Street",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=22380",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/TheEndOfOakStreet_Main_70x100_4bleed-500x714.jpg",
@@ -30,14 +46,6 @@
     "genre": "Animação, Aventura, Família",
     "duration": "1h28",
     "rating": "M/3"
-  },
-  {
-    "title": "Playback",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22061",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/500x760px_Poster-Site_Playback.jpg",
-    "genre": "Biografia",
-    "duration": "1h48",
-    "rating": "M/12"
   },
   {
     "title": "Homem-Aranha: Um Novo Dia",
