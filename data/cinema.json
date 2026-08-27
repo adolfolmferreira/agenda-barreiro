@@ -1,10 +1,18 @@
 [
   {
-    "title": "Mutiny: Código Vingança",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21931",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/1Poster-Cinema_MUTINY_Data-500x721.jpg",
-    "genre": "Ação, Aventura, Thriller",
-    "duration": "1h35",
+    "title": "Coyote vs. Acme (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22287",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/500x760px_Poster-Site_Coyote.jpg",
+    "genre": "Animação, Comédia, Fantasia",
+    "duration": "1h43",
+    "rating": "M/6"
+  },
+  {
+    "title": "Na Companhia Das Estrelas",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21472",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/nanananaCompanhia-das-Estrelas_TEASER_POSTER_IMAX-500x741.jpg",
+    "genre": "Aventura, Ficção científica, Thriller",
+    "duration": "1h58",
     "rating": "M/14"
   },
   {
@@ -14,22 +22,6 @@
     "genre": "Terror, Thriller",
     "duration": "1h50",
     "rating": "M/16"
-  },
-  {
-    "title": "O Fim de Oak Street",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22380",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/TheEndOfOakStreet_Main_70x100_4bleed-500x714.jpg",
-    "genre": "Ficção científica, Mistério, Thriller",
-    "duration": "1h40",
-    "rating": "M/12"
-  },
-  {
-    "title": "Ooh La La 2",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22271",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/Poster-Cinema_OH-La-La-500x721.jpg",
-    "genre": "Comédia",
-    "duration": "1h31",
-    "rating": "M/14"
   },
   {
     "title": "Finnick: Criaturas Mágicas",
@@ -46,6 +38,14 @@
     "genre": "Animação, Aventura, Família",
     "duration": "1h28",
     "rating": "M/3"
+  },
+  {
+    "title": "Harry Potter e a Pedra Filosofal (25º Aniversário)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22598",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/500x760px_Poster-Site_Harry-Potter.jpg",
+    "genre": "Aventura, Fantasia",
+    "duration": "2h47",
+    "rating": "M/6"
   },
   {
     "title": "Homem-Aranha: Um Novo Dia",
@@ -72,11 +72,11 @@
     "rating": "M/6"
   },
   {
-    "title": "Toy Story 5 (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=19461",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2025/11/Toy_story_poster-500x714.jpg",
-    "genre": "Animação, Aventura, Comédia, Família",
-    "duration": "1h42",
+    "title": "Vaiana (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20500",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/02/CANON_Payoff_1Sht_POR-500x740.jpg",
+    "genre": "Família, Fantasia, Musical",
+    "duration": "1h55",
     "rating": "M/6"
   }
 ]
