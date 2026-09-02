@@ -5797,6 +5797,22 @@
     "featured": false
   },
   {
+    "id": "cinema-na-machada-asterix-obelix",
+    "title": "Cinema na Machada",
+    "date": "2026-09-11",
+    "endDate": "",
+    "time": "",
+    "location": "Centro de Educação Ambiental da Mata Nacional da Machada",
+    "category": "Outro",
+    "description": "O \"Cinema na Machada\", cinema ao ar livre está de volta à Mata da Machada! Traga a família e venha assistir a “Astérix & Obélix – O Império do Meio” numa",
+    "descriptionFull": "O \"Cinema na Machada\", cinema ao ar livre está de volta à Mata da Machada! Traga a família e venha assistir a “Astérix & Obélix – O Império do Meio” numa",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/09/Cinema_Machada_barreiro_aml.jpg",
+    "price": "Gratuito",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/cinema-na-machada-asterix-obelix/",
+    "featured": false
+  },
+  {
     "id": "exposicao-arquiteturas-do-invisivel",
     "title": "Exposição Arquiteturas do Invisível",
     "category": "Exposição",
@@ -5896,6 +5912,22 @@
     "featured": false
   },
   {
+    "id": "olhos-de-camarro-teatro",
+    "title": "Olhos de Camarro - Teatro",
+    "date": "2026-09-12",
+    "endDate": "",
+    "time": "",
+    "location": "Biblioteca Municipal do Barreiro – Auditório Manuel Cabanas",
+    "category": "Outro",
+    "description": "A peça “Olhos de Camarro” vai estar em cena no Auditório Manuel Cabanas - Biblioteca Municipal do Barreiro, nos próximos dias 11 e 12 de setembro, às 21h00 e",
+    "descriptionFull": "A peça “Olhos de Camarro” vai estar em cena no Auditório Manuel Cabanas - Biblioteca Municipal do Barreiro, nos próximos dias 11 e 12 de setembro, às 21h00 e",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/09/Olhos-de-Camarro.jpg",
+    "price": "10 Euros (venda de ingressos no local)",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/olhos-de-camarro-teatro/",
+    "featured": false
+  },
+  {
     "id": "movimentoativo-ativo2830-setembro-outubro-2026",
     "title": "Movimento@tivo | @tivo2830",
     "category": "Comunidade",
@@ -5929,6 +5961,22 @@
     "ticketUrl": "mailto:bilheteira@cm-barreiro.pt",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-09-02T20:33:38.898Z"
+  },
+  {
+    "id": "indiejunior-festival-cinema-infantil-juvenil",
+    "title": "IndieJúnior Festival Cinema Infantil Juvenil",
+    "date": "2026-09-13",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita",
+    "category": "Outro",
+    "description": "O IndieJúnior - Festival Internacional de Cinema Infantil e Juvenil do Porto, está de regresso ao Barreiro, nomeadamente ao Auditório Municipal Augusto",
+    "descriptionFull": "O IndieJúnior - Festival Internacional de Cinema Infantil e Juvenil do Porto, está de regresso ao Barreiro, nomeadamente ao Auditório Municipal Augusto",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/09/Indie_Junior_barreiro_aml.jpg",
+    "price": "3 Euros",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/indiejunior-festival-cinema-infantil-juvenil/",
+    "featured": false
   },
   {
     "id": "passeio-gratuito-muleta-em-setembro",
@@ -6237,6 +6285,22 @@
     "contacts": "212 068 287",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-09-02T20:33:25.017Z"
+  },
+  {
+    "id": "licoes-de-voo-ilustracao-de-catia-vidinhas",
+    "title": "Lições de Voo - ilustração de Cátia Vidinhas",
+    "date": "2026-11-01",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita",
+    "category": "Outro",
+    "description": "A exposição de ilustração \"Lições de Voo\", de Cátia Vidinhas, reúne um conjunto de ilustrações provenientes de diferentes projetos, maioritariamente álbuns",
+    "descriptionFull": "A exposição de ilustração \"Lições de Voo\", de Cátia Vidinhas, reúne um conjunto de ilustrações provenientes de diferentes projetos, maioritariamente álbuns",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/09/Licoes-de-Voo.jpg",
+    "price": "Entrada gratuita",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/licoes-de-voo-ilustracao-de-catia-vidinhas/",
+    "featured": false
   },
   {
     "id": "curso-de-treinador-de-natacao-grau-i-com-inscricoes-ate-12-setembro-2026",
