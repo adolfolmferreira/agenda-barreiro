@@ -1,19 +1,35 @@
 [
   {
-    "title": "Tafiti e os Seus Amigos (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22897",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_Tafiti.jpg",
-    "genre": "Animação",
-    "duration": "1h21",
-    "rating": "NA"
+    "title": "Magia e Sedução: Segredos de Família",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22427",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/500x760px_Poster-Site_magia-e-seducao-v-final.jpg",
+    "genre": "Comédia, Drama, Fantasia",
+    "duration": "2h09",
+    "rating": "M/12"
   },
   {
-    "title": "A Qualquer Custo",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22875",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_a-qualquer-custo.jpg",
-    "genre": "Ação, Crime, Thriller",
-    "duration": "1h47",
-    "rating": "NA"
+    "title": "Santo António - O Casamenteiro de Lisboa",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22660",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_Santo-Antononio.jpg",
+    "genre": "Comédia",
+    "duration": "2h00",
+    "rating": "M/12"
+  },
+  {
+    "title": "Shrek (25º Aniversário) (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22814",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_Shrek-25-aniv.jpg",
+    "genre": "Animação, Aventura, Comédia, Fantasia",
+    "duration": "1h30",
+    "rating": "M/6"
+  },
+  {
+    "title": "Oasis: Don't Look Back In Anger",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22993",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/09/poster-site.png",
+    "genre": "Documentário",
+    "duration": "2h02",
+    "rating": "M/12"
   },
   {
     "title": "Coyote vs. Acme (Dob.)",
@@ -22,22 +38,6 @@
     "genre": "Animação, Comédia, Fantasia",
     "duration": "1h43",
     "rating": "M/6"
-  },
-  {
-    "title": "Na Companhia Das Estrelas",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21472",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/nanananaCompanhia-das-Estrelas_TEASER_POSTER_IMAX-500x741.jpg",
-    "genre": "Aventura, Ficção científica, Thriller",
-    "duration": "1h58",
-    "rating": "M/14"
-  },
-  {
-    "title": "Patrulha Pata: O Filme dos Dinossauros (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21167",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/500x760px_Poster-Site_PATRULHA-PATA-O-FILME-DOS-DINOSSAUROS.jpg",
-    "genre": "Animação, Aventura, Família",
-    "duration": "1h28",
-    "rating": "M/3"
   },
   {
     "title": "Homem-Aranha: Um Novo Dia",
@@ -56,11 +56,19 @@
     "rating": "M/14"
   },
   {
-    "title": "Duas Vezes João Liberada",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22760",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/duas-vezes-joao-liberdade-site-500x714.jpg",
-    "genre": "Biografia, Drama",
-    "duration": "1h10",
-    "rating": "M/12"
+    "title": "Tafiti e os Seus Amigos (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22897",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_Tafiti.jpg",
+    "genre": "Animação",
+    "duration": "1h21",
+    "rating": "M/3"
+  },
+  {
+    "title": "Patrulha Pata: O Filme dos Dinossauros (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21167",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/500x760px_Poster-Site_PATRULHA-PATA-O-FILME-DOS-DINOSSAUROS.jpg",
+    "genre": "Animação, Aventura, Família",
+    "duration": "1h28",
+    "rating": "M/3"
   }
 ]
