@@ -1,11 +1,27 @@
 [
   {
-    "title": "Runner: Corrida Pela Vida",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22779",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_runner.jpg",
-    "genre": "Ação, Thriller",
-    "duration": "1h37",
-    "rating": "M/14"
+    "title": "Vingadores: Endgame Encore",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22923",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_Endgame.jpg",
+    "genre": "Ação, Ficção científica",
+    "duration": "03h05",
+    "rating": "M/12"
+  },
+  {
+    "title": "Heart of the Beast: Heróis Inseparáveis",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22449",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/500x760px_Poster-Site_Heart-of-the-Beast.jpg",
+    "genre": "Ação, Aventura, Thriller",
+    "duration": "1h41",
+    "rating": "M/12 "
+  },
+  {
+    "title": "A Ovelha Choné: Trapalhada na Quinta (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22882",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_A-Ovelha-Chone.jpg",
+    "genre": "Animação",
+    "duration": "1h20",
+    "rating": "M/6"
   },
   {
     "title": "Resident Evil",
@@ -16,15 +32,7 @@
     "rating": "M/16"
   },
   {
-    "title": "Magia e Sedução: Segredos de Família",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22427",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/500x760px_Poster-Site_magia-e-seducao-v-final.jpg",
-    "genre": "Comédia, Drama, Fantasia",
-    "duration": "2h09",
-    "rating": "M/12"
-  },
-  {
-    "title": "Santo António - O Casamenteiro de Lisboa",
+    "title": "Santo António: O Casamenteiro de Lisboa",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=22660",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_Santo-Antononio.jpg",
     "genre": "Comédia",
@@ -38,30 +46,6 @@
     "genre": "Animação, Comédia, Fantasia",
     "duration": "1h43",
     "rating": "M/6"
-  },
-  {
-    "title": "Homem-Aranha: Um Novo Dia",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21293",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/500x760px_Poster-Site_Homem-Aranha.jpg",
-    "genre": "Ação, Aventura, Fantasia",
-    "duration": "2h30",
-    "rating": "M/12"
-  },
-  {
-    "title": "Shrek (25º Aniversário) (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22814",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_Shrek-25-aniv.jpg",
-    "genre": "Animação, Aventura, Comédia, Fantasia",
-    "duration": "1h30",
-    "rating": "M/6"
-  },
-  {
-    "title": "Tafiti e os Seus Amigos (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22897",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_Tafiti.jpg",
-    "genre": "Animação",
-    "duration": "1h21",
-    "rating": "M/3"
   },
   {
     "title": "Patrulha Pata: O Filme dos Dinossauros (Dob.)",
