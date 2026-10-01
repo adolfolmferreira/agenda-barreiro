@@ -6546,6 +6546,22 @@
     "scrapedAt": "2026-10-01T15:15:52.530Z"
   },
   {
+    "id": "carimbos-com-identidade-oficina-criativa",
+    "title": "Carimbos com Identidade - Oficina Criativa",
+    "date": "2026-10-11",
+    "endDate": "",
+    "time": "",
+    "location": "Auditório Municipal Augusto Cabrita",
+    "category": "Outro",
+    "description": "Na oficina Carimbos com Identidade cada participante será convidado a desenhar, e construir um ou mais carimbos personalizados. A partir de desenhos simples",
+    "descriptionFull": "Na oficina Carimbos com Identidade cada participante será convidado a desenhar, e construir um ou mais carimbos personalizados. A partir de desenhos simples",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/09/Carimbos-com-identidade-aml.jpg",
+    "price": "3 euros | Informações: 212 068 230, 212 068 287, 212 068 535 ou",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/carimbos-com-identidade-oficina-criativa/",
+    "featured": false
+  },
+  {
     "id": "acao-de-formacao-para-o-movimento-associativo-plataforma-do-associativismo",
     "title": "Ação de Formação para o Movimento Associativo – Plataforma do Associativismo",
     "category": "Workshop",
@@ -6728,6 +6744,22 @@
     "contacts": "212 068 287",
     "source": "cm-barreiro.pt",
     "scrapedAt": "2026-10-01T15:15:42.243Z"
+  },
+  {
+    "id": "as-quatro-estacoes-da-machada-outono",
+    "title": "As Quatro Estações da Machada - Outono",
+    "date": "2026-10-24",
+    "endDate": "",
+    "time": "",
+    "location": "Mata Nacional da Machada",
+    "category": "Outro",
+    "description": "A iniciativa As Quatro Estações da Machada - Outono é um convite para descobrir como a natureza se transforma no outono, explorando a biodiversidade, os",
+    "descriptionFull": "A iniciativa As Quatro Estações da Machada - Outono é um convite para descobrir como a natureza se transforma no outono, explorando a biodiversidade, os",
+    "imageUrl": "https://www.aml.pt/wp-content/uploads/2026/09/Mata-da-Machada-.jpg",
+    "price": "Gratuito, com inscrição prévia. Informações: Linha Verde 800 912 070",
+    "source": "aml",
+    "sourceUrl": "https://www.aml.pt/agenda/as-quatro-estacoes-da-machada-outono/",
+    "featured": false
   },
   {
     "id": "maioridade-outubro-ativo",
