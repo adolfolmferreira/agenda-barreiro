@@ -1,5 +1,21 @@
 [
   {
+    "title": "Verity",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21785",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/Verity-_-Poster_6072x9000-500x741.jpg",
+    "genre": "Mistério, Thriller",
+    "duration": "1h57",
+    "rating": "M/14"
+  },
+  {
+    "title": "Digger",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=21108",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/PT_DIGGER_VERT_CAST_2764x4096_INTL-500x741.jpg",
+    "genre": "Comédia, Drama",
+    "duration": "2h09",
+    "rating": "M/14"
+  },
+  {
     "title": "Vingadores: Endgame Encore",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=22923",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_Endgame.jpg",
@@ -13,15 +29,7 @@
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/500x760px_Poster-Site_Heart-of-the-Beast.jpg",
     "genre": "Ação, Aventura, Thriller",
     "duration": "1h41",
-    "rating": "M/12 "
-  },
-  {
-    "title": "A Ovelha Choné: Trapalhada na Quinta (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22882",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_A-Ovelha-Chone.jpg",
-    "genre": "Animação",
-    "duration": "1h20",
-    "rating": "M/6"
+    "rating": "M/12"
   },
   {
     "title": "Resident Evil",
@@ -38,6 +46,22 @@
     "genre": "Comédia",
     "duration": "2h00",
     "rating": "M/12"
+  },
+  {
+    "title": "A Ilha Esquecida (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22752",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_A-Ilha-esquecida.jpg",
+    "genre": "Animação, Aventura",
+    "duration": "1h49",
+    "rating": "M/6"
+  },
+  {
+    "title": "A Ovelha Choné: Trapalhada na Quinta (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22882",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_A-Ovelha-Chone.jpg",
+    "genre": "Animação",
+    "duration": "1h20",
+    "rating": "M/6"
   },
   {
     "title": "Coyote vs. Acme (Dob.)",
