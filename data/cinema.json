@@ -1,51 +1,19 @@
 [
   {
+    "title": "Uma Outra Mãe",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=23132",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/09/Poster_UmaOutraMae_70x100cm_72dpi-500x713.jpg",
+    "genre": "Terror",
+    "duration": "1h33",
+    "rating": "M/16"
+  },
+  {
     "title": "Verity",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=21785",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/Verity-_-Poster_6072x9000-500x741.jpg",
     "genre": "Mistério, Thriller",
     "duration": "1h57",
     "rating": "M/14"
-  },
-  {
-    "title": "Digger",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21108",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/PT_DIGGER_VERT_CAST_2764x4096_INTL-500x741.jpg",
-    "genre": "Comédia, Drama",
-    "duration": "2h09",
-    "rating": "M/14"
-  },
-  {
-    "title": "Vingadores: Endgame Encore",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22923",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_Endgame.jpg",
-    "genre": "Ação, Ficção científica",
-    "duration": "03h05",
-    "rating": "M/12"
-  },
-  {
-    "title": "Heart of the Beast: Heróis Inseparáveis",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22449",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/500x760px_Poster-Site_Heart-of-the-Beast.jpg",
-    "genre": "Ação, Aventura, Thriller",
-    "duration": "1h41",
-    "rating": "M/12"
-  },
-  {
-    "title": "Resident Evil",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22275",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/Resident-Evil-_-Teaser-Poster-Shadow_1000x1440-500x720.jpg",
-    "genre": "Terror",
-    "duration": "1h30",
-    "rating": "M/16"
-  },
-  {
-    "title": "Santo António: O Casamenteiro de Lisboa",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22660",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_Santo-Antononio.jpg",
-    "genre": "Comédia",
-    "duration": "2h00",
-    "rating": "M/12"
   },
   {
     "title": "A Ilha Esquecida (Dob.)",
@@ -56,12 +24,28 @@
     "rating": "M/6"
   },
   {
+    "title": "Heart of the Beast: Heróis Inseparáveis",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22449",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/500x760px_Poster-Site_Heart-of-the-Beast.jpg",
+    "genre": "Ação, Aventura, Thriller",
+    "duration": "1h41",
+    "rating": "M/12"
+  },
+  {
     "title": "A Ovelha Choné: Trapalhada na Quinta (Dob.)",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=22882",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_A-Ovelha-Chone.jpg",
     "genre": "Animação",
     "duration": "1h20",
     "rating": "M/6"
+  },
+  {
+    "title": "Santo António: O Casamenteiro de Lisboa",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22660",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_Santo-Antononio.jpg",
+    "genre": "Comédia",
+    "duration": "2h00",
+    "rating": "M/12"
   },
   {
     "title": "Coyote vs. Acme (Dob.)",
