@@ -1,5 +1,29 @@
 [
   {
+    "title": "O Pecado Mora em Cima",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22967",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/09/poster-o-pecado-mora-em-cima.jpg",
+    "genre": "Comédia",
+    "duration": "1h33",
+    "rating": "M/14"
+  },
+  {
+    "title": "Street Fighter",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22282",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/SF_2025x3000_Online_Teaser1Sht_Legendary-500x741.jpg",
+    "genre": "Ação, Comédia, Fantasia",
+    "duration": "1h59",
+    "rating": "M/12"
+  },
+  {
+    "title": "A Queda Da Baleia",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22307",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/A-Queda-da-Baleia_Poster-Final-1-500x714.jpg",
+    "genre": "Thriller",
+    "duration": "1h38",
+    "rating": "M/12"
+  },
+  {
     "title": "Uma Outra Mãe",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=23132",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/09/Poster_UmaOutraMae_70x100cm_72dpi-500x713.jpg",
@@ -16,28 +40,12 @@
     "rating": "M/14"
   },
   {
-    "title": "A Ilha Esquecida (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22752",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_A-Ilha-esquecida.jpg",
-    "genre": "Animação, Aventura",
-    "duration": "1h49",
-    "rating": "M/6"
-  },
-  {
     "title": "Heart of the Beast: Heróis Inseparáveis",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=22449",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/500x760px_Poster-Site_Heart-of-the-Beast.jpg",
     "genre": "Ação, Aventura, Thriller",
     "duration": "1h41",
     "rating": "M/12"
-  },
-  {
-    "title": "A Ovelha Choné: Trapalhada na Quinta (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22882",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_A-Ovelha-Chone.jpg",
-    "genre": "Animação",
-    "duration": "1h20",
-    "rating": "M/6"
   },
   {
     "title": "Santo António: O Casamenteiro de Lisboa",
@@ -48,11 +56,27 @@
     "rating": "M/12"
   },
   {
-    "title": "Coyote vs. Acme (Dob.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22287",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/500x760px_Poster-Site_Coyote.jpg",
-    "genre": "Animação, Comédia, Fantasia",
-    "duration": "1h43",
+    "title": "Trapalhões (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=23314",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/09/SPIKED_68x98_15Out-500x714.jpg",
+    "genre": "Animação, Aventura",
+    "duration": "1h25",
+    "rating": "M/6"
+  },
+  {
+    "title": "A Ilha Esquecida (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22752",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_A-Ilha-esquecida.jpg",
+    "genre": "Animação, Aventura",
+    "duration": "1h49",
+    "rating": "M/6"
+  },
+  {
+    "title": "A Ovelha Choné: Trapalhada na Quinta (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=22882",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/500x760px_Poster-Site_A-Ovelha-Chone.jpg",
+    "genre": "Animação",
+    "duration": "1h20",
     "rating": "M/6"
   },
   {
