@@ -1,5 +1,21 @@
 [
   {
+    "title": "Drácula",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=23310",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/09/Dracula-MI-500x714.jpg",
+    "genre": "Comédia, Terror",
+    "duration": "2h50",
+    "rating": "M/16"
+  },
+  {
+    "title": "Sensibilidade e Bom Senso",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=23520",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/10/SensibilidadeEBomSenso_EmbracePoster_70x100cm_72dpi-500x713.jpg",
+    "genre": "Drama, Romance",
+    "duration": "2h11",
+    "rating": "M/12"
+  },
+  {
     "title": "Clayface",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=21624",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/Clayface_Alt_70x100_4bleed-500x714.jpg",
@@ -8,28 +24,12 @@
     "rating": "M/16"
   },
   {
-    "title": "Memórias do Cácere",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=23427",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/10/Poster-Cinema_Memorias-de-um-Carcere-500x715.jpg",
-    "genre": "Drama, História",
-    "duration": "2h47",
-    "rating": "M/12"
-  },
-  {
     "title": "O Pecado Mora em Cima",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=22967",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/09/poster-o-pecado-mora-em-cima.jpg",
     "genre": "Comédia",
     "duration": "1h33",
     "rating": "M/14"
-  },
-  {
-    "title": "Street Fighter",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22282",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/SF_2025x3000_Online_Teaser1Sht_Legendary-500x741.jpg",
-    "genre": "Ação, Comédia, Fantasia",
-    "duration": "1h59",
-    "rating": "M/12"
   },
   {
     "title": "Verity",
@@ -46,6 +46,14 @@
     "genre": "Ação, Aventura, Thriller",
     "duration": "1h41",
     "rating": "M/12"
+  },
+  {
+    "title": "Floresta Mágica (Dob.)",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=23382",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/10/Captura-de-ecra-2026-10-01-as-21.29.42-500x711.png",
+    "genre": "Animação, Aventura, Fantasia",
+    "duration": "2h12",
+    "rating": "M/6"
   },
   {
     "title": "Trapalhões (Dob.)",
