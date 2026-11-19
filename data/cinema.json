@@ -1,18 +1,18 @@
 [
   {
+    "title": "Viana: A Lenda dos Corações de Ouro",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=23566",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/10/Poster-Cinema_Viana-500x721.jpg",
+    "genre": "Animação, Aventura, Romance",
+    "duration": "1h47",
+    "rating": "M/6"
+  },
+  {
     "title": "Ebenezer: Um Conto De Natal",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=22665",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/08/EBZR_INTL_Online_2025x3000_Payoff_Digital_Keyart_Blue_OV-1-500x741.jpg",
     "genre": "Drama, Fantasia",
     "duration": "1h55",
-    "rating": "M/12"
-  },
-  {
-    "title": "Como Roubar Um Banco",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22292",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/06/HOW-TO-ROB-A-BANK-1000x1444-12Nov-500x722.jpg",
-    "genre": "Ação, Crime, Thriller",
-    "duration": "2h02",
     "rating": "M/12"
   },
   {
@@ -24,14 +24,6 @@
     "rating": "M/16"
   },
   {
-    "title": "Floresta Mágica (Leg.)",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=23645",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/10/Captura-de-ecra-2026-10-01-as-21.29.42-500x711.png",
-    "genre": "Animação, Aventura, Fantasia",
-    "duration": "2h12",
-    "rating": "M/6"
-  },
-  {
     "title": "You Can See Everything",
     "url": "https://castellolopescinemas.pt/?post_type=project&p=23553",
     "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/10/YCSE_Poster_720x1024px-500x711.jpg",
@@ -40,36 +32,12 @@
     "rating": "M/12"
   },
   {
-    "title": "Godzilla Minus Zero",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=22499",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/07/poster-godzilla-500x741.jpeg",
-    "genre": "Ação, Drama, Ficção científica",
-    "duration": "2h15",
+    "title": "The Hunger Games: Amanhecer Na Ceifa",
+    "url": "https://castellolopescinemas.pt/?post_type=project&p=20994",
+    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/03/PT_SOLSTICE_2025x3000_1SHT_PayoffDueling_Tributes_1R1-500x741.jpg",
+    "genre": "Ação, Fantasia, Sci-Fi, Thriller",
+    "duration": "2h35",
     "rating": "M/12"
-  },
-  {
-    "title": "Clayface",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21624",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/04/Clayface_Alt_70x100_4bleed-500x714.jpg",
-    "genre": "Sci-Fi, Terror, Thriller",
-    "duration": "1h49",
-    "rating": "M/16"
-  },
-  {
-    "title": "Verity",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=21785",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/05/Verity-_-Poster_6072x9000-500x741.jpg",
-    "genre": "Mistério, Thriller",
-    "duration": "1h57",
-    "rating": "M/14"
-  },
-  {
-    "title": "Entre Olhares 2026",
-    "url": "https://castellolopescinemas.pt/?post_type=project&p=23788",
-    "img": "https://castellolopescinemas.pt/wp-content/uploads/2026/11/500x760-poster-site-1.png",
-    "genre": "",
-    "duration": "",
-    "rating": "NA"
   },
   {
     "title": "O Gato do Chapéu (Dob.)",
